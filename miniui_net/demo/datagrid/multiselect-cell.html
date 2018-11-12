@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" /><link href="../demo.css" rel="stylesheet" type="text/css" />
+
+    
+    <script src="../../scripts/boot.js" type="text/javascript"></script>
+
+    <script src="js/MultiSelectCell.js" type="text/javascript"></script>
+    <style>
+    
+    .excel-cell-selected
+    {
+        background:rgb(223, 232, 246);        
+    }
+    
+    </style>
+    
+        
+</head>
+<body >
+        
+
+    
+
+<div id="datagrid1" class="mini-datagrid" style="width:800px;height:300px;"   
+    allowRowSelect="false" enableHotTrack="false"
+    allowCellEdit="true" allowCellSelect="true" cellEditAction="celldblclick"
+>
+    <div property="columns">
+        <div type="indexcolumn" ></div>
+        <div field="field1" width="100" >列1<input property="editor" class="mini-textbox" style="width:100%;"/></div>    
+        <div field="field2" width="100" >列2<input property="editor" class="mini-textbox" style="width:100%;"/></div>    
+        <div field="field3" width="100" >列3<input property="editor" class="mini-textbox" style="width:100%;"/></div>    
+        <div field="field4" width="100" >列4<input property="editor" class="mini-textbox" style="width:100%;"/></div>    
+        <div field="field5" width="100" >列5<input property="editor" class="mini-textbox" style="width:100%;"/></div>    
+        <div field="field6" width="100" >列6<input property="editor" class="mini-textbox" style="width:100%;"/></div>                    
+        <div field="field7" width="100" >列7<input property="editor" class="mini-textbox" style="width:100%;"/></div>    
+        <div field="field8" width="100" >列8<input property="editor" class="mini-textbox" style="width:100%;"/></div>    
+        <div field="field9" width="100" >列9<input property="editor" class="mini-textbox" style="width:100%;"/></div>    
+        <div field="field10" width="100" >列10<input property="editor" class="mini-textbox" style="width:100%;"/></div>    
+    </div>
+</div>   
+<button onclick="getSelectedCells()">getSelectedCells</button>
+    <script type="text/javascript">
+        
+        mini.parse();
+
+
+        var grid = mini.get("datagrid1");
+
+        var data = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}];
+
+        grid.setData(data);
+
+        var cellSelection = new MultiSelectCell(grid);
+
+        function getSelectedCells() {
+            var cells = cellSelection.getSelectedCells();
+            var json = mini.encode(cells);
+            alert(json);
+
+            //根据单元格数组，获取行/列、单元格值
+            var data = grid.getData(),
+                columns = grid.getBottomColumns();
+            for (var i = 0, l = cells.length; i < l; i++) {
+                var cell = cells[i];
+                var row = data[cell.row];
+                var column = columns[cell.col];
+                var value = row[column.field];
+                //alert(value);
+            }
+        }
+
+
+
+
+    </script>
+
+   
+
+
+  
+
+</body>
+</html>

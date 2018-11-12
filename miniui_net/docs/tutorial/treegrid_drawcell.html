@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery MiniUI - 专业WebUI控件库</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="jquery,web,grid,表格,datagrid,js,javascript,ajax,web开发,tree,table" />   
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。它能缩短开发时间，减少代码量，使开发者更专注于业务和服务端，轻松实现界面开发，带来绝佳的用户体验。" />
+    <link href="../core.css" rel="stylesheet" type="text/css" />
+    
+    <link href="common.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="header">
+        <div class="headerInner">
+            <a class="logo" href="http://www.miniui.com" title="jQuery MiniUI - 专业WebUI控件库">jQuery MiniUI</a>
+            <a id="why" href="/why">为什么选择MiniUI？</a>
+
+            <ul class="topmenu">
+                <li><a href="/"><span>首页</span></a></li>
+                <li onmouseover="showMenu('popup1', this)" onmouseout="hideMenu('popup1', this)"><a href="/product"><span>产品</span></a>
+                    <ul id="popup1" class="popupmenu">
+                        <li class="product"><a href="/product">产品介绍</a></li>
+                        <li><a href="/features">功能特性</a></li>
+                        <li><a href="/screenshots">界面截图</a></li>                        
+                        <li><a href="/support">支持服务</a></li>
+                        <li><a href="/license">授权方式</a></li>
+                        
+                        <li class="faq"><a href="/faq">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="/demo"><span>示例</span></a></li>
+                <li onmouseover="showMenu('popup2', this)" onmouseout="hideMenu('popup2', this)"><a href="/docs"><span>文档</span></a>
+                    <ul id="popup2" class="popupmenu">                        
+                        <li id="start_link"><a href="/docs/quickstart">快速入门</a></li>
+                        <li><a href="/docs/tutorial">开发教程</a></li>
+                        <li id="kb_link"><a href="/docs/kb">精华文章</a></li>
+                        <li><a href="/docs/api">Api参考手册</a></li>
+                    </ul>
+                </li>
+                <li><a href="/bbs"><span>论坛</span></a></li><li><a href="/download"><span>下载</span></a></li>
+                
+                <li><a href="/contact"><span>联系</span></a></li>
+            </ul>
+        
+     
+        </div>
+    </div>
+    <div class="topnav">
+        <div class="topnavInner">
+            <a href="/">首页</a>><a href="/docs">文档中心</a>><a href="/docs/tutorial">开发教程</a>><span>TreeGrid</span>
+        </div>
+    </div>
+    <div class="body " >
+        <div class="bodyInner">
+            
+        <div class="contentView">
+            <h3>TreeGrid：绘制单元格</h3>
+            
+            <a title="TreeGrid 绘制单元格" href="../../demo/treegrid/drawcell.html" target="_blank"><img src="../api/images/treegrid_drawcell.png" /></a>
+
+            <br /><br />
+            <p class="p_demo"><span class="note">参考示例</span>：
+                <a href="../../demo/treegrid/drawcell.html" target="_blank">TreeGrid：绘制单元格</a>&nbsp;&nbsp;&nbsp; 
+                </p>
+            <br />
+
+            <h4>监听处理"drawcell"事件</h4>
+            <p>使用"drawcell"事件，可以自定义单元格内容、样式、行样式等。</p>
+<pre class="code"><span style="color:blue">function </span>onDrawCell(e){
+    <span style="color:blue">var </span>node = e.node,
+        column = e.column,
+        field = e.field,
+        value = e.value;
+
+    <span style="color:#006400">//格式化日期
+    </span><span style="color:blue">if </span>(field == <span style="color:maroon">"Finish"</span>) {
+        <span style="color:blue">if </span>(mini.isDate(value)) e.cellHtml = mini.formatDate(value, <span style="color:maroon">"yyyy年MM月dd日"</span>);
+    }
+    <span style="color:#006400">//工期
+    </span><span style="color:blue">if </span>(field == <span style="color:maroon">"Duration"</span>) {
+        e.cellHtml = value + <span style="color:maroon">"天"</span>;
+    }
+    <span style="color:#006400">//进度
+    </span><span style="color:blue">if </span>(field == <span style="color:maroon">"PercentComplete"</span>) {
+        e.cellHtml = <span style="color:maroon">'&lt;div class="progressbar"&gt;'
+                        </span>+ <span style="color:maroon">'&lt;div class="progressbar-percent" style="width:' </span>+ value + <span style="color:maroon">'%;"&gt;&lt;/div&gt;'
+                        </span>+ <span style="color:maroon">'&lt;div class="progressbar-label"&gt;' </span>+ value + <span style="color:maroon">'%&lt;/div&gt;'
+                    </span>+<span style="color:maroon">'&lt;/div&gt;'</span>;
+    }
+};
+</pre>
+
+
+
+        </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <div id="copyright">Copyright © 上海普加软件有限公司版权所有 </div>
+            <div id="bottomlinks"><a href="/sitemap">网站导航</a>|<a href="/support">支持服务</a>|<a href="/license">授权方式</a>|<a href="/contact">联系我们</a></div>
+        </div>
+    </div>
+</body>
+</html>

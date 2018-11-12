@@ -1,0 +1,202 @@
+﻿<html>
+<head>
+    <title>Calendar - jQuery MiniUI 3.0 Documentation</title>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="core.js" type="text/javascript"></script>
+</head>
+<body>
+    <h3>mini.Calendar</h3>
+    
+    <p>日期选择器。</p>
+
+    <h4>Extend</h4>
+    <p> <a class="extendlink" href="control.html">mini.Control</a></p>    
+
+    <h4>Usage</h4>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">div </span><span style="color:red">id</span><span style="color:blue">="calendar1" </span><span style="color:red">class</span><span style="color:blue">="mini-calendar" </span><span style="color:red">value</span><span style="color:blue">="2011-12-11" &gt;&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+</span></pre>
+
+    <h4>Screenshots</h4>
+    <img src="images/calendar.gif" />
+
+    <h4>Examples</h4>
+    <a class="demo" href="../../demo/calendar/calendar.html" target="_blank">Calendar</a>
+
+
+    <h4>Properties</h4>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th><th><a href="setsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Set? </a></th><th><a href="getsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Get? </a></th><th><a href="tagsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Tag? </a></th></tr>
+        <tr>
+            <td>value</td>
+            <td>String</td>
+            <td>值</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>columns</td>
+            <td>Number</td>
+            <td>列个数</td>
+            <td>1</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>rows</td>
+            <td>Number</td>
+            <td>行个数</td>
+            <td>1</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>viewDate</td>
+            <td>Date</td>
+            <td>默认显示日期</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showTime</td>
+            <td>Boolean</td>
+            <td>显示时间输入框</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>timeFormat</td>
+            <td>String</td>
+            <td>时间格式化字符串</td>
+            <td>H:mm</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showHeader</td>
+            <td>Boolean</td>
+            <td>显示头部</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showFooter</td>
+            <td>Boolean</td>
+            <td>显示底部</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showWeekNumber</td>
+            <td>Boolean</td>
+            <td>显示周数字</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showDaysHeader</td>
+            <td>Boolean</td>
+            <td>显示周头部</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showMonthButtons</td>
+            <td>Boolean</td>
+            <td>显示月导航按钮</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showYearButtons</td>
+            <td>Boolean</td>
+            <td>显示年导航按钮</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showTodayButton</td>
+            <td>Boolean</td>
+            <td>显示“今天”按钮</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showClearButton</td>
+            <td>Boolean</td>
+            <td>显示清除日期按钮</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+
+        
+    </table>
+
+    <h4>Methods</h4>
+    <table>
+        <tr><th>Name</th><th>Parameter</th><th>Description</th><th>Return</th></tr>
+        <tr>
+            <td>setValue（value）</td>
+            <td></td>
+            <td>设置值</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getValue（）</td>
+            <td></td>
+            <td>获取值</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getFormValue（）</td>
+            <td></td>
+            <td>获取表单值</td>
+            <td>String</td>
+        </tr>
+    </table>
+
+    <h4>Events</h4>
+    <table>
+        <tr><th>Name</th><th>EventObject</th><th>Description</th></tr>       
+        <tr>
+            <td>valuechanged</td>
+            <td></td>
+            <td>值改变时发生</td>            
+        </tr>  
+        <tr>
+            <td>datechanged</td>
+            <td></td>
+            <td>日期改变时发生</td>            
+        </tr>  
+        <tr>
+            <td>timechanged</td>
+            <td></td>
+            <td>时间改变时发生</td>            
+        </tr>     
+        <tr>
+            <td>dateclick</td>
+            <td></td>
+            <td>日期点击时发生</td>            
+        </tr>  
+        <tr>
+            <td>drawdate</td>
+            <td>
+<pre>
+{
+    sender: Object,
+    date: Date,    
+    dateCls: String,
+    dateStyle: String,
+    dateHtml: String,
+    allowSelect: Boolean
+}
+</pre>              
+            </td>
+            <td>日期绘制时发生</td>            
+        </tr>       
+    </table>
+
+    
+</body>
+</html>

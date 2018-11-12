@@ -1,0 +1,178 @@
+﻿<html>
+<head>
+    <title>Form - jQuery MiniUI 3.0 Documentation</title>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="core.js" type="text/javascript"></script>
+    
+        
+
+    
+</head>
+<body>
+    <h3>mini.Form</h3>
+    
+    <p>能批量对多个控件进行赋值、取值、重置、验证、获取错误信息等。<br />
+    节省大量针对单独控件的操作代码。<br />
+    加载表单：1）使用ajax获取数据；2）将数据一次性设置给多个控件：form.setData(obj);<br />
+    保存表单：1）获取多个控件数据：var obj = form.getData()；2）使用ajax提交到服务端保存。
+    
+    </p>
+
+    <h4>Usage</h4>
+<p>提交表单数据：</p>
+<pre class="code"><span style="color:blue">var </span>form = <span style="color:blue">new </span>mini.Form(<span style="color:maroon">"#form1"</span>);            
+<span style="color:blue">var </span>data = form.getData();      <span style="color:#006400">//获取表单多个控件的数据
+</span><span style="color:blue">var </span>json = mini.encode(data);   <span style="color:#006400">//序列化成JSON
+</span>$.ajax({
+    url: <span style="color:maroon">"../data/FormService.aspx?method=SaveData"</span>,
+    type: <span style="color:maroon">"post"</span>,
+    data: { submitData: json },
+    success: <span style="color:blue">function </span>(text) {
+        alert(<span style="color:maroon">"提交成功，返回结果:" </span>+ text);    
+    }
+});
+</pre>
+    <br />
+<p>加载表单数据：</p>
+<pre class="code"><span style="color:blue">var </span>form = <span style="color:blue">new </span>mini.Form(<span style="color:maroon">"#form1"</span>);            
+$.ajax({
+    url: <span style="color:maroon">"../data/FormService.aspx?method=LoadData"</span>,
+    type: <span style="color:maroon">"post"</span>,
+    success: <span style="color:blue">function </span>(text) {
+        <span style="color:blue">var </span>data = mini.decode(text);   <span style="color:#006400">//反序列化成对象
+        </span>form.setData(data);             <span style="color:#006400">//设置多个控件数据
+    </span>}
+});
+</pre>
+
+    <h4>Screenshots</h4>
+    <img src="images/form.gif" />
+
+    <h4>Examples</h4>
+    <a class="demo" href="../../demo/form/form.html" target="_blank">Form</a>
+    <a class="demo" href="../../demo/form/validation.html" target="_blank">Validation</a>
+    <a class="demo" href="../../demo/form/validGroup.html" target="_blank">Validation Summary</a>
+    <a class="demo" href="../../demo/form/validWindow.html" target="_blank">Validation Window</a>
+
+
+    <h4>Properties</h4>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th><th><a href="setsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Set? </a></th><th><a href="getsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Get? </a></th><th><a href="tagsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Tag? </a></th></tr>
+    </table>
+
+    <h4>Methods</h4>
+    <table>
+        <tr><th>Name</th><th>Parameter</th><th>Description</th><th>Return</th></tr>
+        <tr>
+            <td>getData（formatter, deep）</td>
+            <td>formatter：Boolean。默认false。设置true，获取的日期格式是"2010-11-12"字符串。<br />
+                deep：Boolean。默认true，数据为{user:{name:"111"}}；设置false，数据为{"user.name": "111"}。                
+                </td>
+            <td>获取表单数据</td>
+            <td>Object</td>
+        </tr>
+        <tr>
+            <td>setData（data, all, deep）</td>
+            <td>
+data：Object。数据对象。<br />
+all：Boolean。默认true。设置true后对表单中所有控件设置值，没有数据则清空处理。<br />
+deep：Boolean。默认true。同上。
+            </td>
+            <td>设置表单数据</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>clear（）</td>
+            <td></td>
+            <td>清空表单</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>reset（）</td>
+            <td></td>
+            <td>重置表单</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>validate（）</td>
+            <td></td>
+            <td>验证表单</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>isValid（）</td>
+            <td></td>
+            <td>表单是否验证通过</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>setIsValid（Boolean）</td>
+            <td></td>
+            <td>设置数据验证结果</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getErrorTexts（）</td>
+            <td></td>
+            <td>获取错误文本数组</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getErrors（）</td>
+            <td></td>
+            <td>获取验证错误的控件数组</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>loading（）</td>
+            <td></td>
+            <td>加载遮罩表单区域</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>unmask（）</td>
+            <td></td>
+            <td>取消遮罩</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>setChanged（Boolean）</td>
+            <td></td>
+            <td>设置是否变动</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>isChanged（）</td>
+            <td></td>
+            <td>判断是否变动</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>setEnabled（Boolean）</td>
+            <td></td>
+            <td>设置是否禁用只读</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getFields（）</td>
+            <td></td>
+            <td>获取表单组件数组</td>
+            <td>Array</td>
+        </tr>
+        
+    </table>
+
+    <h4>Events</h4>
+    <table>
+        <tr><th>Name</th><th>EventObject</th><th>Description</th></tr>
+     
+    </table>
+
+
+</body>
+</html>

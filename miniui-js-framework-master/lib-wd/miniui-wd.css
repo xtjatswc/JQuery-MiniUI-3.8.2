@@ -1,0 +1,152 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0;
+    overflow: hidden;
+    background-color: #f8f8f8;
+}
+
+/*表单必填项颜色*/
+.mini-required .mini-textbox-border,
+.mini-required .mini-buttonedit-border {
+    background: #FFC0CB;
+}
+
+.mini-required .mini-textboxlist-border {
+    background: #FFC0CB;
+}
+
+.mini-labelfield-top {
+    height: auto !important;
+}
+
+.mini-labelfield-top > :first-child {
+    height: auto;
+    margin-left: 0px !important;
+    margin-top: 20px !important;
+}
+
+.mini-labelfield-top textarea {
+    height: 60px !important;
+}
+
+.mini-messagebox-buttons > .mini-button {
+    width: auto !important;
+}
+
+.mini-labelfield-top .mini-labelfield-label {
+    width: 100%;
+}
+
+.mini-mask {
+    z-index: 1000 !important;
+}
+
+.mini-button:focus {
+    background: #cdd9fb;
+    border-color: black;
+}
+
+.mini-messagebox-content-text {
+    text-align: center !important;
+    white-space: normal !important;
+    padding: 0px 5px !important;
+}
+
+.mini-messagebox-content td {
+    vertical-align: top;
+}
+
+.mini-grid .mini-grid-cell-error {
+    background: #ffbec9 !important;
+}
+
+.mini-grid .mini-grid-cell-dirty {
+    background-color: #ffd190;
+}
+
+.wd-datagrid .mini-panel-viewport {
+    background-color: transparent !important;
+}
+
+html body .mini-grid .mini-grid-cell-selected {
+    background: rgb(173, 223, 254) !important;
+}
+
+.wd-grid-editable .mini-grid-rows .grid-cell-editable,
+.wd-grid-editable.mini-grid-rows .grid-cell-editable {
+    background-color: white;
+    box-shadow: #777 1px 1px 0px inset;
+}
+
+.mini-grid-emptyText {
+    font-size: 18px;
+}
+
+/*表单只读模式*/
+.asLabel .mini-textbox-border,
+.asLabel .mini-textbox-input,
+.asLabel .mini-buttonedit-border,
+.asLabel .mini-buttonedit-input,
+.asLabel .mini-textboxlist-border {
+    border: 0;
+    background: none;
+    cursor: default;
+}
+
+.asLabel .mini-buttonedit-button,
+.asLabel .mini-textboxlist-close {
+    display: none;
+}
+
+.asLabel .mini-textboxlist-item {
+    padding-right: 8px;
+}
+
+/*wd-addresspicker*/
+.wd-addresspicker-popup .mini-tabs .mini-tabs-space,
+.wd-addresspicker-popup .mini-tabs .mini-tabs-space div,
+.wd-addresspicker-popup .mini-tabs .mini-tabs-space2,
+.wd-addresspicker-popup .mini-tabs .mini-tabs-space2 div,
+.wd-addresspicker-popup .mini-tabs .mini-tabs-space.mini-tabs-firstSpace,
+.wd-addresspicker-popup .mini-tabs .mini-tabs-space.mini-tabs-firstSpace div,
+.wd-addresspicker-popup .mini-tabs .mini-tabs-space.mini-tabs-lastSpace,
+.wd-addresspicker-popup .mini-tabs .mini-tabs-space.mini-tabs-lastSpace div {
+    width: 0px;
+}
+
+/*tips*/
+.mini-tips {
+    padding-left: 15px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-right: 35px !important;
+    margin-bottom: 20px !important;
+    font-size: 14px !important;
+}
+
+.mini-tips-success {
+    color: #ffffff !important;
+    background-color: #4fc98b !important;
+    border-color: #cdf1dc !important;
+}
+
+.mini-tips-info {
+    color: #ffffff !important;
+    background-color: #0671b7 !important;
+    border-color: #67a3d9 !important;
+}
+
+.mini-tips-warning {
+    color: #594255 !important;
+    background-color: #fce23f !important;
+    border-color: #fba027 !important;
+}
+
+.mini-tips-danger {
+    color: #edd3a1 !important;
+    background-color: #e83925 !important;
+    border-color: #f8a5ad !important;
+}

@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery MiniUI - 专业WebUI控件库</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="jquery,web,grid,表格,datagrid,js,javascript,ajax,web开发,tree,table" />   
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。它能缩短开发时间，减少代码量，使开发者更专注于业务和服务端，轻松实现界面开发，带来绝佳的用户体验。" />
+    <link href="../core.css" rel="stylesheet" type="text/css" />
+    
+    <link href="common.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="header">
+        <div class="headerInner">
+            <a class="logo" href="http://www.miniui.com" title="jQuery MiniUI - 专业WebUI控件库">jQuery MiniUI</a>
+            <a id="why" href="/why">为什么选择MiniUI？</a>
+
+            <ul class="topmenu">
+                <li><a href="/"><span>首页</span></a></li>
+                <li onmouseover="showMenu('popup1', this)" onmouseout="hideMenu('popup1', this)"><a href="/product"><span>产品</span></a>
+                    <ul id="popup1" class="popupmenu">
+                        <li class="product"><a href="/product">产品介绍</a></li>
+                        <li><a href="/features">功能特性</a></li>
+                        <li><a href="/screenshots">界面截图</a></li>                        
+                        <li><a href="/support">支持服务</a></li>
+                        <li><a href="/license">授权方式</a></li>
+                        
+                        <li class="faq"><a href="/faq">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="/demo"><span>示例</span></a></li>
+                <li onmouseover="showMenu('popup2', this)" onmouseout="hideMenu('popup2', this)"><a href="/docs"><span>文档</span></a>
+                    <ul id="popup2" class="popupmenu">                        
+                        <li id="start_link"><a href="/docs/quickstart">快速入门</a></li>
+                        <li><a href="/docs/tutorial">开发教程</a></li>
+                        <li id="kb_link"><a href="/docs/kb">精华文章</a></li>
+                        <li><a href="/docs/api">Api参考手册</a></li>
+                    </ul>
+                </li>
+                <li><a href="/bbs"><span>论坛</span></a></li><li><a href="/download"><span>下载</span></a></li>
+                
+                <li><a href="/contact"><span>联系</span></a></li>
+            </ul>
+        
+     
+        </div>
+    </div>
+    <div class="topnav">
+        <div class="topnavInner">
+            <a href="/">首页</a>><a href="/docs">文档中心</a>><a href="/docs/tutorial">开发教程</a>><span>表单控件</span>
+        </div>
+    </div>
+    <div class="body " >
+        <div class="bodyInner">
+            
+        <div class="contentView">
+            <h3>弹出：选择表格</h3>
+                
+            <a title="弹出：选择表格" href="../../demo/buttonedit/selectGrid.html" target="_blank"><img src="../api/images/openselect.gif"/></a>
+            <br /><br />
+            <p class="p_demo"><span class="note">参考示例</span>：
+                <a href="../../demo/buttonedit/selectGrid.html" target="_blank">弹出：选择表格</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="../../demo/buttonedit/selectGrid_Multi.html" target="_blank">弹出：多选表格</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="../../demo/buttonedit/selectGrid_Multi2.html" target="_blank">弹出：多选表格（复杂）</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="../../demo/buttonedit/selectGrid_js.html" target="_blank">弹出：选择表格（JS）</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+            <br />
+
+            <h4>mini.open</h4>    
+<pre class="code">mini.open({
+    url: bootPATH + <span style="color:maroon">"../demo/CommonLibs/SelectGridWindow.html"</span>,           
+    title: <span style="color:maroon">"选择列表"</span>,
+    width: 650,
+    height: 380,
+    ondestroy: <span style="color:blue">function </span>(action) {                  
+        <span style="color:blue">if </span>(action == <span style="color:maroon">"ok"</span>) {
+            <span style="color:blue">var </span>iframe = <span style="color:blue">this</span>.getIFrameEl();                        
+            <span style="color:blue">var </span>data = iframe.contentWindow.GetData();
+            data = mini.clone(data);    <span style="color:#006400">//必须
+
+            </span>btnEdit.setValue(data.id);
+            btnEdit.setText(data.name);
+        }
+    }
+});  
+</pre>
+
+
+        </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <div id="copyright">Copyright © 上海普加软件有限公司版权所有 </div>
+            <div id="bottomlinks"><a href="/sitemap">网站导航</a>|<a href="/support">支持服务</a>|<a href="/license">授权方式</a>|<a href="/contact">联系我们</a></div>
+        </div>
+    </div>
+</body>
+</html>

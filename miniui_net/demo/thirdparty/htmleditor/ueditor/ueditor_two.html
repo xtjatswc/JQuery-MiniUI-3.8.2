@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+ 
+    <title>UEditor(两个编辑器)</title>
+    <script src="../../../../scripts/boot.js" type="text/javascript"></script>
+    <script src="http://apps.bdimg.com/libs/ueditor/1.4.3.1/ueditor.config.js" type="text/javascript"></script>
+    <script src="http://apps.bdimg.com/libs/ueditor/1.4.3.1/ueditor.all.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="mini-panel" title="添加文章" width="900px"  showFooter="true"
+         showCollapseButton="true">
+        <div id="form1">
+            <table>
+                <tr>
+                    <td valign="top">
+                        <label>文章标题：</label>
+                    </td>
+                    <td>
+                        <input id="textbox1" name="title" class="mini-textbox" style="width:100%" />
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <label>文章正文：</label>
+                    </td>
+                    <td>
+                        <div id="container" name="content" style="width:810px;height:200px;"> </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <label>文章摘要：</label>
+                    </td>
+                    <td>
+                        <div id="container1" name="content" style="width:810px;height:100px;"> </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div property="footer" style="text-align:right;padding:5px;">
+            <a class="mini-button" onclick="getContent()" style="margin-right:10px">获取文章内容</a>
+            <a class="mini-button" onclick="setContent()" style="margin-right:10px">更新文章内容</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script type="text/javascript">
+    mini.parse();
+
+    var ue = UE.getEditor('container');
+
+    var ue1 = UE.getEditor('container1', {
+        toolbars: [['fontfamily', 'fontsize', '|','bold', 'italic', 'underline','strikethrough','|','justifyleft', 'justifycenter', 'justifyright']],
+    })
+
+    function getContent() {
+
+        var arr = [];
+        var title = mini.get("textbox1").getValue();
+        arr.push("文章内容：" + title);
+
+        var content = ue.getContent();
+        arr.push("文章正文：" + content);
+
+        var abstract = ue1.getContent();
+        arr.push("文章摘要：" + abstract);
+        if (!title) {
+            alert("文章标题:" + "该输入项为必填项");
+        }
+        else if (!content) {
+            alert("文章正文不能为空");
+        }
+        else {
+            alert(arr.join('\n'));
+        }
+    };
+    function setContent() {
+        ue.setContent("MiniUI - 专业WebUI控件库");
+        ue1.setContent("快速开发，减少50%代码量,丰富组件库，高性能、低内存");
+
+    };
+
+</script>

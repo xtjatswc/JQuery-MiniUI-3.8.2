@@ -1,0 +1,17 @@
+-光标可定位（多选除外），定位时自动弹出下拉框；
+-下拉不显示空项
+-如必选，自动选择第一项/常用项；
+-显示关闭按钮（视情况，如控件长度不允许可去掉）
+-如果没有左侧表单提示文本(label)，提示文本显示在文本框内。
+-如果支持检索：emptyText指定检索信息，如输入名称、输入码检索
+
+涉及到的属性包括：
+valueFromSelect：true（已默认）
+allowInput：true（已默认）
+showNullItem：false（已默认）
+showPopupOnClick：true（已默认）
+autoFocusItem：true/false
+showClose：true/false
+onCloseClick：function
+required：true/false
+emptyText：

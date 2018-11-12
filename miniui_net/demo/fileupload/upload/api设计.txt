@@ -1,0 +1,15 @@
+
+DataGrid:
+	
+	columnLocking
+	columnMoving
+	columnResizing
+	columnSorting
+	columnMenu
+
+	allowEditing		
+	
+	
+	cellEditing		cellEditingClicks
+	rowEditing
+	

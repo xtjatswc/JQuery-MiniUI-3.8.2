@@ -1,0 +1,12 @@
+/**
+ * created by ${USER} on ${DATE}
+ *
+ * 页面入口文件
+ */
+define(['View', './components', './biz'],
+    function (View, components, biz) {
+
+        return new View(components, biz);
+        
+    }
+);

@@ -1,0 +1,229 @@
+﻿<html>
+<head>
+    <title>TreeGrid - jQuery MiniUI 3.0 Documentation</title>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="core.js" type="text/javascript"></script>
+    
+        
+
+    
+</head>
+<body>
+    <h3>mini.TreeGrid</h3>
+    
+    <p>树形表格。</p>
+
+    <h4>Extend</h4>
+    <p> <a class="extendlink" href="tree.html">mini.Tree</a></p>    
+
+    <h4>Usage</h4>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">div </span><span style="color:red">id</span><span style="color:blue">="treegrid1" </span><span style="color:red">class</span><span style="color:blue">="mini-treegrid" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:600px;</span><span style="color:red">height</span><span style="color:blue">:280px;"     
+    </span><span style="color:red">url</span><span style="color:blue">="../data/tasks.txt" </span><span style="color:red">showTreeIcon</span><span style="color:blue">="true" 
+    </span><span style="color:red">treeColumn</span><span style="color:blue">="taskname" </span><span style="color:red">idField</span><span style="color:blue">="UID" </span><span style="color:red">parentField</span><span style="color:blue">="ParentTaskUID" </span><span style="color:red">resultAsTree</span><span style="color:blue">="false"
+&gt;
+    &lt;</span><span style="color:maroon">div </span><span style="color:red">property</span><span style="color:blue">="columns"&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">type</span><span style="color:blue">="indexcolumn"&gt;&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">name</span><span style="color:blue">="taskname" </span><span style="color:red">field</span><span style="color:blue">="Name" </span><span style="color:red">width</span><span style="color:blue">="200"&gt;</span>任务名称<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="Duration" </span><span style="color:red">width</span><span style="color:blue">="100"&gt;</span>工期<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="Start" </span><span style="color:red">width</span><span style="color:blue">="100" </span><span style="color:red">dateFormat</span><span style="color:blue">="yyyy-MM-dd"&gt;</span>开始日期<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="Finish" </span><span style="color:red">width</span><span style="color:blue">="100" </span><span style="color:red">dateFormat</span><span style="color:blue">="yyyy-MM-dd"&gt;</span>完成日期<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+    &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+</span></pre>
+
+    <h4>Screenshots</h4>
+    <img src="images/treegrid.gif" />
+
+    <h4>Examples</h4>
+	<a class="demo" href="../../demo/treegrid/treegrid.html" target="_blank">TreeGrid</a>
+
+    <h4>Properties</h4>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th><th><a href="setsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Set? </a></th><th><a href="getsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Get? </a></th><th><a href="tagsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Tag? </a></th></tr>
+        <tr>
+            <td>treeColumn</td>
+            <td>String</td>
+            <td>节点列</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>   
+        <tr>
+            <td>columns</td>
+            <td>Array</td>
+            <td>列集合对象</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>allowMoveColumn</td>
+            <td>Boolean</td>
+            <td>允许移动列</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>allowResizeColumn</td>
+            <td>Boolean</td>
+            <td>允许拖拽调节列宽度</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+         <tr>
+            <td>allowResize</td>
+            <td>Boolean</td>
+            <td>允许拖拽调节表格尺寸</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+    </table>
+
+    <h4>Methods</h4>
+    <table>
+        <tr><th>Name</th><th>Parameter</th><th>Description</th><th>Return</th></tr>            
+        
+    </table>
+
+    <h4>Events</h4>
+    <table>
+        <tr><th>Name</th><th>EventObject</th><th>Description</th></tr>
+        <tr>
+            <td>drawcell</td>
+            <td>
+<pre>
+{
+    sender: Object,
+    node: Object,    
+    column: Object,
+    field: String,
+    value: String,
+    cellHtml: "",
+    rowCls: "",
+    cellCls: "",
+    rowStyle: "",
+    cellStyle: "",
+    isLeaf: Boolean,
+    showCheckBox: Boolean,
+    showTreeIcon: Boolean
+    iconCls: String    
+}
+</pre>              
+            </td>
+            <td>绘制单元格时发生</td>
+        </tr>
+    </table>
+
+    <br />
+    <hr />
+
+    <h4 id="columns">Columns</h4>
+    <p>表格列配置集合：columns，是一个数组，如：[column, column, ...]。其中一个column的配置参数如下表：</p>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+        
+        <tr>
+            <td>header</td>
+            <td>String</td>
+            <td>表头列文本</td>
+            <td></td>
+            
+        </tr>  
+        <tr>
+            <td>field</td>
+            <td>String</td>
+            <td>单元格值字段</td>
+            <td></td>
+            
+        </tr>  
+        <tr>
+            <td>name</td>
+            <td>String</td>
+            <td>列标识名称</td>
+            <td></td>
+            
+        </tr> 
+        <tr>
+            <td>width</td>
+            <td>Number</td>
+            <td>列宽度</td>
+            <td></td>
+            
+        </tr>  
+        <tr>
+            <td>headerAlign</td>
+            <td>String</td>
+            <td>表头列文本位置。left/center/right。</td>
+            <td>left</td>
+            
+        </tr>  
+        <tr>
+            <td>align</td>
+            <td>String</td>
+            <td>单元格文本位置。left/center/right。</td>
+            <td>left</td>
+            
+        </tr>  
+        <tr>
+            <td>headerCls</td>
+            <td>String</td>
+            <td>表头列样式类。</td>
+            <td></td>
+            
+        </tr>  
+        <tr>
+            <td>cellCls</td>
+            <td>String</td>
+            <td>单元格样式类</td>
+            <td></td>
+            
+        </tr>  
+        <tr>
+            <td>headerStyle</td>
+            <td>String</td>
+            <td>表头列样式</td>
+            <td></td>
+            
+        </tr>  
+        <tr>
+            <td>cellStyle</td>
+            <td>String</td>
+            <td>单元格样式</td>
+            <td></td>
+            
+        </tr>        
+        <tr>
+            <td>editor</td>
+            <td>Object</td>
+            <td>单元格编辑器。</td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td>renderer</td>
+            <td>Function</td>
+            <td>单元格绘制处理函数，同<a href="#drawcell">drawcell</a>事件。</td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td>allowMove</td>
+            <td>Boolean</td>
+            <td>是否可移动表头列。</td>
+            <td>true</td>
+            
+        </tr>
+        <tr>
+            <td>allowResize</td>
+            <td>Boolean</td>
+            <td>是否拖拽调节表头列宽度。</td>
+            <td>true</td>
+            
+        </tr>
+    </table>
+
+</body>
+</html>

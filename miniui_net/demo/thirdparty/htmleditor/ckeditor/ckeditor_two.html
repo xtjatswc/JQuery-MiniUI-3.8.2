@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CKEditor(两个编辑器)</title>
+    <style type="text/css">
+       
+    </style>
+    <script src="../../../../scripts/boot.js" type="text/javascript"></script>
+    <script src="http://cdn.ckeditor.com/4.5.8/standard-all/ckeditor.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="mini-panel" title="添加文章" width="850px" showFooter="true"
+         showCollapseButton="true" >
+
+        <div id="form1">
+            <table>
+                <tr>
+                    <td valign="top" width="60">
+                        <label>文章标题：</label>
+                    </td>
+                    <td>
+                        <input id="textbox1" name="title" class="mini-textbox" style="width:100%" />
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <label>文章正文：</label>
+                    </td>
+                    <td>
+                        <div name="editor" id="editor" rows="10" cols="80">
+                           <p>MiniUI - 专业WebUI控件库</p>
+                           </br>
+                           <p>   快速开发，减少50%代码量</p>
+                           <p>   丰富组件库，高性能、低内存</p>
+                           <p>   支持 Java、.NET、PHP</p>
+                           <p>   支持 IE6+、FireFox、Chrome</p>
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <label>文章正文：</label>
+                    </td>
+                    <td>
+                        <textarea name="editor1" id="editor1" rows="10" cols="65">
+                            
+                        </textarea>
+                    </td>
+                </tr>
+            </table>
+        </div>
+         <div property="footer" style="text-align:right;padding:5px;">
+            <a class="mini-button" onclick="getContent()" style="margin-right:10px">获取文章内容</a>
+            <a class="mini-button" onclick="setContent()" style="margin-right:10px">更新文章内容</a>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
+<script type="text/javascript">
+
+    var ck = CKEDITOR.replace('editor', {
+        resize_enabled: false
+    });
+
+    var ck1 = CKEDITOR.replace('editor1',
+        {
+            toolbar:
+            [
+               ['Bold', 'Italic', 'Underline'],[ 'Strike', 'Subscript', 'Superscript'],
+               ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'],
+            ],
+            resize_enabled: false
+        });
+
+    function getContent() {
+
+        var arr = [];
+        var title = mini.get("textbox1").getValue();
+        arr.push("文章内容：" + title);
+
+        var content = ck.getData();
+        arr.push("文章正文：" + content);
+
+        var abstract = ck1.getData();
+        arr.push("文章摘要：" + abstract);
+        if (!title) {
+            alert("文章标题:" + "该输入项为必填项");
+        }
+        else if (!content) {
+            alert("文章正文不能为空");
+        }
+        else {
+            alert(arr.join('\n'));
+        }
+    };
+    function setContent() {
+        ck.setData("MiniUI - 专业WebUI控件库");
+        ck1.setData("快速开发，减少50%代码量,丰富组件库，高性能、低内存");
+    };
+
+</script>

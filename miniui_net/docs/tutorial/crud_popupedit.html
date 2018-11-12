@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery MiniUI - 专业WebUI控件库</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="jquery,web,grid,表格,datagrid,js,javascript,ajax,web开发,tree,table" />   
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。它能缩短开发时间，减少代码量，使开发者更专注于业务和服务端，轻松实现界面开发，带来绝佳的用户体验。" />
+    <link href="../core.css" rel="stylesheet" type="text/css" />
+    
+    <link href="common.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="header">
+        <div class="headerInner">
+            <a class="logo" href="http://www.miniui.com" title="jQuery MiniUI - 专业WebUI控件库">jQuery MiniUI</a>
+            <a id="why" href="/why">为什么选择MiniUI？</a>
+
+            <ul class="topmenu">
+                <li><a href="/"><span>首页</span></a></li>
+                <li onmouseover="showMenu('popup1', this)" onmouseout="hideMenu('popup1', this)"><a href="/product"><span>产品</span></a>
+                    <ul id="popup1" class="popupmenu">
+                        <li class="product"><a href="/product">产品介绍</a></li>
+                        <li><a href="/features">功能特性</a></li>
+                        <li><a href="/screenshots">界面截图</a></li>                        
+                        <li><a href="/support">支持服务</a></li>
+                        <li><a href="/license">授权方式</a></li>
+                        
+                        <li class="faq"><a href="/faq">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="/demo"><span>示例</span></a></li>
+                <li onmouseover="showMenu('popup2', this)" onmouseout="hideMenu('popup2', this)"><a href="/docs"><span>文档</span></a>
+                    <ul id="popup2" class="popupmenu">                        
+                        <li id="start_link"><a href="/docs/quickstart">快速入门</a></li>
+                        <li><a href="/docs/tutorial">开发教程</a></li>
+                        <li id="kb_link"><a href="/docs/kb">精华文章</a></li>
+                        <li><a href="/docs/api">Api参考手册</a></li>
+                    </ul>
+                </li>
+                <li><a href="/bbs"><span>论坛</span></a></li><li><a href="/download"><span>下载</span></a></li>
+                
+                <li><a href="/contact"><span>联系</span></a></li>
+            </ul>
+        
+     
+        </div>
+    </div>
+    <div class="topnav">
+        <div class="topnavInner">
+            <a href="/">首页</a>><a href="/docs">文档中心</a>><a href="/docs/tutorial">开发教程</a>><span>CRUD</span>
+        </div>
+    </div>
+    <div class="body " >
+        <div class="bodyInner">
+            
+        <div class="contentView">
+            <h3>CRUD之：弹出面板编辑</h3>
+            
+            <a title="DataGrid 弹出面板编辑" href="../../demo/datagrid/popupeditform.html" target="_blank"><img src="../api/images/popupeditform.gif" /></a>
+
+            <br /><br />
+            <p class="p_demo"><span class="note">参考示例</span>：<a href="../../demo/datagrid/popupeditform.html" target="_blank">CRUD之：弹出面板编辑</a></p>
+            <br />
+
+            <h4>一：创建弹出编辑面板</h4>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">div </span><span style="color:red">id</span><span style="color:blue">="editWindow" </span><span style="color:red">class</span><span style="color:blue">="mini-window" </span><span style="color:red">title</span><span style="color:blue">="Window" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:650px;" 
+    </span><span style="color:red">showModal</span><span style="color:blue">="true" </span><span style="color:red">allowResize</span><span style="color:blue">="true" </span><span style="color:red">allowDrag</span><span style="color:blue">="true"
+    &gt;
+    &lt;</span><span style="color:maroon">div </span><span style="color:red">id</span><span style="color:blue">="editform" </span><span style="color:red">class</span><span style="color:blue">="form" &gt;
+        &lt;</span><span style="color:maroon">input </span><span style="color:red">class</span><span style="color:blue">="mini-hidden" </span><span style="color:red">name</span><span style="color:blue">="id"/&gt;
+        &lt;</span><span style="color:maroon">table </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:100%;"&gt;
+            &lt;</span><span style="color:maroon">tr</span><span style="color:blue">&gt;
+                &lt;</span><span style="color:maroon">td </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:80px;"&gt;</span>员工帐号：<span style="color:blue">&lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+                &lt;</span><span style="color:maroon">td </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:150px;"&gt;&lt;</span><span style="color:maroon">input </span><span style="color:red">name</span><span style="color:blue">="loginname" </span><span style="color:red">class</span><span style="color:blue">="mini-textbox" /&gt;&lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+                &lt;</span><span style="color:maroon">td </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:80px;"&gt;</span>姓名：<span style="color:blue">&lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+                &lt;</span><span style="color:maroon">td </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:150px;"&gt;&lt;</span><span style="color:maroon">input </span><span style="color:red">name</span><span style="color:blue">="name" </span><span style="color:red">class</span><span style="color:blue">="mini-textbox" /&gt;&lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+                &lt;</span><span style="color:maroon">td </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:80px;"&gt;</span>薪资：<span style="color:blue">&lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+                &lt;</span><span style="color:maroon">td </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:150px;"&gt;&lt;</span><span style="color:maroon">input </span><span style="color:red">name</span><span style="color:blue">="salary" </span><span style="color:red">class</span><span style="color:blue">="mini-textbox" /&gt;&lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+            &lt;/</span><span style="color:maroon">tr</span><span style="color:blue">&gt;
+            &lt;</span><span style="color:maroon">tr</span><span style="color:blue">&gt;
+                &lt;</span><span style="color:maroon">td</span><span style="color:blue">&gt;</span>性别：<span style="color:blue">&lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+                &lt;</span><span style="color:maroon">td</span><span style="color:blue">&gt;&lt;</span><span style="color:maroon">input </span><span style="color:red">name</span><span style="color:blue">="gender" </span><span style="color:red">class</span><span style="color:blue">="mini-combobox" </span><span style="color:red">url</span><span style="color:blue">="mini_JSPath + '../../demo/data/genders.txt'"/&gt;&lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+                &lt;</span><span style="color:maroon">td</span><span style="color:blue">&gt;</span>年龄：<span style="color:blue">&lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+                &lt;</span><span style="color:maroon">td</span><span style="color:blue">&gt;&lt;</span><span style="color:maroon">input </span><span style="color:red">name</span><span style="color:blue">="age" </span><span style="color:red">class</span><span style="color:blue">="mini-spinner" </span><span style="color:red">minValue</span><span style="color:blue">="0" </span><span style="color:red">maxValue</span><span style="color:blue">="200" </span><span style="color:red">value</span><span style="color:blue">="25"  /&gt;&lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+                &lt;</span><span style="color:maroon">td</span><span style="color:blue">&gt;</span>出生日期：<span style="color:blue">&lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+                &lt;</span><span style="color:maroon">td</span><span style="color:blue">&gt;&lt;</span><span style="color:maroon">input </span><span style="color:red">name</span><span style="color:blue">="birthday" </span><span style="color:red">class</span><span style="color:blue">="mini-datepicker" /&gt;&lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+            &lt;/</span><span style="color:maroon">tr</span><span style="color:blue">&gt;
+            &lt;</span><span style="color:maroon">tr</span><span style="color:blue">&gt;
+                &lt;</span><span style="color:maroon">td </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">text-align</span><span style="color:blue">:right;</span><span style="color:red">padding-top</span><span style="color:blue">:5px;</span><span style="color:red">padding-right</span><span style="color:blue">:20px;" </span><span style="color:red">colspan</span><span style="color:blue">="6"&gt;
+                    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="Update_Button" </span><span style="color:red">href</span><span style="color:blue">="javascript:updateRow()"&gt;</span>Update<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt; 
+                    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="Cancel_Button" </span><span style="color:red">href</span><span style="color:blue">="javascript:cancelRow()"&gt;</span>Cancel<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;
+                &lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;                
+            &lt;/</span><span style="color:maroon">tr</span><span style="color:blue">&gt;
+       
+        &lt;/</span><span style="color:maroon">table</span><span style="color:blue">&gt;
+    &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+</span></pre>
+            
+
+
+            <h4>二：面板操作</h4>
+            <p>弹出加载面板数据：</p>
+<pre class="code"><span style="color:blue">var </span>editWindow = mini.get(<span style="color:maroon">"editWindow"</span>);
+editWindow.show();
+<span style="color:blue">var </span>form = <span style="color:blue">new </span>mini.Form(<span style="color:maroon">"#editform"</span>);
+form.loading();
+$.ajax({
+    url: <span style="color:maroon">"../data/DataService.aspx?method=GetEmployee&amp;id=" </span>+ row.id,
+    success: <span style="color:blue">function </span>(text) {
+        <span style="color:blue">var </span>o = mini.decode(text);
+        form.setData(o);
+        form.unmask();
+    },
+    error: <span style="color:blue">function </span>() {
+        alert(<span style="color:maroon">"表单加载错误"</span>);
+    }
+});
+</pre>
+            <p>保存提交面板数据：</p>
+<pre class="code"><span style="color:blue">var </span>form = <span style="color:blue">new </span>mini.Form(<span style="color:maroon">"#editform"</span>);
+<span style="color:blue">var </span>o = form.getData();
+
+grid.loading(<span style="color:maroon">"保存中，请稍后......"</span>);
+<span style="color:blue">var </span>json = mini.encode([o]);
+$.ajax({
+    url: <span style="color:maroon">"../data/DataService.aspx?method=SaveEmployees"</span>,
+    data: { employees: json },
+    success: <span style="color:blue">function </span>(text) {
+                    
+        grid.reload();
+    },
+    error: <span style="color:blue">function </span>(jqXHR, textStatus, errorThrown) {
+        alert(jqXHR.responseText);
+    }
+});
+
+editWindow.hide();
+</pre>    
+           
+
+         
+
+        </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <div id="copyright">Copyright © 上海普加软件有限公司版权所有 </div>
+            <div id="bottomlinks"><a href="/sitemap">网站导航</a>|<a href="/support">支持服务</a>|<a href="/license">授权方式</a>|<a href="/contact">联系我们</a></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+﻿{total:11,
+ data:[
+			{url:"BE.ico",name:"比利时"},
+			{url:"CZ.ico",name:"捷克"},
+			{url:"DE.ico",name:"德国"},
+			{url:"DK.ico",name:"丹麦"},
+			{url:"ES.ico",name:"西班牙"},
+			{url:"GB.ico",name:"英国"},
+			{url:"GR.ico",name:"希腊"},
+			{url:"HR.ico",name:"克罗地亚"},
+			{url:"IS.ico",name:"冰岛"},
+			{url:"IT.ico",name:"意大利"},
+			{url:"RU.ico",name:"俄罗斯"}
+]}

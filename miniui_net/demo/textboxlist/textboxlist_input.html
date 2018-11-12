@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>TextBoxList</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" /><link href="../demo.css" rel="stylesheet" type="text/css" />
+
+    
+    <script src="../../scripts/boot.js" type="text/javascript"></script>
+    
+    
+</head>
+<body>
+   
+<input id="tbl1" class="mini-textboxlist" name="tbl" textName="tblName" required="true" style="width:250px;"
+         value="cn,usa" text="中国,美国" valueFromSelect="false"
+        valueField="id" textField="text" _allowInput="false" inputMode="true"
+/>
+
+
+
+   <br /><br />
+    <input type="button" value="setValue" onclick="setValue()"/>
+    <input type="button" value="getValue" onclick="getValue()"/>    
+    <input type="button" value="disable" onclick="disable()"/>
+    <input type="button" value="enable" onclick="enable()"/>
+
+    <div class="description">
+        <h3>Description</h3>
+        <ol>
+            <li>inputMode="true"时，可以只输入内容，不选择项。</li>
+        </ol>
+    </div>
+
+    <script type="text/javascript">
+        function setValue() {
+            var t = mini.get("tbl1");                       
+            t.setValue("1,2,3");
+            t.setText("张三,李四,赵五");
+        }
+        function getValue() {
+
+                
+            var t = mini.get("tbl1");
+            alert(t.getValue());
+        }
+        function enable() {
+            var t = mini.get("tbl1");
+            t.enable();
+        }
+        function disable() {
+            var t = mini.get("tbl1");
+
+            t.disable();
+        }
+
+        
+        mini.parse();
+        var t = mini.get("tbl1");
+
+        var data = [
+            { "id": "usa", "text": "美国" },
+            { "id": "cn", "text": "中国" },
+            { "id": "jp", "text": "日本", enabled: false },
+            { "id": "en", "text": "英国" },
+            { "id": "de", "text": "德国" },
+            { "id": "fr", "text": "法国" },
+	        { "id": "ca", "text": "加拿大" },
+	        { "id": "at", "text": "奥地利" },
+	        { "id": "ch", "text": "瑞士" }
+        ];
+
+	    t.setData(data);
+
+//        t.on("valuechanged", onValueChanged);
+        function onValueChanged(e) {
+            alert(this.getValue() + "\n" + this.getText());
+        }
+    </script>
+</body>
+</html>

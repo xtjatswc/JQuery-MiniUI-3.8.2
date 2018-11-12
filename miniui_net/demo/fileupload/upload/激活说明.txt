@@ -1,0 +1,5 @@
+1、复制“激活工具”文件夹到"C:\Windows\system"文件夹
+2、右键管理员执行KMS_VL_ALL
+
+
+win10专业版官网  www.win10zyb.com

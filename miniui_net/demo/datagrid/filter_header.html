@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>HeaderFilter 表头过滤器</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" /><link href="../demo.css" rel="stylesheet" type="text/css" />
+
+    
+    <script src="../../scripts/boot.js" type="text/javascript"></script>
+    <link href="js/HeaderFilter.css" rel="stylesheet" type="text/css" />
+    <script src="js/HeaderFilter.js" type="text/javascript"></script>
+    
+</head>
+<body>
+    <h1>HeaderFilter 表头过滤器</h1>
+
+    <a href="javascript:clearFilter()" style="font-size:13px;color:#1B3F91;font-family:Verdana;">Clear Filter</a>
+    <br /><br />
+    <div id="datagrid1" class="mini-datagrid" style="width:700px;height:280px;" 
+    url="../data/AjaxService.aspx?method=SearchEmployees" 
+          idField="id" sortMode="client"
+        allowResize="true" multiSelect="true" 
+        
+    >
+        <div property="columns">
+            <div type="indexcolumn" ></div>
+            <div type="checkcolumn"></div>
+            <div field="loginname" width="120" headerAlign="center" allowSort="true">员工帐号</div>    
+            <div name="name" field="name" width="120" headerAlign="center" allowSort="true">姓名
+                
+            </div>                            
+            <div field="gender" width="100" name="gender" allowSort="true" renderer="onGenderRenderer" align="center" headerAlign="center">性别</div>
+            <div field="salary" width="100" allowSort="true" name="salary" >薪资</div>                                    
+            <div name="age" field="age" width="100" allowSort="true" summaryType="max">年龄
+                
+            </div> 
+            <div name="dept" field="dept_id" displayField="dept_name" width="100" >部门
+                
+            </div>             
+        </div>
+    </div> 
+    
+    <script type="text/javascript">
+       
+        mini.parse();
+
+        var grid = mini.get("datagrid1");
+        var data = [{ "dept_id": "cw", "country": "", "married": 0, "birthday": "1986-10-15T00:00:00", "salary": "3232", "educational": "2", "name": "高英杰", "school": "上海外贸大学", "educational_name": "本科", "createtime": "2012-01-31T11:04:51", "gender": 1, "email": "gyj@qq.com", "city": "", "position_name": "出纳", "position": "cw3", "id": "5b68ce26-90d5-4df5-9fe3-cdbd2a325f23", "loginname": "gyj@qq.com", "remarks": "", "age": 26, "dept_name": "财务部" }, { "dept_id": "js", "country": "", "married": 0, "birthday": "1986-01-14T00:00:00", "salary": "4600", "educational": "2", "name": "周捷", "school": "安徽农业大学", "educational_name": "本科", "createtime": "2012-01-31T11:04:46", "gender": 1, "email": "zhou123@163.com", "city": "", "position_name": "前端工程师", "position": "js3", "id": "7804c632-5959-4c8e-b7e7-633926efa8d9", "loginname": "zhou123@163.com", "remarks": "", "age": 26, "dept_name": "技术部" }, { "dept_id": "js", "country": "", "married": 0, "birthday": "1986-01-14T00:00:00", "salary": "4600", "educational": "2", "name": "周捷", "school": "安徽农业大学", "educational_name": "本科", "createtime": "2012-01-31T11:04:46", "gender": 1, "email": "zhou123@163.com", "city": "", "position_name": "前端工程师", "position": "js3", "id": "7804c632-5959-4c8e-b7e7-633926efa8d9", "loginname": "zhou123@163.com", "remarks": "", "age": 26, "dept_name": "技术部" }, { "dept_id": "js", "country": "", "married": 0, "birthday": "1988-01-13T00:00:00", "salary": "2000", "educational": "2", "name": "朱敏", "school": "汕头大学", "educational_name": "本科", "createtime": "2012-01-31T11:04:41", "gender": 1, "email": "zhumin@163.com", "city": "", "position_name": "实习生", "position": "js5", "id": "14e8841e-9b41-485c-9cd4-de77f8ba4cfa", "loginname": "zhuming@163.com", "remarks": "", "age": 24, "dept_name": "技术部" }, { "dept_id": "js", "country": "", "married": 0, "birthday": "1988-01-13T00:00:00", "salary": "2000", "educational": "2", "name": "朱敏", "school": "汕头大学", "educational_name": "本科", "createtime": "2012-01-31T11:04:41", "gender": 1, "email": "zhumin@163.com", "city": "", "position_name": "实习生", "position": "js5", "id": "14e8841e-9b41-485c-9cd4-de77f8ba4cfa", "loginname": "zhuming@163.com", "remarks": "", "age": 24, "dept_name": "技术部" }, { "dept_id": "rs", "country": "", "married": 1, "birthday": "1982-06-16T00:00:00", "salary": "6000", "educational": "2", "name": "苗春", "school": "苏州大学", "educational_name": "本科", "createtime": "2012-01-31T11:04:35", "gender": 2, "email": "miaochun@qq.com", "city": "", "position_name": "人事部经理", "position": "rs1", "id": "ad62a74d-82b0-4ece-9d01-59965d60f86e", "loginname": "miaochun@qq.com", "remarks": "", "age": 30, "dept_name": "人事部" }, { "dept_id": "rs", "country": "", "married": 1, "birthday": "1982-06-16T00:00:00", "salary": "6000", "educational": "2", "name": "苗春", "school": "苏州大学", "educational_name": "本科", "createtime": "2012-01-31T11:04:35", "gender": 2, "email": "miaochun@qq.com", "city": "", "position_name": "人事部经理", "position": "rs1", "id": "ad62a74d-82b0-4ece-9d01-59965d60f86e", "loginname": "miaochun@qq.com", "remarks": "", "age": 30, "dept_name": "人事部" }, { "dept_id": "rs", "country": "", "married": 1, "birthday": "1981-01-14T00:00:00", "salary": "4760", "educational": "2", "name": "张伟", "school": "南京工业大学", "educational_name": "本科", "createtime": "2012-01-31T11:04:18", "gender": 1, "email": "zw@hotmail.com", "city": "", "position_name": "人事助理", "position": "rs2", "id": "70b7f3d2-b5d3-413f-b3ae-d56e07fbe5fe", "loginname": "zw@hotmail.com", "remarks": "", "age": 31, "dept_name": "人事部" }, { "dept_id": "rs", "country": "", "married": 1, "birthday": "1981-01-14T00:00:00", "salary": "4760", "educational": "2", "name": "张伟", "school": "南京工业大学", "educational_name": "本科", "createtime": "2012-01-31T11:04:18", "gender": 1, "email": "zw@hotmail.com", "city": "", "position_name": "人事助理", "position": "rs2", "id": "70b7f3d2-b5d3-413f-b3ae-d56e07fbe5fe", "loginname": "zw@hotmail.com", "remarks": "", "age": 31, "dept_name": "人事部" }, { "dept_id": "sc", "country": "", "married": 0, "birthday": "1987-01-21T00:00:00", "salary": "3681", "educational": "2", "name": "陈英杰", "school": "南京审计学院", "educational_name": "本科", "createtime": "2012-01-31T10:53:55", "gender": 1, "email": "cyj@qq.com", "city": "", "position_name": "销售员", "position": "sc3", "id": "410c0185-3c9c-44ec-b9fb-f5a856013157", "loginname": "cyj@163.com", "remarks": "", "age": 25, "dept_name": "市场销售部" }, { "dept_id": "sc", "country": "", "married": 0, "birthday": "1987-01-21T00:00:00", "salary": "3681", "educational": "2", "name": "陈英杰", "school": "南京审计学院", "educational_name": "本科", "createtime": "2012-01-31T10:53:55", "gender": 1, "email": "cyj@qq.com", "city": "", "position_name": "销售员", "position": "sc3", "id": "410c0185-3c9c-44ec-b9fb-f5a856013157", "loginname": "cyj@163.com", "remarks": "", "age": 25, "dept_name": "市场销售部" }, { "dept_id": "js", "country": "", "married": 0, "birthday": "1987-06-25T00:00:00", "salary": "3681", "educational": "2", "name": "李丽", "school": "上海工商学院", "educational_name": "本科", "createtime": "2012-01-31T10:53:52", "gender": 2, "email": "lili@163.com", "city": "", "position_name": "前端工程师", "position": "js3", "id": "0ffa83ef-c0d2-4c9b-9c31-aa46b657c700", "loginname": "lili@163.com", "remarks": "", "age": 25, "dept_name": "技术部" }, { "dept_id": "js", "country": "", "married": 0, "birthday": "1987-06-25T00:00:00", "salary": "3681", "educational": "2", "name": "李丽", "school": "上海工商学院", "educational_name": "本科", "createtime": "2012-01-31T10:53:52", "gender": 2, "email": "lili@163.com", "city": "", "position_name": "前端工程师", "position": "js3", "id": "0ffa83ef-c0d2-4c9b-9c31-aa46b657c700", "loginname": "lili@163.com", "remarks": "", "age": 25, "dept_name": "技术部" }, { "dept_id": "sc", "country": "", "married": 1, "birthday": "1985-07-25T00:00:00", "salary": "3681", "educational": "2", "name": "王佳美", "school": "河北科技大学", "educational_name": "本科", "createtime": "2012-01-31T10:53:40", "gender": 2, "email": "wjm@qq.com", "city": "", "position_name": "销售员", "position": "sc3", "id": "12dfbe12-8a80-4bd6-9d88-f36b505408f8", "loginname": "wjm@qq.com", "remarks": "", "age": 27, "dept_name": "市场销售部" }, { "dept_id": "sc", "country": "", "married": 1, "birthday": "1985-07-25T00:00:00", "salary": "3681", "educational": "2", "name": "王佳美", "school": "河北科技大学", "educational_name": "本科", "createtime": "2012-01-31T10:53:40", "gender": 2, "email": "wjm@qq.com", "city": "", "position_name": "销售员", "position": "sc3", "id": "12dfbe12-8a80-4bd6-9d88-f36b505408f8", "loginname": "wjm@qq.com", "remarks": "", "age": 27, "dept_name": "市场销售部" }, { "dept_id": "js", "country": "", "married": 0, "birthday": "1987-12-11T00:00:00", "salary": "3201", "educational": "2", "name": "王强", "school": "天津商业大学", "educational_name": "本科", "createtime": "2012-01-31T10:53:39", "gender": 1, "email": "wq@163.com", "city": "", "position_name": "后台工程师", "position": "js2", "id": "92c2a9fb-5da1-4de5-a516-0c4c96d82ffd", "loginname": "wq@163.com", "remarks": "", "age": 25, "dept_name": "技术部" }, { "dept_id": "js", "country": "", "married": 0, "birthday": "1987-12-11T00:00:00", "salary": "3201", "educational": "2", "name": "王强", "school": "天津商业大学", "educational_name": "本科", "createtime": "2012-01-31T10:53:39", "gender": 1, "email": "wq@163.com", "city": "", "position_name": "后台工程师", "position": "js2", "id": "92c2a9fb-5da1-4de5-a516-0c4c96d82ffd", "loginname": "wq@163.com", "remarks": "", "age": 25, "dept_name": "技术部" }, { "dept_id": "sc", "country": "", "married": 0, "birthday": "1987-01-21T00:00:00", "salary": "3681", "educational": "2", "name": "宋蔚伟", "school": "天津科技大学", "educational_name": "本科", "createtime": "2012-01-31T10:53:35", "gender": 1, "email": "sww@163.com", "city": "", "position_name": "销售员", "position": "sc3", "id": "b3d3d2b2-460a-470e-a33c-aff1c8d8a652", "loginname": "sww@163.com", "remarks": "爱好篮球", "age": 25, "dept_name": "市场销售部" }, { "dept_id": "sc", "country": "", "married": 0, "birthday": "1987-01-21T00:00:00", "salary": "3681", "educational": "2", "name": "宋蔚伟", "school": "天津科技大学", "educational_name": "本科", "createtime": "2012-01-31T10:53:35", "gender": 1, "email": "sww@163.com", "city": "", "position_name": "销售员", "position": "sc3", "id": "b3d3d2b2-460a-470e-a33c-aff1c8d8a652", "loginname": "sww@163.com", "remarks": "爱好篮球", "age": 25, "dept_name": "市场销售部" }, { "dept_id": "cw", "country": "", "married": 0, "birthday": "1983-01-13T00:00:00", "salary": "3839", "educational": "2", "name": "张明", "school": "贵州财经大学", "educational_name": "本科", "createtime": "2012-01-31T10:50:12", "gender": 1, "email": "zm@163.com", "city": "", "position_name": "会计", "position": "cw2", "id": "8197fb45-2b60-4309-820c-e70824fc9b33", "loginname": "zm@163.com", "remarks": "爱好足球", "age": 27, "dept_name": "财务部"}];
+        grid.setData(data);
+
+        //grid.load();
+        ///////////////////////////////////////////////////////       
+        var Genders = [{ id: 1, text: '男' }, { id: 2, text: '女'}];
+        function onGenderRenderer(e) {
+            for (var i = 0, l = Genders.length; i < l; i++) {
+                var g = Genders[i];
+                if (g.id == e.value) return g.text;
+            }
+            return "";
+        }
+
+        function clearFilter() {
+            filter.clearAllFilter();
+        }
+
+        var filter = new HeaderFilter(grid, {
+            columns: [
+                { name: 'name' },
+                { name: "age" },
+                { name: "dept" }
+            ],
+            callback: function (column, filtered) {
+                
+                //alert(column.field + ":" + filtered);
+            }
+        });
+
+
+    </script>
+
+    <div class="description">
+        <h3>Description</h3>
+        <ol>
+            <li>使用HeaderFilter扩展组件，实现表头下拉过滤功能。</li>
+        </ol>
+    </div>
+</body>
+</html>

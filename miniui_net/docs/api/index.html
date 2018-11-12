@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery MiniUI V3.0 Api Documentation</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+    
+<!--    <script src="../../scripts/jquery-1.6.2.min.js" type="text/javascript"></script>
+    <script src="../../scripts/miniui/miniui.js" type="text/javascript"></script>
+    <link href="../../scripts/miniui/themes/default/miniui.css" rel="stylesheet" type="text/css" />-->
+    <script src="../../scripts/boot.js" type="text/javascript"></script>
+
+    <style type="text/css">
+    html, html body
+    {
+        padding:0;border:0;margin:0;
+        width:100%;height:100%;overflow:hidden;
+        font-family:Verdana;
+        font-size:12px;    
+        line-height:22px;
+    }
+    /*.header
+    {
+        background:url(../api/images/header.gif) repeat-x;
+    }*/
+    .app-header div
+    {
+        font-family:'Trebuchet MS',Arial,sans-serif;
+        font-size:25px;line-height:60px;padding-left:10px;font-weight:bold;color:#333;        
+    }
+
+    
+    body .app-header .topNav
+    {
+        position:absolute;right:8px;top:10px;        
+        font-size:12px;
+        line-height:25px;
+    }
+    .app-header .topNav a
+    {
+        text-decoration:none;
+        color:#222;
+        font-weight:normal;
+        font-size:12px;
+        line-height:25px;
+        margin-left:3px;
+        margin-right:3px;
+    }
+    .app-header .topNav a:hover
+    {
+        text-decoration:underline;
+        color:Blue;
+    }   
+     .mini-layout-region-south img
+    {
+        vertical-align:top;
+    }
+    </style>
+    <script src="core.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="mini-layout" style="width:100%;height:100%;">
+    <div title="north" region="north" class="app-header" bodyStyle="overflow:hidden;" height="80" showHeader="false" allowResize="false">
+        <div>jQuery MiniUI Api Documentation</div>
+        <div class="topNav">    
+            <a href="../../index.html">首页</a> |
+            <a href="../../demo/index.html">在线示例</a> |
+            <a href="../api/index.html">Api手册</a> |
+            <a href="../tutorial/index.html">开发教程</a> |
+            <a href="../quickstart/index.html">快速入门</a>
+        </div>
+    </div>
+    <div showHeader="false" region="south" style="border:0;text-align:center;" height="25" showSplit="false">
+        Copyright © 上海普加软件有限公司版权所有 
+    </div>
+    <div region="west" title="Api Documentation" showHeader="true" bodyStyle="padding-left:1px;" width="230" minWidth="100" maxWidth="350">
+        <ul id="apiTree" class="mini-tree" showTreeIcon="true" style="width:100%;height:100%;" enableHotTrack="false">
+            <li><a href="overview.html" target="main">Overview</a></li>
+            <li>
+			    <span expanded="false">Base</span>
+			    <ul>
+                    <li><a href="base.html" target="main">Base</a></li>
+				    <li><a href="ajax.html" target="main">Ajax</a></li>
+				    <li><a href="json.html" target="main">JSON</a></li>
+                    <li><a href="date.html" target="main">Date</a></li>
+                    <li><a href="control.html" target="main">Control</a></li>
+                    <li><a href="messagebox.html" target="main">MessageBox</a></li>                     
+			    </ul>
+		    </li>
+            <li>
+			    <span expanded="false">Forms</span>
+			    <ul>
+                    <li><a href="databinding.html" target="main">DataBinding</a></li>
+                    <li><a href="form.html" target="main">Form</a></li>
+                    <li><a href="progressbar.html" target="main">ProgressBar</a></li>
+                    <li><a href="tooltip.html" target="main">ToolTip</a></li>
+                    <li><a href="autocomplete.html" target="main">AutoComplete</a></li> 
+                    <li><a href="textboxlist.html" target="main">TextBoxList</a></li> 
+				    <li><a href="button.html" target="main">Button</a></li>
+                    <li><a href="checkbox.html" target="main">CheckBox</a></li>
+                    <li><a href="listbox.html" target="main">ListBox</a></li>
+                    <li><a href="checkboxlist.html" target="main">CheckBoxList</a></li>
+                    <li><a href="radiobuttonlist.html" target="main">RadioButtonList</a></li>                    
+                    <li><a href="calendar.html" target="main">Calendar</a></li>
+                    <li><a href="buttonedit.html" target="main">ButtonEdit</a></li>
+		<li><a href="filteredit.html" target="main">FilterEdit</a></li>
+                    <li><a href="popupedit.html" target="main">PopupEdit</a></li>
+                    <li><a href="textbox.html" target="main">TextBox</a></li>
+                    <li><a href="password.html" target="main">Password</a></li>  
+                    <li><a href="textarea.html" target="main">TextArea</a></li>
+                    <li><a href="combobox.html" target="main">ComboBox</a></li>
+                    <li><a href="datepicker.html" target="main">DatePicker</a></li>       
+<li><a href="monthpicker.html" target="main">MonthPicker</a></li>       
+                    <li><a href="spinner.html" target="main">Spinner</a></li>       
+                    <li><a href="timespinner.html" target="main">TimeSpinner</a></li>       
+                    <li><a href="treeselect.html" target="main">TreeSelect</a></li>       
+                    <li><a href="lookup.html" target="main">Lookup</a></li>    
+                    <li><a href="htmlfile.html" target="main">HtmlFile</a></li>
+                    <li><a href="fileupload.html" target="main">FileUpload</a></li> 
+                    <li><a href="hidden.html" target="main">Hidden</a></li>
+			    </ul>
+		    </li>
+            <li>
+			    <span expanded="true">Lists</span>
+			    <ul>
+				    <li><a href="datagrid.html" target="main">DataGrid</a></li>
+				    <li><a href="tree.html" target="main">Tree</a></li>
+                    <li><a href="treegrid.html" target="main">TreeGrid</a></li>                    
+			    </ul>
+		    </li>
+            <li>
+			    <span expanded="true">Layouts</span>
+			    <ul>
+                    <li><a href="fit.html" target="main">Fit</a></li>
+				    <li><a href="panel.html" target="main">Panel</a></li>   
+                    <li><a href="window.html" target="main">Window</a></li>                 
+                    <li><a href="splitter.html" target="main">Splitter</a></li>
+                    <li><a href="Layout.html" target="main">Layout</a></li>	                    
+			    </ul>
+		    </li>
+            <li>
+			    <span expanded="false">Navigations</span>
+			    <ul>
+                    <li><a href="pager.html" target="main">Pager</a></li>                    
+                    <li><a href="outlookbar.html" target="main">OutlookBar</a></li>
+                    <li><a href="outlookmenu.html" target="main">OutlookMenu</a></li>
+                    <li><a href="outlooktree.html" target="main">OutlookTree</a></li>
+                    <li><a href="tree.html" target="main">Tree</a></li>
+                    <li><a href="tabs.html" target="main">Tabs</a></li>
+				    <li><a href="menu.html" target="main">Menu</a></li>
+                    <li><a href="menuitem.html" target="main">MenuItem</a></li>                    
+                    <li><a href="toolbar.html" target="main">Toolbar</a></li>                    
+			    </ul>
+		    </li>
+        </ul>
+
+    </div>
+    <div title="center" region="center" bodyStyle="overflow:hidden;">
+        <iframe onload="onIFrameLoad(this)" src="overview.html" id="mainframe" frameborder="0" name="main" style="width:100%;height:100%;" border="0"></iframe>
+    </div>
+
+</div>
+    <script type="text/javascript">
+        mini.parse();
+    </script>
+<script src="../../scripts/tongji.js" type="text/javascript"></script>
+</body>
+</html>

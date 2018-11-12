@@ -1,0 +1,348 @@
+﻿body 
+{
+	color: #252525;
+    font-family: Verdana,"宋体",Arial,Helvetica;
+    font-size: 12px;
+}
+img
+{
+    border: 0;
+}
+b
+{
+    font-weight: bold;
+}
+
+.clear
+{
+    clear: both;
+}
+#wrapper
+{
+    width: 910px;
+    margin: 10px auto;
+}
+
+/*header*/
+#header
+{
+    width: 910px;
+    clear: both;
+}
+
+
+#mini_nav_block
+{
+    font-size: 12px;
+    float: right;
+    padding-top: 12px;
+    color: #999;
+    padding-right: 10px;
+}
+#mininav
+{
+    width: 910px;
+    height: 40px;
+    background: url(bg_mininav2.gif);
+    border:1px solid #92C8FA;
+}
+#logo
+{
+    float: left;
+    padding-left: 20px;
+    padding-top:5px;
+}
+.logoText
+{
+    font-family:"Trebuchet MS",Arial,sans-serif;
+    font-size:20px;
+    padding-top:2px;
+}
+
+#banner {
+    background: url("banner-bg.gif") repeat-x scroll 0 -170px #E0F2FF;
+    cursor: default;
+    height: 310px;
+    position: relative;
+    border:1px solid #92C8FA;
+    margin:8px 0;
+    width:910px;
+}
+#onlinedemoLink, #downloadLink {
+    background: url("deme_button.gif") no-repeat scroll -3px -3px transparent;
+    display: block;
+    height: 35px;
+    left: 30px;
+    position: absolute;
+    top: 230px;
+    width: 152px;
+}
+#downloadLink {
+    background: url("download_button.gif") no-repeat scroll 0 -3px transparent;
+    left: 200px;
+}
+.banner-title {
+    color: #000000;
+    font-family: 微软雅黑,黑体,宋体;
+    font-size: 25px;
+    left: 30px;
+    position: absolute;
+    top: 35px;
+}
+.indexBanner-content li {
+    background: url("ok.gif") no-repeat scroll 2px 4px transparent;
+    line-height: 26px;
+    list-style: none outside none;
+    margin: 0;
+    padding-left: 28px;
+}
+.indexBanner-content {
+    color: #000000;
+    font-family: Tahoma,宋体;
+    font-size: 14px;
+    left: 0px;
+    position: absolute;
+    top: 80px;
+}
+#bannerImg {
+    position: absolute;
+    right: 20px;
+    top: 40px;
+}
+.side_left
+{
+	float:left;
+    margin-right: 5px;
+    width: 600px;
+}
+.side_middle
+{
+    width: 600px;
+}
+.side_right
+{
+	float:left;
+    margin-left: 5px;
+    width: 300px;
+}
+.side_left li{
+    display: block;
+    margin: 0 0 4px;
+    min-height: 16px;
+    padding: 1px 0;
+    text-align: left;
+}
+.title {
+    background: url(title_bg.gif) repeat-x scroll 0 0 #E5EDF2;
+    border: 0 none;
+    height: 28px;
+    position: relative;
+}
+.title h3 {
+    color:#252525;
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    height: 28px;
+    line-height: 28px;
+    text-indent: 1em;
+    margin:0;
+}
+#wrapper a
+{
+	color: #252525;
+    text-decoration: none;
+}
+#wrapper .list_block .more a
+{
+    float: right;
+    padding-right: 5px;
+    text-decoration:none;
+}
+.list_block
+{
+    border:1px solid #92C8FA;
+    padding: 1px;
+    margin-bottom: 8px;
+}
+.list_block ul
+{
+    list-style:none;
+    margin-left:0;
+    padding:0;
+}
+.list_block li
+{
+    padding-right:10px;
+}
+.list_block .sec
+{
+    padding-top:3px;
+    padding-bottom:2px;
+}
+.list_block ul li a
+{
+	font-weight:bold;
+}
+.list_block ul li .sec a
+{
+	font-weight:normal;
+}
+.list_block ul li a, .list_block p b a {
+    color: #252525;
+    font-size: 14px;
+    line-height: 22px;
+    text-decoration: none;
+    width: auto;
+}
+#wrapper .list_block ul li .sec a:hover
+{
+	color:#075DB3;
+	text-decoration:underline;
+}
+#footer
+{
+    width: 910px;
+    text-align: center;
+    margin: 10px auto;
+}
+#footer a, #footer a:visited
+{
+    color: #333;
+    text-decoration: none;
+    padding: 5px;
+}
+#footer a:hover
+{
+    color: #c00;
+}
+.gray_line
+{
+    background: transparent url(bg_line.gif) repeat-x scroll 0 0;
+    height: 1px;
+    margin: 6px 4px 0;
+    overflow: hidden;
+}
+.uiList
+{
+	border:1px solid #92C8FA;
+	margin: 0 auto;
+	width:910px;
+	clear: both;
+    cursor: default;
+
+}
+.formList
+{
+	float: left;
+    width: 310px;
+}
+.uiListContent {
+    float: left;
+    margin-right: 40px;
+    padding-left: 0;
+}
+.uiList a {
+    background: url("a.gif") no-repeat scroll -5px 4px transparent;
+    color: #222222;
+    display: block;
+    font-family: "Trebuchet MS",Arial,sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    padding-left: 16px;
+}
+.layoutList {
+    float: left;
+    width: 200px;
+}
+.navList
+{
+	float: left;
+    width: 200px;
+}
+.listList
+{
+	float: left;
+    width: 150px;
+}
+.uiList a
+{
+	text-decoration:none;
+}
+.uiList h1 
+{
+	background: url("formIcon.png") no-repeat scroll 0 0 transparent;
+    font-family: 微软雅黑,黑体,宋体;
+    font-size: 15px;
+    height: 50px;
+    margin: 0;
+    padding: 0 0 0 50px;
+}
+.uiList a:hover
+{
+	text-decoration:underline;
+	color: #075DB3;
+}
+#source
+{
+	padding:10px;
+}
+#source a
+{
+	font-size:15px;
+}
+.sec
+{
+	padding-left:20px;
+}
+#wrapper .list_block .sec a
+{
+	font-size:12px;
+	text-decoration:none;
+	margin-right:8px;
+}
+#feature
+{
+	
+	line-height:30px;
+	position:relative;
+	height:197px;
+}
+#feature ul
+{
+	padding-left:12px;
+	margin:0;
+}
+#feature li
+{
+	list-style-type:none;
+	padding-top:5px;
+	height:20px;
+}
+#feature li a
+{
+	font-weight:normal;
+}
+.list_block #feature ul li a 
+{
+	font-size:13px;
+}
+#getstart
+{
+	padding-left:30px;
+}
+#getstart li
+{
+	float:left;
+	margin-right:25px;
+}
+#getstart li a
+{
+	font-size:13px;
+	font-weight:normal;
+	color:#075DB3;
+}
+#getstart li a:hover
+{
+	text-decoration:underline;
+}

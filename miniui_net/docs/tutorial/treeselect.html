@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery MiniUI - 专业WebUI控件库</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="jquery,web,grid,表格,datagrid,js,javascript,ajax,web开发,tree,table" />   
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。它能缩短开发时间，减少代码量，使开发者更专注于业务和服务端，轻松实现界面开发，带来绝佳的用户体验。" />
+    <link href="../core.css" rel="stylesheet" type="text/css" />
+    
+    <link href="common.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="header">
+        <div class="headerInner">
+            <a class="logo" href="http://www.miniui.com" title="jQuery MiniUI - 专业WebUI控件库">jQuery MiniUI</a>
+            <a id="why" href="/why">为什么选择MiniUI？</a>
+
+            <ul class="topmenu">
+                <li><a href="/"><span>首页</span></a></li>
+                <li onmouseover="showMenu('popup1', this)" onmouseout="hideMenu('popup1', this)"><a href="/product"><span>产品</span></a>
+                    <ul id="popup1" class="popupmenu">
+                        <li class="product"><a href="/product">产品介绍</a></li>
+                        <li><a href="/features">功能特性</a></li>
+                        <li><a href="/screenshots">界面截图</a></li>                        
+                        <li><a href="/support">支持服务</a></li>
+                        <li><a href="/license">授权方式</a></li>
+                        
+                        <li class="faq"><a href="/faq">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="/demo"><span>示例</span></a></li>
+                <li onmouseover="showMenu('popup2', this)" onmouseout="hideMenu('popup2', this)"><a href="/docs"><span>文档</span></a>
+                    <ul id="popup2" class="popupmenu">                        
+                        <li id="start_link"><a href="/docs/quickstart">快速入门</a></li>
+                        <li><a href="/docs/tutorial">开发教程</a></li>
+                        <li id="kb_link"><a href="/docs/kb">精华文章</a></li>
+                        <li><a href="/docs/api">Api参考手册</a></li>
+                    </ul>
+                </li>
+                <li><a href="/bbs"><span>论坛</span></a></li><li><a href="/download"><span>下载</span></a></li>
+                
+                <li><a href="/contact"><span>联系</span></a></li>
+            </ul>
+        
+     
+        </div>
+    </div>
+    <div class="topnav">
+        <div class="topnavInner">
+            <a href="/">首页</a>><a href="/docs">文档中心</a>><a href="/docs/tutorial">开发教程</a>><span>表单控件</span>
+        </div>
+    </div>
+    <div class="body " >
+        <div class="bodyInner">
+            
+        <div class="contentView">
+            <h3>TreeSelect：树形选择框</h3>
+                
+            <a title="TreeSelect：树形选择框" href="../../demo/treeselect/treeselect.html" target="_blank"><img src="../api/images/treeselect.gif"/></a>
+            <br /><br />
+            <p class="p_demo"><span class="note">参考示例</span>：
+                <a href="../../demo/treeselect/treeselect.html" target="_blank">TreeSelect：树形选择框</a></p>
+            <br />
+
+            <h4>创建TreeSelect</h4>    
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">input </span><span style="color:red">id</span><span style="color:blue">="select1" </span><span style="color:red">class</span><span style="color:blue">="mini-treeselect" </span><span style="color:red">url</span><span style="color:blue">="../data/listTree.txt" 
+    </span><span style="color:red">textField</span><span style="color:blue">="text" </span><span style="color:red">valueField</span><span style="color:blue">="id" </span><span style="color:red">parentField</span><span style="color:blue">="pid" 
+/&gt;
+</span></pre>
+
+            <h4>数据结构</h4>
+<pre class="code">[
+    {id: "base", text: "Base", expanded: false},
+    
+    {id: "ajax", text: "Ajax", pid: "base"},
+    {id: "json", text: "JSON", pid: "base"},
+    {id: "date", text: "Date", pid: "base"},
+    {id: "control", text: "Control", pid: "base"},
+
+    {id: "forms", text: "Forms", expanded: false},
+    
+    {id: "button", text: "Button", pid: "forms"},
+    {id: "listbox", text: "ListBox", pid: "forms"},
+    {id: "checkboxlist", text: "CheckBoxList", pid: "forms"},
+    
+    {id: "lists", text: "Lists", expanded: false},
+    
+    {id: "datagrid", text: "DataGrid", pid: "lists"},            
+    {id: "tree", text: "Tree", pid: "lists"},
+    {id: "treegrid", text: "TreeGrid ", pid: "lists"},
+
+    {id: "layouts", text: "Layouts", expanded: false},
+    
+    {id: "panel", text: "Panel", pid: "layouts"},
+    {id: "splitter", text: "Splitter", pid: "layouts"},
+    {id: "layout", text: "Layout ", pid: "layouts"},
+
+    {id: "navigations", text: "Navigations", expanded: false},
+        
+    {id: "pager", text: "Pager", pid: "navigations"},
+    {id: "tabs", text: "Tabs", pid: "navigations"},
+    {id: "navbar", text: "OutlookBar", pid: "navigations"},
+    {id: "menu", text: "Menu", pid: "navigations"}
+
+]
+</pre>
+
+
+        </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <div id="copyright">Copyright © 上海普加软件有限公司版权所有 </div>
+            <div id="bottomlinks"><a href="/sitemap">网站导航</a>|<a href="/support">支持服务</a>|<a href="/license">授权方式</a>|<a href="/contact">联系我们</a></div>
+        </div>
+    </div>
+</body>
+</html>

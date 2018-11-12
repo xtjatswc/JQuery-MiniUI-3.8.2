@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+ 
+    <title>TinyMCE(弹出)</title>
+    <script src="../../../../scripts/boot.js" type="text/javascript"></script>
+    <script src="https://cdn.bootcss.com/tinymce/4.6.6/tinymce.min.js" type="text/javascript"></script>
+   
+</head>
+<body>
+    <div id="win1" class="mini-window" title="表单" style="width:850px;height:500px;"
+        showFooter="true">
+        <div>文本编辑器：</div>
+        <div id="tinymce">
+            <p>MiniUI - 专业WebUI控件库</p>
+           </br>
+           <p>   快速开发，减少50%代码量</p>
+           <p>   丰富组件库，高性能、低内存</p>
+           <p>   支持 Java、.NET、PHP</p>
+           <p>   支持 IE6+、FireFox、Chrome</p>
+        </div>
+         <div property="footer" style="text-align:right;padding:5px;">
+            <a class="mini-button" onclick="getContent()" style="margin-right:20px">获取文章内容</a>
+            <a class="mini-button" onclick="setContent()" style="margin-right:20px">更新文章内容</a>
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+    mini.parse();
+    var win1 = mini.get("win1");
+    win1.show();
+    tinymce.init({
+        selector: '#tinymce',
+        height: 280
+    });
+
+    function getContent() {
+        var arr = tinymce.get('tinymce').getContent();
+        alert(arr);
+    };
+
+    function setContent() {
+        tinymce.get('tinymce').setContent('MiniUI - 专业WebUI控件库');
+    }
+</script>

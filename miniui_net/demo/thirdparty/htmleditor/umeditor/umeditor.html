@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>UMEditor</title>
+    <script src="../../../../scripts/boot.js" type="text/javascript"></script>
+
+     <link href="http://ueditor.baidu.com/umeditor/themes/default/css/umeditor.min.css" rel="stylesheet" type="text/css" />    
+    <script src="http://ueditor.baidu.com/umeditor/third-party/template.min.js" type="text/javascript"></script>
+    <script src="http://ueditor.baidu.com/umeditor/umeditor.config.js" type="text/javascript"></script>
+    <script src="http://ueditor.baidu.com/umeditor/umeditor.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <div class="mini-panel" title="表单" style="width:850px;height:auto;" bodyStyle="overflow:hidden;"
+         showCollapseButton="true">
+
+        <div style="padding:5px">文本编辑器：</div>
+        <div type="text/plain" id="myEditor" style="height:300px" Readonly="true">
+            
+           <p>MiniUI - 专业WebUI控件库</p>
+           </br>
+           <p>   快速开发，减少50%代码量</p>
+           <p>   丰富组件库，高性能、低内存</p>
+           <p>   支持 Java、.NET、PHP</p>
+           <p>   支持 IE6+、FireFox、Chrome</p>
+        </div>
+    </div>
+    <div style="margin-top:20px">
+        <table>
+          <tr>
+            <td> <a class="mini-button" onclick="setContent">设置编辑器的值</a></td>
+            <td style="padding-left:5px;"><a class="mini-button" onclick="getContent">获取编辑器的值</a></td>
+          </tr>
+          <tr style="padding-top:10px;">
+            <td> <a class="mini-button" onclick="setDisabled">设置编辑器只读</a></td>
+            <td style="padding-left:5px;"> <a class="mini-button" onclick="setEnabled">取消编辑器只读</a></td>
+          </tr>
+        </table>
+    </div>
+ 
+</body>
+</html>
+<script type="text/javascript">
+    mini.parse();
+    var um = UM.getEditor('myEditor');
+
+    
+    
+    function getContent() {
+        var arr = um.getContent();
+        alert(arr);
+    };
+    function setContent() {
+        um.setContent('MiniUI - 专业WebUI控件库');
+    }
+    function setDisabled() {
+
+        um.setDisabled('fullscreen');
+
+    };
+    function setEnabled() {
+        um.setEnabled();
+    }
+
+</script>

@@ -1,0 +1,317 @@
+﻿<html>
+<head>
+    <title>TextBox - jQuery MiniUI 3.0 Documentation</title>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="core.js" type="text/javascript"></script>
+</head>
+<body>
+    <h3>mini.TextBox</h3>
+    
+    <p>文本输入框。</p>
+
+    <h4>Extend</h4>
+    <p> <a class="extendlink" href="control.html">mini.Control</a></p>    
+    
+    <h4>Examples</h4>
+    <a class="demo" href="../../demo/textbox/textbox.html" target="_blank">Textbox</a>
+
+    <h4>Properties</h4>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th><th><a href="setsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Set? </a></th><th><a href="getsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Get? </a></th><th><a href="tagsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Tag? </a></th></tr>             
+        
+        <tr>
+            <td>emptyText</td>
+            <td>String</td>
+            <td>文本为空时的提示内容</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>value</td>
+            <td>String</td>
+            <td>值</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>allowInput</td>
+            <td>Boolean</td>
+            <td>允许文本输入</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>        
+        <tr>
+            <td>selectOnFocus</td>
+            <td>Boolean</td>
+            <td>获取焦点时选中文本</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>        
+        <tr>
+            <td>maxLength</td>
+            <td>Number</td>
+            <td>最大字符串</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>   
+        <tr>
+            <td>inputStyle</td>
+            <td>String</td>
+            <td>输入框样式。比如：inputStyle="text-align:right;"</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>   
+        <tr>
+            <td>errorMode</td>
+            <td>String：icon、border、none</td>
+            <td>错误提示方式</td>
+            <td>icon</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>validateOnChanged</td>
+            <td>Boolean</td>
+            <td>值改变时验证</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>validateOnLeave</td>
+            <td>Boolean</td>
+            <td>失去焦点时验证</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>forceValidate</td>
+            <td>Boolean</td>
+            <td>是否隐藏、禁用时都能强制验证</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        
+        <tr>
+            <td>indentSpace</td>
+            <td>Boolean</td>
+            <td>是否显示占位空白</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>required</td>
+            <td>Boolean</td>
+            <td>不允许为空</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>labelField</td>
+            <td>Boolean</td>
+            <td>是否显示label</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+         <tr>
+            <td>label</td>
+            <td>String</td>
+            <td>label文本</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+          <tr>
+            <td>labelStyle</td>
+            <td>String</td>
+            <td>label样式</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>requiredErrorText</td>
+            <td>String</td>
+            <td></td>
+            <td>不能为空</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>vtype</td>
+            <td>String</td>
+            <td>验证规则。如vtype="email"。<a href="../../demo/form/rules.html" style="color:Blue;text-decoration:underline;" target="_blank">参考示例</a>。</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>emailErrorText</td>
+            <td>String</td>
+            <td></td>
+            <td>请输入邮件格式</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+
+        <tr>
+            <td>urlErrorText</td>
+            <td>String</td>
+            <td></td>
+            <td>请输入URL格式</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>floatErrorText</td>
+            <td>String</td>
+            <td></td>
+            <td>请输入数字</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>intErrorText</td>
+            <td>String</td>
+            <td></td>
+            <td>请输入整数</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>dateErrorText</td>
+            <td>String</td>
+            <td></td>
+            <td>请输入日期格式 {0}</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>maxLengthErrorText</td>
+            <td>String</td>
+            <td></td>
+            <td>不能超过 {0} 个字符</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>minLengthErrorText</td>
+            <td>String</td>
+            <td></td>
+            <td>不能少于 {0} 个字符</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>maxErrorText</td>
+            <td>String</td>
+            <td></td>
+            <td>数字不能大于 {0} </td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>minErrorText</td>
+            <td>String</td>
+            <td></td>
+            <td>数字不能小于 {0} </td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>rangeLengthErrorText</td>
+            <td>String</td>
+            <td></td>
+            <td>字符数必须在 {0} 到 {1} 之间</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>rangeErrorText</td>
+            <td>String</td>
+            <td></td>
+            <td>数字必须在 {0} 到 {1} 之间</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>       
+    </table>
+
+    <h4>Methods</h4>
+    <table>
+        <tr><th>Name</th><th>Parameter</th><th>Description</th><th>Return</th></tr>
+        
+        <tr>
+            <td>doValueChanged（）</td>
+            <td></td>
+            <td>主动激发valuechanged事件。一般在设置值之后调用。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>setValue（value）</td>
+            <td></td>
+            <td>设置值</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getValue（）</td>
+            <td></td>
+            <td>获取值</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getFormValue（）</td>
+            <td></td>
+            <td>获取表单值</td>
+            <td>String</td>
+        </tr>
+        <tr>
+            <td>validate（）</td>
+            <td></td>
+            <td>验证控件值</td>
+            <td>Boolean</td>
+        </tr>
+        <tr>
+            <td>isValid（）</td>
+            <td></td>
+            <td>是否通过验证</td>
+            <td>Boolean</td>
+        </tr>
+        <tr>
+            <td>setIsValid（Boolean）</td>
+            <td></td>
+            <td>设置验证结果</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h4>Events</h4>
+    <table>
+        <tr><th>Name</th><th>EventObject</th><th>Description</th></tr>       
+        <tr>
+            <td>valuechanged</td>
+            <td></td>
+            <td>值改变时发生</td>            
+        </tr>       
+        <tr>
+            <td>validation</td>
+            <td></td>
+            <td>验证时发生</td>            
+        </tr>                  
+        <tr>
+            <td>enter</td>
+            <td></td>
+            <td>回车时发生</td>            
+        </tr>  
+        <tr>
+            <td>keydown</td>
+            <td></td>
+            <td>键盘按下时发生</td>            
+        </tr>  
+        <tr>
+            <td>keyup</td>
+            <td></td>
+            <td>键盘按起时发生</td>            
+        </tr>   
+        <tr>
+            <td>focus</td>
+            <td></td>
+            <td>获取焦点时发生</td>            
+        </tr>  
+        <tr>
+            <td>blur</td>
+            <td></td>
+            <td>失去焦点时发生</td>            
+        </tr>  
+    </table>
+
+    
+</body>
+</html>

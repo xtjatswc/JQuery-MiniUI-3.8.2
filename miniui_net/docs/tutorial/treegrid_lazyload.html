@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery MiniUI - 专业WebUI控件库</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="jquery,web,grid,表格,datagrid,js,javascript,ajax,web开发,tree,table" />   
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。它能缩短开发时间，减少代码量，使开发者更专注于业务和服务端，轻松实现界面开发，带来绝佳的用户体验。" />
+    <link href="../core.css" rel="stylesheet" type="text/css" />
+    
+    <link href="common.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="header">
+        <div class="headerInner">
+            <a class="logo" href="http://www.miniui.com" title="jQuery MiniUI - 专业WebUI控件库">jQuery MiniUI</a>
+            <a id="why" href="/why">为什么选择MiniUI？</a>
+
+            <ul class="topmenu">
+                <li><a href="/"><span>首页</span></a></li>
+                <li onmouseover="showMenu('popup1', this)" onmouseout="hideMenu('popup1', this)"><a href="/product"><span>产品</span></a>
+                    <ul id="popup1" class="popupmenu">
+                        <li class="product"><a href="/product">产品介绍</a></li>
+                        <li><a href="/features">功能特性</a></li>
+                        <li><a href="/screenshots">界面截图</a></li>                        
+                        <li><a href="/support">支持服务</a></li>
+                        <li><a href="/license">授权方式</a></li>
+                        
+                        <li class="faq"><a href="/faq">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="/demo"><span>示例</span></a></li>
+                <li onmouseover="showMenu('popup2', this)" onmouseout="hideMenu('popup2', this)"><a href="/docs"><span>文档</span></a>
+                    <ul id="popup2" class="popupmenu">                        
+                        <li id="start_link"><a href="/docs/quickstart">快速入门</a></li>
+                        <li><a href="/docs/tutorial">开发教程</a></li>
+                        <li id="kb_link"><a href="/docs/kb">精华文章</a></li>
+                        <li><a href="/docs/api">Api参考手册</a></li>
+                    </ul>
+                </li>
+                <li><a href="/bbs"><span>论坛</span></a></li><li><a href="/download"><span>下载</span></a></li>
+                
+                <li><a href="/contact"><span>联系</span></a></li>
+            </ul>
+        
+     
+        </div>
+    </div>
+    <div class="topnav">
+        <div class="topnavInner">
+            <a href="/">首页</a>><a href="/docs">文档中心</a>><a href="/docs/tutorial">开发教程</a>><span>TreeGrid</span>
+        </div>
+    </div>
+    <div class="body " >
+        <div class="bodyInner">
+            
+        <div class="contentView">
+            <h3>TreeGrid：懒加载</h3>
+            
+            <a title="TreeGrid：懒加载" href="../../demo/treegrid/lazytree.html" target="_blank"><img src="../api/images/treegrid_lazyload.png" /></a>
+
+            <br /><br />
+            <p class="p_demo"><span class="note">参考示例</span>：
+                <a href="../../demo/treegrid/lazytree.html" target="_blank">TreeGrid：懒加载</a>&nbsp;&nbsp;&nbsp; 
+                </p>
+            <br />
+
+            <h4>创建代码</h4>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">div </span><span style="color:red">id</span><span style="color:blue">="treegrid1" </span><span style="color:red">class</span><span style="color:blue">="mini-treegrid" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:600px;</span><span style="color:red">height</span><span style="color:blue">:250px;"     
+    </span><span style="color:red">url</span><span style="color:blue">="../data/TreeService.aspx?method=LoadNodes" </span><span style="color:red">showTreeIcon</span><span style="color:blue">="true" </span><span style="color:red">textField</span><span style="color:blue">="text" </span><span style="color:red">idField</span><span style="color:blue">="id" 
+    </span><span style="color:red">treeColumn</span><span style="color:blue">="filename" </span><span style="color:red">onbeforeload</span><span style="color:blue">="onBeforeTreeLoad" 
+&gt;
+    &lt;</span><span style="color:maroon">div </span><span style="color:red">property</span><span style="color:blue">="columns"&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">name</span><span style="color:blue">="filename" </span><span style="color:red">field</span><span style="color:blue">="name" </span><span style="color:red">width</span><span style="color:blue">="150"&gt;</span>名称<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="type" </span><span style="color:red">width</span><span style="color:blue">="100"&gt;</span>类型<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="size" </span><span style="color:red">width</span><span style="color:blue">="100" </span><span style="color:red">dateFormat</span><span style="color:blue">="yyyy-MM-dd"&gt;</span>大小<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="createdate" </span><span style="color:red">width</span><span style="color:blue">="100" </span><span style="color:red">dateFormat</span><span style="color:blue">="yyyy-MM-dd"&gt;</span>创建日期<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+    &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+</span></pre>
+
+            <h4>服务端返回数据</h4>
+<pre class="code">[{
+    id: "form",
+    text: "Form",
+    ......
+    isLeaf: false,                            //是否叶子节点：+和-号
+    expanded: false                            //节点处于收缩状态
+},
+......
+]
+</pre>
+            <p>其中，isLeft 说明此节点是否有下一级节点。expanded 表示此节点处于折叠状态。</p>
+            
+            <h4>懒加载事件</h4>
+            <p>当用户点击"+"图标时，会自动加载下一级节点，此时会把当前节点id传递到后台，也可以拦截加载事件，增加额外属性：</p>
+<pre class="code"><span style="color:blue">function </span>onBeforeTreeLoad(e) {
+    <span style="color:blue">var </span>tree = e.sender;    <span style="color:#006400">//树控件
+    </span><span style="color:blue">var </span>node = e.node;      <span style="color:#006400">//当前节点
+    </span><span style="color:blue">var </span>params = e.params;  <span style="color:#006400">//参数对象
+
+    //可以传递自定义的属性
+    </span>params.myField = <span style="color:maroon">"123"</span>; <span style="color:#006400">//后台：request对象获取"myField"
+</span>}
+</pre>
+
+            <h4>服务端处理</h4>
+            <p>服务端通过request获取"id"属性后，加载此节点的下一级节点数组，并通过JSON返回。</p>
+<pre class="code"><span style="color:#2b91af">String </span>id = Request[<span style="color:#a31515">"id"</span>];
+<span style="color:blue">if </span>(<span style="color:#2b91af">String</span>.IsNullOrEmpty(id)) id = <span style="color:#a31515">"-1"</span>;
+
+<span style="color:green">//获取下一级节点
+</span><span style="color:#2b91af">String </span>sql = <span style="color:#a31515">"select * from plus_file where pid = '" </span>+ id + <span style="color:#a31515">"' order by updatedate"</span>;
+<span style="color:#2b91af">ArrayList </span>folders = <span style="color:#2b91af">DBUtil</span>.Select(sql);
+
+<span style="color:green">//判断节点，是否有子节点。如果有，则处理isLeaf和expanded。
+</span><span style="color:blue">for </span>(<span style="color:blue">int </span>i = 0, l = folders.Count; i &lt; l; i++)
+{
+    <span style="color:#2b91af">Hashtable </span>node = (<span style="color:#2b91af">Hashtable</span>)folders[i];
+    <span style="color:#2b91af">String </span>nodeId = node[<span style="color:#a31515">"id"</span>].ToString();
+
+    <span style="color:#2b91af">String </span>sql2 = <span style="color:#a31515">"select * from plus_file where pid = '" </span>+ nodeId + <span style="color:#a31515">"' order by updatedate"</span>;
+    <span style="color:#2b91af">ArrayList </span>nodes = <span style="color:#2b91af">DBUtil</span>.Select(sql2);
+
+    <span style="color:blue">if </span>(nodes.Count &gt; 0)
+    {
+        node[<span style="color:#a31515">"isLeaf"</span>] = <span style="color:blue">false</span>;
+        node[<span style="color:#a31515">"expanded"</span>] = <span style="color:blue">false</span>;
+    }
+
+}
+
+<span style="color:green">//返回JSON
+</span><span style="color:#2b91af">String </span>json = PluSoft.Utils.<span style="color:#2b91af">JSON</span>.Encode(folders);
+Response.Write(json);
+</pre>
+
+
+
+        </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <div id="copyright">Copyright © 上海普加软件有限公司版权所有 </div>
+            <div id="bottomlinks"><a href="/sitemap">网站导航</a>|<a href="/support">支持服务</a>|<a href="/license">授权方式</a>|<a href="/contact">联系我们</a></div>
+        </div>
+    </div>
+</body>
+</html>

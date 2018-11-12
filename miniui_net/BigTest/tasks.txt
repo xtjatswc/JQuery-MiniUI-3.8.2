@@ -1,0 +1,4786 @@
+﻿[{
+    "UID": "1",
+    "ParentTaskUID": -1,
+    "Name": "项目范围规划",
+    "Duration": 5,
+    "Start": "2007-01-01T00:00:00",
+    "Finish": "2007-01-05T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "2",
+    "ParentTaskUID": "1",
+    "Name": "确定项目范围",
+    "Duration": 1,
+    "Start": "2007-01-01T00:00:00",
+    "Finish": "2007-01-01T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "3",
+    "ParentTaskUID": "1",
+    "Name": "获得项目所需资金",
+    "Duration": 1,
+    "Start": "2007-01-02T00:00:00",
+    "Finish": "2007-01-02T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "2"
+    }]
+},
+{
+    "UID": "4",
+    "ParentTaskUID": "1",
+    "Name": "定义预备资源",
+    "Duration": 1,
+    "Start": "2007-01-03T00:00:00",
+    "Finish": "2007-01-03T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "3"
+    }]
+},
+{
+    "UID": "5",
+    "ParentTaskUID": "1",
+    "Name": "获得核心资源",
+    "Duration": 1,
+    "Start": "2007-01-04T00:00:00",
+    "Finish": "2007-01-04T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "4"
+    }]
+},
+{
+    "UID": "6",
+    "ParentTaskUID": "1",
+    "Name": "完成项目范围规划",
+    "Duration": 0,
+    "Start": "2007-01-05T00:00:00",
+    "Finish": "2007-01-05T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "5"
+    }]
+},
+{
+    "UID": "7",
+    "ParentTaskUID": -1,
+    "Name": "分析/软件需求",
+    "Duration": 16,
+    "Start": "2007-01-08T00:00:00",
+    "Finish": "2007-01-29T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "8",
+    "ParentTaskUID": "7",
+    "Name": "行为需求分析",
+    "Duration": 5,
+    "Start": "2007-01-08T00:00:00",
+    "Finish": "2007-01-12T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "6"
+    }]
+},
+{
+    "UID": "9",
+    "ParentTaskUID": "7",
+    "Name": "起草初步的软件规范",
+    "Duration": 3,
+    "Start": "2007-01-15T00:00:00",
+    "Finish": "2007-01-17T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "8"
+    }]
+},
+{
+    "UID": "10",
+    "ParentTaskUID": "7",
+    "Name": "制定初步预算",
+    "Duration": 2,
+    "Start": "2007-01-18T00:00:00",
+    "Finish": "2007-01-19T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "9"
+    }]
+},
+{
+    "UID": "11",
+    "ParentTaskUID": "7",
+    "Name": "工作组共同审阅软件规范/预算",
+    "Duration": 1,
+    "Start": "2007-01-22T00:00:00",
+    "Finish": "2007-01-22T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "10"
+    }]
+},
+{
+    "UID": "12",
+    "ParentTaskUID": "7",
+    "Name": "根据反馈修改软件规范",
+    "Duration": 1,
+    "Start": "2007-01-23T00:00:00",
+    "Finish": "2007-01-23T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "11"
+    }]
+},
+{
+    "UID": "13",
+    "ParentTaskUID": "7",
+    "Name": "制定交付期限",
+    "Duration": 1,
+    "Start": "2007-01-24T00:00:00",
+    "Finish": "2007-01-24T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "12"
+    }]
+},
+{
+    "UID": "14",
+    "ParentTaskUID": "7",
+    "Name": "获得开展后续工作的批准(概念、期限和预算)",
+    "Duration": 1,
+    "Start": "2007-01-25T00:00:00",
+    "Finish": "2007-01-25T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "13"
+    }]
+},
+{
+    "UID": "15",
+    "ParentTaskUID": "7",
+    "Name": "获得所需资源",
+    "Duration": 1,
+    "Start": "2007-01-26T00:00:00",
+    "Finish": "2007-01-26T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "14"
+    }]
+},
+{
+    "UID": "16",
+    "ParentTaskUID": "7",
+    "Name": "完成分析工作",
+    "Duration": 0,
+    "Start": "2007-01-29T00:00:00",
+    "Finish": "2007-01-29T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "15"
+    }]
+},
+{
+    "UID": "17",
+    "ParentTaskUID": -1,
+    "Name": "设计",
+    "Duration": 16,
+    "Start": "2007-01-30T00:00:00",
+    "Finish": "2007-02-20T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "18",
+    "ParentTaskUID": "17",
+    "Name": "审阅初步的软件规范",
+    "Duration": 2,
+    "Start": "2007-01-30T00:00:00",
+    "Finish": "2007-01-31T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "16"
+    }]
+},
+{
+    "UID": "19",
+    "ParentTaskUID": "17",
+    "Name": "制定功能规范",
+    "Duration": 5,
+    "Start": "2007-02-01T00:00:00",
+    "Finish": "2007-02-07T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "18"
+    }]
+},
+{
+    "UID": "20",
+    "ParentTaskUID": "17",
+    "Name": "根据功能规范开发原型",
+    "Duration": 4,
+    "Start": "2007-02-08T00:00:00",
+    "Finish": "2007-02-13T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "19"
+    }]
+},
+{
+    "UID": "21",
+    "ParentTaskUID": "17",
+    "Name": "审阅功能规范",
+    "Duration": 2,
+    "Start": "2007-02-14T00:00:00",
+    "Finish": "2007-02-15T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "20"
+    }]
+},
+{
+    "UID": "22",
+    "ParentTaskUID": "17",
+    "Name": "根据反馈修改功能规范",
+    "Duration": 1,
+    "Start": "2007-02-16T00:00:00",
+    "Finish": "2007-02-16T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "21"
+    }]
+},
+{
+    "UID": "23",
+    "ParentTaskUID": "17",
+    "Name": "获得开展后续工作的批准",
+    "Duration": 1,
+    "Start": "2007-02-19T00:00:00",
+    "Finish": "2007-02-19T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "22"
+    }]
+},
+{
+    "UID": "24",
+    "ParentTaskUID": "17",
+    "Name": "完成设计工作",
+    "Duration": 0,
+    "Start": "2007-02-20T00:00:00",
+    "Finish": "2007-02-20T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "23"
+    }]
+},
+{
+    "UID": "25",
+    "ParentTaskUID": -1,
+    "Name": "开发",
+    "Duration": 34,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-04-09T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "26",
+    "ParentTaskUID": "25",
+    "Name": "审阅功能规范",
+    "Duration": 1,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-21T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "24"
+    }]
+},
+{
+    "UID": "27",
+    "ParentTaskUID": "25",
+    "Name": "确定模块化/分层设计参数",
+    "Duration": 1,
+    "Start": "2007-02-22T00:00:00",
+    "Finish": "2007-02-22T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "26"
+    }]
+},
+{
+    "UID": "28",
+    "ParentTaskUID": "25",
+    "Name": "分派任务给开发人员",
+    "Duration": 1,
+    "Start": "2007-02-23T00:00:00",
+    "Finish": "2007-02-23T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "27"
+    }]
+},
+{
+    "UID": "29",
+    "ParentTaskUID": "25",
+    "Name": "编写代码",
+    "Duration": 15,
+    "Start": "2007-02-26T00:00:00",
+    "Finish": "2007-03-16T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "28"
+    }]
+},
+{
+    "UID": "30",
+    "ParentTaskUID": "25",
+    "Name": "开发人员测试(初步调试)",
+    "Duration": 15,
+    "Start": "2007-03-19T00:00:00",
+    "Finish": "2007-04-06T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "29"
+    }]
+},
+{
+    "UID": "31",
+    "ParentTaskUID": "25",
+    "Name": "完成开发工作",
+    "Duration": 0,
+    "Start": "2007-04-09T00:00:00",
+    "Finish": "2007-04-09T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "30"
+    }]
+},
+{
+    "UID": "32",
+    "ParentTaskUID": -1,
+    "Name": "测试",
+    "Duration": 63,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-05-18T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "33",
+    "ParentTaskUID": "32",
+    "Name": "根据产品规范制定单元测试计划",
+    "Duration": 4,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-26T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "24"
+    }]
+},
+{
+    "UID": "34",
+    "ParentTaskUID": "32",
+    "Name": "根据产品规范制定整体测试计划",
+    "Duration": 4,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-26T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "24"
+    }]
+},
+{
+    "UID": "35",
+    "ParentTaskUID": "32",
+    "Name": "单元测试",
+    "Duration": 16,
+    "Start": "2007-04-10T00:00:00",
+    "Finish": "2007-05-01T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "36",
+    "ParentTaskUID": "35",
+    "Name": "审阅模块化代码",
+    "Duration": 5,
+    "Start": "2007-04-10T00:00:00",
+    "Finish": "2007-04-16T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "33"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "31"
+    }]
+},
+{
+    "UID": "37",
+    "ParentTaskUID": "35",
+    "Name": "测试组件模块是否符合产品规范",
+    "Duration": 2,
+    "Start": "2007-04-17T00:00:00",
+    "Finish": "2007-04-18T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "31"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "36"
+    }]
+},
+{
+    "UID": "38",
+    "ParentTaskUID": "35",
+    "Name": "找出不符合产品规范的异常情况",
+    "Duration": 3,
+    "Start": "2007-04-19T00:00:00",
+    "Finish": "2007-04-23T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "37"
+    }]
+},
+{
+    "UID": "39",
+    "ParentTaskUID": "35",
+    "Name": "修改代码",
+    "Duration": 3,
+    "Start": "2007-04-24T00:00:00",
+    "Finish": "2007-04-26T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "38"
+    }]
+},
+{
+    "UID": "40",
+    "ParentTaskUID": "35",
+    "Name": "重新测试经过修改的代码",
+    "Duration": 2,
+    "Start": "2007-04-27T00:00:00",
+    "Finish": "2007-04-30T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "39"
+    }]
+},
+{
+    "UID": "41",
+    "ParentTaskUID": "35",
+    "Name": "完成单元测试",
+    "Duration": 0,
+    "Start": "2007-05-01T00:00:00",
+    "Finish": "2007-05-01T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "40"
+    }]
+},
+{
+    "UID": "42",
+    "ParentTaskUID": "32",
+    "Name": "整体测试",
+    "Duration": 13,
+    "Start": "2007-05-02T00:00:00",
+    "Finish": "2007-05-18T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "43",
+    "ParentTaskUID": "42",
+    "Name": "测试模块集成情况",
+    "Duration": 5,
+    "Start": "2007-05-02T00:00:00",
+    "Finish": "2007-05-08T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "41"
+    }]
+},
+{
+    "UID": "44",
+    "ParentTaskUID": "42",
+    "Name": "找出不符合规范的异常情况",
+    "Duration": 2,
+    "Start": "2007-05-09T00:00:00",
+    "Finish": "2007-05-10T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "43"
+    }]
+},
+{
+    "UID": "45",
+    "ParentTaskUID": "42",
+    "Name": "修改代码",
+    "Duration": 3,
+    "Start": "2007-05-11T00:00:00",
+    "Finish": "2007-05-15T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "44"
+    }]
+},
+{
+    "UID": "46",
+    "ParentTaskUID": "42",
+    "Name": "重新测试经过修改的代码",
+    "Duration": 2,
+    "Start": "2007-05-16T00:00:00",
+    "Finish": "2007-05-17T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "45"
+    }]
+},
+{
+    "UID": "47",
+    "ParentTaskUID": "42",
+    "Name": "完成整体测试",
+    "Duration": 0,
+    "Start": "2007-05-18T00:00:00",
+    "Finish": "2007-05-18T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "46"
+    }]
+},
+{
+    "UID": "48",
+    "ParentTaskUID": -1,
+    "Name": "培训",
+    "Duration": 59,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-05-14T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "49",
+    "ParentTaskUID": "48",
+    "Name": "制定针对最终用户的培训规范",
+    "Duration": 3,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-23T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "24"
+    }]
+},
+{
+    "UID": "50",
+    "ParentTaskUID": "48",
+    "Name": "制定针对产品技术支持人员的培训规范",
+    "Duration": 3,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-23T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "24"
+    }]
+},
+{
+    "UID": "51",
+    "ParentTaskUID": "48",
+    "Name": "确定培训方法(基于计算机的培训、教室授课等)",
+    "Duration": 2,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-22T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "24"
+    }]
+},
+{
+    "UID": "52",
+    "ParentTaskUID": "48",
+    "Name": "编写培训材料",
+    "Duration": 15,
+    "Start": "2007-04-10T00:00:00",
+    "Finish": "2007-04-30T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "49"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "31"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "50"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "51"
+    }]
+},
+{
+    "UID": "53",
+    "ParentTaskUID": "48",
+    "Name": "研究培训材料的可用性",
+    "Duration": 4,
+    "Start": "2007-05-01T00:00:00",
+    "Finish": "2007-05-04T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "52"
+    }]
+},
+{
+    "UID": "54",
+    "ParentTaskUID": "48",
+    "Name": "对培训材料进行最后处理",
+    "Duration": 3,
+    "Start": "2007-05-07T00:00:00",
+    "Finish": "2007-05-09T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "53"
+    }]
+},
+{
+    "UID": "55",
+    "ParentTaskUID": "48",
+    "Name": "制定培训机制",
+    "Duration": 2,
+    "Start": "2007-05-10T00:00:00",
+    "Finish": "2007-05-11T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "54"
+    }]
+},
+{
+    "UID": "56",
+    "ParentTaskUID": "48",
+    "Name": "完成培训材料",
+    "Duration": 0,
+    "Start": "2007-05-14T00:00:00",
+    "Finish": "2007-05-14T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "55"
+    }]
+},
+{
+    "UID": "57",
+    "ParentTaskUID": -1,
+    "Name": "文档",
+    "Duration": 39,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-04-16T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "58",
+    "ParentTaskUID": "57",
+    "Name": "制定“帮助”规范",
+    "Duration": 1,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-21T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "24"
+    }]
+},
+{
+    "UID": "59",
+    "ParentTaskUID": "57",
+    "Name": "开发“帮助”系统",
+    "Duration": 15,
+    "Start": "2007-03-19T00:00:00",
+    "Finish": "2007-04-06T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "58"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "29"
+    }]
+},
+{
+    "UID": "60",
+    "ParentTaskUID": "57",
+    "Name": "审阅“帮助”文档",
+    "Duration": 3,
+    "Start": "2007-04-09T00:00:00",
+    "Finish": "2007-04-11T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "59"
+    }]
+},
+{
+    "UID": "61",
+    "ParentTaskUID": "57",
+    "Name": "根据反馈修改“帮助”文档",
+    "Duration": 2,
+    "Start": "2007-04-12T00:00:00",
+    "Finish": "2007-04-13T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "60"
+    }]
+},
+{
+    "UID": "62",
+    "ParentTaskUID": "57",
+    "Name": "制定用户手册规范",
+    "Duration": 2,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-22T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "24"
+    }]
+},
+{
+    "UID": "63",
+    "ParentTaskUID": "57",
+    "Name": "编写用户手册",
+    "Duration": 15,
+    "Start": "2007-03-19T00:00:00",
+    "Finish": "2007-04-06T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "62"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "29"
+    }]
+},
+{
+    "UID": "64",
+    "ParentTaskUID": "57",
+    "Name": "审阅所有的用户文档",
+    "Duration": 2,
+    "Start": "2007-04-09T00:00:00",
+    "Finish": "2007-04-10T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "63"
+    }]
+},
+{
+    "UID": "65",
+    "ParentTaskUID": "57",
+    "Name": "根据反馈修改用户文档",
+    "Duration": 2,
+    "Start": "2007-04-11T00:00:00",
+    "Finish": "2007-04-12T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "64"
+    }]
+},
+{
+    "UID": "66",
+    "ParentTaskUID": "57",
+    "Name": "完成文档",
+    "Duration": 0,
+    "Start": "2007-04-16T00:00:00",
+    "Finish": "2007-04-16T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "65"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "61"
+    }]
+},
+{
+    "UID": "67",
+    "ParentTaskUID": -1,
+    "Name": "试生产",
+    "Duration": 87,
+    "Start": "2007-01-30T00:00:00",
+    "Finish": "2007-05-30T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "68",
+    "ParentTaskUID": "67",
+    "Name": "确定测试群体",
+    "Duration": 1,
+    "Start": "2007-01-30T00:00:00",
+    "Finish": "2007-01-30T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "16"
+    }]
+},
+{
+    "UID": "69",
+    "ParentTaskUID": "67",
+    "Name": "确定软件分发机制",
+    "Duration": 1,
+    "Start": "2007-01-31T00:00:00",
+    "Finish": "2007-01-31T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "68"
+    }]
+},
+{
+    "UID": "70",
+    "ParentTaskUID": "67",
+    "Name": "安装/部署软件",
+    "Duration": 1,
+    "Start": "2007-05-21T00:00:00",
+    "Finish": "2007-05-21T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "47"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "69"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "66"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "56"
+    }]
+},
+{
+    "UID": "71",
+    "ParentTaskUID": "67",
+    "Name": "获得用户反馈",
+    "Duration": 5,
+    "Start": "2007-05-22T00:00:00",
+    "Finish": "2007-05-28T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "70"
+    }]
+},
+{
+    "UID": "72",
+    "ParentTaskUID": "67",
+    "Name": "评估测试信息",
+    "Duration": 1,
+    "Start": "2007-05-29T00:00:00",
+    "Finish": "2007-05-29T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "71"
+    }]
+},
+{
+    "UID": "73",
+    "ParentTaskUID": "67",
+    "Name": "完成试生产工作",
+    "Duration": 0,
+    "Start": "2007-05-30T00:00:00",
+    "Finish": "2007-05-30T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "72"
+    }]
+},
+{
+    "UID": "74",
+    "ParentTaskUID": -1,
+    "Name": "部署",
+    "Duration": 6,
+    "Start": "2007-05-31T00:00:00",
+    "Finish": "2007-06-07T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "75",
+    "ParentTaskUID": "74",
+    "Name": "确定最终部署策略",
+    "Duration": 1,
+    "Start": "2007-05-31T00:00:00",
+    "Finish": "2007-05-31T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "73"
+    }]
+},
+{
+    "UID": "76",
+    "ParentTaskUID": "74",
+    "Name": "确定部署方法",
+    "Duration": 1,
+    "Start": "2007-06-01T00:00:00",
+    "Finish": "2007-06-01T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "75"
+    }]
+},
+{
+    "UID": "77",
+    "ParentTaskUID": "74",
+    "Name": "获得部署所需资源",
+    "Duration": 1,
+    "Start": "2007-06-04T00:00:00",
+    "Finish": "2007-06-04T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "76"
+    }]
+},
+{
+    "UID": "78",
+    "ParentTaskUID": "74",
+    "Name": "培训技术支持人员",
+    "Duration": 1,
+    "Start": "2007-06-05T00:00:00",
+    "Finish": "2007-06-05T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "77"
+    }]
+},
+{
+    "UID": "79",
+    "ParentTaskUID": "74",
+    "Name": "部署软件",
+    "Duration": 1,
+    "Start": "2007-06-06T00:00:00",
+    "Finish": "2007-06-06T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "78"
+    }]
+},
+{
+    "UID": "80",
+    "ParentTaskUID": "74",
+    "Name": "完成部署工作",
+    "Duration": 0,
+    "Start": "2007-06-07T00:00:00",
+    "Finish": "2007-06-07T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "79"
+    }]
+},
+{
+    "UID": "81",
+    "ParentTaskUID": -1,
+    "Name": "实施工作结束后的回顾",
+    "Duration": 4,
+    "Start": "2007-06-08T00:00:00",
+    "Finish": "2007-06-13T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "82",
+    "ParentTaskUID": "81",
+    "Name": "将经验教训记录存档",
+    "Duration": 1,
+    "Start": "2007-06-08T00:00:00",
+    "Finish": "2007-06-08T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "80"
+    }]
+},
+{
+    "UID": "83",
+    "ParentTaskUID": "81",
+    "Name": "分发给工作组成员",
+    "Duration": 1,
+    "Start": "2007-06-11T00:00:00",
+    "Finish": "2007-06-11T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "82"
+    }]
+},
+{
+    "UID": "84",
+    "ParentTaskUID": "81",
+    "Name": "建立软件维护小组",
+    "Duration": 1,
+    "Start": "2007-06-12T00:00:00",
+    "Finish": "2007-06-12T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "83"
+    }]
+},
+{
+    "UID": "85",
+    "ParentTaskUID": "81",
+    "Name": "完成回顾",
+    "Duration": 0,
+    "Start": "2007-06-13T00:00:00",
+    "Finish": "2007-06-13T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "84"
+    }]
+},
+{
+    "UID": "86",
+    "ParentTaskUID": -1,
+    "Name": "软件开发模板结束",
+    "Duration": 0,
+    "Start": "2007-06-14T00:00:00",
+    "Finish": "2007-06-14T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "85"
+    }]
+},
+{
+    "UID": "87",
+    "ParentTaskUID": -1,
+    "Name": "项目范围规划",
+    "Duration": 5,
+    "Start": "2007-01-01T00:00:00",
+    "Finish": "2007-01-05T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "88",
+    "ParentTaskUID": "87",
+    "Name": "确定项目范围",
+    "Duration": 1,
+    "Start": "2007-01-01T00:00:00",
+    "Finish": "2007-01-01T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "89",
+    "ParentTaskUID": "87",
+    "Name": "获得项目所需资金",
+    "Duration": 1,
+    "Start": "2007-01-02T00:00:00",
+    "Finish": "2007-01-02T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "88"
+    }]
+},
+{
+    "UID": "90",
+    "ParentTaskUID": "87",
+    "Name": "定义预备资源",
+    "Duration": 1,
+    "Start": "2007-01-03T00:00:00",
+    "Finish": "2007-01-03T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "89"
+    }]
+},
+{
+    "UID": "91",
+    "ParentTaskUID": "87",
+    "Name": "获得核心资源",
+    "Duration": 1,
+    "Start": "2007-01-04T00:00:00",
+    "Finish": "2007-01-04T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "90"
+    }]
+},
+{
+    "UID": "92",
+    "ParentTaskUID": "87",
+    "Name": "完成项目范围规划",
+    "Duration": 0,
+    "Start": "2007-01-05T00:00:00",
+    "Finish": "2007-01-05T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "91"
+    }]
+},
+{
+    "UID": "93",
+    "ParentTaskUID": -1,
+    "Name": "分析/软件需求",
+    "Duration": 16,
+    "Start": "2007-01-08T00:00:00",
+    "Finish": "2007-01-29T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "94",
+    "ParentTaskUID": "93",
+    "Name": "行为需求分析",
+    "Duration": 5,
+    "Start": "2007-01-08T00:00:00",
+    "Finish": "2007-01-12T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "92"
+    }]
+},
+{
+    "UID": "95",
+    "ParentTaskUID": "93",
+    "Name": "起草初步的软件规范",
+    "Duration": 3,
+    "Start": "2007-01-15T00:00:00",
+    "Finish": "2007-01-17T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "94"
+    }]
+},
+{
+    "UID": "96",
+    "ParentTaskUID": "93",
+    "Name": "制定初步预算",
+    "Duration": 2,
+    "Start": "2007-01-18T00:00:00",
+    "Finish": "2007-01-19T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "95"
+    }]
+},
+{
+    "UID": "97",
+    "ParentTaskUID": "93",
+    "Name": "工作组共同审阅软件规范/预算",
+    "Duration": 1,
+    "Start": "2007-01-22T00:00:00",
+    "Finish": "2007-01-22T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "96"
+    }]
+},
+{
+    "UID": "98",
+    "ParentTaskUID": "93",
+    "Name": "根据反馈修改软件规范",
+    "Duration": 1,
+    "Start": "2007-01-23T00:00:00",
+    "Finish": "2007-01-23T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "97"
+    }]
+},
+{
+    "UID": "99",
+    "ParentTaskUID": "93",
+    "Name": "制定交付期限",
+    "Duration": 1,
+    "Start": "2007-01-24T00:00:00",
+    "Finish": "2007-01-24T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "98"
+    }]
+},
+{
+    "UID": "100",
+    "ParentTaskUID": "93",
+    "Name": "获得开展后续工作的批准(概念、期限和预算)",
+    "Duration": 1,
+    "Start": "2007-01-25T00:00:00",
+    "Finish": "2007-01-25T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "99"
+    }]
+},
+{
+    "UID": "101",
+    "ParentTaskUID": "93",
+    "Name": "获得所需资源",
+    "Duration": 1,
+    "Start": "2007-01-26T00:00:00",
+    "Finish": "2007-01-26T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "100"
+    }]
+},
+{
+    "UID": "102",
+    "ParentTaskUID": "93",
+    "Name": "完成分析工作",
+    "Duration": 0,
+    "Start": "2007-01-29T00:00:00",
+    "Finish": "2007-01-29T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "101"
+    }]
+},
+{
+    "UID": "103",
+    "ParentTaskUID": -1,
+    "Name": "设计",
+    "Duration": 16,
+    "Start": "2007-01-30T00:00:00",
+    "Finish": "2007-02-20T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "104",
+    "ParentTaskUID": "103",
+    "Name": "审阅初步的软件规范",
+    "Duration": 2,
+    "Start": "2007-01-30T00:00:00",
+    "Finish": "2007-01-31T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "102"
+    }]
+},
+{
+    "UID": "105",
+    "ParentTaskUID": "103",
+    "Name": "制定功能规范",
+    "Duration": 5,
+    "Start": "2007-02-01T00:00:00",
+    "Finish": "2007-02-07T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "104"
+    }]
+},
+{
+    "UID": "106",
+    "ParentTaskUID": "103",
+    "Name": "根据功能规范开发原型",
+    "Duration": 4,
+    "Start": "2007-02-08T00:00:00",
+    "Finish": "2007-02-13T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "105"
+    }]
+},
+{
+    "UID": "107",
+    "ParentTaskUID": "103",
+    "Name": "审阅功能规范",
+    "Duration": 2,
+    "Start": "2007-02-14T00:00:00",
+    "Finish": "2007-02-15T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "106"
+    }]
+},
+{
+    "UID": "108",
+    "ParentTaskUID": "103",
+    "Name": "根据反馈修改功能规范",
+    "Duration": 1,
+    "Start": "2007-02-16T00:00:00",
+    "Finish": "2007-02-16T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "107"
+    }]
+},
+{
+    "UID": "109",
+    "ParentTaskUID": "103",
+    "Name": "获得开展后续工作的批准",
+    "Duration": 1,
+    "Start": "2007-02-19T00:00:00",
+    "Finish": "2007-02-19T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "108"
+    }]
+},
+{
+    "UID": "110",
+    "ParentTaskUID": "103",
+    "Name": "完成设计工作",
+    "Duration": 0,
+    "Start": "2007-02-20T00:00:00",
+    "Finish": "2007-02-20T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "109"
+    }]
+},
+{
+    "UID": "111",
+    "ParentTaskUID": -1,
+    "Name": "开发",
+    "Duration": 34,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-04-09T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "112",
+    "ParentTaskUID": "111",
+    "Name": "审阅功能规范",
+    "Duration": 1,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-21T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "110"
+    }]
+},
+{
+    "UID": "113",
+    "ParentTaskUID": "111",
+    "Name": "确定模块化/分层设计参数",
+    "Duration": 1,
+    "Start": "2007-02-22T00:00:00",
+    "Finish": "2007-02-22T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "112"
+    }]
+},
+{
+    "UID": "114",
+    "ParentTaskUID": "111",
+    "Name": "分派任务给开发人员",
+    "Duration": 1,
+    "Start": "2007-02-23T00:00:00",
+    "Finish": "2007-02-23T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "113"
+    }]
+},
+{
+    "UID": "115",
+    "ParentTaskUID": "111",
+    "Name": "编写代码",
+    "Duration": 15,
+    "Start": "2007-02-26T00:00:00",
+    "Finish": "2007-03-16T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "114"
+    }]
+},
+{
+    "UID": "116",
+    "ParentTaskUID": "111",
+    "Name": "开发人员测试(初步调试)",
+    "Duration": 15,
+    "Start": "2007-03-19T00:00:00",
+    "Finish": "2007-04-06T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "115"
+    }]
+},
+{
+    "UID": "117",
+    "ParentTaskUID": "111",
+    "Name": "完成开发工作",
+    "Duration": 0,
+    "Start": "2007-04-09T00:00:00",
+    "Finish": "2007-04-09T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "116"
+    }]
+},
+{
+    "UID": "118",
+    "ParentTaskUID": -1,
+    "Name": "测试",
+    "Duration": 63,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-05-18T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "119",
+    "ParentTaskUID": "118",
+    "Name": "根据产品规范制定单元测试计划",
+    "Duration": 4,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-26T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "110"
+    }]
+},
+{
+    "UID": "120",
+    "ParentTaskUID": "118",
+    "Name": "根据产品规范制定整体测试计划",
+    "Duration": 4,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-26T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "110"
+    }]
+},
+{
+    "UID": "121",
+    "ParentTaskUID": "118",
+    "Name": "单元测试",
+    "Duration": 16,
+    "Start": "2007-04-10T00:00:00",
+    "Finish": "2007-05-01T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "122",
+    "ParentTaskUID": "121",
+    "Name": "审阅模块化代码",
+    "Duration": 5,
+    "Start": "2007-04-10T00:00:00",
+    "Finish": "2007-04-16T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "117"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "119"
+    }]
+},
+{
+    "UID": "123",
+    "ParentTaskUID": "121",
+    "Name": "测试组件模块是否符合产品规范",
+    "Duration": 2,
+    "Start": "2007-04-17T00:00:00",
+    "Finish": "2007-04-18T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "117"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "122"
+    }]
+},
+{
+    "UID": "124",
+    "ParentTaskUID": "121",
+    "Name": "找出不符合产品规范的异常情况",
+    "Duration": 3,
+    "Start": "2007-04-19T00:00:00",
+    "Finish": "2007-04-23T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "123"
+    }]
+},
+{
+    "UID": "125",
+    "ParentTaskUID": "121",
+    "Name": "修改代码",
+    "Duration": 3,
+    "Start": "2007-04-24T00:00:00",
+    "Finish": "2007-04-26T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "124"
+    }]
+},
+{
+    "UID": "126",
+    "ParentTaskUID": "121",
+    "Name": "重新测试经过修改的代码",
+    "Duration": 2,
+    "Start": "2007-04-27T00:00:00",
+    "Finish": "2007-04-30T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "125"
+    }]
+},
+{
+    "UID": "127",
+    "ParentTaskUID": "121",
+    "Name": "完成单元测试",
+    "Duration": 0,
+    "Start": "2007-05-01T00:00:00",
+    "Finish": "2007-05-01T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "126"
+    }]
+},
+{
+    "UID": "128",
+    "ParentTaskUID": "118",
+    "Name": "整体测试",
+    "Duration": 13,
+    "Start": "2007-05-02T00:00:00",
+    "Finish": "2007-05-18T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "129",
+    "ParentTaskUID": "128",
+    "Name": "测试模块集成情况",
+    "Duration": 5,
+    "Start": "2007-05-02T00:00:00",
+    "Finish": "2007-05-08T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "127"
+    }]
+},
+{
+    "UID": "130",
+    "ParentTaskUID": "128",
+    "Name": "找出不符合规范的异常情况",
+    "Duration": 2,
+    "Start": "2007-05-09T00:00:00",
+    "Finish": "2007-05-10T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "129"
+    }]
+},
+{
+    "UID": "131",
+    "ParentTaskUID": "128",
+    "Name": "修改代码",
+    "Duration": 3,
+    "Start": "2007-05-11T00:00:00",
+    "Finish": "2007-05-15T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "130"
+    }]
+},
+{
+    "UID": "132",
+    "ParentTaskUID": "128",
+    "Name": "重新测试经过修改的代码",
+    "Duration": 2,
+    "Start": "2007-05-16T00:00:00",
+    "Finish": "2007-05-17T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "131"
+    }]
+},
+{
+    "UID": "133",
+    "ParentTaskUID": "128",
+    "Name": "完成整体测试",
+    "Duration": 0,
+    "Start": "2007-05-18T00:00:00",
+    "Finish": "2007-05-18T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "132"
+    }]
+},
+{
+    "UID": "134",
+    "ParentTaskUID": -1,
+    "Name": "培训",
+    "Duration": 59,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-05-14T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "135",
+    "ParentTaskUID": "134",
+    "Name": "制定针对最终用户的培训规范",
+    "Duration": 3,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-23T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "110"
+    }]
+},
+{
+    "UID": "136",
+    "ParentTaskUID": "134",
+    "Name": "制定针对产品技术支持人员的培训规范",
+    "Duration": 3,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-23T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "110"
+    }]
+},
+{
+    "UID": "137",
+    "ParentTaskUID": "134",
+    "Name": "确定培训方法(基于计算机的培训、教室授课等)",
+    "Duration": 2,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-22T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "110"
+    }]
+},
+{
+    "UID": "138",
+    "ParentTaskUID": "134",
+    "Name": "编写培训材料",
+    "Duration": 15,
+    "Start": "2007-04-10T00:00:00",
+    "Finish": "2007-04-30T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "117"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "135"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "136"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "137"
+    }]
+},
+{
+    "UID": "139",
+    "ParentTaskUID": "134",
+    "Name": "研究培训材料的可用性",
+    "Duration": 4,
+    "Start": "2007-05-01T00:00:00",
+    "Finish": "2007-05-04T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "138"
+    }]
+},
+{
+    "UID": "140",
+    "ParentTaskUID": "134",
+    "Name": "对培训材料进行最后处理",
+    "Duration": 3,
+    "Start": "2007-05-07T00:00:00",
+    "Finish": "2007-05-09T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "139"
+    }]
+},
+{
+    "UID": "141",
+    "ParentTaskUID": "134",
+    "Name": "制定培训机制",
+    "Duration": 2,
+    "Start": "2007-05-10T00:00:00",
+    "Finish": "2007-05-11T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "140"
+    }]
+},
+{
+    "UID": "142",
+    "ParentTaskUID": "134",
+    "Name": "完成培训材料",
+    "Duration": 0,
+    "Start": "2007-05-14T00:00:00",
+    "Finish": "2007-05-14T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "141"
+    }]
+},
+{
+    "UID": "143",
+    "ParentTaskUID": -1,
+    "Name": "文档",
+    "Duration": 39,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-04-16T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "144",
+    "ParentTaskUID": "143",
+    "Name": "制定“帮助”规范",
+    "Duration": 1,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-21T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "110"
+    }]
+},
+{
+    "UID": "145",
+    "ParentTaskUID": "143",
+    "Name": "开发“帮助”系统",
+    "Duration": 15,
+    "Start": "2007-03-19T00:00:00",
+    "Finish": "2007-04-06T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "115"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "144"
+    }]
+},
+{
+    "UID": "146",
+    "ParentTaskUID": "143",
+    "Name": "审阅“帮助”文档",
+    "Duration": 3,
+    "Start": "2007-04-09T00:00:00",
+    "Finish": "2007-04-11T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "145"
+    }]
+},
+{
+    "UID": "147",
+    "ParentTaskUID": "143",
+    "Name": "根据反馈修改“帮助”文档",
+    "Duration": 2,
+    "Start": "2007-04-12T00:00:00",
+    "Finish": "2007-04-13T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "146"
+    }]
+},
+{
+    "UID": "148",
+    "ParentTaskUID": "143",
+    "Name": "制定用户手册规范",
+    "Duration": 2,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-22T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "110"
+    }]
+},
+{
+    "UID": "149",
+    "ParentTaskUID": "143",
+    "Name": "编写用户手册",
+    "Duration": 15,
+    "Start": "2007-03-19T00:00:00",
+    "Finish": "2007-04-06T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "115"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "148"
+    }]
+},
+{
+    "UID": "150",
+    "ParentTaskUID": "143",
+    "Name": "审阅所有的用户文档",
+    "Duration": 2,
+    "Start": "2007-04-09T00:00:00",
+    "Finish": "2007-04-10T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "149"
+    }]
+},
+{
+    "UID": "151",
+    "ParentTaskUID": "143",
+    "Name": "根据反馈修改用户文档",
+    "Duration": 2,
+    "Start": "2007-04-11T00:00:00",
+    "Finish": "2007-04-12T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "150"
+    }]
+},
+{
+    "UID": "152",
+    "ParentTaskUID": "143",
+    "Name": "完成文档",
+    "Duration": 0,
+    "Start": "2007-04-16T00:00:00",
+    "Finish": "2007-04-16T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "147"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "151"
+    }]
+},
+{
+    "UID": "153",
+    "ParentTaskUID": -1,
+    "Name": "试生产",
+    "Duration": 87,
+    "Start": "2007-01-30T00:00:00",
+    "Finish": "2007-05-30T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "154",
+    "ParentTaskUID": "153",
+    "Name": "确定测试群体",
+    "Duration": 1,
+    "Start": "2007-01-30T00:00:00",
+    "Finish": "2007-01-30T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "102"
+    }]
+},
+{
+    "UID": "155",
+    "ParentTaskUID": "153",
+    "Name": "确定软件分发机制",
+    "Duration": 1,
+    "Start": "2007-01-31T00:00:00",
+    "Finish": "2007-01-31T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "154"
+    }]
+},
+{
+    "UID": "156",
+    "ParentTaskUID": "153",
+    "Name": "安装/部署软件",
+    "Duration": 1,
+    "Start": "2007-05-21T00:00:00",
+    "Finish": "2007-05-21T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "133"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "142"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "152"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "155"
+    }]
+},
+{
+    "UID": "157",
+    "ParentTaskUID": "153",
+    "Name": "获得用户反馈",
+    "Duration": 5,
+    "Start": "2007-05-22T00:00:00",
+    "Finish": "2007-05-28T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "156"
+    }]
+},
+{
+    "UID": "158",
+    "ParentTaskUID": "153",
+    "Name": "评估测试信息",
+    "Duration": 1,
+    "Start": "2007-05-29T00:00:00",
+    "Finish": "2007-05-29T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "157"
+    }]
+},
+{
+    "UID": "159",
+    "ParentTaskUID": "153",
+    "Name": "完成试生产工作",
+    "Duration": 0,
+    "Start": "2007-05-30T00:00:00",
+    "Finish": "2007-05-30T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "158"
+    }]
+},
+{
+    "UID": "160",
+    "ParentTaskUID": -1,
+    "Name": "部署",
+    "Duration": 6,
+    "Start": "2007-05-31T00:00:00",
+    "Finish": "2007-06-07T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "161",
+    "ParentTaskUID": "160",
+    "Name": "确定最终部署策略",
+    "Duration": 1,
+    "Start": "2007-05-31T00:00:00",
+    "Finish": "2007-05-31T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "159"
+    }]
+},
+{
+    "UID": "162",
+    "ParentTaskUID": "160",
+    "Name": "确定部署方法",
+    "Duration": 1,
+    "Start": "2007-06-01T00:00:00",
+    "Finish": "2007-06-01T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "161"
+    }]
+},
+{
+    "UID": "163",
+    "ParentTaskUID": "160",
+    "Name": "获得部署所需资源",
+    "Duration": 1,
+    "Start": "2007-06-04T00:00:00",
+    "Finish": "2007-06-04T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "162"
+    }]
+},
+{
+    "UID": "164",
+    "ParentTaskUID": "160",
+    "Name": "培训技术支持人员",
+    "Duration": 1,
+    "Start": "2007-06-05T00:00:00",
+    "Finish": "2007-06-05T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "163"
+    }]
+},
+{
+    "UID": "165",
+    "ParentTaskUID": "160",
+    "Name": "部署软件",
+    "Duration": 1,
+    "Start": "2007-06-06T00:00:00",
+    "Finish": "2007-06-06T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "164"
+    }]
+},
+{
+    "UID": "166",
+    "ParentTaskUID": "160",
+    "Name": "完成部署工作",
+    "Duration": 0,
+    "Start": "2007-06-07T00:00:00",
+    "Finish": "2007-06-07T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "165"
+    }]
+},
+{
+    "UID": "167",
+    "ParentTaskUID": -1,
+    "Name": "实施工作结束后的回顾",
+    "Duration": 4,
+    "Start": "2007-06-08T00:00:00",
+    "Finish": "2007-06-13T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "168",
+    "ParentTaskUID": "167",
+    "Name": "将经验教训记录存档",
+    "Duration": 1,
+    "Start": "2007-06-08T00:00:00",
+    "Finish": "2007-06-08T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "166"
+    }]
+},
+{
+    "UID": "169",
+    "ParentTaskUID": "167",
+    "Name": "分发给工作组成员",
+    "Duration": 1,
+    "Start": "2007-06-11T00:00:00",
+    "Finish": "2007-06-11T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "168"
+    }]
+},
+{
+    "UID": "170",
+    "ParentTaskUID": "167",
+    "Name": "建立软件维护小组",
+    "Duration": 1,
+    "Start": "2007-06-12T00:00:00",
+    "Finish": "2007-06-12T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "169"
+    }]
+},
+{
+    "UID": "171",
+    "ParentTaskUID": "167",
+    "Name": "完成回顾",
+    "Duration": 0,
+    "Start": "2007-06-13T00:00:00",
+    "Finish": "2007-06-13T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "170"
+    }]
+},
+{
+    "UID": "172",
+    "ParentTaskUID": -1,
+    "Name": "软件开发模板结束",
+    "Duration": 0,
+    "Start": "2007-06-14T00:00:00",
+    "Finish": "2007-06-14T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "171"
+    }]
+},
+{
+    "UID": "173",
+    "ParentTaskUID": -1,
+    "Name": "项目范围规划",
+    "Duration": 5,
+    "Start": "2007-01-01T00:00:00",
+    "Finish": "2007-01-05T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "174",
+    "ParentTaskUID": "173",
+    "Name": "确定项目范围",
+    "Duration": 1,
+    "Start": "2007-01-01T00:00:00",
+    "Finish": "2007-01-01T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "175",
+    "ParentTaskUID": "173",
+    "Name": "获得项目所需资金",
+    "Duration": 1,
+    "Start": "2007-01-02T00:00:00",
+    "Finish": "2007-01-02T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "174"
+    }]
+},
+{
+    "UID": "176",
+    "ParentTaskUID": "173",
+    "Name": "定义预备资源",
+    "Duration": 1,
+    "Start": "2007-01-03T00:00:00",
+    "Finish": "2007-01-03T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "175"
+    }]
+},
+{
+    "UID": "177",
+    "ParentTaskUID": "173",
+    "Name": "获得核心资源",
+    "Duration": 1,
+    "Start": "2007-01-04T00:00:00",
+    "Finish": "2007-01-04T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "176"
+    }]
+},
+{
+    "UID": "178",
+    "ParentTaskUID": "173",
+    "Name": "完成项目范围规划",
+    "Duration": 0,
+    "Start": "2007-01-05T00:00:00",
+    "Finish": "2007-01-05T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "177"
+    }]
+},
+{
+    "UID": "179",
+    "ParentTaskUID": -1,
+    "Name": "分析/软件需求",
+    "Duration": 16,
+    "Start": "2007-01-08T00:00:00",
+    "Finish": "2007-01-29T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "180",
+    "ParentTaskUID": "179",
+    "Name": "行为需求分析",
+    "Duration": 5,
+    "Start": "2007-01-08T00:00:00",
+    "Finish": "2007-01-12T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "178"
+    }]
+},
+{
+    "UID": "181",
+    "ParentTaskUID": "179",
+    "Name": "起草初步的软件规范",
+    "Duration": 3,
+    "Start": "2007-01-15T00:00:00",
+    "Finish": "2007-01-17T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "180"
+    }]
+},
+{
+    "UID": "182",
+    "ParentTaskUID": "179",
+    "Name": "制定初步预算",
+    "Duration": 2,
+    "Start": "2007-01-18T00:00:00",
+    "Finish": "2007-01-19T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "181"
+    }]
+},
+{
+    "UID": "183",
+    "ParentTaskUID": "179",
+    "Name": "工作组共同审阅软件规范/预算",
+    "Duration": 1,
+    "Start": "2007-01-22T00:00:00",
+    "Finish": "2007-01-22T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "182"
+    }]
+},
+{
+    "UID": "184",
+    "ParentTaskUID": "179",
+    "Name": "根据反馈修改软件规范",
+    "Duration": 1,
+    "Start": "2007-01-23T00:00:00",
+    "Finish": "2007-01-23T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "183"
+    }]
+},
+{
+    "UID": "185",
+    "ParentTaskUID": "179",
+    "Name": "制定交付期限",
+    "Duration": 1,
+    "Start": "2007-01-24T00:00:00",
+    "Finish": "2007-01-24T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "184"
+    }]
+},
+{
+    "UID": "186",
+    "ParentTaskUID": "179",
+    "Name": "获得开展后续工作的批准(概念、期限和预算)",
+    "Duration": 1,
+    "Start": "2007-01-25T00:00:00",
+    "Finish": "2007-01-25T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "185"
+    }]
+},
+{
+    "UID": "187",
+    "ParentTaskUID": "179",
+    "Name": "获得所需资源",
+    "Duration": 1,
+    "Start": "2007-01-26T00:00:00",
+    "Finish": "2007-01-26T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "186"
+    }]
+},
+{
+    "UID": "188",
+    "ParentTaskUID": "179",
+    "Name": "完成分析工作",
+    "Duration": 0,
+    "Start": "2007-01-29T00:00:00",
+    "Finish": "2007-01-29T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "187"
+    }]
+},
+{
+    "UID": "189",
+    "ParentTaskUID": -1,
+    "Name": "设计",
+    "Duration": 16,
+    "Start": "2007-01-30T00:00:00",
+    "Finish": "2007-02-20T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "190",
+    "ParentTaskUID": "189",
+    "Name": "审阅初步的软件规范",
+    "Duration": 2,
+    "Start": "2007-01-30T00:00:00",
+    "Finish": "2007-01-31T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "188"
+    }]
+},
+{
+    "UID": "191",
+    "ParentTaskUID": "189",
+    "Name": "制定功能规范",
+    "Duration": 5,
+    "Start": "2007-02-01T00:00:00",
+    "Finish": "2007-02-07T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "190"
+    }]
+},
+{
+    "UID": "192",
+    "ParentTaskUID": "189",
+    "Name": "根据功能规范开发原型",
+    "Duration": 4,
+    "Start": "2007-02-08T00:00:00",
+    "Finish": "2007-02-13T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "191"
+    }]
+},
+{
+    "UID": "193",
+    "ParentTaskUID": "189",
+    "Name": "审阅功能规范",
+    "Duration": 2,
+    "Start": "2007-02-14T00:00:00",
+    "Finish": "2007-02-15T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "192"
+    }]
+},
+{
+    "UID": "194",
+    "ParentTaskUID": "189",
+    "Name": "根据反馈修改功能规范",
+    "Duration": 1,
+    "Start": "2007-02-16T00:00:00",
+    "Finish": "2007-02-16T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "193"
+    }]
+},
+{
+    "UID": "195",
+    "ParentTaskUID": "189",
+    "Name": "获得开展后续工作的批准",
+    "Duration": 1,
+    "Start": "2007-02-19T00:00:00",
+    "Finish": "2007-02-19T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "194"
+    }]
+},
+{
+    "UID": "196",
+    "ParentTaskUID": "189",
+    "Name": "完成设计工作",
+    "Duration": 0,
+    "Start": "2007-02-20T00:00:00",
+    "Finish": "2007-02-20T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "195"
+    }]
+},
+{
+    "UID": "197",
+    "ParentTaskUID": -1,
+    "Name": "开发",
+    "Duration": 34,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-04-09T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "198",
+    "ParentTaskUID": "197",
+    "Name": "审阅功能规范",
+    "Duration": 1,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-21T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "196"
+    }]
+},
+{
+    "UID": "199",
+    "ParentTaskUID": "197",
+    "Name": "确定模块化/分层设计参数",
+    "Duration": 1,
+    "Start": "2007-02-22T00:00:00",
+    "Finish": "2007-02-22T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "198"
+    }]
+},
+{
+    "UID": "200",
+    "ParentTaskUID": "197",
+    "Name": "分派任务给开发人员",
+    "Duration": 1,
+    "Start": "2007-02-23T00:00:00",
+    "Finish": "2007-02-23T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "199"
+    }]
+},
+{
+    "UID": "201",
+    "ParentTaskUID": "197",
+    "Name": "编写代码",
+    "Duration": 15,
+    "Start": "2007-02-26T00:00:00",
+    "Finish": "2007-03-16T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "200"
+    }]
+},
+{
+    "UID": "202",
+    "ParentTaskUID": "197",
+    "Name": "开发人员测试(初步调试)",
+    "Duration": 15,
+    "Start": "2007-03-19T00:00:00",
+    "Finish": "2007-04-06T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "201"
+    }]
+},
+{
+    "UID": "203",
+    "ParentTaskUID": "197",
+    "Name": "完成开发工作",
+    "Duration": 0,
+    "Start": "2007-04-09T00:00:00",
+    "Finish": "2007-04-09T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "202"
+    }]
+},
+{
+    "UID": "204",
+    "ParentTaskUID": -1,
+    "Name": "测试",
+    "Duration": 63,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-05-18T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "205",
+    "ParentTaskUID": "204",
+    "Name": "根据产品规范制定单元测试计划",
+    "Duration": 4,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-26T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "196"
+    }]
+},
+{
+    "UID": "206",
+    "ParentTaskUID": "204",
+    "Name": "根据产品规范制定整体测试计划",
+    "Duration": 4,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-26T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "196"
+    }]
+},
+{
+    "UID": "207",
+    "ParentTaskUID": "204",
+    "Name": "单元测试",
+    "Duration": 16,
+    "Start": "2007-04-10T00:00:00",
+    "Finish": "2007-05-01T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "208",
+    "ParentTaskUID": "207",
+    "Name": "审阅模块化代码",
+    "Duration": 5,
+    "Start": "2007-04-10T00:00:00",
+    "Finish": "2007-04-16T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "203"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "205"
+    }]
+},
+{
+    "UID": "209",
+    "ParentTaskUID": "207",
+    "Name": "测试组件模块是否符合产品规范",
+    "Duration": 2,
+    "Start": "2007-04-17T00:00:00",
+    "Finish": "2007-04-18T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "203"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "208"
+    }]
+},
+{
+    "UID": "210",
+    "ParentTaskUID": "207",
+    "Name": "找出不符合产品规范的异常情况",
+    "Duration": 3,
+    "Start": "2007-04-19T00:00:00",
+    "Finish": "2007-04-23T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "209"
+    }]
+},
+{
+    "UID": "211",
+    "ParentTaskUID": "207",
+    "Name": "修改代码",
+    "Duration": 3,
+    "Start": "2007-04-24T00:00:00",
+    "Finish": "2007-04-26T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "210"
+    }]
+},
+{
+    "UID": "212",
+    "ParentTaskUID": "207",
+    "Name": "重新测试经过修改的代码",
+    "Duration": 2,
+    "Start": "2007-04-27T00:00:00",
+    "Finish": "2007-04-30T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "211"
+    }]
+},
+{
+    "UID": "213",
+    "ParentTaskUID": "207",
+    "Name": "完成单元测试",
+    "Duration": 0,
+    "Start": "2007-05-01T00:00:00",
+    "Finish": "2007-05-01T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "212"
+    }]
+},
+{
+    "UID": "214",
+    "ParentTaskUID": "204",
+    "Name": "整体测试",
+    "Duration": 13,
+    "Start": "2007-05-02T00:00:00",
+    "Finish": "2007-05-18T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "215",
+    "ParentTaskUID": "214",
+    "Name": "测试模块集成情况",
+    "Duration": 5,
+    "Start": "2007-05-02T00:00:00",
+    "Finish": "2007-05-08T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "213"
+    }]
+},
+{
+    "UID": "216",
+    "ParentTaskUID": "214",
+    "Name": "找出不符合规范的异常情况",
+    "Duration": 2,
+    "Start": "2007-05-09T00:00:00",
+    "Finish": "2007-05-10T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "215"
+    }]
+},
+{
+    "UID": "217",
+    "ParentTaskUID": "214",
+    "Name": "修改代码",
+    "Duration": 3,
+    "Start": "2007-05-11T00:00:00",
+    "Finish": "2007-05-15T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "216"
+    }]
+},
+{
+    "UID": "218",
+    "ParentTaskUID": "214",
+    "Name": "重新测试经过修改的代码",
+    "Duration": 2,
+    "Start": "2007-05-16T00:00:00",
+    "Finish": "2007-05-17T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "217"
+    }]
+},
+{
+    "UID": "219",
+    "ParentTaskUID": "214",
+    "Name": "完成整体测试",
+    "Duration": 0,
+    "Start": "2007-05-18T00:00:00",
+    "Finish": "2007-05-18T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "218"
+    }]
+},
+{
+    "UID": "220",
+    "ParentTaskUID": -1,
+    "Name": "培训",
+    "Duration": 59,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-05-14T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "221",
+    "ParentTaskUID": "220",
+    "Name": "制定针对最终用户的培训规范",
+    "Duration": 3,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-23T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "196"
+    }]
+},
+{
+    "UID": "222",
+    "ParentTaskUID": "220",
+    "Name": "制定针对产品技术支持人员的培训规范",
+    "Duration": 3,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-23T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "196"
+    }]
+},
+{
+    "UID": "223",
+    "ParentTaskUID": "220",
+    "Name": "确定培训方法(基于计算机的培训、教室授课等)",
+    "Duration": 2,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-22T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "196"
+    }]
+},
+{
+    "UID": "224",
+    "ParentTaskUID": "220",
+    "Name": "编写培训材料",
+    "Duration": 15,
+    "Start": "2007-04-10T00:00:00",
+    "Finish": "2007-04-30T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "203"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "221"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "222"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "223"
+    }]
+},
+{
+    "UID": "225",
+    "ParentTaskUID": "220",
+    "Name": "研究培训材料的可用性",
+    "Duration": 4,
+    "Start": "2007-05-01T00:00:00",
+    "Finish": "2007-05-04T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "224"
+    }]
+},
+{
+    "UID": "226",
+    "ParentTaskUID": "220",
+    "Name": "对培训材料进行最后处理",
+    "Duration": 3,
+    "Start": "2007-05-07T00:00:00",
+    "Finish": "2007-05-09T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "225"
+    }]
+},
+{
+    "UID": "227",
+    "ParentTaskUID": "220",
+    "Name": "制定培训机制",
+    "Duration": 2,
+    "Start": "2007-05-10T00:00:00",
+    "Finish": "2007-05-11T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "226"
+    }]
+},
+{
+    "UID": "228",
+    "ParentTaskUID": "220",
+    "Name": "完成培训材料",
+    "Duration": 0,
+    "Start": "2007-05-14T00:00:00",
+    "Finish": "2007-05-14T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "227"
+    }]
+},
+{
+    "UID": "229",
+    "ParentTaskUID": -1,
+    "Name": "文档",
+    "Duration": 39,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-04-16T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "230",
+    "ParentTaskUID": "229",
+    "Name": "制定“帮助”规范",
+    "Duration": 1,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-21T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "196"
+    }]
+},
+{
+    "UID": "231",
+    "ParentTaskUID": "229",
+    "Name": "开发“帮助”系统",
+    "Duration": 15,
+    "Start": "2007-03-19T00:00:00",
+    "Finish": "2007-04-06T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "201"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "230"
+    }]
+},
+{
+    "UID": "232",
+    "ParentTaskUID": "229",
+    "Name": "审阅“帮助”文档",
+    "Duration": 3,
+    "Start": "2007-04-09T00:00:00",
+    "Finish": "2007-04-11T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "231"
+    }]
+},
+{
+    "UID": "233",
+    "ParentTaskUID": "229",
+    "Name": "根据反馈修改“帮助”文档",
+    "Duration": 2,
+    "Start": "2007-04-12T00:00:00",
+    "Finish": "2007-04-13T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "232"
+    }]
+},
+{
+    "UID": "234",
+    "ParentTaskUID": "229",
+    "Name": "制定用户手册规范",
+    "Duration": 2,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-22T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "196"
+    }]
+},
+{
+    "UID": "235",
+    "ParentTaskUID": "229",
+    "Name": "编写用户手册",
+    "Duration": 15,
+    "Start": "2007-03-19T00:00:00",
+    "Finish": "2007-04-06T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "201"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "234"
+    }]
+},
+{
+    "UID": "236",
+    "ParentTaskUID": "229",
+    "Name": "审阅所有的用户文档",
+    "Duration": 2,
+    "Start": "2007-04-09T00:00:00",
+    "Finish": "2007-04-10T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "235"
+    }]
+},
+{
+    "UID": "237",
+    "ParentTaskUID": "229",
+    "Name": "根据反馈修改用户文档",
+    "Duration": 2,
+    "Start": "2007-04-11T00:00:00",
+    "Finish": "2007-04-12T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "236"
+    }]
+},
+{
+    "UID": "238",
+    "ParentTaskUID": "229",
+    "Name": "完成文档",
+    "Duration": 0,
+    "Start": "2007-04-16T00:00:00",
+    "Finish": "2007-04-16T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "233"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "237"
+    }]
+},
+{
+    "UID": "239",
+    "ParentTaskUID": -1,
+    "Name": "试生产",
+    "Duration": 87,
+    "Start": "2007-01-30T00:00:00",
+    "Finish": "2007-05-30T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "240",
+    "ParentTaskUID": "239",
+    "Name": "确定测试群体",
+    "Duration": 1,
+    "Start": "2007-01-30T00:00:00",
+    "Finish": "2007-01-30T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "188"
+    }]
+},
+{
+    "UID": "241",
+    "ParentTaskUID": "239",
+    "Name": "确定软件分发机制",
+    "Duration": 1,
+    "Start": "2007-01-31T00:00:00",
+    "Finish": "2007-01-31T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "240"
+    }]
+},
+{
+    "UID": "242",
+    "ParentTaskUID": "239",
+    "Name": "安装/部署软件",
+    "Duration": 1,
+    "Start": "2007-05-21T00:00:00",
+    "Finish": "2007-05-21T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "219"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "228"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "238"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "241"
+    }]
+},
+{
+    "UID": "243",
+    "ParentTaskUID": "239",
+    "Name": "获得用户反馈",
+    "Duration": 5,
+    "Start": "2007-05-22T00:00:00",
+    "Finish": "2007-05-28T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "242"
+    }]
+},
+{
+    "UID": "244",
+    "ParentTaskUID": "239",
+    "Name": "评估测试信息",
+    "Duration": 1,
+    "Start": "2007-05-29T00:00:00",
+    "Finish": "2007-05-29T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "243"
+    }]
+},
+{
+    "UID": "245",
+    "ParentTaskUID": "239",
+    "Name": "完成试生产工作",
+    "Duration": 0,
+    "Start": "2007-05-30T00:00:00",
+    "Finish": "2007-05-30T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "244"
+    }]
+},
+{
+    "UID": "246",
+    "ParentTaskUID": -1,
+    "Name": "部署",
+    "Duration": 6,
+    "Start": "2007-05-31T00:00:00",
+    "Finish": "2007-06-07T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "247",
+    "ParentTaskUID": "246",
+    "Name": "确定最终部署策略",
+    "Duration": 1,
+    "Start": "2007-05-31T00:00:00",
+    "Finish": "2007-05-31T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "245"
+    }]
+},
+{
+    "UID": "248",
+    "ParentTaskUID": "246",
+    "Name": "确定部署方法",
+    "Duration": 1,
+    "Start": "2007-06-01T00:00:00",
+    "Finish": "2007-06-01T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "247"
+    }]
+},
+{
+    "UID": "249",
+    "ParentTaskUID": "246",
+    "Name": "获得部署所需资源",
+    "Duration": 1,
+    "Start": "2007-06-04T00:00:00",
+    "Finish": "2007-06-04T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "248"
+    }]
+},
+{
+    "UID": "250",
+    "ParentTaskUID": "246",
+    "Name": "培训技术支持人员",
+    "Duration": 1,
+    "Start": "2007-06-05T00:00:00",
+    "Finish": "2007-06-05T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "249"
+    }]
+},
+{
+    "UID": "251",
+    "ParentTaskUID": "246",
+    "Name": "部署软件",
+    "Duration": 1,
+    "Start": "2007-06-06T00:00:00",
+    "Finish": "2007-06-06T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "250"
+    }]
+},
+{
+    "UID": "252",
+    "ParentTaskUID": "246",
+    "Name": "完成部署工作",
+    "Duration": 0,
+    "Start": "2007-06-07T00:00:00",
+    "Finish": "2007-06-07T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "251"
+    }]
+},
+{
+    "UID": "253",
+    "ParentTaskUID": -1,
+    "Name": "实施工作结束后的回顾",
+    "Duration": 4,
+    "Start": "2007-06-08T00:00:00",
+    "Finish": "2007-06-13T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "254",
+    "ParentTaskUID": "253",
+    "Name": "将经验教训记录存档",
+    "Duration": 1,
+    "Start": "2007-06-08T00:00:00",
+    "Finish": "2007-06-08T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "252"
+    }]
+},
+{
+    "UID": "255",
+    "ParentTaskUID": "253",
+    "Name": "分发给工作组成员",
+    "Duration": 1,
+    "Start": "2007-06-11T00:00:00",
+    "Finish": "2007-06-11T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "254"
+    }]
+},
+{
+    "UID": "256",
+    "ParentTaskUID": "253",
+    "Name": "建立软件维护小组",
+    "Duration": 1,
+    "Start": "2007-06-12T00:00:00",
+    "Finish": "2007-06-12T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "255"
+    }]
+},
+{
+    "UID": "257",
+    "ParentTaskUID": "253",
+    "Name": "完成回顾",
+    "Duration": 0,
+    "Start": "2007-06-13T00:00:00",
+    "Finish": "2007-06-13T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "256"
+    }]
+},
+{
+    "UID": "258",
+    "ParentTaskUID": -1,
+    "Name": "软件开发模板结束",
+    "Duration": 0,
+    "Start": "2007-06-14T00:00:00",
+    "Finish": "2007-06-14T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 1,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "257"
+    }]
+},
+{
+    "UID": "259",
+    "ParentTaskUID": -1,
+    "Name": "项目范围规划",
+    "Duration": 5,
+    "Start": "2007-01-01T00:00:00",
+    "Finish": "2007-01-05T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "260",
+    "ParentTaskUID": "259",
+    "Name": "确定项目范围",
+    "Duration": 1,
+    "Start": "2007-01-01T00:00:00",
+    "Finish": "2007-01-01T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "261",
+    "ParentTaskUID": "259",
+    "Name": "获得项目所需资金",
+    "Duration": 1,
+    "Start": "2007-01-02T00:00:00",
+    "Finish": "2007-01-02T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "260"
+    }]
+},
+{
+    "UID": "262",
+    "ParentTaskUID": "259",
+    "Name": "定义预备资源",
+    "Duration": 1,
+    "Start": "2007-01-03T00:00:00",
+    "Finish": "2007-01-03T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "261"
+    }]
+},
+{
+    "UID": "263",
+    "ParentTaskUID": "259",
+    "Name": "获得核心资源",
+    "Duration": 1,
+    "Start": "2007-01-04T00:00:00",
+    "Finish": "2007-01-04T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "262"
+    }]
+},
+{
+    "UID": "264",
+    "ParentTaskUID": "259",
+    "Name": "完成项目范围规划",
+    "Duration": 0,
+    "Start": "2007-01-05T00:00:00",
+    "Finish": "2007-01-05T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "263"
+    }]
+},
+{
+    "UID": "265",
+    "ParentTaskUID": -1,
+    "Name": "分析/软件需求",
+    "Duration": 16,
+    "Start": "2007-01-08T00:00:00",
+    "Finish": "2007-01-29T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "266",
+    "ParentTaskUID": "265",
+    "Name": "行为需求分析",
+    "Duration": 5,
+    "Start": "2007-01-08T00:00:00",
+    "Finish": "2007-01-12T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "264"
+    }]
+},
+{
+    "UID": "267",
+    "ParentTaskUID": "265",
+    "Name": "起草初步的软件规范",
+    "Duration": 3,
+    "Start": "2007-01-15T00:00:00",
+    "Finish": "2007-01-17T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "266"
+    }]
+},
+{
+    "UID": "268",
+    "ParentTaskUID": "265",
+    "Name": "制定初步预算",
+    "Duration": 2,
+    "Start": "2007-01-18T00:00:00",
+    "Finish": "2007-01-19T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "267"
+    }]
+},
+{
+    "UID": "269",
+    "ParentTaskUID": "265",
+    "Name": "工作组共同审阅软件规范/预算",
+    "Duration": 1,
+    "Start": "2007-01-22T00:00:00",
+    "Finish": "2007-01-22T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "268"
+    }]
+},
+{
+    "UID": "270",
+    "ParentTaskUID": "265",
+    "Name": "根据反馈修改软件规范",
+    "Duration": 1,
+    "Start": "2007-01-23T00:00:00",
+    "Finish": "2007-01-23T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "269"
+    }]
+},
+{
+    "UID": "271",
+    "ParentTaskUID": "265",
+    "Name": "制定交付期限",
+    "Duration": 1,
+    "Start": "2007-01-24T00:00:00",
+    "Finish": "2007-01-24T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "270"
+    }]
+},
+{
+    "UID": "272",
+    "ParentTaskUID": "265",
+    "Name": "获得开展后续工作的批准(概念、期限和预算)",
+    "Duration": 1,
+    "Start": "2007-01-25T00:00:00",
+    "Finish": "2007-01-25T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "271"
+    }]
+},
+{
+    "UID": "273",
+    "ParentTaskUID": "265",
+    "Name": "获得所需资源",
+    "Duration": 1,
+    "Start": "2007-01-26T00:00:00",
+    "Finish": "2007-01-26T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "272"
+    }]
+},
+{
+    "UID": "274",
+    "ParentTaskUID": "265",
+    "Name": "完成分析工作",
+    "Duration": 0,
+    "Start": "2007-01-29T00:00:00",
+    "Finish": "2007-01-29T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "273"
+    }]
+},
+{
+    "UID": "275",
+    "ParentTaskUID": -1,
+    "Name": "设计",
+    "Duration": 16,
+    "Start": "2007-01-30T00:00:00",
+    "Finish": "2007-02-20T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "276",
+    "ParentTaskUID": "275",
+    "Name": "审阅初步的软件规范",
+    "Duration": 2,
+    "Start": "2007-01-30T00:00:00",
+    "Finish": "2007-01-31T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "274"
+    }]
+},
+{
+    "UID": "277",
+    "ParentTaskUID": "275",
+    "Name": "制定功能规范",
+    "Duration": 5,
+    "Start": "2007-02-01T00:00:00",
+    "Finish": "2007-02-07T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "276"
+    }]
+},
+{
+    "UID": "278",
+    "ParentTaskUID": "275",
+    "Name": "根据功能规范开发原型",
+    "Duration": 4,
+    "Start": "2007-02-08T00:00:00",
+    "Finish": "2007-02-13T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "277"
+    }]
+},
+{
+    "UID": "279",
+    "ParentTaskUID": "275",
+    "Name": "审阅功能规范",
+    "Duration": 2,
+    "Start": "2007-02-14T00:00:00",
+    "Finish": "2007-02-15T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "278"
+    }]
+},
+{
+    "UID": "280",
+    "ParentTaskUID": "275",
+    "Name": "根据反馈修改功能规范",
+    "Duration": 1,
+    "Start": "2007-02-16T00:00:00",
+    "Finish": "2007-02-16T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "279"
+    }]
+},
+{
+    "UID": "281",
+    "ParentTaskUID": "275",
+    "Name": "获得开展后续工作的批准",
+    "Duration": 1,
+    "Start": "2007-02-19T00:00:00",
+    "Finish": "2007-02-19T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "280"
+    }]
+},
+{
+    "UID": "282",
+    "ParentTaskUID": "275",
+    "Name": "完成设计工作",
+    "Duration": 0,
+    "Start": "2007-02-20T00:00:00",
+    "Finish": "2007-02-20T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "281"
+    }]
+},
+{
+    "UID": "283",
+    "ParentTaskUID": -1,
+    "Name": "开发",
+    "Duration": 34,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-04-09T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "284",
+    "ParentTaskUID": "283",
+    "Name": "审阅功能规范",
+    "Duration": 1,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-21T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "282"
+    }]
+},
+{
+    "UID": "285",
+    "ParentTaskUID": "283",
+    "Name": "确定模块化/分层设计参数",
+    "Duration": 1,
+    "Start": "2007-02-22T00:00:00",
+    "Finish": "2007-02-22T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "284"
+    }]
+},
+{
+    "UID": "286",
+    "ParentTaskUID": "283",
+    "Name": "分派任务给开发人员",
+    "Duration": 1,
+    "Start": "2007-02-23T00:00:00",
+    "Finish": "2007-02-23T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "285"
+    }]
+},
+{
+    "UID": "287",
+    "ParentTaskUID": "283",
+    "Name": "编写代码",
+    "Duration": 15,
+    "Start": "2007-02-26T00:00:00",
+    "Finish": "2007-03-16T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "286"
+    }]
+},
+{
+    "UID": "288",
+    "ParentTaskUID": "283",
+    "Name": "开发人员测试(初步调试)",
+    "Duration": 15,
+    "Start": "2007-03-19T00:00:00",
+    "Finish": "2007-04-06T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "287"
+    }]
+},
+{
+    "UID": "289",
+    "ParentTaskUID": "283",
+    "Name": "完成开发工作",
+    "Duration": 0,
+    "Start": "2007-04-09T00:00:00",
+    "Finish": "2007-04-09T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "288"
+    }]
+},
+{
+    "UID": "290",
+    "ParentTaskUID": -1,
+    "Name": "测试",
+    "Duration": 50,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-05-01T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "291",
+    "ParentTaskUID": "290",
+    "Name": "根据产品规范制定单元测试计划",
+    "Duration": 4,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-26T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "282"
+    }]
+},
+{
+    "UID": "292",
+    "ParentTaskUID": "290",
+    "Name": "根据产品规范制定整体测试计划",
+    "Duration": 4,
+    "Start": "2007-02-21T00:00:00",
+    "Finish": "2007-02-26T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "282"
+    }]
+},
+{
+    "UID": "293",
+    "ParentTaskUID": "290",
+    "Name": "单元测试",
+    "Duration": 16,
+    "Start": "2007-04-10T00:00:00",
+    "Finish": "2007-05-01T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 1,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": []
+},
+{
+    "UID": "294",
+    "ParentTaskUID": "293",
+    "Name": "审阅模块化代码",
+    "Duration": 5,
+    "Start": "2007-04-10T00:00:00",
+    "Finish": "2007-04-16T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "289"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "291"
+    }]
+},
+{
+    "UID": "295",
+    "ParentTaskUID": "293",
+    "Name": "测试组件模块是否符合产品规范",
+    "Duration": 2,
+    "Start": "2007-04-17T00:00:00",
+    "Finish": "2007-04-18T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "289"
+    },
+    {
+        "Type": 1,
+        "PredecessorUID": "294"
+    }]
+},
+{
+    "UID": "296",
+    "ParentTaskUID": "293",
+    "Name": "找出不符合产品规范的异常情况",
+    "Duration": 3,
+    "Start": "2007-04-19T00:00:00",
+    "Finish": "2007-04-23T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "295"
+    }]
+},
+{
+    "UID": "297",
+    "ParentTaskUID": "293",
+    "Name": "修改代码",
+    "Duration": 3,
+    "Start": "2007-04-24T00:00:00",
+    "Finish": "2007-04-26T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "296"
+    }]
+},
+{
+    "UID": "298",
+    "ParentTaskUID": "293",
+    "Name": "重新测试经过修改的代码",
+    "Duration": 2,
+    "Start": "2007-04-27T00:00:00",
+    "Finish": "2007-04-30T23:23:59",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 0,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "297"
+    }]
+},
+{
+    "UID": "299",
+    "ParentTaskUID": "293",
+    "Name": "完成单元测试",
+    "Duration": 0,
+    "Start": "2007-05-01T00:00:00",
+    "Finish": "2007-05-01T00:00:00",
+    "PercentComplete": 0,
+    "Summary": 0,
+    "Critical": 0,
+    "Milestone": 1,
+    "PredecessorLink": [{
+        "Type": 1,
+        "PredecessorUID": "298"
+    }]
+}]

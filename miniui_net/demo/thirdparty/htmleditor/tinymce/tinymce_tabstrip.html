@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+ 
+    <title>TinyMCE(选项卡)</title>
+    <script src="../../../../scripts/boot.js" type="text/javascript"></script>
+    <script src="https://cdn.bootcss.com/tinymce/4.6.6/tinymce.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <div id="Div1" class="mini-tabs" activeIndex="0" style="width:800px" >
+        <div title="Tab1">
+             <table style="width:100%;table-layout:fixed;">
+               <tr>
+                   <td style="width:100px;vertical-align:top">
+                    输入框一：
+                   </td>
+                   <td style="width:650px">
+                      <input class="mini-textarea" style="height:50px;width:100%;" />
+                   </td>
+               </tr>
+               <tr>
+                 <td style="width:100px;vertical-align:top">
+                     编辑器一：
+                 </td>
+                 <td>
+                     <div id="tinymce" style="height:300px">
+                        <p>MiniUI - 专业WebUI控件库</p>
+                        </br>
+                        <p>   快速开发，减少50%代码量</p>
+                        <p>   丰富组件库，高性能、低内存</p>
+                        <p>   支持 Java、.NET、PHP</p>
+                        <p>   支持 IE6+、FireFox、Chrome</p>
+                     
+                   </div>
+                 </td>
+               </tr>
+            </table>
+            <a class="mini-button" onclick="getContent('tm')">获取编辑器的值</a>
+        </div>
+        <div title="Tab2">
+            <table style="width:100%;table-layout:fixed;">
+               <tr>
+                   <td style="width:100px;vertical-align:top">
+                    输入框二：
+                   </td>
+                   <td style="width:650px">
+                      <input class="mini-textarea" style="height:50px;width:100%;" />
+                   </td>
+               </tr>
+               <tr>
+                 <td style="width:100px;vertical-align:top">
+                     编辑器二：
+                 </td>
+                 <td>
+                     <div id="tinymce1">MiniUI - 专业WebUI控件库</div>
+                 </td>
+               </tr>
+            </table>
+            <a class="mini-button" onclick="getContent('tm1')">获取编辑器的值</a>
+        </div>
+
+    </div>
+    
+
+
+</body>
+
+</html>
+<script type="text/javascript">
+    mini.parse();
+    tinymce.init({
+        selector: '#tinymce',
+ 
+    });
+    tinymce.init({
+        selector: '#tinymce1',
+        menubar: false,
+        toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+
+    });
+
+    function getContent(el) {
+
+        if (el == "tm") {
+            alert(tinymce.get('tinymce').getContent());
+        }
+        else if (el == "tm1") {
+            alert(tinymce.get('tinymce1').getContent());
+        }
+    }
+
+</script>

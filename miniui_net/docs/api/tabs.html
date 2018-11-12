@@ -1,0 +1,475 @@
+﻿<html>
+<head>
+    <title>Tabs - jQuery MiniUI 3.0 Documentation</title>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="core.js" type="text/javascript"></script>
+    
+        
+
+</head>
+<body>
+    <h3>mini.Tabs</h3>
+    
+    <p>选项卡。</p>
+    
+    <h4>Extend</h4>
+    <p> <a class="extendlink" href="control.html">mini.Control</a></p>    
+
+    <h4>Usage</h4>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">div </span><span style="color:red">class</span><span style="color:blue">="mini-tabs" </span><span style="color:red">activeIndex</span><span style="color:blue">="0"  </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:350px;</span><span style="color:red">height</span><span style="color:blue">:200px;"&gt;
+    &lt;</span><span style="color:maroon">div </span><span style="color:red">title</span><span style="color:blue">="Tab1"&gt;
+        </span>1
+    <span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">div </span><span style="color:red">title</span><span style="color:blue">="Tab2" </span><span style="color:red">iconCls</span><span style="color:blue">="icon-cut" &gt;
+        </span>2
+    <span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">div </span><span style="color:red">title</span><span style="color:blue">="Tab3" </span><span style="color:red">showCloseButton</span><span style="color:blue">="true" &gt;
+        </span>3
+    <span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">div </span><span style="color:red">title</span><span style="color:blue">="Tab4" </span><span style="color:red">showCloseButton</span><span style="color:blue">="true" </span><span style="color:red">enabled</span><span style="color:blue">="false"&gt;
+        </span>4
+    <span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+</span></pre>
+
+    <h4>Screenshots</h4>
+    <img src="images/tabs.gif" />
+
+    <h4>Examples</h4>
+    <a class="demo" href="../../demo/tabs/tabs.html" target="_blank">Tabs</a> 
+
+    <h4>Properties</h4>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th><th><a href="setsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Set? </a></th><th><a href="getsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Get? </a></th><th><a href="tagsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Tag? </a></th></tr>
+        <tr>
+            <td>activeIndex</td>
+            <td>Number</td>
+            <td>选中面板的索引</td>
+            <td>-1</td> 
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>tabAlign</td>
+            <td>left/center/right/fit</td>
+            <td>对齐方式</td>
+            <td>left</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>tabPosition</td>
+            <td>left/top/right/bottom</td>
+            <td>定位方式</td>
+            <td>top</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showBody</td>
+            <td>Boolean</td>
+            <td>是否显示内容区</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>bodyStyle</td>
+            <td>String</td>
+            <td>内容区样式</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+
+        <tr>
+            <td>url</td>
+            <td>String</td>
+            <td>路径地址</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+
+        <tr>
+            <td>maskOnLoad</td>
+            <td>Boolean</td>
+            <td>加载时遮罩。</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+        <tr>
+            <td>titleField</td>
+            <td>String</td>
+            <td></td>
+            <td>title</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+        <tr>
+            <td>urlField</td>
+            <td>String</td>
+            <td></td>
+            <td>url</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+        <tr>
+            <td>dataField</td>
+            <td>String</td>
+            <td>数据列表字段</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>plain</td>
+            <td>Boolean</td>
+            <td>是否隐藏头部背景</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+
+        <tr>
+            <td>arrowPosition</td>
+            <td>String</td>
+            <td>选项卡超出范围时箭头显示方式。right|side。</td>
+            <td>right</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+
+        <tr>
+            <td>showNavMenu</td>
+            <td>Boolean</td>
+            <td>是否显示选项卡下拉导航菜单</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+        <tr>
+            <td>buttons</td>
+            <td>Boolean</td>
+            <td>按钮元素id，如buttons="#tabsButtons"。</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+        <tr>
+            <td>buttonsAlign</td>
+            <td>String</td>
+            <td>按钮显示位置。left|right。</td>
+            <td>right</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+        
+    </table>
+
+    <h4>Methods</h4>
+    <table>
+        <tr><th>Name</th><th>Parameter</th><th>Description</th><th>Return</th></tr>
+        <tr>
+            <td>setTabs ( Array )</td>
+            <td></td>
+            <td>设置tabs数组。<a href="#tab">tab对象</a>。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getTabs (  )</td>
+            <td></td>
+            <td>获取tabs数组。</td>
+            <td>Array</td>
+        </tr>
+        <tr>
+            <td>addTab ( Object [, index] )</td>
+            <td>
+            Object：tab对象。<br />
+            index：Number。索引号。<br />
+
+            </td>
+            <td>增加<a href="#tab">tab</a>。<br />
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>removeTab ( name/index )</td>
+            <td>name：tab名称或索引。</td>
+            <td>删除<a href="#tab">tab</a>面板。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>removeAll ( butTab )</td>
+            <td>butTab：例外的tab。</td>
+            <td>删除所有子tab。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>moveTab ( tab, index )</td>
+            <td></td>
+            <td>移动tab面板到新位置</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>updateTab ( tab, options )</td>
+            <td></td>
+            <td>更新<a href="#tab">tab</a>面板</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>activeTab ( tab )</td>
+            <td></td>
+            <td>选中<a href="#tab">tab</a>面板</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getActiveTab (  )</td>
+            <td></td>
+            <td>获取选中的tab对象。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getTab ( index/name )</td>
+            <td></td>
+            <td>获取面板对象</td>
+            <td><a href="#tab">tab</a></td>
+        </tr>      
+        <tr>
+            <td>load ( url )</td>
+            <td></td>
+            <td>加载Tabs的JSON数组</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>loadTab ( url, tab, onTabLoad, onTabDestroy )</td>
+            <td>url：路径地址。<br />
+                tab：tab对象。<br />
+                onTabLoad：tab的IFrame加载回调函数。<br />
+                onTabDestroy：tab的IFrame销毁回调函数。
+            </td>
+            <td>加载指定tab的内容区域</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>reloadTab ( tab )</td>
+            <td>
+            </td>
+            <td>重新加载tab。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getTabBodyEl ( tab )</td>
+            <td>
+            </td>
+            <td>获取Tab的内容区元素。</td>
+            <td>Element</td>
+        </tr>
+        <tr>
+            <td>getTabIFrameEl ( tab )</td>
+            <td>
+            </td>
+            <td>获取Tab的IFrame元素。</td>
+            <td>Element</td>
+        </tr>
+    </table>
+
+    <h4>Events</h4>
+    <table>
+        <tr><th>Name</th><th>EventObject</th><th>Description</th></tr>
+        <tr>
+            <td>beforeactivechanged</td>
+            <td>
+<pre>
+{
+    sender: Object
+    tab: Object,
+    cancel: false
+}
+</pre>
+            </td>
+            <td>面板切换前发生</td>
+        </tr>
+        <tr>
+            <td>activechanged</td>
+            <td>
+<pre>
+{
+    sender: Object
+    tab: Object
+}
+</pre>
+            </td>
+            <td>面板切换时发生</td>           
+        </tr>
+        <tr>
+            <td>beforecloseclick</td>
+            <td>
+<pre>
+{
+    sender: Object
+    tab: Object,
+    cancel: false
+}
+</pre>
+            </td>
+            <td>关闭tab前发生</td>
+        </tr>
+        <tr>
+            <td>closeclick</td>
+            <td>
+<pre>
+{
+    sender: Object
+    tab: Object
+}
+</pre>
+            </td>
+            <td>tab关闭时发生</td>           
+        </tr>        
+        <tr>
+            <td>tabload</td>
+            <td>
+<pre>
+{
+    sender: Object
+    tab: Object
+}
+</pre>
+            </td>
+            <td>tab内容页面加载完成时激发</td>
+        </tr>
+        <tr>
+            <td>tabdestroy</td>
+            <td>
+<pre>
+{
+    sender: Object
+    tab: Object
+}
+</pre>
+            </td>
+            <td>tab内容页面销毁时激发</td>
+        </tr>
+    </table>
+    
+
+        <hr />
+
+    <h4 id="tab">Tab Object</h4>
+    <p>Tabs 面板对象，属性如下：</p>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+        <tr>
+            <td>name</td>
+            <td>String</td>
+            <td>面板名称</td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td>title</td>
+            <td>String</td>
+            <td>标题文本</td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td>newLine</td>
+            <td>Boolean</td>
+            <td>是否换行</td>
+            <td>false</td>
+            
+        </tr>
+        <tr>
+            <td>iconCls</td>
+            <td>String</td>
+            <td>标题图标样式类</td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td>iconStyle</td>
+            <td>String</td>
+            <td>标题图标样式</td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td>headerCls</td>
+            <td>String</td>
+            <td>头部样式类</td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td>headerStyle</td>
+            <td>String</td>
+            <td>头部样式</td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td>bodyCls</td>
+            <td>String</td>
+            <td>内容区样式类</td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td>bodyStyle</td>
+            <td>String</td>
+            <td>内容区样式</td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td>visible</td>
+            <td>Boolean</td>
+            <td>是否显示</td>
+            <td>true</td>
+            
+        </tr>
+        <tr>
+            <td>enabled</td>
+            <td>Boolean</td>
+            <td>是否启用</td>
+            <td>true</td>
+            
+        </tr>
+        <tr>
+            <td>showCloseButton</td>
+            <td>Boolean</td>
+            <td>是否显示关闭按钮</td>
+            <td>true</td>
+            
+        </tr>
+        <tr>
+            <td>url</td>
+            <td>String</td>
+            <td>路径地址</td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td>onload</td>
+            <td>Function</td>
+            <td>加载成功时激发</td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td>ondestroy</td>
+            <td>Function</td>
+            <td>销毁时激发</td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td>removeAction</td>
+            <td>String</td>
+            <td>tab的IFrame销毁时的动作，比如"close","cancel","ok"。</td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td>refreshOnClick</td>
+            <td>Boolean</td>
+            <td>点击tab时不断刷新页面。</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+    </table>
+</body>
+</html>

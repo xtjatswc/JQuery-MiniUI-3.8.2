@@ -1,0 +1,1854 @@
+﻿<html>
+<head>
+    <title>DataGrid - jQuery MiniUI 3.0 Documentation</title>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="core.js" type="text/javascript"></script>
+    
+
+    
+</head>
+<body>
+    <h3>mini.DataGrid</h3>
+    
+    <p>表格。实现分页加载、自定义列、单元格渲染、行编辑器、锁定列、过滤行、汇总行等功能。</p>
+
+    <h4>Extend</h4>
+    <p> <a class="extendlink" href="panel.html">mini.Panel</a></p>    
+
+    <h4>Usage</h4>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">div </span><span style="color:red">id</span><span style="color:blue">="datagrid1" </span><span style="color:red">class</span><span style="color:blue">="mini-datagrid" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:700px;</span><span style="color:red">height</span><span style="color:blue">:250px;" 
+    </span><span style="color:red">url</span><span style="color:blue">="../data/AjaxService.aspx?method=SearchEmployees" 
+&gt;
+    &lt;</span><span style="color:maroon">div </span><span style="color:red">property</span><span style="color:blue">="columns"&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">type</span><span style="color:blue">="indexcolumn"&gt;&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;                
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="loginname" </span><span style="color:red">width</span><span style="color:blue">="120" </span><span style="color:red">headerAlign</span><span style="color:blue">="center" </span><span style="color:red">allowSort</span><span style="color:blue">="true"&gt;</span>员工帐号<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;    
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="name" </span><span style="color:red">width</span><span style="color:blue">="120" </span><span style="color:red">headerAlign</span><span style="color:blue">="center" </span><span style="color:red">allowSort</span><span style="color:blue">="true"&gt;</span>姓名<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;    
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">header</span><span style="color:blue">="工作信息"&gt;
+            &lt;</span><span style="color:maroon">div </span><span style="color:red">property</span><span style="color:blue">="columns"&gt;
+                &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="dept_name" </span><span style="color:red">width</span><span style="color:blue">="120"&gt;</span>所属部门<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+                &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="position_name" </span><span style="color:red">width</span><span style="color:blue">="100"&gt;</span>职位<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+                &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="salary" </span><span style="color:red">width</span><span style="color:blue">="100" </span><span style="color:red">allowSort</span><span style="color:blue">="true"&gt;</span>薪资<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+            &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+        &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+    &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+</span></pre>
+
+    <h4>Screenshots</h4>
+    <img src="images/datagrid.gif" />
+
+    <h4>Examples</h4>
+    
+    <div class="examples">
+        <a href="../../demo/datagrid/datagrid.html" target="_blank">Base Example</a>
+        <a href="../../demo/datagrid/pager.html" target="_blank">Pagination</a>
+        <a href="../../demo/datagrid/filter.html" target="_blank">Filter Row</a>
+        <a href="../../demo/datagrid/fixedcolumns.html" target="_blank">FixedColumns</a>
+        <a href="../../demo/datagrid/summary.html" target="_blank">Data Summary</a>
+    </div>
+     <div class="examples">
+        CRUD：
+        <a href="../../demo/datagrid/rowedit.html" target="_blank">Row Edit</a>
+        <a href="../../demo/datagrid/editform.html" target="_blank">EditForm</a>
+        <a href="../../demo/datagrid/popupeditform.html" target="_blank">Popup EditForm</a>
+    </div>
+    <div class="examples">
+        Master-Detail：
+                <a href="../../demo/datagrid/detailform.html" target="_blank">Detail Form</a>
+                <a href="../../demo/datagrid/detailgrid.html" target="_blank">Detail Grid</a>
+                <a href="../../demo/datagrid/detailtabs.html" target="_blank">Detail Tabs</a>
+                <a href="../../demo/datagrid/inline_detailform.html" target="_blank">Inline Form</a>
+                <a href="../../demo/datagrid/inline_detailgrid.html" target="_blank">Inline Grid</a>
+                <a href="../../demo/datagrid/inline_detailtabs.html" target="_blank">Inline Tabs</a>
+                <a href="../../demo/datagrid/popupeditform.html" target="_blank">Popup Form</a>
+    </div>
+
+      
+      <div style="clear:both;"></div>
+    <h4>Properties</h4>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th><th><a href="setsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Set? </a></th><th><a href="getsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Get? </a></th><th><a href="tagsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Tag? </a></th></tr>
+        <tr>
+            <td>data</td>
+            <td>Array</td>
+            <td>数据对象</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>     
+        
+        <tr>
+            <td>columns</td>
+            <td>Array</td>
+            <td>列集合对象</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>url</td>
+            <td>String</td>
+            <td>数据加载地址</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>ajaxType</td>
+            <td>String</td>
+            <td>ajax类型：get/post。</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>ajaxOptions</td>
+            <td>Object</td>
+            <td>ajax配置对象。如：ajaxOptions="{type:'post', async: true, data: {a:1, b: true}, dataType: 'text', contentType: 'application/x-www-form-urlencoded;charset=utf-8'}"。</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>idField</td>
+            <td>String</td>
+            <td>行数据唯一字段。</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>virtualScroll</td>
+            <td>Boolean</td>
+            <td>是否虚拟滚动。当显示的数据超过500以上时，请设置此属性，能极大提升性能。</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>virtualColumns</td>
+            <td>Boolean</td>
+            <td>是否虚拟滚动列，在列较多时有用，提高性能。</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+        <tr>
+            <td>pageIndex</td>
+            <td>Number</td>
+            <td>页码</td>
+            <td>0</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>pageSize</td>
+            <td>Number</td>
+            <td>每页多少条</td>
+            <td>10</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+
+        <tr>
+            <td>sizeList</td>
+            <td>Array</td>
+            <td>页尺寸集合，比如[5,10,100]</td>
+            <td>[5,10,20,50,100]</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>        
+        <tr>
+            <td>sortField</td>
+            <td>String</td>
+            <td>排序字段</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>sortOrder</td>
+            <td>asc,desc</td>
+            <td>排序方向</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>sortMode</td>
+            <td>client</td>
+            <td>排序模式。设置为"client"后则时客户端排序</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        
+        <tr>
+            <td>totalCount</td>
+            <td>Number</td>
+            <td>总记录数</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>defaultColumnWidth</td>
+            <td>Number</td>
+            <td>默认列宽</td>
+            <td>100</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>showColumns</td>
+            <td>Boolean</td>
+            <td>显示表头</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showPager</td>
+            <td>Boolean</td>
+            <td>显示分页</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showHGridLines</td>
+            <td>Boolean</td>
+            <td>显示横向表格线条</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>showVGridLines</td>
+            <td>Boolean</td>
+            <td>显示竖向表格线条</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>showFilterRow</td>
+            <td>Boolean</td>
+            <td>显示过滤行</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>showSummaryRow</td>
+            <td>Boolean</td>
+            <td>显示汇总行</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>showGroupSummary</td>
+            <td>Boolean</td>
+            <td>是否显示分组汇总</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>summaryPosition</td>
+            <td>String</td>
+            <td>分组汇总位置。top|bottom。</td>
+            <td>bottom</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>allowEmptyContextMenu</td>
+            <td>Boolean</td>
+            <td>是否右键点击空白处也显示右键菜单</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        
+        <tr>
+            <td>showCellTip</td>
+            <td>Boolean</td>
+            <td>允许单元格提示框（当宽度变小有省略号时）</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>allowCellWrap</td>
+            <td>Boolean</td>
+            <td>允许单元格换行</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        
+        <tr>
+            <td>allowHeaderWrap</td>
+            <td>Boolean</td>
+            <td>允许表头文本换行</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        
+        <tr>
+            <td>allowSortColumn</td>
+            <td>Boolean</td>
+            <td>允许列排序</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>allowMoveColumn</td>
+            <td>Boolean</td>
+            <td>允许移动列</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>allowResizeColumn</td>
+            <td>Boolean</td>
+            <td>允许拖拽调节列宽度</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>enableHotTrack</td>
+            <td>Boolean</td>
+            <td>移动到行时高亮显示</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>allowCellSelect</td>
+            <td>Boolean</td>
+            <td>允许选择单元格</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>allowCellEdit</td>
+            <td>Boolean</td>
+            <td>允许单元格编辑。此模式下，行编辑API将失效。</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>editNextOnEnterKey</td>
+            <td>Boolean</td>
+            <td>按回车键进入下一个单元格编辑。</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>editNextRowCell</td>
+            <td>Boolean</td>
+            <td>按回车键进入下一行同列的单元格编辑。</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>cellEditAction</td>
+            <td>String</td>
+            <td>激发单元格编辑的事件，默认是cellclick，也可以配置成celldblclick。</td>
+            <td>cellclick</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>allowCellValid</td>
+            <td>Boolean</td>
+            <td>是否自动验证，当编辑单元格时。</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>validateOnAdd</td>
+            <td>Boolean</td>
+            <td>是否自动验证，当新增行时。</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        
+        <tr>
+            <td>allowRowSelect</td>
+            <td>Boolean</td>
+            <td>允许选择行</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        
+        <tr>
+            <td>onlyCheckSelection</td>
+            <td>Boolean</td>
+            <td>是否只通过checkcolumn列选择</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>multiSelect</td>
+            <td>Boolean</td>
+            <td>允许多选行</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+         <tr>
+            <td>allowUnselect</td>
+            <td>Boolean</td>
+            <td>允许反选。设置true后，点击任意单元格都会选中行，以及取消选中行。</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        
+        <tr>
+            <td>allowAlternating</td>
+            <td>Boolean</td>
+            <td>显示斑马纹</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>frozenStartColumn</td>
+            <td>Number</td>
+            <td>锁定开始列</td>
+            <td>-1</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>frozenEndColumn</td>
+            <td>Number</td>
+            <td>锁定截至列</td>
+            <td>-1</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showPageIndex</td>
+            <td>Boolean</td>
+            <td>显示页码</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showPageSize</td>
+            <td>Boolean</td>
+            <td>显示页尺寸</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+  <!--      <tr>
+            <td>showTotalCount</td>
+            <td>Boolean</td>
+            <td>显示总记录数</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>-->
+        <tr>
+            <td>showLoading</td>
+            <td>Boolean</td>
+            <td>显示Loading遮罩效果</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        
+         <tr>
+            <td>allowResize</td>
+            <td>Boolean</td>
+            <td>允许拖拽调节表格尺寸</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>selectOnLoad</td>
+            <td>Boolean</td>
+            <td>加载完是否自动选中</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>collapseGroupOnLoad</td>
+            <td>Boolean</td>
+            <td>加载完是否折叠分组</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>showEmptyText</td>
+            <td>Boolean</td>
+            <td>数据为空时显示提示文本</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>emptyText</td>
+            <td>String</td>
+            <td>数据为空时的提示文本</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>alwaysShowEmptyText</td>
+            <td>Boolean</td>
+            <td>是否总是显示空文本</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        
+        <tr>
+            <td>pageIndexField</td>
+            <td>String</td>
+            <td>分页索引字段名</td>
+            <td>"pageIndex"</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>pageSizeField</td>
+            <td>String</td>
+            <td>分页条数字段名</td>
+            <td>"pageSize"</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>sortFieldField</td>
+            <td>String</td>
+            <td>排序字段的字段名</td>
+            <td>"sortField"</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>sortOrderField</td>
+            <td>String</td>
+            <td>排序方向字段名</td>
+            <td>"sortOrder"</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>totalField</td>
+            <td>String</td>
+            <td>总记录数字段名</td>
+            <td>"total"</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>dataField</td>
+            <td>String</td>
+            <td>数据字段名</td>
+            <td>"data"</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        
+        <tr>
+            <td>showPageInfo</td>
+            <td>Boolean</td>
+            <td>显示分页文本信息</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showReloadButton</td>
+            <td>Boolean</td>
+            <td>显示"刷新"分页按钮</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>autoHideRowDetail</td>
+            <td>Boolean</td>
+            <td>展开详细行时，自动隐藏其他详细行</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showModified</td>
+            <td>Boolean</td>
+            <td>是否显示修改的红色小三角</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>        
+        <tr>
+            <td>showColumnsMenu</td>
+            <td>Boolean</td>
+            <td>显示列菜单。实现显示、隐藏列。</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>        
+
+
+                <tr>
+            <td>showPagerButtonText</td>
+            <td>Boolean</td>
+            <td>显示分页按钮文本</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>     
+
+                <tr>
+            <td>showPagerButtonIcon</td>
+            <td>Boolean</td>
+            <td>显示分页按钮图标</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>     
+
+        <tr>
+            <td>sizeText</td>
+            <td>String</td>
+            <td>分页控件分页文字。</td>
+            <td>""</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>pageSizeWidth</td>
+            <td>Number</td>
+            <td>分页控件pageSize选择框的宽度。</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+
+                        <tr>
+            <td>enableGroupOrder</td>
+            <td>Boolean</td>
+            <td>分组时是否应用排序。</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>    
+        
+         <tr>
+            <td>skipReadOnlyCell</td>
+            <td>Boolean</td>
+            <td>tab导航编辑时非编辑直接跳过。</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>      
+        <tr>
+            <td>showSortIcon</td>
+            <td>Boolean</td>
+            <td>显示可派序列的提示图标。</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        
+        
+        <tr>
+            <td>sortDblClick</td>
+            <td>Boolean</td>
+            <td>双击表头列排序。</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>selectOnRightClick</td>
+            <td>Boolean</td>
+            <td>是否允许右键点击选择。</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>navEditMode</td>
+            <td>Boolean</td>
+            <td>导航编辑模式。true时，按tab/enter键在导航切换时进入单元格编辑。</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>autoLoad</td>
+            <td>Boolean</td>
+            <td>是否自动加载数据。</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        
+        
+    </table>
+    
+    <h4>Methods</h4>
+    <table>
+        <tr><th>Name</th><th>Parameter</th><th>Description</th><th>Return</th></tr>
+
+        <tr>
+            <td>load ( params, success, fail )</td>
+            <td>params：Object。参数对象。<br />
+                success：Function。成功回调函数。<br />
+                fail：Function。失败回调函数。
+            </td>
+            <td>加载数据。<br />
+比如，grid.load({key: "普加"})。
+<br />后台接收如下信息：
+<pre>
+{
+    key: "普加",  //自定义
+    pageIndex: 0,
+    pageSize: 10,
+    sortField: "",
+    sortOrder: "asc"
+}
+</pre>            
+使用：String key = request.
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>reload ( )</td>
+            <td>
+            </td>
+            <td>重新加载数据。<br />
+            </td>
+            <td></td>
+        </tr>
+        
+         <tr>
+            <td>getLoadParams (  )</td>
+            <td></td>
+            <td>获取查询参数对象。</td>
+            <td>Object。</td>
+        </tr>
+        <tr>
+            <td>gotoPage ( index, size )</td>
+            <td></td>
+            <td>跳转页码。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>sortBy ( sortField, sortOrder )</td>
+            <td></td>
+            <td>排序字段</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>clearSort ( )</td>
+            <td></td>
+            <td>取消排序。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>groupBy ( field, dir )</td>
+            <td></td>
+            <td>分组。比如：grid.groupBy("city", "desc")</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getResultObject (  )</td>
+            <td></td>
+            <td>获取加载的服务端数据对象。一般在onload事件中调用。</td>
+            <td>Object</td>
+        </tr>
+        
+        <tr>
+            <td>loading ( )</td>
+            <td></td>
+            <td>显示加载遮罩。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>unmask ( )</td>
+            <td></td>
+            <td>取消遮罩。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>frozenColumns ( start, end )</td>
+            <td></td>
+            <td>锁定列。比如：grid.frozenColumns(0, 2)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>unFrozenColumns (  )</td>
+            <td></td>
+            <td>取消锁定列。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>clearGroup ( )</td>
+            <td></td>
+            <td>取消分组。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>collapseGroups ( )</td>
+            <td></td>
+            <td>折叠所有分组。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>expandGroups ( )</td>
+            <td></td>
+            <td>展开所有分组。</td>
+            <td></td>
+        </tr>
+        
+
+        <tr>
+            <td>mergeCells ( cells )</td>
+            <td></td>
+            <td>合并单元格。比如：
+<pre>
+var cells = [
+    { rowIndex: 1, columnIndex: 0, rowSpan: 1, colSpan: 2 },
+    { rowIndex: 3, columnIndex: 0, rowSpan: 4, colSpan: 3 }
+];
+grid.mergeCells(cells);
+</pre>            
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>mergeColumns ( columns )</td>
+            <td></td>
+            <td>自动合并相同值单元格。比如：
+<pre>
+grid.mergeColumns(["company"]);//company是某列的name
+</pre>
+            </td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>setCurrentCell ( cell )</td>
+            <td>cell: [row, column]</td>
+            <td>设置当前选中单元格。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getCurrentCell ( )</td>
+            <td></td>
+            <td>获取当前选中单元格。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>isChanged ( )</td>
+            <td></td>
+            <td>是否已修改。</td>
+            <td>Boolean</td>
+        </tr>
+        
+        <tr>
+            <td>getChanges ( state, onlyField )</td>
+            <td>
+state: added|modified|removed。如传递null，则获取增删改数据。<br />
+onlyField：Boolean。传递true，modified的行数据将只返回修改的字段。
+            </td>
+            <td>获取增加、删除、修改后的数据集合。row._state为added/modified/removed。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>beginEditCell (  )</td>
+            <td></td>
+            <td>对当前选中单元格启动编辑。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>cancelEdit (  )</td>
+            <td></td>
+            <td>取消所有行编辑。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>commitEditRow ( row )</td>
+            <td></td>
+            <td>提交指定行编辑。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>commitEdit (  )</td>
+            <td></td>
+            <td>提交所有行编辑。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>beginEditRow ( row )</td>
+            <td></td>
+            <td>启动行编辑。</td>
+            <td></td>
+        </tr>
+<!--        <tr>
+            <td>getEditData ( )</td>
+            <td></td>
+            <td>获取编辑中的行数据。</td>
+            <td>Array</td>
+        </tr>
+        <tr>
+            <td>getEditRowData ( row )</td>
+            <td></td>
+            <td>获取编辑中的指定行数据。</td>
+            <td>Array</td>
+        </tr>  -->      
+        <tr>
+            <td>cancelEditRow ( row )</td>
+            <td></td>
+            <td>取消指定行编辑。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>isEditing ( )</td>
+            <td></td>
+            <td>是否有行编辑。</td>
+            <td>Boolean</td>
+        </tr>
+        <tr>
+            <td>isEditingRow ( row )</td>
+            <td></td>
+            <td>指定行是否处于编辑状态。</td>
+            <td>Boolean</td>
+        </tr>
+        
+        <tr>
+            <td>getCellEditor ( column, row )</td>
+            <td></td>
+            <td>获取指定列和行的编辑器控件对象。</td>
+            <td><a href="control.html">Control</a></td>
+        </tr>                
+        <tr>
+            <td>getEditorOwnerRow ( editor )</td>
+            <td></td>
+            <td>获取编辑器属于哪一行对象</td>
+            <td></td>
+        </tr>
+        
+
+        <tr>
+            <td>updateRow ( row, rowData )</td>
+            <td></td>
+            <td>更新行（JavaScript）</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>removeRow ( row, autoSelect )</td>
+            <td></td>
+            <td>删除行（JavaScript）。autoSelect为true，则删除记录后，自动选择下一条记录。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>removeRows ( rows, autoSelect )</td>
+            <td></td>
+            <td>删除多行（JavaScript）。autoSelect为true，则删除记录后，自动选择下一条记录。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>addRows ( rows, index )</td>
+            <td></td>
+            <td>增加多行（Javascript）</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>addRow ( row, index )</td>
+            <td></td>
+            <td>增加行（Javascript）</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>moveRow ( row, index )</td>
+            <td></td>
+            <td>移动行（Javascript）</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>moveUp ( Array )</td>
+            <td></td>
+            <td>上移</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>moveDown ( Array )</td>
+            <td></td>
+            <td>下移</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>clearRows ( )</td>
+            <td></td>
+            <td>清除所有行（Javascript）</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>accept ( )</td>
+            <td></td>
+            <td>清除所有行修改痕迹。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>acceptRecord ( row )</td>
+            <td></td>
+            <td>清除指定行修改痕迹。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>reject ( )</td>
+            <td></td>
+            <td>取消还原数据修改。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>rejectRecord ( row )</td>
+            <td></td>
+            <td>取消还原指定行修改。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>indexOf ( row )</td>
+            <td></td>
+            <td>获取行索引号</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>isSelected ( row )</td>
+            <td></td>
+            <td>是否选中行</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getSelecteds ( )</td>
+            <td></td>
+            <td>获取所有选中的行</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getSelected ( )</td>
+            <td></td>
+            <td>获取当前选中行</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>setSelected ( row )</td>
+            <td></td>
+            <td>设置当前选中行</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>select ( row, fireEvent )</td>
+            <td>
+            fireEvent: Boolean。是否激发选择事件。
+            </td>
+            <td>选中行</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>deselect ( row, fireEvent )</td>
+            <td>fireEvent: Boolean。是否激发选择事件。</td>
+            <td>取消选中行</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>selectAll ( fireEvent )</td>
+            <td>fireEvent: Boolean。是否激发选择事件。</td>
+            <td>选中所有行</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>deselectAll ( fireEvent )</td>
+            <td>fireEvent: Boolean。是否激发选择事件。</td>
+            <td>取消选中所有行</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>clearSelect ( fireEvent )</td>
+            <td>fireEvent: Boolean。是否激发选择事件。</td>
+            <td>取消选中所有行</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>selects ( rows, fireEvent )</td>
+            <td>fireEvent: Boolean。是否激发选择事件。</td>
+            <td>选中多行</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>deselects ( rows, fireEvent )</td>
+            <td>fireEvent: Boolean。是否激发选择事件。</td>
+            <td>取消选中多行</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>showAllRowDetail ( )</td>
+            <td></td>
+            <td>显示所有行详细</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>hideAllRowDetail ( )</td>
+            <td></td>
+            <td>隐藏所有行详细</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>showRowDetail ( row )</td>
+            <td></td>
+            <td>显示行详细</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>hideRowDetail ( row )</td>
+            <td></td>
+            <td>隐藏行详细</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>isShowRowDetail ( row )</td>
+            <td></td>
+            <td>是否显示了行详细</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>getRowDetailCellEl ( row )</td>
+            <td></td>
+            <td>获取行详细DOM对象</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>hideColumn ( column )</td>
+            <td></td>
+            <td>隐藏列</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>showColumn ( column )</td>
+            <td></td>
+            <td>显示列</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>setColumnWidth ( column, Number )</td>
+            <td></td>
+            <td>设置列宽</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>updateColumn ( column, Object )</td>
+            <td></td>
+            <td>更新列内容。例如：grid.updateColumn("name", {header: "姓名"});</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getRow ( index )</td>
+            <td></td>
+            <td>获取行对象</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>findRow ( Function )</td>
+            <td></td>
+            <td>通过查询函数获取行对象。如：
+<pre>
+var row = grid.findRow(function(row){
+    if(row.name == "张三") return true;
+});
+</pre>            
+            </td>
+            <td>Object</td>
+        </tr>
+        <tr>
+            <td>findRows ( Function )</td>
+            <td></td>
+            <td>通过查询函数获取行对象数组。如：
+<pre>
+var rows = grid.findRows(function(row){
+    if(row.age > 20) return true;
+});
+</pre>            
+            </td>
+            <td>Array</td>
+        </tr>
+        <tr>
+            <td>getColumn ( index/columnName )</td>
+            <td></td>
+            <td>获取列对象</td>
+            <td></td>
+        </tr>
+       <tr>
+            <td>getRowEl ( row, viewIndex )</td>
+            <td></td>
+            <td>获取行DOM对象。viewIndex=1获取锁定行，viewIndex=2获取内容行。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getCellEl ( row, column )</td>
+            <td></td>
+            <td>获取单元格DOM对象</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getHeaderCellEl (column )</td>
+            <td></td>
+            <td>获取表头单元格DOM对象</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>addRowCls ( row, cls )</td>
+            <td></td>
+            <td>增加行样式</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>removeRowCls ( row, cls )</td>
+            <td></td>
+            <td>删除行样式</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getFilterCellEl ( column )</td>
+            <td></td>
+            <td>获取过滤行单元格DOM对象</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getSummaryCellEl ( column )</td>
+            <td></td>
+            <td>获取汇总行单元格DOM对象</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>validate (  )</td>
+            <td></td>
+            <td>验证表格所有单元格</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>isValid (  )</td>
+            <td></td>
+            <td>是否验证通过</td>
+            <td>Boolean</td>
+        </tr>
+        <tr>
+            <td>scrollIntoView ( row  )</td>
+            <td></td>
+            <td>定位滚动条到行</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getBottomPager (   )</td>
+            <td></td>
+            <td>获取分页控件</td>
+            <td></td>
+        </tr>
+        
+          <tr>
+            <td>getColumnByEvent ( event  )</td>
+            <td></td>
+            <td>根据事件对象获取列</td>
+            <td></td>
+        </tr>
+          <tr>
+            <td>getRowByEvent ( event  )</td>
+            <td></td>
+            <td>根据事件对象获取行</td>
+            <td></td>
+        </tr>
+          <tr>
+            <td>getCellByEvent ( event  )</td>
+            <td></td>
+            <td>根据事件对象获取单元格。cell = [record, column ]</td>
+            <td></td>
+        </tr>
+          <tr>
+            <td>getBottomColumns (   )</td>
+            <td></td>
+            <td>获取底部显示的列数组</td>
+            <td></td>
+        </tr>
+          <tr>
+            <td>getColumns (   )</td>
+            <td></td>
+            <td>获取列集合</td>
+            <td></td>
+        </tr>
+          <tr>
+            <td>getRowByUid ( uid )</td>
+            <td></td>
+            <td>根据uid获取行对象</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h4>Events</h4>
+    <table>
+        <tr><th>Name</th><th>EventObject</th><th>Description</th></tr>
+        <tr>
+            <td>columnschanged</td>
+            <td>
+            
+            </td>
+            <td>列改变时激发。如列显示/隐藏、列宽调整、列增加/删除等情况。</td>
+        </tr>
+        <tr>
+            <td>rowclick</td>
+            <td>
+<pre>
+{
+    sender: Object, //表格对象
+    record: Object //行对象
+}
+</pre>
+            
+            </td>
+            <td>行点击时发生</td>
+        </tr>
+        <tr>
+            <td>rowdblclick</td>
+            <td>
+<pre>
+{
+    sender: Object, //表格对象
+    record: Object //行对象
+}
+</pre>
+            </td>
+            <td>行双击时发生</td>
+        </tr>
+        <tr>
+            <td>rowmousedown</td>
+            <td>
+<pre>
+{
+    sender: Object, //表格对象
+    record: Object //行对象
+}
+</pre>            
+            </td>
+            <td>行鼠标按下时发生</td>
+        </tr>
+        <tr>
+            <td>cellclick</td>
+            <td>
+<pre>
+{
+    sender: Object, //表格对象
+    record: Object, //行对象
+    column: Object //列对象
+}
+</pre>            
+            </td>
+            <td>单元格点击时发生</td>
+        </tr>
+        <tr>
+            <td>cellmousedown</td>
+            <td>
+<pre>
+{
+    sender: Object, //表格对象
+    record: Object, //行对象
+    column: Object //列对象
+}
+</pre>  
+            </td>
+            <td>单元格鼠标按下时发生</td>
+        </tr>
+        <tr>
+            <td>headercellclick</td>
+            <td>
+<pre>
+{
+    sender: Object, //表格对象
+    column: Object //列对象
+}
+</pre>            
+            </td>
+            <td>表头单元格点击时发生</td>
+        </tr>
+        <tr>
+            <td>headercellmousedown</td>
+            <td>
+<pre>
+{
+    sender: Object, //表格对象
+    column: Object //列对象
+}
+</pre>  
+            </td>
+            <td>表头单元格鼠标按下时发生</td>
+        </tr>
+        <tr>
+            <td>headercellcontextmenu</td>
+            <td>
+<pre>
+{
+    sender: Object, //表格对象
+    column: Object //列对象
+}
+</pre>  
+            </td>
+            <td>表头单元格点击右键时发生</td>
+        </tr>
+        <tr>
+            <td>beforeload</td>
+            <td>
+<pre>
+{
+    sender: Object, //表格对象
+    data: Object    //参数对象
+    cancel: Boolean 
+}
+</pre>            
+            </td>
+            <td>数据加载前发生</td>
+        </tr>
+        <tr>
+            <td>preload</td>
+            <td></td>
+            <td>数据加载，设置到Grid前发生</td>
+        </tr>
+        <tr>
+            <td>loaderror</td>
+            <td>
+<pre>
+{
+    sender: Object, //表格对象
+    xhr: Object, //ajax对象
+    errorMsg: String //错误信息
+    errorCode: int  //错误码
+}
+</pre>              
+            </td>
+            <td>数据加载错误时发生</td>
+        </tr>
+        <tr>
+            <td>load</td>
+            <td>
+<pre>
+{
+    sender: Object, //表格对象
+    xhr: Object,    //ajax对象
+    data: Array     //数据    
+}
+</pre>   
+            </td>
+            <td>数据加载成功时发生</td>
+        </tr>
+        <tr>
+            <td>update</td>
+            <td>
+  
+            </td>
+            <td>表格渲染完毕事件</td>
+        </tr>
+        <tr>
+            <td>drawcell</td>
+            <td>
+<pre>
+{
+    sender: Object,
+    rowIndex: Number,
+    columnIndex: Number,
+    record: Object,    
+    column: Object,
+    field: String,
+    value: String,
+    cellHtml: "",
+    rowCls: "",
+    cellCls: "",
+    rowStyle: "",
+    cellStyle: ""
+}
+</pre>              
+            </td>
+            <td>绘制单元格时发生</td>
+        </tr>
+        <tr>
+            <td>cellbeginedit</td>
+            <td>
+<pre>
+{
+    sender: Object,
+    rowIndex: Number,    
+    record: Object,
+    column: Object,
+    field: String,
+    editor: Object,
+    value: String,
+    cancel: false
+}
+</pre>            
+            </td>
+            <td>编辑开始前发生</td>
+        </tr>
+        <tr>
+            <td>cellcommitedit</td>
+            <td>
+<pre>
+{
+    sender: Object,
+    rowIndex: Number,    
+    record: Object,
+    column: Object,
+    field: String,
+    editor: Object,
+    oldValue: Object,
+    value: Object,
+    cancel: false
+}
+</pre>            
+            </td>
+            <td>编辑值提交前发生</td>
+        </tr>
+        <tr>
+            <td>cellendedit</td>
+            <td>
+<pre>
+{
+    sender: Object,
+    rowIndex: Number,    
+    record: Object,
+    column: Object,
+    field: String,
+    editor: Object,
+    value: String
+}
+</pre>            
+            </td>
+            <td>编辑结束时发生</td>
+        </tr>
+        <tr>
+            <td>celleditenter</td>
+            <td>
+<pre>
+{
+    sender: Object,
+    record: Object
+}
+</pre>            
+            </td>
+            <td>编辑器按回车时发生</td>
+        </tr>
+        
+        <tr>
+            <td>selectionchanged</td>
+            <td></td>
+            <td>行选择改变时发生</td>
+        </tr>      
+        <tr>
+            <td>beforeselect</td>
+            <td>
+<pre>
+{
+    sender: Object,
+    record: Object,
+    cancel: Boolean
+}
+</pre>              
+            </td>
+            <td>行选中前发生</td>
+        </tr>   
+        <tr>
+            <td>beforedeselect</td>
+            <td>
+<pre>
+{
+    sender: Object,
+    record: Object,
+    cancel: Boolean
+}
+</pre>              
+            </td>
+            <td>行取消选中前发生</td>
+        </tr>   
+        <tr>
+            <td>select</td>
+            <td>
+<pre>
+{
+    sender: Object,
+    record: Object
+}
+</pre>              
+            </td>
+            <td>行选中时发生</td>
+        </tr>   
+        <tr>
+            <td>deselect</td>
+            <td>
+<pre>
+{
+    sender: Object,
+    record: Object
+}
+</pre>              
+            </td>
+            <td>行取消选中时发生</td>
+        </tr>   
+        <tr>
+            <td>cellvalidation</td>
+            <td>
+<pre>
+{
+    sender: Object,
+    record: Object,
+    column: Object,
+    field: String,
+    value: String,
+    isValid: Boolean,  //是否验证通过
+    errorText: ""   //错误提示文本
+}
+</pre>            
+            </td>
+            <td>单元格验证时发生（一般在单元格编辑结束时）</td>
+        </tr>
+        <tr>
+            <td>drawsummarycell</td>
+            <td>
+<pre>
+{
+    sender: Object,
+    result: Object,     //服务端返回的原始数据对象
+    records: Array,     //行数组
+    column: Object,     
+    field: String,
+    value: String,
+    cellHtml: "",
+    cellCls: "",
+    cellStyle: ""
+}
+</pre>     
+            </td>
+            <td>绘制汇总单元格事件</td>
+        </tr>
+  <!--      <tr>
+            <td>drawgroupsummarycell</td>
+            <td>
+<pre>
+{
+    sender: Object,
+    records: Array,     //行数组
+    column: Object,     
+    field: String,
+    value: String,
+    cellHtml: "",
+    cellCls: "",
+    cellStyle: ""
+}
+</pre>     
+            </td>
+        </tr>-->
+        <tr>
+            <td>resize</td>
+            <td>
+            
+            </td>
+            <td>表格拖拽调节尺寸时发生</td>
+        </tr>
+    </table>
+
+    <br />
+    <hr />
+
+    <h4 id="columns">Columns</h4>
+    <p>表格列配置集合：columns，是一个数组，如：[column, column, ...]。其中一个column的配置参数如下表：</p>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th></tr>
+        <tr>
+            <td>type</td>
+            <td>indexcolumn|checkcolumn|checkboxcolumn|comboboxcolumn|treeselectcolumn</td>
+            <td>列类型。创建几个特殊的列。</td>
+            <td></td>
+        </tr>  
+        <tr>
+            <td>header</td>
+            <td>String</td>
+            <td>表头列文本</td>
+            <td></td>
+            
+        </tr>  
+        <tr>
+            <td>field</td>
+            <td>String</td>
+            <td>单元格值字段</td>
+            <td></td>
+            
+        </tr>  
+        <tr>
+            <td>displayField</td>
+            <td>String</td>
+            <td>单元格文本字段</td>
+            <td></td>
+            
+        </tr>  
+        <tr>
+            <td>sortField</td>
+            <td>String</td>
+            <td>排序字段</td>
+            <td></td>
+            
+        </tr> 
+        <tr>
+            <td>name</td>
+            <td>String</td>
+            <td>列标识名称</td>
+            <td></td>
+            
+        </tr> 
+        <tr>
+            <td>width</td>
+            <td>Number</td>
+            <td>列宽度</td>
+            <td></td>
+            
+        </tr>  
+         <tr>
+            <td>visible</td>
+            <td>Boolean</td>
+            <td>是否显示</td>
+            <td></td>
+            
+        </tr> 
+        <tr>
+            <td>hideable</td>
+            <td>Boolean</td>
+            <td>是否在表头菜单项显示</td>
+            <td>false</td>
+        </tr>   
+         <tr>
+            <td>readOnly</td>
+            <td>Boolean</td>
+            <td>是否只读</td>
+            <td>false</td>
+            
+        </tr>  
+        
+        <tr>
+            <td>headerAlign</td>
+            <td>String</td>
+            <td>表头列文本位置。left/center/right。</td>
+            <td>left</td>
+            
+        </tr>  
+        <tr>
+            <td>align</td>
+            <td>String</td>
+            <td>单元格文本位置。left/center/right。</td>
+            <td>left</td>
+            
+        </tr>  
+        <tr>
+            <td>headerCls</td>
+            <td>String</td>
+            <td>表头列样式类。</td>
+            <td></td>
+            
+        </tr>  
+        <tr>
+            <td>cellCls</td>
+            <td>String</td>
+            <td>单元格样式类</td>
+            <td></td>
+            
+        </tr>  
+        <tr>
+            <td>headerStyle</td>
+            <td>String</td>
+            <td>表头列样式</td>
+            <td></td>
+            
+        </tr>  
+        <tr>
+            <td>cellStyle</td>
+            <td>String</td>
+            <td>单元格样式</td>
+            <td></td>
+            
+        </tr>        
+        <tr>
+            <td>editor</td>
+            <td>Object</td>
+            <td>单元格编辑器。</td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td>renderer</td>
+            <td>Function</td>
+            <td>单元格绘制处理函数，同<a href="#drawcell">drawcell</a>事件。</td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td>allowMove</td>
+            <td>Boolean</td>
+            <td>是否可移动表头列。</td>
+            <td>true</td>
+            
+        </tr>
+        <tr>
+            <td>allowResize</td>
+            <td>Boolean</td>
+            <td>是否拖拽调节表头列宽度。</td>
+            <td>true</td>
+            
+        </tr>
+        <tr>
+            <td>autoShowPopup</td>
+            <td>Boolean</td>
+            <td>编辑时是否自动显示下拉框。</td>
+            <td>false</td>
+            
+        </tr>
+        <tr>
+            <td>dataType</td>
+            <td>string|int|float|date|boolean|currency</td>
+            <td>数据类型，为客户端排序所用。</td>
+            <td>string</td>
+        </tr>
+        <tr>
+            <td>currencyUnit</td>
+            <td>String</td>
+            <td>货币单位。当dataType="currency"有用。如：￥432,432.00。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>dateFormat</td>
+            <td>String</td>
+            <td>日期格式化。如：yyyy-MM-dd HH:mm:ss。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>numberFormat</td>
+            <td>String</td>
+            <td>数字格式化。如：
+        <ul>
+            <li>小数点和千分位：format="n"</li>
+            <li>货币格式：format="c"。</li>
+            <li>百分比格式：format="p"。</li>
+            <li>自定义格式：format="¥#,0.00"。</li>            
+        </ul>
+            </td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>vtype</td>
+            <td>String</td>
+            <td>验证规则，如required,email,url等。具体<a href="../../demo/form/rules.html" target="_blank">参考这里</a>。</td>
+            <td>false</td>            
+        </tr>
+        <tr>
+            <td>summaryType</td>
+            <td>count|min|max|sum|avg</td>
+            <td>汇总计算类型。</td>
+            <td></td>            
+        </tr>
+        <tr>
+            <td>summaryRenderer</td>
+            <td>Function</td>
+            <td>汇总单元格渲染函数。</td>
+            <td></td>
+        </tr>
+<!--        <tr>
+            <td>groupSummaryType</td>
+            <td>count|min|max|sum|avg</td>
+            <td>分组汇总计算类型。</td>
+            <td></td>            
+        </tr>
+        <tr>
+            <td>groupSummaryRenderer</td>
+            <td>Function</td>
+            <td>分组汇总单元格渲染函数。</td>
+            <td></td>            
+        </tr>-->
+        <tr>
+            <td>autoEscape</td>
+            <td>false</td>
+            <td>是否自动转义Html。</td>
+            <td></td>
+        </tr>
+<!--        <tr>
+            <td>defaultValue</td>
+            <td></td>
+            <td>默认值。编辑时如果没有数据，则采用defaultValue默认值。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>defaultText</td>
+            <td></td>
+            <td>默认文本。</td>
+            <td></td>            
+        </tr>-->
+        <tr>
+            <td>decimalPlaces</td>
+            <td>Number</td>
+            <td>保留的小数位数，默认2位。</td>
+            <td></td>            
+        </tr>
+        
+    </table>
+</body>
+</html>

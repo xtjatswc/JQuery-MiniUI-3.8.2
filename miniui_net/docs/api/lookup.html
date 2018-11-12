@@ -1,0 +1,129 @@
+﻿<html>
+<head>
+    <title>Lookup - jQuery MiniUI 3.0 Documentation</title>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="core.js" type="text/javascript"></script>
+    
+        
+
+    
+</head>
+<body>
+    <h3>Lookup</h3>
+    
+    <p>下拉搜索选择框。</p>
+
+    <h4>Extend</h4>
+    <p> <a class="extendlink" href="popupedit.html">mini.PopupEdit</a></p>    
+
+    <h4>Usage</h4>
+<pre class="code"><span style="color: blue">&lt;</span><span style="color: maroon">input </span><span style="color: red">id</span><span style="color: blue">="lookup2" </span><span style="color: red">class</span><span style="color: blue">="mini-lookup" </span><span style="color: red">style</span><span style="color: blue">="</span><span style="color: red">width</span><span style="color: blue">:200px;" 
+    </span><span style="color: red">textField</span><span style="color: blue">="name" </span><span style="color: red">valueField</span><span style="color: blue">="id" </span><span style="color: red">popupWidth</span><span style="color: blue">="auto"
+    </span><span style="color: red">popup</span><span style="color: blue">="#gridPanel" </span><span style="color: red">grid</span><span style="color: blue">="#datagrid1"
+/&gt;
+
+&lt;</span><span style="color: maroon">div </span><span style="color: red">id</span><span style="color: blue">="gridPanel" </span><span style="color: red">class</span><span style="color: blue">="mini-panel" </span><span style="color: red">title</span><span style="color: blue">="header" </span><span style="color: red">iconCls</span><span style="color: blue">="icon-add" </span><span style="color: red">style</span><span style="color: blue">="</span><span style="color: red">width</span><span style="color: blue">:450px;</span><span style="color: red">height</span><span style="color: blue">:250px;" 
+    </span><span style="color: red">showToolbar</span><span style="color: blue">="true" </span><span style="color: red">showCloseButton</span><span style="color: blue">="true" </span><span style="color: red">showHeader</span><span style="color: blue">="false" </span><span style="color: red">bodyStyle</span><span style="color: blue">="padding:0" </span><span style="color: red">borderStyle</span><span style="color: blue">="border:0" 
+&gt;
+    &lt;</span><span style="color: maroon">div </span><span style="color: red">property</span><span style="color: blue">="toolbar" </span><span style="color: red">style</span><span style="color: blue">="</span><span style="color: red">padding</span><span style="color: blue">:5px;</span><span style="color: red">padding-left</span><span style="color: blue">:8px;</span><span style="color: red">text-align</span><span style="color: blue">:center;"&gt;   
+        &lt;</span><span style="color: maroon">span</span><span style="color: blue">&gt;</span>姓名：<span style="color: blue">&lt;/</span><span style="color: maroon">span</span><span style="color: blue">&gt;    
+        &lt;</span><span style="color: maroon">input </span><span style="color: red">id</span><span style="color: blue">="keyText" </span><span style="color: red">class</span><span style="color: blue">="mini-textbox" </span><span style="color: red">style</span><span style="color: blue">="</span><span style="color: red">width</span><span style="color: blue">:160px;" </span><span style="color: red">onenter</span><span style="color: blue">="onSearchClick"/&gt;
+        &lt;</span><span style="color: maroon">a </span><span style="color: red">class</span><span style="color: blue">="mini-button" </span><span style="color: red">onclick</span><span style="color: blue">="onSearchClick"&gt;</span>Search<span style="color: blue">&lt;/</span><span style="color: maroon">a</span><span style="color: blue">&gt;       
+    &lt;/</span><span style="color: maroon">div</span><span style="color: blue">&gt;
+    &lt;</span><span style="color: maroon">div </span><span style="color: red">id</span><span style="color: blue">="datagrid1" </span><span style="color: red">class</span><span style="color: blue">="mini-datagrid" </span><span style="color: red">style</span><span style="color: blue">="</span><span style="color: red">width</span><span style="color: blue">:100%;</span><span style="color: red">height</span><span style="color: blue">:100%;" 
+        </span><span style="color: red">borderStyle</span><span style="color: blue">="border:0" </span><span style="color: red">showPageSize</span><span style="color: blue">="false" </span><span style="color: red">showPageIndex</span><span style="color: blue">="false"
+        </span><span style="color: red">multiSelect</span><span style="color: blue">="true" </span><span style="color: red">url</span><span style="color: blue">="../data/AjaxService.aspx?method=SearchEmployees"
+    &gt;
+        &lt;</span><span style="color: maroon">div </span><span style="color: red">property</span><span style="color: blue">="columns"&gt;
+            &lt;</span><span style="color: maroon">div </span><span style="color: red">type</span><span style="color: blue">="checkcolumn" &gt;</span>#<span style="color: blue">&lt;/</span><span style="color: maroon">div</span><span style="color: blue">&gt;
+            &lt;</span><span style="color: maroon">div </span><span style="color: red">field</span><span style="color: blue">="loginname" </span><span style="color: red">width</span><span style="color: blue">="120" </span><span style="color: red">headerAlign</span><span style="color: blue">="center" </span><span style="color: red">allowSort</span><span style="color: blue">="true"&gt;</span>员工帐号<span style="color: blue">&lt;/</span><span style="color: maroon">div</span><span style="color: blue">&gt;    
+            &lt;</span><span style="color: maroon">div </span><span style="color: red">field</span><span style="color: blue">="name" </span><span style="color: red">width</span><span style="color: blue">="120" </span><span style="color: red">headerAlign</span><span style="color: blue">="center" </span><span style="color: red">allowSort</span><span style="color: blue">="true"&gt;</span>姓名<span style="color: blue">&lt;/</span><span style="color: maroon">div</span><span style="color: blue">&gt;
+            &lt;</span><span style="color: maroon">div </span><span style="color: red">field</span><span style="color: blue">="createtime" </span><span style="color: red">width</span><span style="color: blue">="100" </span><span style="color: red">headerAlign</span><span style="color: blue">="center" </span><span style="color: red">dateFormat</span><span style="color: blue">="yyyy-MM-dd" </span><span style="color: red">allowSort</span><span style="color: blue">="true"&gt;</span>创建日期<span style="color: blue">&lt;/</span><span style="color: maroon">div</span><span style="color: blue">&gt;                
+        &lt;/</span><span style="color: maroon">div</span><span style="color: blue">&gt;
+    &lt;/</span><span style="color: maroon">div</span><span style="color: blue">&gt;  
+&lt;/</span><span style="color: maroon">div</span><span style="color: blue">&gt;
+</span></pre>
+
+    <h4>Screenshots</h4>
+    <img src="images/lookup.gif" />
+
+    <h4>Examples</h4>
+    <a class="demo" href="../../demo/lookup/lookup.html" target="_blank">Lookup</a>
+
+
+    <h4>Properties</h4>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th><th><a href="setsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Set? </a></th><th><a href="getsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Get? </a></th><th><a href="tagsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Tag? </a></th></tr>
+        <tr>
+            <td>valueField</td>
+            <td>String</td>
+            <td>值字段</td>
+            <td>id</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>textField</td>
+            <td>String</td>
+            <td>文本字段</td>
+            <td>text</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>grid</td>
+            <td>String</td>
+            <td>表格id。如"#datagrid1"</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>popup</td>
+            <td>String</td>
+            <td>下拉框id。如"#gridPanel"</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+    </table>
+
+    <h4>Methods</h4>
+    <table>
+        <tr><th>Name</th><th>Parameter</th><th>Description</th><th>Return</th></tr>
+        <tr>
+            <td>setValue（value）</td>
+            <td></td>
+            <td>设置值</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getValue（）</td>
+            <td></td>
+            <td>获取值</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>deselectAll（）</td>
+            <td></td>
+            <td>清除所有选中</td>
+            <td></td>
+        </tr>
+        
+    </table>
+
+    <h4>Events</h4>
+    <table>
+        <tr><th>Name</th><th>EventObject</th><th>Description</th></tr>
+        <tr>
+            <td>valuechanged</td>
+            <td></td>
+            <td>值改变时发生</td>
+           
+        </tr>
+        
+    </table>
+
+</body>
+</html>

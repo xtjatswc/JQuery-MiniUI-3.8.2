@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery MiniUI - 专业WebUI控件库</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="jquery,web,grid,表格,datagrid,js,javascript,ajax,web开发,tree,table" />   
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。它能缩短开发时间，减少代码量，使开发者更专注于业务和服务端，轻松实现界面开发，带来绝佳的用户体验。" />
+    <link href="../core.css" rel="stylesheet" type="text/css" />
+    
+    <style type="text/css">
+
+    .td1
+    {
+        width:180px;
+        padding-bottom:32px;
+        vertical-align:top;
+        cursor:default;
+    }
+    .td1 div
+    {
+        width:150px;
+        height:100px;
+        border:solid 1px #bbb;
+        background:url(images/support.gif) no-repeat 50% 50%;
+        text-align:center;
+        line-height:100px;
+        font-size:14px;
+        font-family:微软雅黑,黑体,宋体;
+    }
+    .td2
+    {
+        vertical-align:top;
+        padding-top:2px;
+    }
+    h2
+    {
+        font-size:15px;
+        margin:0;
+    }
+    p
+    {
+        line-height:20px;
+        font-size:13px;
+    }
+    ul
+    {
+        font-size:13px;
+        line-height:20px;
+    }
+h4
+{
+    font-size:16px;
+    font-family:微软雅黑,黑体,宋体;
+    margin-bottom:8px;
+}     
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="headerInner">
+            <a class="logo" href="http://www.miniui.com" title="jQuery MiniUI - 专业WebUI控件库">jQuery MiniUI</a>
+            <a id="why" href="/why">为什么选择MiniUI？</a>
+
+            <ul class="topmenu">
+                <li><a href="/"><span>首页</span></a></li>
+                <li onmouseover="showMenu('popup1', this)" onmouseout="hideMenu('popup1', this)"><a href="/product"><span>产品</span></a>
+                    <ul id="popup1" class="popupmenu">
+                        <li class="product"><a href="/product">产品介绍</a></li>
+                        <li><a href="/features">功能特性</a></li>
+                        <li><a href="/screenshots">界面截图</a></li>                        
+                        <li><a href="/support">支持服务</a></li>
+                        <li><a href="/license">授权方式</a></li>
+                        
+                        <li class="faq"><a href="/faq">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="/demo"><span>示例</span></a></li>
+                <li onmouseover="showMenu('popup2', this)" onmouseout="hideMenu('popup2', this)"><a href="/docs"><span>文档</span></a>
+                    <ul id="popup2" class="popupmenu">                        
+                        <li id="start_link"><a href="/docs/quickstart">快速入门</a></li>
+                        <li><a href="/docs/tutorial">开发教程</a></li>
+                        <li id="kb_link"><a href="/docs/kb">精华文章</a></li>
+                        <li><a href="/docs/api">Api参考手册</a></li>
+                    </ul>
+                </li>
+                <li><a href="/bbs"><span>论坛</span></a></li><li><a href="/download"><span>下载</span></a></li>
+                
+                <li><a href="/contact"><span>联系</span></a></li>
+            </ul>
+        
+     
+        </div>
+    </div>
+    <div class="topnav">
+        <div class="topnavInner">
+            <a href="/">首页</a>><a href="/docs">文档中心</a>><span>快速入门</span>
+        </div>
+    </div>
+    <div class="body leftCenter">
+        <div class="bodyInner">
+            <div class="bodyLeft">
+                <div class="leftmenu">
+                    <h1>快速入门</h1>
+                    <ul>
+                        <li><a href="index.html">下载安装</a></li>
+                        <li><a href="first.html">Hello, world!</a></li>
+                        <li class="active"><a href="crud.html">CRUD</a></li>                        
+                        <li><a href="form.html">表单开发</a></li>                        
+                        <li><a href="layout.html">主框架布局</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bodyCenter">
+                <h1 class="bodyTitle" style="font-family:Tahoma;">CRUD</h1>
+
+                <div id="content">
+                        <p>CRUD包括：查询、编辑、新增、删除等数据操作。</p>
+                    <p>效果图如下：</p>
+                    <img src="images/crud.png" />
+                    <br /><br />
+                        
+                        <h4>查询数据</h4>
+                        <p>首先，我们创建一个数据表格：</p>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">div </span><span style="color:red">id</span><span style="color:blue">="datagrid1" </span><span style="color:red">class</span><span style="color:blue">="mini-datagrid" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:700px;</span><span style="color:red">height</span><span style="color:blue">:250px;"
+    </span><span style="color:red">url</span><span style="color:blue">="../data/AjaxService.aspx?method=SearchEmployees"  </span><span style="color:red">idField</span><span style="color:blue">="id" </span><span style="color:red">allowResize</span><span style="color:blue">="true"
+&gt;
+    &lt;</span><span style="color:maroon">div </span><span style="color:red">property</span><span style="color:blue">="columns"&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">type</span><span style="color:blue">="indexcolumn"&gt;&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="loginname" </span><span style="color:red">width</span><span style="color:blue">="120" </span><span style="color:red">headerAlign</span><span style="color:blue">="center" </span><span style="color:red">allowSort</span><span style="color:blue">="true"&gt;</span>员工帐号<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="name" </span><span style="color:red">width</span><span style="color:blue">="120" </span><span style="color:red">allowSort</span><span style="color:blue">="true"&gt;</span>姓名<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="age" </span><span style="color:red">width</span><span style="color:blue">="60" </span><span style="color:red">allowSort</span><span style="color:blue">="true"&gt;</span>年龄<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="birthday" </span><span style="color:red">width</span><span style="color:blue">="100" </span><span style="color:red">dateFormat</span><span style="color:blue">="yyyy-MM-dd"&gt;</span>出生日期<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+    &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt; 
+</span></pre>
+                        <p>定义一个search函数，实现查询功能：</p>
+<pre class="code"><span style="color:blue">function </span>search() {
+    <span style="color:blue">var </span>key = document.getElementById(<span style="color:maroon">"key"</span>).value;
+    grid.load({ key: key });
+}
+</pre>
+
+                        <h4>编辑数据</h4>
+                        <p>给需要编辑的列，加上不同的编辑器，代码如下：</p>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">div </span><span style="color:red">id</span><span style="color:blue">="datagrid1" </span><span style="color:red">class</span><span style="color:blue">="mini-datagrid" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:700px;</span><span style="color:red">height</span><span style="color:blue">:250px;"
+    </span><span style="color:red">url</span><span style="color:blue">="../data/AjaxService.aspx?method=SearchEmployees"  </span><span style="color:red">idField</span><span style="color:blue">="id" </span><span style="color:red">allowResize</span><span style="color:blue">="true"
+&gt;
+    &lt;</span><span style="color:maroon">div </span><span style="color:red">property</span><span style="color:blue">="columns"&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">type</span><span style="color:blue">="indexcolumn"&gt;&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="loginname" </span><span style="color:red">width</span><span style="color:blue">="120" </span><span style="color:red">headerAlign</span><span style="color:blue">="center" </span><span style="color:red">allowSort</span><span style="color:blue">="true"&gt;</span>员工帐号<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="name" </span><span style="color:red">width</span><span style="color:blue">="120" </span><span style="color:red">allowSort</span><span style="color:blue">="true"&gt;</span>姓名
+            <span style="color:#006400">&lt;!--textbox editor--&gt;
+            </span><span style="color:blue">&lt;</span><span style="color:maroon">input </span><span style="color:red">property</span><span style="color:blue">="editor" </span><span style="color:red">class</span><span style="color:blue">="mini-textbox" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:100%;"/&gt;
+        &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="age" </span><span style="color:red">width</span><span style="color:blue">="60" </span><span style="color:red">allowSort</span><span style="color:blue">="true"&gt;</span>年龄
+            <span style="color:#006400">&lt;!--spinner editor--&gt;
+            </span><span style="color:blue">&lt;</span><span style="color:maroon">input </span><span style="color:red">property</span><span style="color:blue">="editor" </span><span style="color:red">class</span><span style="color:blue">="mini-spinner" 
+                </span><span style="color:red">minValue</span><span style="color:blue">="0" </span><span style="color:red">maxValue</span><span style="color:blue">="200" </span><span style="color:red">value</span><span style="color:blue">="25" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:100%;"/&gt;
+        &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="birthday" </span><span style="color:red">width</span><span style="color:blue">="100" </span><span style="color:red">dateFormat</span><span style="color:blue">="yyyy-MM-dd"&gt;</span>出生日期
+            <span style="color:#006400">&lt;!--datepicker editor--&gt;
+            </span><span style="color:blue">&lt;</span><span style="color:maroon">input </span><span style="color:red">property</span><span style="color:blue">="editor" </span><span style="color:red">class</span><span style="color:blue">="mini-datepicker" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:100%;"/&gt;
+        &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+    &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;  
+</span></pre>
+                    <p>调用如下"beginEditRow"方法，将选中行进入编辑状态：</p>
+<pre class="code"><span style="color:blue">function </span>editRow() {
+    <span style="color:blue">var </span>row = grid.getSelected();
+    <span style="color:blue">if </span>(row) {            
+        grid.beginEditRow(row);
+    }
+}
+</pre>
+                    <p>使用ajax将编辑的数据提交到服务端，实现保存功能：</p>
+<pre class="code"><span style="color:blue">function </span>saveData() {
+    <span style="color:blue">var </span>rowsData = grid.getEditData();
+    <span style="color:blue">var </span>json = mini.encode(rowsData);
+
+    grid.loading(<span style="color:maroon">"保存中，请稍后......"</span>);        
+    $.ajax({
+        url: <span style="color:maroon">"../data/AjaxService.aspx?method=SaveEmployees"</span>,
+        data: { employees: json },
+        success: <span style="color:blue">function </span>(text) {
+            grid.reload();
+        },
+        error: <span style="color:blue">function </span>(jqXHR, textStatus, errorThrown) {
+            alert(jqXHR.responseText);
+        }
+    });
+}
+</pre>
+
+
+
+                    <h4>新增记录</h4>
+                    <p>使用addRow方法，新增记录后，进行编辑，最后保存。</p>
+<pre class="code"><span style="color:blue">function </span>addRow() {
+    <span style="color:blue">var </span>newRow = {name: <span style="color:maroon">"New Row"</span>};
+    grid.addRow(newRow, 0);
+    grid.beginEditRow(newRow);
+}
+</pre>
+                    <h4>删除记录</h4>
+                    <p>获取选中记录，使用ajax将记录的id发送到后台，进行删除操作：</p>
+<pre class="code"><span style="color:blue">function </span>deleteRow() {
+    <span style="color:blue">var </span>rows = grid.getSelecteds();
+    <span style="color:blue">if </span>(rows.length &gt; 0) {
+        <span style="color:blue">if </span>(confirm(<span style="color:maroon">"确定删除选中记录？"</span>)) {
+            <span style="color:blue">var </span>ids = [];
+            <span style="color:blue">for </span>(<span style="color:blue">var </span>i = 0, l = rows.length; i &lt; l; i++) {
+                <span style="color:blue">var </span>r = rows[i];
+                ids.push(r.id);
+            }
+            <span style="color:blue">var </span>id = ids.join(<span style="color:maroon">','</span>);
+            grid.loading(<span style="color:maroon">"操作中，请稍后......"</span>);
+            $.ajax({
+                url: <span style="color:maroon">"../data/AjaxService.aspx?method=RemoveEmployees&amp;id=" </span>+ id,
+                success: <span style="color:blue">function </span>(text) {
+                    grid.reload();
+                },
+                error: <span style="color:blue">function </span>() {
+                }
+            });
+        }
+    } <span style="color:blue">else </span>{
+        alert(<span style="color:maroon">"请选中一条记录"</span>);
+    }
+}
+</pre>
+                    <h4>服务端AjaxServer处理</h4>
+                    <p>查询数据：</p>
+<pre class="code"><span style="color:blue">public void </span>SearchEmployees()
+{
+    <span style="color:green">//查询条件
+    </span><span style="color:blue">string </span>key = Request[<span style="color:#a31515">"key"</span>];
+    <span style="color:green">//分页
+    </span><span style="color:blue">int </span>pageIndex = <span style="color:#2b91af">Convert</span>.ToInt32(Request[<span style="color:#a31515">"pageIndex"</span>]);
+    <span style="color:blue">int </span>pageSize = <span style="color:#2b91af">Convert</span>.ToInt32(Request[<span style="color:#a31515">"pageSize"</span>]);
+    <span style="color:green">//字段排序
+    </span><span style="color:#2b91af">String </span>sortField = Request[<span style="color:#a31515">"sortField"</span>];
+    <span style="color:#2b91af">String </span>sortOrder = Request[<span style="color:#a31515">"sortOrder"</span>];
+
+    <span style="color:green">//业务层：数据库操作
+    </span><span style="color:#2b91af">Hashtable </span>result = <span style="color:blue">new </span><span style="color:#2b91af">TestDB</span>().SearchEmployees(key, pageIndex, pageSize, sortField, sortOrder);
+
+    <span style="color:green">//JSON
+    </span><span style="color:#2b91af">String </span>json = PluSoft.Utils.<span style="color:#2b91af">JSON</span>.Encode(result);
+    Response.Write(json);
+}
+</pre>
+                    <p>保存数据（新增、编辑）：</p>
+<pre class="code"><span style="color:blue">public void </span>SaveEmployees()
+{
+    <span style="color:#2b91af">String </span>employeesStr = Request[<span style="color:#a31515">"employees"</span>];
+    <span style="color:#2b91af">ArrayList </span>employees = (<span style="color:#2b91af">ArrayList</span>)PluSoft.Utils.<span style="color:#2b91af">JSON</span>.Decode(employeesStr);
+
+    <span style="color:blue">foreach </span>(<span style="color:#2b91af">Hashtable </span>employee <span style="color:blue">in </span>employees)
+    {
+        <span style="color:blue">if </span>(employee[<span style="color:#a31515">"name"</span>] == <span style="color:blue">null</span>) <span style="color:blue">throw new </span><span style="color:#2b91af">Exception</span>(<span style="color:#a31515">"用户名不能为空"</span>);
+        <span style="color:blue">if </span>(employee[<span style="color:#a31515">"id"</span>] == <span style="color:blue">null </span>|| employee[<span style="color:#a31515">"id"</span>].ToString() == <span style="color:#a31515">""</span>)
+        {
+            employee[<span style="color:#a31515">"createtime"</span>] = <span style="color:#2b91af">DateTime</span>.Now;
+            <span style="color:blue">new </span><span style="color:#2b91af">TestDB</span>().InsertEmployee(employee);
+        }
+        <span style="color:blue">else
+        </span>{
+            <span style="color:blue">new </span><span style="color:#2b91af">TestDB</span>().UpdateEmployee(employee);
+        }
+    }
+}
+</pre>
+                    <p>删除数据：</p>
+<pre class="code"><span style="color:blue">public void </span>RemoveEmployees()
+{
+    <span style="color:#2b91af">String </span>idStr = Request[<span style="color:#a31515">"id"</span>];
+    <span style="color:blue">if </span>(<span style="color:#2b91af">String</span>.IsNullOrEmpty(idStr)) <span style="color:blue">return</span>;
+    <span style="color:#2b91af">String</span>[] ids = idStr.Split(<span style="color:#a31515">','</span>);
+    <span style="color:blue">for </span>(<span style="color:blue">int </span>i = 0, l = ids.Length; i &lt; l; i++)
+    {
+        <span style="color:blue">string </span>id = ids[i];
+        <span style="color:blue">new </span><span style="color:#2b91af">TestDB</span>().DeleteEmployee(id);
+    }
+}
+</pre>
+                    <p>参考示例：</p>
+                    <ul>
+				        <li><a href="../../demo/datagrid/crud.html" target="_blank">CRUD</a></li>                        
+                        <li><a href="../../demo/datagrid/rowedit.html" target="_blank">CRUD：单元格编辑器</a></li>                        
+                        <li><a href="../../demo/datagrid/editform.html" target="_blank">CRUD：编辑表单</a></li>
+                        <li><a href="../../demo/datagrid/popupeditform.html" target="_blank">CRUD：弹出面板</a></li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+            <div class="bodyRight">                
+                <div class="panel">
+                    <h1>文档中心</h1>
+                    <div class="panelBody">
+                        <a id="start_item" href="/docs/getting_started">新手入门</a>
+                        <a href="/docs/tutorial">开发指南</a>
+                        <a id="kb_item" href="/docs/kb">精华文章</a>
+                        <a href="/docs/api">组件参考手册</a>
+                    </div>
+                </div>
+                <div class="panel">
+                    <h1>示例中心</h1>
+                    <div class="panelBody">
+                        <a href="/demo#app=crud">CRUD：DataGrid</a>
+                        <a href="/demo#app=master-detail">Master-Detail</a>
+                        <a href="/demo#app=layout">界面布局</a>
+                        <a href="/demo#app=validator">数据验证</a>
+                        <a href="/demo#ui=tree">树形：Tree</a>
+             <!--           <a href="/api">富文本编辑器</a>
+                        <a href="/api">图表</a>-->
+                    </div>
+                </div>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <div id="copyright">Copyright © 上海普加软件有限公司版权所有 </div>
+            <div id="bottomlinks"><a href="/sitemap">网站导航</a>|<a href="/support">支持服务</a>|<a href="/license">授权方式</a>|<a href="/contact">联系我们</a></div>
+        </div>
+    </div>
+</body>
+</html>

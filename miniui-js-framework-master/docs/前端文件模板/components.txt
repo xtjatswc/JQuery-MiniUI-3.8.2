@@ -1,0 +1,16 @@
+/**
+ * created by ${USER} on ${DATE} 
+ *
+ * 组件配置代码，如果需要引用其他组件，添加到依赖列表里
+ */
+define(['jquery'], function ($) {
+
+    return function (options) {
+        var view = this;
+    
+        // 在这里编写组件的配置代码
+        // eg. 
+        options('控件id', { onClick: function(e){ } });
+        
+    }
+});

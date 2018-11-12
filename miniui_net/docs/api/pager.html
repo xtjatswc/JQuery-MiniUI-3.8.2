@@ -1,0 +1,162 @@
+﻿<html>
+<head>
+    <title>Pager - jQuery MiniUI 3.0 Documentation</title>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="core.js" type="text/javascript"></script>
+    
+        
+
+</head>
+<body>
+    <h3>mini.Pager</h3>
+    
+    <p>分页控件。</p>
+
+    <h4>Extend</h4>
+    <p> <a class="extendlink" href="control.html">mini.Control</a></p>    
+
+
+    <h4>Usage</h4>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">div </span><span style="color:red">class</span><span style="color:blue">="mini-pager" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:500px;</span><span style="color:red">background</span><span style="color:blue">:#ccc;" 
+    </span><span style="color:red">totalCount</span><span style="color:blue">="123" </span><span style="color:red">onpagechanged</span><span style="color:blue">="onPageChanged" </span><span style="color:red">sizeList</span><span style="color:blue">="[5,10,20,100]"&gt;        
+&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;    
+&lt;</span><span style="color:maroon">script </span><span style="color:red">type</span><span style="color:blue">="text/javascript"&gt;
+    function </span>onPageChanged(e) {
+        alert(e.pageIndex+<span style="color:maroon">":"</span>+e.pageSize);
+    }       
+<span style="color:blue">&lt;/</span><span style="color:maroon">script</span><span style="color:blue">&gt;
+</span></pre>
+
+    <h4>Screenshots</h4>
+    <img src="images/pager.gif" />
+
+    <h4>Examples</h4>
+    <a class="demo" href="../../demo/pager/pager.html" target="_blank">Pager</a>
+    
+
+    <h4>Properties</h4>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th><th><a href="setsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Set? </a></th><th><a href="getsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Get? </a></th><th><a href="tagsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Tag? </a></th></tr>
+        <tr>
+            <td>pageIndex</td>
+            <td>Number</td>
+            <td>页码</td>
+            <td>0</td> 
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>pageSize</td>
+            <td>Number</td>
+            <td>每页多少条</td>
+            <td>10</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>totalCount</td>
+            <td>Number</td>
+            <td>总记录数</td>
+            <td>0</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>sizeList</td>
+            <td>Array</td>
+            <td>页尺寸数组</td>
+            <td>[10, 20, 50, 100]</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showPageIndex</td>
+            <td>Boolean</td>
+            <td>显示页码</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showPageSize</td>
+            <td>Boolean</td>
+            <td>显示页尺寸</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showPageInfo</td>
+            <td>Boolean</td>
+            <td>显示分页信息</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showReloadButton</td>
+            <td>Boolean</td>
+            <td>显示刷新按钮</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+
+        <tr>
+            <td>showButtonText</td>
+            <td>Boolean</td>
+            <td>显示按钮文本</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showButtonIcon</td>
+            <td>Boolean</td>
+            <td>显示按钮图标</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showReloadButton</td>
+            <td>Boolean</td>
+            <td>显示刷新按钮</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        
+    </table>
+
+    <h4>Methods</h4>
+    <table>
+        <tr><th>Name</th><th>Parameter</th><th>Description</th><th>Return</th></tr>
+        <tr>
+            <td>update ( index, size, total )</td>
+            <td></td>
+            <td>更新分页控件状态。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getTotalPage ( )</td>
+            <td>
+
+            </td>
+            <td>获取总页数。<br />
+            </td>
+            <td>Number</td>
+        </tr>
+ 
+    </table>
+
+    <h4>Events</h4>
+    <table>
+        <tr><th>Name</th><th>EventObject</th><th>Description</th></tr>
+        <tr>
+            <td>pagechanged</td>
+            <td></td>
+            <td>分页信息改变时发生</td>
+           
+        </tr>
+        
+    </table>
+    
+
+       
+</body>
+</html>

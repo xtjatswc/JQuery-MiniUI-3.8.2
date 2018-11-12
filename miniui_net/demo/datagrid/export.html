@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title> 导出Excel</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" /><link href="../demo.css" rel="stylesheet" type="text/css" />
+
+    
+    <script src="../../scripts/boot.js" type="text/javascript"></script>
+    
+        
+</head>
+<body>
+    <h1> 导出Excel</h1>      
+
+    <div style="padding-bottom:5px;">
+        
+        <span>员工姓名：</span><input type="text" id="key"  />
+        <input type="button" value="查找" onclick="search()"/>
+        
+        <input type="button" value="导出Excel" onclick="ExportExcel()" style="margin-left:50px;"/>
+    </div>
+    <div id="datagrid1" class="mini-datagrid" style="width:800px;height:280px;" allowResize="true"
+         url="../data/AjaxService.aspx?method=SearchEmployees" idField="id" multiSelect="true">
+        <div property="columns">
+            <div type="indexcolumn"></div>        
+            <div type="checkcolumn"></div>
+            <div field="loginname" width="120" headerAlign="center" allowSort="true">员工帐号</div>
+            <div field="name" width="120" headerAlign="center" allowSort="true">姓名</div>
+            <div header="工作信息">
+                <div property="columns">
+                    <div field="dept_name" width="120">所属部门</div>
+                    <div field="position_name" width="100">职位</div>
+                    <div field="salary" dataType="currency" currencyUnit="￥" align="right" width="100" allowSort="true">薪资</div>
+                </div>
+            </div>
+            <div field="createtime" width="100" headerAlign="center" dateFormat="yyyy-MM-dd" allowSort="true">创建日期</div>
+            <div header="基本信息">
+                <div property="columns">
+                    <div field="gender" width="100" renderer="onGenderRenderer">性别</div>
+                    <div field="age" width="100" allowSort="true">年龄</div>
+                    <div field="birthday" width="100" renderer="onBirthdayRenderer">出生日期</div>
+                    <div field="married" width="100" align="center" renderer="onMarriedRenderer">婚否</div>
+                    <div field="email" width="100">邮箱</div>
+                </div>
+            </div>
+            <div header="学历信息">
+                <div property="columns">
+                    <div field="educational_name" width="100">学历</div>
+                    <div field="school" width="120">毕业院校</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <iframe id="exportIFrame" style="display:none;"></iframe>
+    
+
+    <script type="text/javascript">
+        mini.parse();
+
+        var grid = mini.get("datagrid1");
+        grid.load();
+
+        //对"createtime"字段，进行降级排序
+        grid.sortBy("createtime", "desc");
+
+        function search() {
+            var key = document.getElementById("key").value;
+            grid.load({ key: key });
+        }
+        $("#key").bind("keydown", function (e) {
+            if (e.keyCode == 13) {
+                search();
+            }
+        });
+        ///////////////////////////////////////////////////////
+        var Genders = [{ id: 1, text: '男' }, { id: 2, text: '女'}];
+        function onGenderRenderer(e) {
+            for (var i = 0, l = Genders.length; i < l; i++) {
+                var g = Genders[i];
+                if (g.id == e.value) return g.text;
+            }
+            return "";
+        }
+
+        function ExportExcel() {
+            var columns = grid.columns;
+
+            function getColumns(columns) {
+                var cols = [];
+                for (var i = 0; i < columns.length; i++) {
+                    var column = columns[i];
+
+                    var col = { header: column.header, field: column.field, type: column.type };
+                    if (column.columns) {
+                        col.columns = getColumns(column.columns);
+                    }
+                    cols.push(col);
+
+                }
+                return cols;
+            }
+            var columns = getColumns(columns);
+
+            DownLoad("export.aspx", { type: "excel", columns: columns }, function () {
+                //alert("导出成功");
+            });
+
+        }
+
+        function DownLoad(url, fields, callback) {
+
+            //创建Form
+            var submitfrm = document.createElement("form");
+            submitfrm.action = url;
+            submitfrm.method = "post";
+            submitfrm.target = "_blank";
+            document.body.appendChild(submitfrm);
+
+            if (fields) {
+
+                for (var p in fields) {
+                    var input = mini.append(submitfrm, "<input type='hidden' name='" + p + "'>");
+                    var v = fields[p];
+                    if (typeof v != "string") v = mini.encode(v);
+                    input.value = v;
+                }
+            }
+
+            submitfrm.submit();
+            setTimeout(function () {
+                submitfrm.parentNode.removeChild(submitfrm);
+                if (callback) callback();
+            }, 1000);
+        }
+
+    </script>
+
+    <div class="description">
+        <h3>Description</h3>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery MiniUI - 专业WebUI控件库</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="jquery,web,grid,表格,datagrid,js,javascript,ajax,web开发,tree,table" />   
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。它能缩短开发时间，减少代码量，使开发者更专注于业务和服务端，轻松实现界面开发，带来绝佳的用户体验。" />
+    <link href="../css/core.css" rel="stylesheet" type="text/css" />
+    <script src="../scripts/core.js" type="text/javascript"></script>
+    <style type="text/css">
+    .docslist
+    {
+        width:100%;
+        border:solid 1px #CCCCCC;
+        margin-bottom:25px;
+    }
+    .docslist tr
+    {
+        background:url(../images/doc_sep.gif) no-repeat 0 bottom;
+    }
+    .td1
+    {
+        padding:15px;
+        padding-bottom:28px;
+        padding-right:25px;
+    }
+    .td1 img
+    {
+        border:0;
+    }
+    .td2
+    {
+        vertical-align:top;
+        width:100%;
+        padding-top:23px;
+        padding-bottom:28px;
+    }
+    .doc-title
+    {
+        font-weight:bold;
+        font-size:13px;
+        color:#0078C2;
+        margin-top:5px;
+    }
+    .td2 p
+    {
+        margin-top:15px;
+        margin-bottom:10px;
+        line-height:18px;
+    }
+    .doc-links a
+    {
+        padding-left:13px;
+        background:url(../images/arrow3.gif) no-repeat 0px 2px;
+        margin-right:48px;
+        white-space:nowrap;
+        line-height:20px;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="headerInner">
+            <a class="logo" href="http://www.miniui.com" title="jQuery MiniUI - 专业WebUI控件库">jQuery MiniUI</a>
+            <a id="why" href="/why">为什么选择MiniUI？</a>
+
+            <ul class="topmenu">
+                <li><a href="/"><span>首页</span></a></li>
+                <li onmouseover="showMenu('popup1', this)" onmouseout="hideMenu('popup1', this)"><a href="/product"><span>产品</span></a>
+                    <ul id="popup1" class="popupmenu">
+                        <li class="product"><a href="/product">产品介绍</a></li>
+                        <li><a href="/features">功能特性</a></li>
+                        <li><a href="/screenshots">界面截图</a></li>                        
+                        <li><a href="/support">支持服务</a></li>
+                        <li><a href="/license">授权方式</a></li>
+                        
+                        <li class="faq"><a href="/faq">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="/demo"><span>示例</span></a></li>
+                <li onmouseover="showMenu('popup2', this)" onmouseout="hideMenu('popup2', this)"><a href="/docs"><span>文档</span></a>
+                    <ul id="popup2" class="popupmenu">                        
+                        <li id="start_link"><a href="/docs/quickstart">快速入门</a></li>
+                        <li><a href="/docs/tutorial">开发教程</a></li>
+                        <li id="kb_link"><a href="/docs/kb">精华文章</a></li>
+                        <li><a href="/docs/api">Api参考手册</a></li>
+                    </ul>
+                </li>
+                <li><a href="/bbs"><span>论坛</span></a></li><li><a href="/download"><span>下载</span></a></li>
+                
+                <li><a href="/contact"><span>联系</span></a></li>
+            </ul>
+        
+     
+        </div>
+    </div>
+    <div class="topnav">
+        <div class="topnavInner">
+            <a href="/">首页</a>><span>文档中心</span>
+        </div>
+    </div>
+    <div class="body " >
+        <div class="bodyInner">
+            
+            <div class="bodyCenter" style="padding-bottom:60px;">
+                
+<table class="docslist" cellpadding="0" cellspacing="0" >
+    
+    <tr >
+        <td class="td1">
+            <a href="quickstart/index.html"><img src="../images/start_img.gif" alt="快速入门" /></a>
+        </td>
+        <td class="td2">
+            <a href="quickstart/index.html" class="doc-title">快速入门</a>
+            <p>通过本文档，能快速的熟悉jQuery MiniUI，并帮助您搭建起第一个成功应用。</p>
+            <div class="doc-links">
+                <a href="quickstart/index.html">下载安装</a>
+                <a href="quickstart/first.html">Hello, world!</a>
+                <a href="quickstart/crud.html">CRUD</a>
+                <a href="quickstart/form.html">表单开发</a>
+                <a href="quickstart/layout.html">主框架布局</a>
+            </div>
+        </td>
+    </tr>
+<!--    <tr>
+        <td class="td1">
+            <a href="guide/index.html"><img src="../images/tutorial_img.gif" alt="开发指南" /></a>
+        </td>
+        <td class="td2">
+            <a href="guide/index.html" class="doc-title">开发指南</a>
+            <p>解析MiniUI控件设计和开发思路。</p>
+            <div class="doc-links">
+                <a href="guide/hello.html">Hello MiniUI!</a>
+                <a href="guide/system.html">MiniUI系统架构</a>
+                <a href="guide/form.html">表单篇</a>
+                <a href="guide/datagrid.html">表格篇</a>
+                <a href="guide/tree.html">树形篇</a>
+                <a href="guide/layout.html">布局器篇</a>
+                <a href="guide/nav.html">导航器篇</a>
+                
+            </div>
+        </td>
+    </tr>   --> 
+    <tr >
+        <td class="td1">
+            <a href="tutorial/index.html"><img src="../images/kb_img.gif" alt="组件使用详解" /></a>
+        </td>
+        <td class="td2">
+            <a href="tutorial/index.html" class="doc-title">开发教程</a>
+            <p>从组件如何创建，组件主要属性、方法、事件等角度剖析讲解。</p>
+            <div class="doc-links">
+                <a href="tutorial/index.html#syslayout">主框架布局</a>
+                <a href="tutorial/index.html#crud">CRUD</a>
+                <a href="tutorial/index.html#form">表单组件</a>
+                <a href="tutorial/index.html#datagrid">数据表格</a>
+                <a href="tutorial/index.html#tree">树形控件</a>
+                <a href="tutorial/index.html#treegrid">TreeGrid</a>
+                <a href="tutorial/index.html#layout">布局控件</a>
+                <a href="tutorial/index.html#navigation">导航控件</a>                
+            </div>
+        </td>
+    </tr>
+    <tr style="background:none;">
+        <td class="td1">
+            <a href="api/index.html"><img src="../images/api_img.gif" alt="API参考手册" /></a>
+        </td>
+        <td class="td2">
+            <a href="api/index.html" class="doc-title">API参考手册</a>
+            <p>了解MiniUI的组件类型、属性、方法和事件。</p>
+            
+        </td>
+    </tr>
+
+</table>
+                
+
+            </div>
+            <div class="bodyRight">                
+                <a class="downloadButton" href="/download"></a>
+                <div class="panel">
+                    <h1>示例中心</h1>
+                    <div class="panelBody">
+                        <a href="/demo#app=crud">CRUD：DataGrid</a>
+                        <a href="/demo#app=master-detail">Master-Detail</a>
+                        <a href="/demo#app=layout">界面布局</a>
+                        <a href="/demo#app=validator">数据验证</a>
+                        <a href="/demo#ui=tree">树形：Tree</a>
+             <!--           <a href="/api">富文本编辑器</a>
+                        <a href="/api">图表</a>-->
+                    </div>
+                </div>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <div id="copyright">Copyright © 上海普加软件有限公司版权所有 </div>
+            <div id="bottomlinks"><a href="/sitemap">网站导航</a>|<a href="/support">支持服务</a>|<a href="/license">授权方式</a>|<a href="/contact">联系我们</a></div>
+        </div>
+    </div>
+</body>
+</html>

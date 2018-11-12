@@ -1,0 +1,26 @@
+/**
+ * created by ${USER} on ${DATE} 
+ *
+ * 业务（UI）逻辑代码
+ */
+define([], function () {
+
+    return {
+        /**
+         * 页面组件初始化完成时的回掉函数，所有组件可用.
+         * 获取控件采用：this.c('控件id')
+         */
+        ready: function (base) {
+            base();
+            
+            this.init();
+        }
+        
+        /**
+         * 初始化
+         */
+        init: function() {
+            
+        }
+    };
+});

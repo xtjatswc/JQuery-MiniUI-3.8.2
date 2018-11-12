@@ -1,0 +1,74 @@
+﻿
+.header
+{
+    display:none;
+}
+body
+{
+    color: #252525;
+    font-family: Verdana,"宋体",Arial,Helvetica;
+    font-size: 13px;
+    padding:8px;
+}
+.footer
+{
+    display:none;
+}
+.topnav
+{
+    padding-bottom:15px;
+}
+.topnav a
+{
+    font-family: Verdana,"宋体",Arial,Helvetica;
+    font-size: 13px;
+    text-decoration:none;
+    padding-left:2px;
+    padding-right:2px;
+}
+
+body .contentView
+{
+    padding:0px;
+}
+.bodyLeft, .bodyRight
+{
+    display:none;
+}
+
+
+
+h1
+{
+    font-size:16px;
+    font-family:微软雅黑,黑体,宋体;
+    margin-bottom:0px;
+} 
+.bodyTitle
+{
+    font-size:22px;
+    font-family:微软雅黑,黑体,宋体;
+}
+
+h3
+{
+    font-size:22px;
+    font-family:微软雅黑,黑体,宋体;
+    margin-bottom:25px;
+    margin-top:5px;
+    color:Black;
+}
+
+.code
+{
+    border:dashed 1px #bbb;
+    background:#f2f1f1;
+    padding:5px;
+    color:#222;
+    overflow:auto;
+}
+.note
+{
+    color:#cc0000;
+    font-weight:bold;
+}

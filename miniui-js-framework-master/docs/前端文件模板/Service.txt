@@ -1,0 +1,54 @@
+/**
+ * created by ${USER} on ${DATE}
+ *
+ * 服务文件建议都以“Service”结尾，放在单独的“service”文件夹下
+ *
+ * Service 和 Controller 对应关系及服务url生成规则
+ * - 一个Service对应一个Conroller，一个服务方法对应一个Action方法；
+ *
+ * - Service有两个属性：root和path。
+ *   root 一般代表服务寄宿的根路径（一般是站点根路径），
+ *   path 代表该服务相对root的路径（一般一组相关的服务放在相同路径下）；
+ *
+ * - 服务默认的root通过Service.inherit方法的第二个参数指定，同时可在构造服务的时候由构造函数的第一个参数覆盖；
+ *   path通过Service.inherit方法的第三个参数指定；
+ *   如果缺省Service.inherit方法的第三个参数，那么第二个参数作为path，root取当前站点上下文路径（window.ctx）；
+ *
+ * - 服务定义中可指定一个可选的url属性，如果没有指定，那么url取自name属性；
+ *
+ * - 服务方法最终的url由服务的root，path，服务定义的url属性共同决定，具体规则如下：
+ *   1.如果服务定义的url是个带协议的绝对路径，那么url就作为最终返回值；
+ *   2.如果服务定义的url以/开头（代表相对root），那么最终url为：root + url；
+ *   3.最后（代表相对path），最终url为：root + path + '/' + def.url；
+ */
+define(['Service'], function (Service) {
+
+    /**
+     * 服务定义
+     *
+     * @name {String} 服务方法名-必填 .
+     * @type {String} 请求方式，支持 'post' 和 'get'. 默认策略：如果方法名以get开头，则为get；否则post .
+     * @dataType {String} 返回的数据类型，默认 json .
+     * @url {String} 和最终请求的url有关，生成url的具体策略参考上述服务说明.
+     * @contentType {String} 请求的内容类型(MineType), 只在type为post时有效
+     *              默认规则：如果请求参数为复杂对象，则为application/json (引用Service.CONTENT_TYPE_JSON)，
+     *                      否则application/x-www-form-urlencoded (引用Service.CONTENT_TYPE_FORM_URLENCODED)。
+     * @cleanArgs {Boolean} 是否清理请求数据：目前是删除请求参数中带下划线的参数，默认true .
+     * @syncable {Boolean} 是否支持同步，默认false。如果为true，服务有个同步版本的方法：name+Sync .
+     * @cacheable {Boolean} 是否支持缓存，默认false .
+     * @mock {Object} mock模式，后台接口未提供的情况下，前端可做模拟请求. 指定项包括：
+     * {
+     *  result: any
+     *  error:{
+     *      msg: 'error message',
+     *      code: error code,
+     *      data: 附加信息
+     *    }
+     * }
+     *
+     */
+    var serviceDefs = [
+    ];
+
+    return Service.inherit(serviceDefs, window.ctx);
+});

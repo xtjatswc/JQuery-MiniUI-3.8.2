@@ -1,0 +1,12 @@
+注册验证类型(vtype)的方法：
+
+mini.VTypes[vtype] = function (value, args){
+  // value 待验证的值
+  // vtype 验证参数，如 rangeLength:2,6 ---- args=['2','6']
+}
+
+vtype 是个字符串，格式如下：
+
+验证类型:参数1,参数2...
+
+如：rangeLength:2,6

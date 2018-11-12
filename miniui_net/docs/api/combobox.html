@@ -1,0 +1,227 @@
+﻿<html>
+<head>
+    <title>ComboBox - jQuery MiniUI 3.0 Documentation</title>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="core.js" type="text/javascript"></script>
+</head>
+<body>
+    <h3>mini.ComboBox</h3>
+    
+    <p>下拉列表输入框。</p>
+
+    <h4>Extend</h4>
+    <p> <a class="extendlink" href="popupedit.html">PopupEdit</a></p>    
+
+
+    <h4>Usage</h4>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">input </span><span style="color:red">class</span><span style="color:blue">="mini-combobox" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:150px;" </span><span style="color:red">textField</span><span style="color:blue">="text" </span><span style="color:red">valueField</span><span style="color:blue">="id" 
+    </span><span style="color:red">url</span><span style="color:blue">="../data/countrys.txt" </span><span style="color:red">value</span><span style="color:blue">="cn" </span><span style="color:red">showNullItem</span><span style="color:blue">="true" </span><span style="color:red">allowInput</span><span style="color:blue">="true"/&gt;         
+</span></pre>
+
+    <h4>Screenshots</h4>
+    <img src="images/combobox.gif" />
+    <p style="padding-left:15px;">mini.ComboBox也支持下拉多列表格显示：</p>
+    <img src="images/combobox2.gif" />
+
+    <h4>Examples</h4>
+    <a class="demo" href="../../demo/combobox/combobox.html" target="_blank">ComboBox</a>
+    <a class="demo" href="../../demo/combobox/linkage-combo.html" target="_blank">ComboBox联动下拉选择</a>
+      
+
+    <h4>Properties</h4>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th><th><a href="setsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Set? </a></th><th><a href="getsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Get? </a></th><th><a href="tagsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Tag? </a></th></tr>
+        <tr>
+            <td>value</td>
+            <td>String</td>
+            <td>值</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>valueField</td>
+            <td>String</td>
+            <td>值字段</td>
+            <td>id</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>textField</td>
+            <td>String</td>
+            <td>文本显示字段</td>
+            <td>text</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>pinyinField</td>
+            <td>String</td>
+            <td>拼音字段</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>dataField</td>
+            <td>String</td>
+            <td>数据列表字段</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>multiSelect</td>
+            <td>Boolean</td>
+            <td>多选</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>Array</td>
+            <td>数据对象</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>url</td>
+            <td>String</td>
+            <td>数据加载地址</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>ajaxType</td>
+            <td>String</td>
+            <td>ajax类型：get/post。</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>ajaxOptions</td>
+            <td>Object</td>
+            <td>ajax配置对象。如：ajaxOptions="{type:'post', async: true, data: {a:1, b: true}, dataType: 'text', contentType: 'application/x-www-form-urlencoded;charset=utf-8'}"。</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>columns</td>
+            <td>Array</td>
+            <td>下拉列表列集合。参考<a href="listbox.html#columns">Columns</a></td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <!--<tr>
+            <td>popupWidth</td>
+            <td>Number</td>
+            <td>下拉框宽度。比如200，100%。</td>
+            <td>100%</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>popupHeight</td>
+            <td>Number</td>
+            <td>下拉框高度。比如200，auto。</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>-->
+        <tr>
+            <td>showNullItem</td>
+            <td>Boolean</td>
+            <td>显示空项</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>nullItemText</td>
+            <td>String</td>
+            <td>空项文本</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>valueFromSelect</td>
+            <td>Boolean</td>
+            <td>必须从选择项录入</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>clearOnLoad</td>
+            <td>Boolean</td>
+            <td>为true时，如果value跟新加载的数据不匹配，则清空；设置false后，value不会清空。</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        
+        
+    </table>
+
+    <h4>Methods</h4>
+    <table>
+        <tr><th>Name</th><th>Parameter</th><th>Description</th><th>Return</th></tr>
+        <tr>
+            <td>setValue（value）</td>
+            <td></td>
+            <td>设置值</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getValue（）</td>
+            <td></td>
+            <td>获取值</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getFormValue（）</td>
+            <td></td>
+            <td>获取表单值</td>
+            <td>String</td>
+        </tr>
+        <tr>
+            <td>load（url）</td>
+            <td></td>
+            <td>加载数据</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>select（Number）</td>
+            <td></td>
+            <td>选择项</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getSelecteds（）</td>
+            <td></td>
+            <td>获取选择项数组。multiSelect=true时有效。</td>
+            <td>Array</td>
+        </tr>
+        <tr>
+            <td>getSelected（）</td>
+            <td></td>
+            <td>获取选中项。multiSelect=false时有效。</td>
+            <td>Object</td>
+        </tr>
+        
+    </table>
+
+    <h4>Events</h4>
+    <table>
+        <tr><th>Name</th><th>EventObject</th><th>Description</th></tr>       
+        <tr>
+            <td>valuechanged</td>
+            <td></td>
+            <td>值改变时发生</td>            
+        </tr>       
+        <tr>
+            <td>itemclick</td>
+            <td></td>
+            <td>下拉项点击时发生</td>            
+        </tr>    
+    </table>
+
+    
+</body>
+</html>

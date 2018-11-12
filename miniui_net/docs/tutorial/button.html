@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery MiniUI - 专业WebUI控件库</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="jquery,web,grid,表格,datagrid,js,javascript,ajax,web开发,tree,table" />   
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。它能缩短开发时间，减少代码量，使开发者更专注于业务和服务端，轻松实现界面开发，带来绝佳的用户体验。" />
+    <link href="../core.css" rel="stylesheet" type="text/css" />
+    
+    <link href="common.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="header">
+        <div class="headerInner">
+            <a class="logo" href="http://www.miniui.com" title="jQuery MiniUI - 专业WebUI控件库">jQuery MiniUI</a>
+            <a id="why" href="/why">为什么选择MiniUI？</a>
+
+            <ul class="topmenu">
+                <li><a href="/"><span>首页</span></a></li>
+                <li onmouseover="showMenu('popup1', this)" onmouseout="hideMenu('popup1', this)"><a href="/product"><span>产品</span></a>
+                    <ul id="popup1" class="popupmenu">
+                        <li class="product"><a href="/product">产品介绍</a></li>
+                        <li><a href="/features">功能特性</a></li>
+                        <li><a href="/screenshots">界面截图</a></li>                        
+                        <li><a href="/support">支持服务</a></li>
+                        <li><a href="/license">授权方式</a></li>
+                        
+                        <li class="faq"><a href="/faq">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="/demo"><span>示例</span></a></li>
+                <li onmouseover="showMenu('popup2', this)" onmouseout="hideMenu('popup2', this)"><a href="/docs"><span>文档</span></a>
+                    <ul id="popup2" class="popupmenu">                        
+                        <li id="start_link"><a href="/docs/quickstart">快速入门</a></li>
+                        <li><a href="/docs/tutorial">开发教程</a></li>
+                        <li id="kb_link"><a href="/docs/kb">精华文章</a></li>
+                        <li><a href="/docs/api">Api参考手册</a></li>
+                    </ul>
+                </li>
+                <li><a href="/bbs"><span>论坛</span></a></li><li><a href="/download"><span>下载</span></a></li>
+                
+                <li><a href="/contact"><span>联系</span></a></li>
+            </ul>
+        
+     
+        </div>
+    </div>
+    <div class="topnav">
+        <div class="topnavInner">
+            <a href="/">首页</a>><a href="/docs">文档中心</a>><a href="/docs/tutorial">开发教程</a>><span>表单控件</span>
+        </div>
+    </div>
+    <div class="body " >
+        <div class="bodyInner">
+            
+        <div class="contentView">
+            <h3>Button：按钮</h3>
+                
+            <a title="Button 按钮" href="../../demo/button/button.html" target="_blank"><img src="../api/images/buttons.gif"/></a>
+            <br /><br />
+            <p class="p_demo"><span class="note">参考示例</span>：
+                <a href="../../demo/button/button.html" target="_blank">按钮</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="../../demo/button/menubutton.html" target="_blank">菜单按钮</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="../../demo/button/radiobutton.html" target="_blank">按钮组</a>
+                <a href="../../demo/toolbar/toolbar.html" target="_blank">工具栏</a>
+            </p>
+            <br />
+
+            <h4>创建按钮</h4>    
+<pre class="code">    <span style="color:blue">&lt;</span><span style="color:maroon">h4</span><span style="color:blue">&gt;</span>Only Text<span style="color:blue">&lt;/</span><span style="color:maroon">h4</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button" </span><span style="color:red">onclick</span><span style="color:blue">="onClick" </span><span style="color:red">enabled</span><span style="color:blue">="false" &gt;</span>增加<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button" </span><span style="color:red">onclick</span><span style="color:blue">="onClick" &gt;</span>修改<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;
+
+    &lt;</span><span style="color:maroon">h4</span><span style="color:blue">&gt;</span>Text and Icon<span style="color:blue">&lt;/</span><span style="color:maroon">h4</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button" </span><span style="color:red">iconCls</span><span style="color:blue">="icon-add" </span><span style="color:red">onclick</span><span style="color:blue">="onClick" &gt;</span>增加<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button mini-button-iconRight" </span><span style="color:red">iconCls</span><span style="color:blue">="icon-edit" </span><span style="color:red">onclick</span><span style="color:blue">="onClick" &gt;</span>修改<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;    
+
+    &lt;</span><span style="color:maroon">h4</span><span style="color:blue">&gt;</span>Only Icon<span style="color:blue">&lt;/</span><span style="color:maroon">h4</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button" </span><span style="color:red">iconCls</span><span style="color:blue">="icon-add" </span><span style="color:red">onclick</span><span style="color:blue">="onClick"&gt;&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button" </span><span style="color:red">iconCls</span><span style="color:blue">="icon-edit" </span><span style="color:red">onclick</span><span style="color:blue">="onClick"&gt;&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;    
+
+    &lt;</span><span style="color:maroon">h4</span><span style="color:blue">&gt;</span>Plain<span style="color:blue">&lt;/</span><span style="color:maroon">h4</span><span style="color:blue">&gt;    
+    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button" </span><span style="color:red">plain</span><span style="color:blue">="true" </span><span style="color:red">iconCls</span><span style="color:blue">="icon-add" </span><span style="color:red">onclick</span><span style="color:blue">="onClick"&gt;</span>增加<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button" </span><span style="color:red">plain</span><span style="color:blue">="true" </span><span style="color:red">iconCls</span><span style="color:blue">="icon-edit" </span><span style="color:red">onclick</span><span style="color:blue">="onClick"&gt;</span>修改<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button" </span><span style="color:red">plain</span><span style="color:blue">="true" </span><span style="color:red">iconCls</span><span style="color:blue">="icon-remove" </span><span style="color:red">onclick</span><span style="color:blue">="onClick"&gt;</span>删除<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;
+
+    &lt;</span><span style="color:maroon">h4</span><span style="color:blue">&gt;</span>Icon Position<span style="color:blue">&lt;/</span><span style="color:maroon">h4</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button mini-button-iconTop" </span><span style="color:red">iconCls</span><span style="color:blue">="icon-add" </span><span style="color:red">onclick</span><span style="color:blue">="onClick" &gt;</span>增加<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;    
+    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button mini-button-iconTop" </span><span style="color:red">iconCls</span><span style="color:blue">="icon-edit" </span><span style="color:red">onclick</span><span style="color:blue">="onClick" &gt;</span>修改<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;
+
+    &lt;</span><span style="color:maroon">h4</span><span style="color:blue">&gt;</span>A Link<span style="color:blue">&lt;/</span><span style="color:maroon">h4</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button" </span><span style="color:red">href</span><span style="color:blue">="http://www.google.com"&gt;</span>Google<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button" </span><span style="color:red">href</span><span style="color:blue">="http://www.baidu.com"&gt;</span>Baidu<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;
+</span></pre>
+
+            <h4>菜单按钮</h4>
+<pre class="code">    <span style="color:blue">&lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-menubutton" </span><span style="color:red">menu</span><span style="color:blue">="#popupMenu" &gt;</span>选择...<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;
+
+    &lt;</span><span style="color:maroon">ul </span><span style="color:red">id</span><span style="color:blue">="popupMenu" </span><span style="color:red">class</span><span style="color:blue">="mini-menu" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">display</span><span style="color:blue">:none;"&gt;
+        &lt;</span><span style="color:maroon">li</span><span style="color:blue">&gt;
+            &lt;</span><span style="color:maroon">span </span><span style="color:blue">&gt;</span>操作<span style="color:blue">&lt;/</span><span style="color:maroon">span</span><span style="color:blue">&gt;
+            &lt;</span><span style="color:maroon">ul</span><span style="color:blue">&gt;
+                &lt;</span><span style="color:maroon">li </span><span style="color:red">iconCls</span><span style="color:blue">="icon-new" </span><span style="color:red">onclick</span><span style="color:blue">="onItemClick"&gt;</span>新建<span style="color:blue">&lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;
+                &lt;</span><span style="color:maroon">li </span><span style="color:red">class</span><span style="color:blue">="separator"&gt;&lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;
+                &lt;</span><span style="color:maroon">li </span><span style="color:red">iconCls</span><span style="color:blue">="icon-add" </span><span style="color:red">onclick</span><span style="color:blue">="onItemClick"&gt;</span>增加<span style="color:blue">&lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;    
+                &lt;</span><span style="color:maroon">li </span><span style="color:red">iconCls</span><span style="color:blue">="icon-edit" </span><span style="color:red">onclick</span><span style="color:blue">="onItemClick"&gt;</span>修改<span style="color:blue">&lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;
+                &lt;</span><span style="color:maroon">li </span><span style="color:red">iconCls</span><span style="color:blue">="icon-remove" </span><span style="color:red">onclick</span><span style="color:blue">="onItemClick"&gt;</span>删除<span style="color:blue">&lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;                      
+            &lt;/</span><span style="color:maroon">ul</span><span style="color:blue">&gt;
+        &lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">li </span><span style="color:red">class</span><span style="color:blue">="separator"&gt;&lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">li </span><span style="color:red">iconCls</span><span style="color:blue">="icon-open" &gt;</span>打开<span style="color:blue">&lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">li </span><span style="color:red">iconCls</span><span style="color:blue">="icon-remove" &gt;</span>关闭<span style="color:blue">&lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;
+    &lt;/</span><span style="color:maroon">ul</span><span style="color:blue">&gt;
+</span></pre>
+            <h4>工具栏</h4>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">div </span><span style="color:red">class</span><span style="color:blue">="mini-toolbar"&gt;
+    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button" </span><span style="color:red">iconCls</span><span style="color:blue">="icon-add"&gt;</span>增加<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button" </span><span style="color:red">iconCls</span><span style="color:blue">="icon-edit"&gt;</span>修改<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button" </span><span style="color:red">iconCls</span><span style="color:blue">="icon-remove"&gt;</span>删除<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">span </span><span style="color:red">class</span><span style="color:blue">="separator"&gt;&lt;/</span><span style="color:maroon">span</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button" </span><span style="color:red">plain</span><span style="color:blue">="true"&gt;</span>增加<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button" </span><span style="color:red">plain</span><span style="color:blue">="true"&gt;</span>修改<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button" </span><span style="color:red">plain</span><span style="color:blue">="true"&gt;</span>删除<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">span </span><span style="color:red">class</span><span style="color:blue">="separator"&gt;&lt;/</span><span style="color:maroon">span</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">input </span><span style="color:red">class</span><span style="color:blue">="mini-textbox" /&gt;   
+    &lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button" </span><span style="color:red">plain</span><span style="color:blue">="true"&gt;</span>查询<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;
+&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+</span></pre>
+            
+        </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <div id="copyright">Copyright © 上海普加软件有限公司版权所有 </div>
+            <div id="bottomlinks"><a href="/sitemap">网站导航</a>|<a href="/support">支持服务</a>|<a href="/license">授权方式</a>|<a href="/contact">联系我们</a></div>
+        </div>
+    </div>
+</body>
+</html>

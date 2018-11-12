@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery MiniUI - 专业WebUI控件库</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="jquery,web,grid,表格,datagrid,js,javascript,ajax,web开发,tree,table" />   
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。它能缩短开发时间，减少代码量，使开发者更专注于业务和服务端，轻松实现界面开发，带来绝佳的用户体验。" />
+    <link href="../core.css" rel="stylesheet" type="text/css" />
+    
+    <link href="common.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="header">
+        <div class="headerInner">
+            <a class="logo" href="http://www.miniui.com" title="jQuery MiniUI - 专业WebUI控件库">jQuery MiniUI</a>
+            <a id="why" href="/why">为什么选择MiniUI？</a>
+
+            <ul class="topmenu">
+                <li><a href="/"><span>首页</span></a></li>
+                <li onmouseover="showMenu('popup1', this)" onmouseout="hideMenu('popup1', this)"><a href="/product"><span>产品</span></a>
+                    <ul id="popup1" class="popupmenu">
+                        <li class="product"><a href="/product">产品介绍</a></li>
+                        <li><a href="/features">功能特性</a></li>
+                        <li><a href="/screenshots">界面截图</a></li>                        
+                        <li><a href="/support">支持服务</a></li>
+                        <li><a href="/license">授权方式</a></li>
+                        
+                        <li class="faq"><a href="/faq">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="/demo"><span>示例</span></a></li>
+                <li onmouseover="showMenu('popup2', this)" onmouseout="hideMenu('popup2', this)"><a href="/docs"><span>文档</span></a>
+                    <ul id="popup2" class="popupmenu">                        
+                        <li id="start_link"><a href="/docs/quickstart">快速入门</a></li>
+                        <li><a href="/docs/tutorial">开发教程</a></li>
+                        <li id="kb_link"><a href="/docs/kb">精华文章</a></li>
+                        <li><a href="/docs/api">Api参考手册</a></li>
+                    </ul>
+                </li>
+                <li><a href="/bbs"><span>论坛</span></a></li><li><a href="/download"><span>下载</span></a></li>
+                
+                <li><a href="/contact"><span>联系</span></a></li>
+            </ul>
+        
+     
+        </div>
+    </div>
+    <div class="topnav">
+        <div class="topnavInner">
+            <a href="/">首页</a>><a href="/docs">文档中心</a>><a href="/docs/tutorial">开发教程</a>><span>树形控件</span>
+        </div>
+    </div>
+    <div class="body " >
+        <div class="bodyInner">
+            
+        <div class="contentView">
+            <h3>创建树：列表结构</h3>
+                
+            <a title="Tree 树" href="../../demo/tree/list2tree.html" target="_blank"><img src="../api/images/tree.gif"/></a>
+            <br /><br />
+            <p class="p_demo"><span class="note">参考示例</span>：
+                <a href="../../demo/tree/list2tree.html" target="_blank">列表数据生成Tree</a></p>
+            <br />
+
+            <h4>创建Tree</h4>            
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">ul </span><span style="color:red">id</span><span style="color:blue">="tree1" </span><span style="color:red">class</span><span style="color:blue">="mini-tree" </span><span style="color:red">url</span><span style="color:blue">="../data/listTree.txt" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:200px;</span><span style="color:red">padding</span><span style="color:blue">:5px;" 
+    </span><span style="color:red">showTreeIcon</span><span style="color:blue">="true" </span><span style="color:red">textField</span><span style="color:blue">="text" </span><span style="color:red">idField</span><span style="color:blue">="id" </span><span style="color:red">parentField</span><span style="color:blue">="pid" </span><span style="color:red">resultAsTree</span><span style="color:blue">="false"  
+    &gt;
+&lt;/</span><span style="color:maroon">ul</span><span style="color:blue">&gt;
+</span></pre>
+            <p><span class="note">注意</span>：idField、parentField、resultAsTree属性。</p>
+        
+            <h4>数据结构：列表</h4>
+            <p>通过url返回的数据结构如下：</p>
+<pre class="code">[
+    {id: "base", text: "Base", expanded: false},    
+    {id: "ajax", text: "Ajax", pid: "base"},
+    {id: "json", text: "JSON", pid: "base"},
+    ......
+]
+</pre>
+            <p>其中，id和pid对应父子关系。</p>
+        </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <div id="copyright">Copyright © 上海普加软件有限公司版权所有 </div>
+            <div id="bottomlinks"><a href="/sitemap">网站导航</a>|<a href="/support">支持服务</a>|<a href="/license">授权方式</a>|<a href="/contact">联系我们</a></div>
+        </div>
+    </div>
+</body>
+</html>

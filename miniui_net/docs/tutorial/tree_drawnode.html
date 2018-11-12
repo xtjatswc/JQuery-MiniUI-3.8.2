@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery MiniUI - 专业WebUI控件库</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="jquery,web,grid,表格,datagrid,js,javascript,ajax,web开发,tree,table" />   
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。它能缩短开发时间，减少代码量，使开发者更专注于业务和服务端，轻松实现界面开发，带来绝佳的用户体验。" />
+    <link href="../core.css" rel="stylesheet" type="text/css" />
+    
+    <link href="common.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="header">
+        <div class="headerInner">
+            <a class="logo" href="http://www.miniui.com" title="jQuery MiniUI - 专业WebUI控件库">jQuery MiniUI</a>
+            <a id="why" href="/why">为什么选择MiniUI？</a>
+
+            <ul class="topmenu">
+                <li><a href="/"><span>首页</span></a></li>
+                <li onmouseover="showMenu('popup1', this)" onmouseout="hideMenu('popup1', this)"><a href="/product"><span>产品</span></a>
+                    <ul id="popup1" class="popupmenu">
+                        <li class="product"><a href="/product">产品介绍</a></li>
+                        <li><a href="/features">功能特性</a></li>
+                        <li><a href="/screenshots">界面截图</a></li>                        
+                        <li><a href="/support">支持服务</a></li>
+                        <li><a href="/license">授权方式</a></li>
+                        
+                        <li class="faq"><a href="/faq">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="/demo"><span>示例</span></a></li>
+                <li onmouseover="showMenu('popup2', this)" onmouseout="hideMenu('popup2', this)"><a href="/docs"><span>文档</span></a>
+                    <ul id="popup2" class="popupmenu">                        
+                        <li id="start_link"><a href="/docs/quickstart">快速入门</a></li>
+                        <li><a href="/docs/tutorial">开发教程</a></li>
+                        <li id="kb_link"><a href="/docs/kb">精华文章</a></li>
+                        <li><a href="/docs/api">Api参考手册</a></li>
+                    </ul>
+                </li>
+                <li><a href="/bbs"><span>论坛</span></a></li><li><a href="/download"><span>下载</span></a></li>
+                
+                <li><a href="/contact"><span>联系</span></a></li>
+            </ul>
+        
+     
+        </div>
+    </div>
+    <div class="topnav">
+        <div class="topnavInner">
+            <a href="/">首页</a>><a href="/docs">文档中心</a>><a href="/docs/tutorial">开发教程</a>><span>树形控件</span>
+        </div>
+    </div>
+    <div class="body " >
+        <div class="bodyInner">
+            
+        <div class="contentView">
+            <h3>自定义节点</h3>
+            <a title="自定义节点" href="../../demo/tree/drawnode.html" target="_blank"><img src="../api/images/drawnode.gif" /></a>
+            <br /><br />
+            <p class="p_demo"><span class="note">参考示例</span>：<a href="../../demo/tree/drawnode.html" target="_blank">自定义节点</a></p>
+            <br />
+
+            <h4>创建代码</h4>            
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">ul </span><span style="color:red">id</span><span style="color:blue">="tree1" </span><span style="color:red">class</span><span style="color:blue">="mini-tree" </span><span style="color:red">url</span><span style="color:blue">="../data/tree.txt" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:200px;</span><span style="color:red">padding</span><span style="color:blue">:5px;" 
+    </span><span style="color:red">showTreeIcon</span><span style="color:blue">="true" </span><span style="color:red">textField</span><span style="color:blue">="text" </span><span style="color:red">idField</span><span style="color:blue">="id" 
+    </span><span style="color:red">ondrawnode</span><span style="color:blue">="onDrawNode" </span><span style="color:red">showCheckBox</span><span style="color:blue">="true"
+    &gt;        
+&lt;/</span><span style="color:maroon">ul</span><span style="color:blue">&gt;
+</span></pre>
+            <p>此时，我们监听了“drawnode”事件。</p>
+
+
+            <h4>drawnode 事件</h4>      
+            <pre class="code"><span style="color:blue">function </span>onDrawNode(e) {
+    <span style="color:blue">var </span>tree = e.sender;
+    <span style="color:blue">var </span>node = e.node;
+
+    <span style="color:blue">var </span>hasChildren = tree.hasChildren(node);
+
+    <span style="color:#006400">//所有子节点加上超链接
+    </span><span style="color:blue">if </span>(hasChildren == <span style="color:blue">false</span>) {
+        e.nodeHtml = <span style="color:maroon">'&lt;a href="http://www.miniui.com/api/' </span>+ node.id + <span style="color:maroon">'.html" target="_blank"&gt;' </span>+ node.text + <span style="color:maroon">'&lt;/a&gt;'</span>;
+    }
+
+    <span style="color:#006400">//父节点高亮显示；子节点斜线、蓝色、下划线显示
+    </span><span style="color:blue">if </span>(hasChildren == <span style="color:blue">true</span>) {
+        e.nodeStyle = <span style="color:maroon">'font-weight:bold;'</span>;
+    } <span style="color:blue">else </span>{
+        e.nodeStyle = <span style="color:maroon">"font-style:italic;"</span>; <span style="color:#006400">//nodeStyle
+        </span>e.nodeCls = <span style="color:maroon">"blueColor"</span>;            <span style="color:#006400">//nodeCls
+    </span>}
+
+    <span style="color:#006400">//修改默认的父子节点图标
+    </span><span style="color:blue">if </span>(hasChildren == <span style="color:blue">true</span>) {
+        e.iconCls = <span style="color:maroon">"folder"</span>;
+    } <span style="color:blue">else </span>{
+        e.iconCls = <span style="color:maroon">"file"</span>;
+    }
+
+    <span style="color:#006400">//父节点的CheckBox全部隐藏
+    </span><span style="color:blue">if </span>(hasChildren == <span style="color:blue">true</span>) {
+        e.showCheckBox = <span style="color:blue">false</span>;
+    }
+}
+</pre>
+    <div style="padding-top:5px;"><span class="note">Note：</span>
+        <ol>
+            <li>文本内容(nodeHtml)：所有子节点加上超链接</li>
+            <li>节点样式(nodeStyle/nodeCls)：父节点高亮显示；子节点斜线、蓝色、下划线显示</li>
+            <li>节点图片(iconCls)：修改默认的父子节点图标</li>
+            <li>隐藏CheckBox(showCheckBox)：父节点的CheckBox全部隐藏</li>
+            <li>开发者可以扩展节点判断条件，对文本、样式、图标、CheckBox等做任意自定义。</li>
+        </ol>
+    </div>
+        </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <div id="copyright">Copyright © 上海普加软件有限公司版权所有 </div>
+            <div id="bottomlinks"><a href="/sitemap">网站导航</a>|<a href="/support">支持服务</a>|<a href="/license">授权方式</a>|<a href="/contact">联系我们</a></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery MiniUI - 专业WebUI控件库</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="jquery,web,grid,表格,datagrid,js,javascript,ajax,web开发,tree,table" />   
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。它能缩短开发时间，减少代码量，使开发者更专注于业务和服务端，轻松实现界面开发，带来绝佳的用户体验。" />
+    <link href="../core.css" rel="stylesheet" type="text/css" />
+    
+    <link href="common.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="header">
+        <div class="headerInner">
+            <a class="logo" href="http://www.miniui.com" title="jQuery MiniUI - 专业WebUI控件库">jQuery MiniUI</a>
+            <a id="why" href="/why">为什么选择MiniUI？</a>
+
+            <ul class="topmenu">
+                <li><a href="/"><span>首页</span></a></li>
+                <li onmouseover="showMenu('popup1', this)" onmouseout="hideMenu('popup1', this)"><a href="/product"><span>产品</span></a>
+                    <ul id="popup1" class="popupmenu">
+                        <li class="product"><a href="/product">产品介绍</a></li>
+                        <li><a href="/features">功能特性</a></li>
+                        <li><a href="/screenshots">界面截图</a></li>                        
+                        <li><a href="/support">支持服务</a></li>
+                        <li><a href="/license">授权方式</a></li>
+                        
+                        <li class="faq"><a href="/faq">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="/demo"><span>示例</span></a></li>
+                <li onmouseover="showMenu('popup2', this)" onmouseout="hideMenu('popup2', this)"><a href="/docs"><span>文档</span></a>
+                    <ul id="popup2" class="popupmenu">                        
+                        <li id="start_link"><a href="/docs/quickstart">快速入门</a></li>
+                        <li><a href="/docs/tutorial">开发教程</a></li>
+                        <li id="kb_link"><a href="/docs/kb">精华文章</a></li>
+                        <li><a href="/docs/api">Api参考手册</a></li>
+                    </ul>
+                </li>
+                <li><a href="/bbs"><span>论坛</span></a></li><li><a href="/download"><span>下载</span></a></li>
+                
+                <li><a href="/contact"><span>联系</span></a></li>
+            </ul>
+        
+     
+        </div>
+    </div>
+    <div class="topnav">
+        <div class="topnavInner">
+            <a href="/">首页</a>><a href="/docs">文档中心</a>><a href="/docs/tutorial">开发教程</a>><span>CRUD</span>
+        </div>
+    </div>
+    <div class="body " >
+        <div class="bodyInner">
+            
+        <div class="contentView">
+            <h3>CRUD之：行编辑</h3>
+            
+            <a title="DataGrid 行编辑" href="../../demo/datagrid/rowedit.html" target="_blank"><img src="../api/images/celleditor.gif" /></a>
+
+            <br /><br />
+            <p class="p_demo"><span class="note">参考示例</span>：<a href="../../demo/datagrid/rowedit.html" target="_blank">CRUD之：行编辑</a></p>
+            <br />
+
+            <h4>一：创建单元格编辑器</h4>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">div </span><span style="color:red">id</span><span style="color:blue">="datagrid1" </span><span style="color:red">class</span><span style="color:blue">="mini-datagrid" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:700px;</span><span style="color:red">height</span><span style="color:blue">:280px;" 
+    </span><span style="color:red">url</span><span style="color:blue">="../data/DataService.aspx?method=SearchEmployees" 
+&gt;
+    &lt;</span><span style="color:maroon">div </span><span style="color:red">property</span><span style="color:blue">="columns"&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">name</span><span style="color:blue">="action" </span><span style="color:red">width</span><span style="color:blue">="120" </span><span style="color:red">headerAlign</span><span style="color:blue">="center" </span><span style="color:red">align</span><span style="color:blue">="center" </span><span style="color:red">renderer</span><span style="color:blue">="onActionRenderer" </span><span style="color:red">cellStyle</span><span style="color:blue">="padding:0;"&gt;</span>#<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="loginname" </span><span style="color:red">width</span><span style="color:blue">="120" </span><span style="color:red">headerAlign</span><span style="color:blue">="center" </span><span style="color:red">allowSort</span><span style="color:blue">="true"&gt;</span>员工帐号
+            <span style="color:blue">&lt;</span><span style="color:maroon">input </span><span style="color:red">property</span><span style="color:blue">="editor" </span><span style="color:red">class</span><span style="color:blue">="mini-textbox" /&gt;
+        &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;                
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="gender" </span><span style="color:red">width</span><span style="color:blue">="100" </span><span style="color:red">allowSort</span><span style="color:blue">="true" </span><span style="color:red">renderer</span><span style="color:blue">="onGenderRenderer" </span><span style="color:red">align</span><span style="color:blue">="center" </span><span style="color:red">headerAlign</span><span style="color:blue">="center"&gt;</span>性别
+            <span style="color:blue">&lt;</span><span style="color:maroon">input </span><span style="color:red">property</span><span style="color:blue">="editor" </span><span style="color:red">class</span><span style="color:blue">="mini-combobox" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:100%;" </span><span style="color:red">data</span><span style="color:blue">="[{id:1,text:'男'}, {id:2, text: '女'}]"/&gt;                
+        &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;            
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="age" </span><span style="color:red">width</span><span style="color:blue">="100" </span><span style="color:red">allowSort</span><span style="color:blue">="true"&gt;</span>年龄
+            <span style="color:blue">&lt;</span><span style="color:maroon">input </span><span style="color:red">property</span><span style="color:blue">="editor" </span><span style="color:red">class</span><span style="color:blue">="mini-spinner" </span><span style="color:red">minValue</span><span style="color:blue">="0" </span><span style="color:red">maxValue</span><span style="color:blue">="200" </span><span style="color:red">value</span><span style="color:blue">="25" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:100%;"/&gt;
+        &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="birthday" </span><span style="color:red">width</span><span style="color:blue">="100" </span><span style="color:red">allowSort</span><span style="color:blue">="true" </span><span style="color:red">dateFormat</span><span style="color:blue">="yyyy-MM-dd"&gt;</span>出生日期
+            <span style="color:blue">&lt;</span><span style="color:maroon">input </span><span style="color:red">property</span><span style="color:blue">="editor" </span><span style="color:red">class</span><span style="color:blue">="mini-datepicker" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:100%;"/&gt;
+        &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;                                    
+        &lt;</span><span style="color:maroon">div </span><span style="color:red">field</span><span style="color:blue">="createtime" </span><span style="color:red">width</span><span style="color:blue">="100" </span><span style="color:red">headerAlign</span><span style="color:blue">="center" </span><span style="color:red">dateFormat</span><span style="color:blue">="yyyy-MM-dd" </span><span style="color:red">allowSort</span><span style="color:blue">="true"&gt;</span>创建日期<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;                
+    &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt; 
+</span></pre>
+            <p>比如：mini-textbox的property为"editor"，表示是此列的编辑器。</p>
+
+
+            <h4>二：编辑操作</h4>
+            <p>开始编辑行：</p>
+<pre class="code">grid.beginEditRow(row);
+</pre>
+            <p>取消编辑：</p>
+<pre class="code">grid.cancelEdit();
+</pre>
+            <p>提交编辑数据：</p>
+<pre class="code"><span style="color:blue">var </span>rowData = grid.getEditRowData(row);
+grid.loading(<span style="color:maroon">"保存中，请稍后......"</span>);
+<span style="color:blue">var </span>json = mini.encode([rowData]);
+$.ajax({
+    url: <span style="color:maroon">"../data/DataService.aspx?method=SaveEmployees"</span>,
+    data: { employees: json },
+    success: <span style="color:blue">function </span>(text) {
+        grid.reload();
+    },
+    error: <span style="color:blue">function </span>(jqXHR, textStatus, errorThrown) {
+        alert(jqXHR.responseText);
+    }
+});
+</pre>
+
+           
+
+         
+
+        </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <div id="copyright">Copyright © 上海普加软件有限公司版权所有 </div>
+            <div id="bottomlinks"><a href="/sitemap">网站导航</a>|<a href="/support">支持服务</a>|<a href="/license">授权方式</a>|<a href="/contact">联系我们</a></div>
+        </div>
+    </div>
+</body>
+</html>

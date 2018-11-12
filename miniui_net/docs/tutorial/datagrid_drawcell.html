@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery MiniUI - 专业WebUI控件库</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="jquery,web,grid,表格,datagrid,js,javascript,ajax,web开发,tree,table" />   
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。它能缩短开发时间，减少代码量，使开发者更专注于业务和服务端，轻松实现界面开发，带来绝佳的用户体验。" />
+    <link href="../core.css" rel="stylesheet" type="text/css" />
+    
+    <link href="common.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="header">
+        <div class="headerInner">
+            <a class="logo" href="http://www.miniui.com" title="jQuery MiniUI - 专业WebUI控件库">jQuery MiniUI</a>
+            <a id="why" href="/why">为什么选择MiniUI？</a>
+
+            <ul class="topmenu">
+                <li><a href="/"><span>首页</span></a></li>
+                <li onmouseover="showMenu('popup1', this)" onmouseout="hideMenu('popup1', this)"><a href="/product"><span>产品</span></a>
+                    <ul id="popup1" class="popupmenu">
+                        <li class="product"><a href="/product">产品介绍</a></li>
+                        <li><a href="/features">功能特性</a></li>
+                        <li><a href="/screenshots">界面截图</a></li>                        
+                        <li><a href="/support">支持服务</a></li>
+                        <li><a href="/license">授权方式</a></li>
+                        
+                        <li class="faq"><a href="/faq">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="/demo"><span>示例</span></a></li>
+                <li onmouseover="showMenu('popup2', this)" onmouseout="hideMenu('popup2', this)"><a href="/docs"><span>文档</span></a>
+                    <ul id="popup2" class="popupmenu">                        
+                        <li id="start_link"><a href="/docs/quickstart">快速入门</a></li>
+                        <li><a href="/docs/tutorial">开发教程</a></li>
+                        <li id="kb_link"><a href="/docs/kb">精华文章</a></li>
+                        <li><a href="/docs/api">Api参考手册</a></li>
+                    </ul>
+                </li>
+                <li><a href="/bbs"><span>论坛</span></a></li><li><a href="/download"><span>下载</span></a></li>
+                
+                <li><a href="/contact"><span>联系</span></a></li>
+            </ul>
+        
+     
+        </div>
+    </div>
+    <div class="topnav">
+        <div class="topnavInner">
+            <a href="/">首页</a>><a href="/docs">文档中心</a>><a href="/docs/tutorial">开发教程</a>><span>数据表格</span>
+        </div>
+    </div>
+    <div class="body " >
+        <div class="bodyInner">
+            
+        <div class="contentView">
+            <h3>表格：自定义单元格</h3>
+                
+            <a title="表格：自定义单元格" href="../../demo/datagrid/drawcell.html" target="_blank"><img src="../api/images/drawcell.gif"/></a>
+            <br /><br />
+            <p class="p_demo"><span class="note">参考示例</span>：<a href="../../demo/datagrid/drawcell.html" target="_blank">自定义单元格</a></p>
+            <br />
+
+            <h4>监听处理"drawcell"事件</h4>
+            <p>使用"drawcell"事件，可以自定义单元格内容、样式、行样式等。</p>
+<pre class="code">grid.on(<span style="color:maroon">"drawcell"</span>, <span style="color:blue">function </span>(e) {
+    <span style="color:blue">var </span>record = e.record,
+        column = e.column,
+        field = e.field,
+        value = e.value;
+
+    <span style="color:#006400">//格式化日期
+    </span><span style="color:blue">if </span>(field == <span style="color:maroon">"birthday"</span>) {
+        <span style="color:blue">if </span>(mini.isDate(value)) e.cellHtml = mini.formatDate(value, <span style="color:maroon">"yyyy-MM-dd"</span>);
+
+    }
+
+    <span style="color:#006400">//给年龄，增加"岁"字符串
+    </span><span style="color:blue">if </span>(field == <span style="color:maroon">"age"</span>) {
+        e.cellHtml = value + <span style="color:maroon">"岁"</span>;
+    }
+
+    <span style="color:#006400">//给帐号列，增加背景色
+    </span><span style="color:blue">if </span>(field == <span style="color:maroon">"loginname"</span>) {
+        e.cellStyle = <span style="color:maroon">"background:#ecedef"</span>;
+    }
+
+    <span style="color:#006400">//超过1万工资，红色标识
+    </span><span style="color:blue">if </span>(field == <span style="color:maroon">"salary" </span>&amp;&amp; value &gt;= 10000) {
+        e.cellStyle = <span style="color:maroon">"color:red;font-weight:bold;"</span>;
+    }
+
+    <span style="color:#006400">//显示学历
+    </span><span style="color:blue">if </span>(field == <span style="color:maroon">"educational"</span>) {
+        <span style="color:blue">for </span>(<span style="color:blue">var </span>i = 0, l = Educationals.length; i &lt; l; i++) {
+            <span style="color:blue">var </span>edu = Educationals[i];
+            <span style="color:blue">if </span>(edu.id == value) {
+                e.cellHtml = edu.name;
+                <span style="color:blue">break</span>;
+            }
+        }
+    }
+
+    <span style="color:#006400">//action列，超连接操作按钮
+    </span><span style="color:blue">if </span>(column.name == <span style="color:maroon">"action"</span>) {
+        e.cellStyle = <span style="color:maroon">"text-align:center"</span>;
+        e.cellHtml = <span style="color:maroon">'&lt;a href="javascript:edit(\'' </span>+ record.id + <span style="color:maroon">'\')"&gt;Edit&lt;/a&gt;&amp;nbsp; '
+                    </span>+ <span style="color:maroon">'&lt;a href="javascript:del(\'' </span>+ record.id + <span style="color:maroon">'\')"&gt;Delete&lt;/a&gt;'
+    </span>}
+
+    <span style="color:#006400">//将性别文本替换成图片
+    </span><span style="color:blue">if </span>(column.field == <span style="color:maroon">"gender"</span>) {
+        <span style="color:blue">if </span>(e.value == 1) {
+            e.cellHtml = <span style="color:maroon">"&lt;span class='icon-female'&gt;&lt;/span&gt;"
+        </span>} <span style="color:blue">else </span>{
+            e.cellHtml = <span style="color:maroon">"&lt;span class='icon-boy'&gt;&lt;/span&gt;"
+        </span>}
+    }
+
+    <span style="color:#006400">//设置行样式
+    </span><span style="color:blue">if </span>(record.gender == 1) {
+        e.rowCls = <span style="color:maroon">"myrow"</span>;
+    }
+});
+</pre>
+        
+
+        </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <div id="copyright">Copyright © 上海普加软件有限公司版权所有 </div>
+            <div id="bottomlinks"><a href="/sitemap">网站导航</a>|<a href="/support">支持服务</a>|<a href="/license">授权方式</a>|<a href="/contact">联系我们</a></div>
+        </div>
+    </div>
+</body>
+</html>

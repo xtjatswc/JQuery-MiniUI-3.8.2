@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery MiniUI - 专业WebUI控件库</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="jquery,web,grid,表格,datagrid,js,javascript,ajax,web开发,tree,table" />   
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。它能缩短开发时间，减少代码量，使开发者更专注于业务和服务端，轻松实现界面开发，带来绝佳的用户体验。" />
+    <link href="../core.css" rel="stylesheet" type="text/css" />
+    
+    <link href="common.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="header">
+        <div class="headerInner">
+            <a class="logo" href="http://www.miniui.com" title="jQuery MiniUI - 专业WebUI控件库">jQuery MiniUI</a>
+            <a id="why" href="/why">为什么选择MiniUI？</a>
+
+            <ul class="topmenu">
+                <li><a href="/"><span>首页</span></a></li>
+                <li onmouseover="showMenu('popup1', this)" onmouseout="hideMenu('popup1', this)"><a href="/product"><span>产品</span></a>
+                    <ul id="popup1" class="popupmenu">
+                        <li class="product"><a href="/product">产品介绍</a></li>
+                        <li><a href="/features">功能特性</a></li>
+                        <li><a href="/screenshots">界面截图</a></li>                        
+                        <li><a href="/support">支持服务</a></li>
+                        <li><a href="/license">授权方式</a></li>
+                        
+                        <li class="faq"><a href="/faq">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="/demo"><span>示例</span></a></li>
+                <li onmouseover="showMenu('popup2', this)" onmouseout="hideMenu('popup2', this)"><a href="/docs"><span>文档</span></a>
+                    <ul id="popup2" class="popupmenu">                        
+                        <li id="start_link"><a href="/docs/quickstart">快速入门</a></li>
+                        <li><a href="/docs/tutorial">开发教程</a></li>
+                        <li id="kb_link"><a href="/docs/kb">精华文章</a></li>
+                        <li><a href="/docs/api">Api参考手册</a></li>
+                    </ul>
+                </li>
+                <li><a href="/bbs"><span>论坛</span></a></li><li><a href="/download"><span>下载</span></a></li>
+                
+                <li><a href="/contact"><span>联系</span></a></li>
+            </ul>
+        
+     
+        </div>
+    </div>
+    <div class="topnav">
+        <div class="topnavInner">
+            <a href="/">首页</a>><a href="/docs">文档中心</a>><a href="/docs/tutorial">开发教程</a>><span>数据表格</span>
+        </div>
+    </div>
+    <div class="body " >
+        <div class="bodyInner">
+            
+        <div class="contentView">
+            <h3>表格：右键菜单</h3>
+                
+            <a title="表格：右键菜单" href="../../demo/datagrid/contextmenu.html" target="_blank"><img src="../api/images/contextmenu_grid.gif"/></a>
+            <br /><br />
+            <p class="p_demo"><span class="note">参考示例</span>：<a href="../../demo/datagrid/contextmenu.html" target="_blank">右键菜单</a></p>
+            <br />
+
+            <h4>一：创建ContextMenu</h4>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">ul </span><span style="color:red">id</span><span style="color:blue">="gridMenu" </span><span style="color:red">class</span><span style="color:blue">="mini-contextmenu" </span><span style="color:red">onbeforeopen</span><span style="color:blue">="onBeforeOpen"&gt;              
+    &lt;</span><span style="color:maroon">li </span><span style="color:red">name</span><span style="color:blue">="add" </span><span style="color:red">iconCls</span><span style="color:blue">="icon-add" </span><span style="color:red">onclick</span><span style="color:blue">="onAdd"&gt;</span>新增<span style="color:blue">&lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">li </span><span style="color:red">name</span><span style="color:blue">="edit" </span><span style="color:red">iconCls</span><span style="color:blue">="icon-edit" </span><span style="color:red">onclick</span><span style="color:blue">="onEdit"&gt;</span>编辑节点<span style="color:blue">&lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">li </span><span style="color:red">name</span><span style="color:blue">="remove" </span><span style="color:red">iconCls</span><span style="color:blue">="icon-remove" </span><span style="color:red">onclick</span><span style="color:blue">="onRemove"&gt;</span>删除节点<span style="color:blue">&lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;        
+&lt;/</span><span style="color:maroon">ul</span><span style="color:blue">&gt;
+</span></pre>
+            <h4>二：设置表格contextmenu</h4>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">div </span><span style="color:red">id</span><span style="color:blue">="datagrid1" </span><span style="color:red">class</span><span style="color:blue">="mini-datagrid" 
+    </span><span style="color:red">contextMenu</span><span style="color:blue">="#gridMenu"
+&gt;
+    </span>......
+<span style="color:blue">&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;   
+</span></pre>
+            <h4>三：监听beforeopen事件</h4>
+            <p>监听右键菜单的beforeopen事件，可以对右键菜单精确控制。</p>
+<pre class="code"><span style="color:blue">function </span>onBeforeOpen(e) {
+    <span style="color:blue">var </span>grid = mini.get(<span style="color:maroon">"datagrid1"</span>);
+    <span style="color:blue">var </span>menu = e.sender;
+            
+    <span style="color:blue">var </span>row = grid.getSelected();
+    <span style="color:blue">var </span>rowIndex = grid.indexOf(row);            
+    <span style="color:blue">if </span>(!row ||  rowIndex== 0) {
+        e.cancel = <span style="color:blue">true</span>;
+        <span style="color:#006400">//阻止浏览器默认右键菜单
+        </span>e.htmlEvent.preventDefault();
+        <span style="color:blue">return</span>;
+    }
+    <span style="color:#006400">////////////////////////////////
+    </span><span style="color:blue">var </span>editItem = mini.getbyName(<span style="color:maroon">"edit"</span>, menu);
+    <span style="color:blue">var </span>removeItem = mini.getbyName(<span style="color:maroon">"remove"</span>, menu);
+    editItem.show();
+    removeItem.enable();
+
+    <span style="color:blue">if </span>(rowIndex == 1) {
+        editItem.hide();
+    }
+    <span style="color:blue">if </span>(rowIndex == 1) {
+        removeItem.disable();
+    }
+
+}
+</pre>
+            <h4>四：表头菜单headerContextMenu</h4>
+            <p>创建同样一个menu菜单对象，设置给表格的headerContextMenu属性即可。</p>
+
+        </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <div id="copyright">Copyright © 上海普加软件有限公司版权所有 </div>
+            <div id="bottomlinks"><a href="/sitemap">网站导航</a>|<a href="/support">支持服务</a>|<a href="/license">授权方式</a>|<a href="/contact">联系我们</a></div>
+        </div>
+    </div>
+</body>
+</html>

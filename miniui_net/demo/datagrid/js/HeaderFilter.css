@@ -1,0 +1,73 @@
+﻿
+.headerfilter-filtered .headerfilter-trigger
+{
+    background-color:#ccc;
+}
+
+.headerfilter-trigger
+{
+    width:16px;height:16px;position:absolute;top:50%;right:4px;margin-top:-8px;cursor:pointer;
+    background-position:50% 50%;
+}
+
+.headerfilter-trigger:hover
+{
+    background-color:#ccc;
+}
+
+.filterwindow
+{
+    width:200px;
+    min-height:30px;
+    border:solid 1px #aaa;
+    position:absolute;
+    background:white;
+    
+	-moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+	filter: progid:DXImageTransform.Microsoft.Blur(pixelRadius=2,MakeShadow=false,ShadowOpacity=0.3);
+	
+	z-index:10000;
+}
+
+.filterwindow-footer
+{
+    text-align:center;
+    padding:8px 0;
+}
+
+.filterwindow-content
+{
+    position:relative;
+    max-height:250px;
+    overflow:auto;
+}
+
+.filterwindow-button
+{
+    padding:0px 8px;
+    border:solid 1px #aaa;
+    border-radius:2px;    
+}
+.clearfilter
+{
+    margin-left:10px;
+}
+.filterwindow-item
+{
+   padding:0 2px;
+}
+.filterwindow-item label
+{
+    display:block;
+    line-height:18px;
+    min-height:25px;
+    padding:10px auto;
+    vertical-align:middle;
+}
+.filterwindow-item input
+{
+    position:relative;
+    top:2px;
+    margin-right:2px;    
+}

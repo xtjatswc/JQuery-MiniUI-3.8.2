@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>进度条</title>
+    <script src="../../scripts/boot.js" type="text/javascript"></script>
+    <style>
+   
+    
+    </style>
+</head>
+<body>
+
+
+    
+    <div id="p1" class="mini-progressbar" value="55"></div>
+
+    <br />
+    <br />
+    <input type="button" value="setValue" onclick="setValue()"/>
+    <input type="button" value="getValue" onclick="getValue()"/>
+
+</body>
+</html>
+<script type="text/javascript">
+    mini.parse();
+    var bar = mini.get("p1");
+
+    function setValue() {
+        bar.setValue(bar.getValue() + 10);
+    }
+    function getValue() {
+        alert(bar.getValue());
+    }
+    
+</script>

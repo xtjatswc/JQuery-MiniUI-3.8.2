@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+ 
+    <title>UEditor(选项卡)</title>
+    <script src="../../../../scripts/boot.js" type="text/javascript"></script>
+    <script src="http://apps.bdimg.com/libs/ueditor/1.4.3.1/ueditor.config.js" type="text/javascript"></script>
+    <script src="http://apps.bdimg.com/libs/ueditor/1.4.3.1/ueditor.all.min.js" type="text/javascript"></script>
+</head>                 
+
+<body>
+
+    <div id="tabs1" class="mini-tabs" activeIndex="0" style="width:800px" >
+        <div title="Tab1">
+             <table style="width:100%;table-layout:fixed;">
+               <tr>
+                   <td style="width:100px;vertical-align:top">
+                    输入框一：
+                   </td>
+                   <td style="width:650px">
+                      <input class="mini-textarea" style="height:50px;width:650px;" />
+                   </td>
+               </tr>
+               <tr>
+                 <td style="width:100px;vertical-align:top">
+                     编辑器一：
+                 </td>
+                 <td>
+                     <textarea id="container" name="content" style="width:650px">
+                        <p>MiniUI - 专业WebUI控件库</p>
+                        </br>
+                        <p>   快速开发，减少50%代码量</p>
+                        <p>   丰富组件库，高性能、低内存</p>
+                        <p>   支持 Java、.NET、PHP</p>
+                        <p>   支持 IE6+、FireFox、Chrome</p>
+                     
+                   </textarea>
+                 </td>
+               </tr>
+            </table>
+            <a class="mini-button" onclick="getContent('ue')">获取编辑器的值</a>
+        </div>
+        <div title="Tab2">
+            <table style="width:100%;table-layout:fixed;">
+               <tr>
+                   <td style="width:100px;vertical-align:top">
+                    输入框二：
+                   </td>
+                   <td style="width:650px">
+                      <input class="mini-textarea" style="height:50px;width:650px;" />
+                   </td>
+               </tr>
+               <tr>
+                 <td style="width:100px;vertical-align:top">
+                     编辑器二：
+                 </td>
+                 <td>
+                     <textarea id="container1" name="content" style="width:650px">
+                        这是编辑器二的值
+                     
+                   </textarea>
+                 </td>
+               </tr>
+            </table>
+            <a class="mini-button" onclick="getContent('ue1')">获取编辑器的值</a>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
+<script type="text/javascript">
+
+    mini.parse();
+    var ue = UE.getEditor('container');
+    var ue1 = UE.getEditor('container1');
+
+    function getContent(el) {
+
+        if (el == "ue") {
+            alert(ue.getContent());
+        }
+        else if (el == "ue1") {
+            alert(ue1.getContent());
+        }
+    }
+</script>

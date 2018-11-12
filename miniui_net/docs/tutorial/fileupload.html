@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery MiniUI - 专业WebUI控件库</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="jquery,web,grid,表格,datagrid,js,javascript,ajax,web开发,tree,table" />   
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。它能缩短开发时间，减少代码量，使开发者更专注于业务和服务端，轻松实现界面开发，带来绝佳的用户体验。" />
+    <link href="../core.css" rel="stylesheet" type="text/css" />
+    
+    <link href="common.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="header">
+        <div class="headerInner">
+            <a class="logo" href="http://www.miniui.com" title="jQuery MiniUI - 专业WebUI控件库">jQuery MiniUI</a>
+            <a id="why" href="/why">为什么选择MiniUI？</a>
+
+            <ul class="topmenu">
+                <li><a href="/"><span>首页</span></a></li>
+                <li onmouseover="showMenu('popup1', this)" onmouseout="hideMenu('popup1', this)"><a href="/product"><span>产品</span></a>
+                    <ul id="popup1" class="popupmenu">
+                        <li class="product"><a href="/product">产品介绍</a></li>
+                        <li><a href="/features">功能特性</a></li>
+                        <li><a href="/screenshots">界面截图</a></li>                        
+                        <li><a href="/support">支持服务</a></li>
+                        <li><a href="/license">授权方式</a></li>
+                        
+                        <li class="faq"><a href="/faq">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="/demo"><span>示例</span></a></li>
+                <li onmouseover="showMenu('popup2', this)" onmouseout="hideMenu('popup2', this)"><a href="/docs"><span>文档</span></a>
+                    <ul id="popup2" class="popupmenu">                        
+                        <li id="start_link"><a href="/docs/quickstart">快速入门</a></li>
+                        <li><a href="/docs/tutorial">开发教程</a></li>
+                        <li id="kb_link"><a href="/docs/kb">精华文章</a></li>
+                        <li><a href="/docs/api">Api参考手册</a></li>
+                    </ul>
+                </li>
+                <li><a href="/bbs"><span>论坛</span></a></li><li><a href="/download"><span>下载</span></a></li>
+                
+                <li><a href="/contact"><span>联系</span></a></li>
+            </ul>
+        
+     
+        </div>
+    </div>
+    <div class="topnav">
+        <div class="topnavInner">
+            <a href="/">首页</a>><a href="/docs">文档中心</a>><a href="/docs/tutorial">开发教程</a>><span>表单控件</span>
+        </div>
+    </div>
+    <div class="body " >
+        <div class="bodyInner">
+            
+        <div class="contentView">
+            <h3>FileUpload：文件上传控件</h3>
+                
+            <a title="FileUpload 文件上传控件" href="../../demo/fileupload/fileupload.html" target="_blank"><img src="../api/images/fileupload.gif"/></a>
+            <br /><br />
+            <p class="p_demo"><span class="note">参考示例</span>：<a href="../../demo/fileupload/fileupload.html" target="_blank">FileUpload：文件上传控件</a></p>
+            <br />
+
+            <h4>创建FileUpload</h4>    
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">input </span><span style="color:red">id</span><span style="color:blue">="fileupload1" </span><span style="color:red">class</span><span style="color:blue">="mini-fileupload" </span><span style="color:red">name</span><span style="color:blue">="Fdata" </span><span style="color:red">limitType</span><span style="color:blue">="*.txt" 
+    </span><span style="color:red">flashUrl</span><span style="color:blue">="swfupload/swfupload.swf"
+    </span><span style="color:red">uploadUrl</span><span style="color:blue">="upload.aspx"
+    </span><span style="color:red">onuploadsuccess</span><span style="color:blue">="onUploadSuccess"
+    /&gt;
+</span></pre>
+
+            <h4>服务端处理</h4>
+<pre class="code"><span style="color:green">// 获得程序路径
+</span><span style="color:blue">string </span>tempFile = Request.PhysicalApplicationPath;
+
+<span style="color:green">//找到目标文件对象
+</span><span style="color:#2b91af">HttpPostedFile </span>uploadFile = Request.Files[<span style="color:#a31515">"Fdata"</span>];
+
+<span style="color:green">// 如果有文件, 则保存到一个地址
+</span><span style="color:blue">if </span>(uploadFile.ContentLength &gt; 0)
+{
+    uploadFile.SaveAs(<span style="color:blue">string</span>.Format(<span style="color:#a31515">"{0}{1}{2}"</span>, tempFile, <span style="color:#a31515">"demo\\fileUpload\\upload\\"</span>, uploadFile.FileName));
+}
+
+Response.Write(uploadFile.FileName +<span style="color:#a31515">"("</span>+<span style="color:#2b91af">DateTime</span>.Now+<span style="color:#a31515">")"</span>);    <span style="color:green">//可以返回一个JSON字符串, 在客户端做更多处理
+</span></pre>
+
+        </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <div id="copyright">Copyright © 上海普加软件有限公司版权所有 </div>
+            <div id="bottomlinks"><a href="/sitemap">网站导航</a>|<a href="/support">支持服务</a>|<a href="/license">授权方式</a>|<a href="/contact">联系我们</a></div>
+        </div>
+    </div>
+</body>
+</html>

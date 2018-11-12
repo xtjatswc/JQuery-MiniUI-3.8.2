@@ -1,0 +1,12 @@
+关于最近快捷键连续按导致方法调用多次的问题，框架层面目前解决如下：
+
+1.打开模态窗口：View.open({showModal: true/undefined})
+2.弹出框：View.showMessageBox, View.showXxx等
+3.异步任务（Promise）遮罩处理：View.withWaiting，View.addWithWaiting，以及View方法里以WithWaiting结尾的函数
+
+针对以上三种情况，整个界面会进入阻塞状态（不会接受键盘事件）
+除此之外的情况，需要各自界面控制，避免重复执行
+
+注：
+框架不会做过多不在自身职责范围内的事情，不会尝试解决太多个性化的问题；
+像上面的一些公共操作，希望各个系统能够统一调用框架封装的功能，这样方便后期统一控制及解决共性问题；

@@ -1,0 +1,133 @@
+﻿<html>
+<head>
+    <title>MessageBox - jQuery MiniUI 3.0 Documentation</title>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="core.js" type="text/javascript"></script>
+</head>
+<body>
+    <h3>MessageBox</h3>
+    
+    <p>消息框。</p>  
+
+    <h4>Screenshots</h4>
+    <img src="images/hello.gif" />
+
+    <h4>Examples</h4>
+    <a class="demo" href="../../demo/messagebox.html" target="_blank">MessageBox</a>
+
+    <h4>Static Methods</h4>
+    <table>
+        <tr><th>Name</th><th>Parameter</th><th>Description</th><th>Return</th></tr>
+        <tr>
+            <td>mini.alert（message, title, callback）</td>
+            <td></td>
+            <td>提示框</td>
+            <td>messageId</td>
+        </tr>
+        <tr>
+            <td>mini.confirm（message, title, callback）</td>
+            <td></td>
+            <td>选择提示框</td>
+            <td>messageId</td>
+        </tr>
+        <tr>
+            <td>mini.prompt（message, title, callback, multi）</td>
+            <td></td>
+            <td>文本输入提示框</td>
+            <td>messageId</td>
+        </tr>
+        <tr>
+            <td>mini.loading（message, title）</td>
+            <td></td>
+            <td>加载提示框</td>
+            <td>messageId</td>
+        </tr>
+        <tr>
+            <td>mini.showTips（options）</td>
+            <td>
+<pre>
+{
+    content: String,    
+    state: String,      //default|success|info|warning|danger
+    x: String,          //left|center|right
+    y: String,          //top|center|bottom
+    timeout: Number     //自动消失间隔时间。默认2000（2秒）。
+}
+</pre>            
+            </td>
+            <td>消息提示框</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>mini.showMessageBox（options）</td>
+            <td>
+<pre>
+{
+    title: String,    
+    message: String,
+    buttons: ["ok", "no", "cancel"],    
+    iconCls: "mini-messagebox-question",
+    html: String,   
+    callback: function(action){
+    }
+}
+</pre>            
+            </td>
+            <td>显示提示框</td>
+            <td>messageId</td>
+        </tr>
+        <tr>
+            <td>mini.hideMessageBox（messageId）</td>
+            <td></td>
+            <td>隐藏提示框</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>mini.open（options）</td>
+            <td>options : 
+<pre>
+{
+    targetWindow: window,   //页面对象。默认是顶级页面。
+    url: String,        //页面地址
+    title: String,      //标题
+    iconCls: String,    //标题图标
+    width: Number,      //宽度
+    height: Number,     //高度
+    allowResize: Boolean,       //允许尺寸调节
+    allowDrag: Boolean,         //允许拖拽位置
+    showCloseButton: Boolean,   //显示关闭按钮
+    showMaxButton: Boolean,     //显示最大化按钮
+    showModal: Boolean,         //显示遮罩
+    loadOnRefresh: false,       //true每次刷新都激发onload事件
+    onload: function () {       //弹出页面加载完成
+        var iframe = this.getIFrameEl(); 
+        var data = {};       
+        //调用弹出页面方法进行初始化
+        iframe.contentWindow.SetData(data); 
+                        
+    },
+    ondestroy: function (action) {  //弹出页面关闭前
+        if (action == "ok") {       //如果点击“确定”
+            var iframe = this.getIFrameEl();
+            //获取选中、编辑的结果
+            var data = iframe.contentWindow.GetData();
+            data = mini.clone(data);    //必须。克隆数据。
+            ......
+        }                        
+    }
+
+}
+</pre>            
+            </td>
+            <td>弹出子页面</td>
+            <td></td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿1.可以直接打开index.html，运行和查看Demo示例、Api文档等。
+
+2.为更好演示DataGrid相关示例，以及提供可参考的数据交互代码，需要安装部署示例数据库。
+	
+	1) Java部署
+	miniui_java.rar是一个eclipse项目。
+	首先，在eclipse中使用“导入项目”，导入解压缩后的文件夹。
+	然后，在dbsql目录下，选择合适的数据库文件，安装示例数据库和表。
+	最后，打开src\com\plusoft\db\DataBase.java，修改相关数据库配置字符串。
+	如果是myeclipse工具，请下载 miniui_java_myeclipse.rar，参考以上部署步骤就可以。
+
+	2) .Net部署
+	打开Visual Studio，选择“文件”->“打开”->“网站”，打开文件夹，生成一个网站项目。
+	在dbsql目录下，选择合适的数据库文件，安装示例数据库和表。
+	在App_Code/DBUtility/DataBase.cs，修改相关数据库配置字符串。
+
+	3) PHP部署	
+	在dbsql目录下，选择合适的数据库文件，安装示例数据库和表。
+	在demo/data/invoke.php，修改相关数据库配置字符串。
+
+
+如有其他问题，请访问论坛获得支持：
+http://www.miniui.com/bbs
+

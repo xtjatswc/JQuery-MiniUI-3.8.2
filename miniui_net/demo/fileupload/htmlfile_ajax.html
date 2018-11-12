@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ajax上传文件</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" /><link href="../demo.css" rel="stylesheet" type="text/css" />
+
+     
+    <script src="../../scripts/boot.js" type="text/javascript"></script>
+
+    <script src="js/ajaxfileupload.js" type="text/javascript"></script>
+
+</head>
+<body>
+    
+    <div>
+        图片：<input class="mini-htmlfile" name="Fdata"  id="file1" style="width:300px;"/>
+
+        <br /><br />
+        <input type="button" value="上传" onclick="ajaxFileUpload()"/>
+    </div>
+    <div class="description">
+        <h3>Description</h3>
+        <p>需要引用<a href="js/ajaxfileupload.js">ajaxfileupload.js</a>无刷新上传文件。</p>
+    </div>
+</body>
+</html>
+<script>
+    
+    function ajaxFileUpload() {
+        
+        var inputFile = $("#file1 > input:file")[0];
+
+        $.ajaxFileUpload({
+            url: 'upload.aspx',                 //用于文件上传的服务器端请求地址
+            fileElementId: inputFile,               //文件上传域的ID
+            //data: { a: 1, b: true },            //附加的额外参数
+            dataType: 'text',                   //返回值类型 一般设置为json
+            success: function (data, status)    //服务器成功响应处理函数
+            {
+                alert("上传成功: " + data);
+
+            },
+            error: function (data, status, e)   //服务器响应失败处理函数
+            {
+                alert(e);
+            },
+            complete: function () {
+                var jq = $("#file1 > input:file");
+                jq.before(inputFile);
+                jq.remove();
+            }
+        });
+    }
+
+</script>

@@ -1,0 +1,83 @@
+﻿h3
+{
+    font-size:20px;
+    font-family:微软雅黑,黑体,宋体;
+    margin-bottom:25px;
+    margin-top:5px;
+    color:Black;
+}
+h4
+{
+    font-size:16px;
+    font-family:微软雅黑,黑体,宋体;
+    margin-bottom:0px;
+} 
+ul a
+{
+    font-size:14px;
+    font-family:微软雅黑,黑体,宋体;
+}
+    
+.contentView
+{
+    padding:15px;
+    padding-bottom:80px;
+    font-size:13px;
+    color:#222;
+}
+
+.code
+{
+    border:dashed 1px #bbb;
+    background:#f2f1f1;
+    padding:5px;
+    color:#222;
+    overflow:auto;
+}
+p
+{
+    line-height:18px;    
+}
+
+.p_demo a
+{
+    color:blue;
+    font-size:14px;
+    font-family:微软雅黑;
+    text-decoration:underline;
+}
+.note
+{
+    color:#cc0000;
+    font-weight:bold;
+}
+
+
+
+.contentView table
+{
+    border-collapse:collapse;
+    font-size: 1em;
+    margin: 1em;
+    width: auto;
+    color:#131313;
+}
+.contentView table th
+{
+    background:#EEEEEE;
+    font-weight:bold;
+    line-height:18px;
+    color:Black;
+}
+.contentView th, .contentView td
+{
+    border: 1px solid #999999;
+    padding: 0.25em 0.5em;
+    text-align: left;
+    vertical-align: top;
+    line-height:16px;
+}
+a img
+{
+    border:0;
+}

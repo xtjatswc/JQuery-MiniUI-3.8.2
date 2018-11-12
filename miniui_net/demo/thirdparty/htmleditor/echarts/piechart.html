@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>PieChart</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link href="../../../demo.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../scripts/boot.js" type="text/javascript"></script>
+    <script src="https://cdn.bootcss.com/echarts/3.7.1/echarts.min.js"></script>
+
+</head>
+<body>
+    <h1>PieChart</h1>
+    <input type="button" value="OpenChart" onclick="showChartWindow()" />
+    <div id="win1" class="mini-window" title="PieChart" style="width:580px;height:450px;"
+         showToolbar="false" showFooter="true" showModal="true" allowResize="true">
+
+        <div class="ct" id="chart1" style="height:100%;width:100%;">></div>
+
+
+    </div>
+</body>
+</html>
+
+
+<script type="text/javascript">
+    mini.parse();
+
+    var option = {
+        title: {
+            text: '某站点用户访问来源',
+            subtext: '纯属虚构',
+            x: 'center'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
+        },
+        series: [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius: '55%',
+                center: ['50%', '60%'],
+                data: [
+                    { value: 335, name: '直接访问' },
+                    { value: 310, name: '邮件营销' },
+                    { value: 234, name: '联盟广告' },
+                    { value: 135, name: '视频广告' },
+                    { value: 1548, name: '搜索引擎' }
+                ],
+                itemStyle: {
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+
+
+
+    function buildChart() {
+
+        var chart1 = echarts.init(document.getElementById('chart1'));
+        chart1.setOption(option);
+    }
+    function showChartWindow() {
+        var win = mini.get("win1");
+        win.show();
+        buildChart();
+    }
+    showChartWindow()
+</script>

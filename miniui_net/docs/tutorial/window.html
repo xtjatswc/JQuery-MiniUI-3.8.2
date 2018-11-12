@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery MiniUI - 专业WebUI控件库</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="jquery,web,grid,表格,datagrid,js,javascript,ajax,web开发,tree,table" />   
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。它能缩短开发时间，减少代码量，使开发者更专注于业务和服务端，轻松实现界面开发，带来绝佳的用户体验。" />
+    <link href="../core.css" rel="stylesheet" type="text/css" />
+    
+    <link href="common.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="header">
+        <div class="headerInner">
+            <a class="logo" href="http://www.miniui.com" title="jQuery MiniUI - 专业WebUI控件库">jQuery MiniUI</a>
+            <a id="why" href="/why">为什么选择MiniUI？</a>
+
+            <ul class="topmenu">
+                <li><a href="/"><span>首页</span></a></li>
+                <li onmouseover="showMenu('popup1', this)" onmouseout="hideMenu('popup1', this)"><a href="/product"><span>产品</span></a>
+                    <ul id="popup1" class="popupmenu">
+                        <li class="product"><a href="/product">产品介绍</a></li>
+                        <li><a href="/features">功能特性</a></li>
+                        <li><a href="/screenshots">界面截图</a></li>                        
+                        <li><a href="/support">支持服务</a></li>
+                        <li><a href="/license">授权方式</a></li>
+                        
+                        <li class="faq"><a href="/faq">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="/demo"><span>示例</span></a></li>
+                <li onmouseover="showMenu('popup2', this)" onmouseout="hideMenu('popup2', this)"><a href="/docs"><span>文档</span></a>
+                    <ul id="popup2" class="popupmenu">                        
+                        <li id="start_link"><a href="/docs/quickstart">快速入门</a></li>
+                        <li><a href="/docs/tutorial">开发教程</a></li>
+                        <li id="kb_link"><a href="/docs/kb">精华文章</a></li>
+                        <li><a href="/docs/api">Api参考手册</a></li>
+                    </ul>
+                </li>
+                <li><a href="/bbs"><span>论坛</span></a></li><li><a href="/download"><span>下载</span></a></li>
+                
+                <li><a href="/contact"><span>联系</span></a></li>
+            </ul>
+        
+     
+        </div>
+    </div>
+    <div class="topnav">
+        <div class="topnavInner">
+            <a href="/">首页</a>><a href="/docs">文档中心</a>><a href="/docs/tutorial">开发教程</a>><span>布局控件</span>
+        </div>
+    </div>
+    <div class="body " >
+        <div class="bodyInner">
+            
+        <div class="contentView">
+            <h3>Window：弹出面板</h3>
+                
+            <a title="Window 弹出面板" href="../../demo/window/window.html" target="_blank"><img src="../api/images/window.gif"/></a>
+            <br /><br />
+            <p class="p_demo"><span class="note">参考示例</span>：<a href="../../demo/window/window.html" target="_blank">Window：弹出面板</a></p>
+            <br />
+
+            <h4>创建Window</h4>            
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">div </span><span style="color:red">id</span><span style="color:blue">="win1" </span><span style="color:red">class</span><span style="color:blue">="mini-window" </span><span style="color:red">title</span><span style="color:blue">="Window" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:300px;</span><span style="color:red">height</span><span style="color:blue">:200px;" 
+    </span><span style="color:red">showMaxButton</span><span style="color:blue">="true" 
+    </span><span style="color:red">showToolbar</span><span style="color:blue">="true" </span><span style="color:red">showFooter</span><span style="color:blue">="true" </span><span style="color:red">showModal</span><span style="color:blue">="true" </span><span style="color:red">allowResize</span><span style="color:blue">="true" </span><span style="color:red">allowDrag</span><span style="color:blue">="true"
+    &gt;
+    &lt;</span><span style="color:maroon">div </span><span style="color:red">property</span><span style="color:blue">="toolbar" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">padding</span><span style="color:blue">:5px;"&gt;
+        &lt;</span><span style="color:maroon">input </span><span style="color:red">type</span><span style="color:blue">='button' </span><span style="color:red">value</span><span style="color:blue">='Toolbar' </span><span style="color:red">style</span><span style="color:blue">='</span><span style="color:red">vertical-align</span><span style="color:blue">:middle;'/&gt;
+    &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">div </span><span style="color:red">property</span><span style="color:blue">="footer"&gt;
+        &lt;</span><span style="color:maroon">input </span><span style="color:red">type</span><span style="color:blue">='button' </span><span style="color:red">value</span><span style="color:blue">='Footer' </span><span style="color:red">style</span><span style="color:blue">='</span><span style="color:red">vertical-align</span><span style="color:blue">:middle;'/&gt;
+    &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+
+    </span>1<span style="color:blue">&lt;</span><span style="color:maroon">br </span><span style="color:blue">/&gt;</span>1<span style="color:blue">&lt;</span><span style="color:maroon">br </span><span style="color:blue">/&gt;</span>1<span style="color:blue">&lt;</span><span style="color:maroon">br </span><span style="color:blue">/&gt;</span>1<span style="color:blue">&lt;</span><span style="color:maroon">br </span><span style="color:blue">/&gt;</span>1<span style="color:blue">&lt;</span><span style="color:maroon">br </span><span style="color:blue">/&gt;</span>1<span style="color:blue">&lt;</span><span style="color:maroon">br </span><span style="color:blue">/&gt;</span>1<span style="color:blue">&lt;</span><span style="color:maroon">br </span><span style="color:blue">/&gt;</span>1<span style="color:blue">&lt;</span><span style="color:maroon">br </span><span style="color:blue">/&gt;</span>1<span style="color:blue">&lt;</span><span style="color:maroon">br </span><span style="color:blue">/&gt;</span>1<span style="color:blue">&lt;</span><span style="color:maroon">br </span><span style="color:blue">/&gt;</span>1<span style="color:blue">&lt;</span><span style="color:maroon">br </span><span style="color:blue">/&gt;</span>1<span style="color:blue">&lt;</span><span style="color:maroon">br </span><span style="color:blue">/&gt;</span>1<span style="color:blue">&lt;</span><span style="color:maroon">br </span><span style="color:blue">/&gt;</span>1<span style="color:blue">&lt;</span><span style="color:maroon">br </span><span style="color:blue">/&gt;</span>1<span style="color:blue">&lt;</span><span style="color:maroon">br </span><span style="color:blue">/&gt;</span>1<span style="color:blue">&lt;</span><span style="color:maroon">br </span><span style="color:blue">/&gt;
+&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+</span></pre>
+        
+            <h4>弹出面板</h4>
+<pre class="code"><span style="color:blue">var </span>win = mini.get(<span style="color:maroon">"win1"</span>);
+win.show();
+</pre>
+            <h4>隐藏面板</h4>
+<pre class="code"><span style="color:blue">var </span>win = mini.get(<span style="color:maroon">"win1"</span>);
+win.hide();
+</pre>
+
+
+        </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <div id="copyright">Copyright © 上海普加软件有限公司版权所有 </div>
+            <div id="bottomlinks"><a href="/sitemap">网站导航</a>|<a href="/support">支持服务</a>|<a href="/license">授权方式</a>|<a href="/contact">联系我们</a></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>PieChart</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link href="../../../demo.css" rel="stylesheet" type="text/css" />
+    <script src="../../../../scripts/boot.js" type="text/javascript"></script>
+    <script src="https://cdn.bootcss.com/echarts/3.7.1/echarts.min.js"></script>
+
+</head>
+<body>
+    <h1>ColumnChart</h1>
+    <input type="button" value="OpenChart" onclick="showChartWindow()" />
+    <div id="win1" class="mini-window" title="ColumnChart" style="width:580px;height:450px;"
+         showToolbar="false" showFooter="true" showModal="true" allowResize="true">
+
+        <div id="chartContainer" style="height:100%;width:100%;">></div>
+
+
+    </div>
+</body>
+</html>
+
+
+<script type="text/javascript">
+    mini.parse();
+
+    option = {
+        title: {
+            text: '世界人口总量',
+            subtext: '数据来自网络'
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
+        legend: {
+            data: ['2011年', '2012年']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'value',
+            boundaryGap: [0, 0.01]
+        },
+        yAxis: {
+            type: 'category',
+            data: ['巴西', '印尼', '美国', '印度', '中国', '世界人口(万)']
+        },
+        series: [
+            {
+                name: '2011年',
+                type: 'bar',
+                data: [18203, 23489, 29034, 104970, 131744, 630230]
+            },
+            {
+                name: '2012年',
+                type: 'bar',
+                data: [19325, 23438, 31000, 121594, 134141, 681807]
+            }
+        ]
+    };
+
+    function buildChart() {
+
+        var chart = echarts.init(document.getElementById('chartContainer'));
+        chart.setOption(option);
+    }
+    function showChartWindow() {
+        var win = mini.get("win1");
+        win.show();
+        buildChart();
+    }
+    showChartWindow();
+</script>

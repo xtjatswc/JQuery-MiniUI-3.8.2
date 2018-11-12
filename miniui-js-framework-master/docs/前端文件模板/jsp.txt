@@ -1,0 +1,12 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <%@ include file="/WEB-INF/views/common/taglibs.jsp" %>
+    <%@ include file="/WEB-INF/views/common/include_js.jsp" %>
+    <script data-main="${NAME}/view" src="${coreJsRoot}/require.js"></script>
+</head>
+<body>
+</body>
+</html>

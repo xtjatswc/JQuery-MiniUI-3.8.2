@@ -1,0 +1,95 @@
+﻿<html>
+<head>
+    <title>CheckBoxList - jQuery MiniUI 3.0 Documentation</title>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="core.js" type="text/javascript"></script>
+</head>
+<body>
+    <h3>mini.CheckBoxList</h3>
+    
+    <p>复选框组。</p>
+
+    <h4>Extend</h4>
+    <p> <a class="extendlink" href="listbox.html">mini.ListBox</a></p>    
+
+    <h4>Usage</h4>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">div </span><span style="color:red">id</span><span style="color:blue">="cbl1" </span><span style="color:red">class</span><span style="color:blue">="mini-checkboxlist" </span><span style="color:red">repeatItems</span><span style="color:blue">="2" </span><span style="color:red">repeatLayout</span><span style="color:blue">="table"
+    </span><span style="color:red">textField</span><span style="color:blue">="text" </span><span style="color:red">valueField</span><span style="color:blue">="id" </span><span style="color:red">value</span><span style="color:blue">="cn,usa" </span><span style="color:red">onload</span><span style="color:blue">="onLoad"
+    </span><span style="color:red">url</span><span style="color:blue">="../data/countrys.txt" &gt;
+&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+</span></pre>
+
+    <h4>Screenshots</h4>
+    <img src="images/checkboxlist.gif" />
+
+    <h4>Examples</h4>
+    <a class="demo" href="../../demo/checkboxlist/checkboxlist.html" target="_blank">CheckBoxList</a>
+    
+    <h4>Properties</h4>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th><th><a href="setsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Set? </a></th><th><a href="getsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Get? </a></th><th><a href="tagsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Tag? </a></th></tr>
+        <tr>
+            <td>multiSelect</td>
+            <td>Boolean</td>
+            <td>多选</td>  
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>repeatLayout</td>
+            <td>String：none,flow,table</td>
+            <td>布局方式</td>
+            <td>none</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>repeatDirection</td>
+            <td>String：vertical, horizontal</td>
+            <td>平铺方向</td>
+            <td>horizontal</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>repeatItems</td>
+            <td>Number</td>
+            <td>平铺显示项</td>
+            <td>0</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+    </table>
+
+    <h4>Methods</h4>
+    <table>
+        <tr><th>Name</th><th>Parameter</th><th>Description</th><th>Return</th></tr>
+        <tr>
+            <td>setValue（value）</td>
+            <td></td>
+            <td>设置值</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getValue（）</td>
+            <td></td>
+            <td>获取值</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h4>Events</h4>
+    <table>
+        <tr><th>Name</th><th>EventObject</th><th>Description</th></tr>       
+        <tr>
+            <td>valuechanged</td>
+            <td></td>
+            <td>值改变时发生</td>            
+        </tr>        
+    </table>
+
+    
+</body>
+</html>

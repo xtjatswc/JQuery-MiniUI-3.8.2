@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery MiniUI - 专业WebUI控件库</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="jquery,web,grid,表格,datagrid,js,javascript,ajax,web开发,tree,table" />   
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。它能缩短开发时间，减少代码量，使开发者更专注于业务和服务端，轻松实现界面开发，带来绝佳的用户体验。" />
+    <link href="../core.css" rel="stylesheet" type="text/css" />
+    
+    <link href="common.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="header">
+        <div class="headerInner">
+            <a class="logo" href="http://www.miniui.com" title="jQuery MiniUI - 专业WebUI控件库">jQuery MiniUI</a>
+            <a id="why" href="/why">为什么选择MiniUI？</a>
+
+            <ul class="topmenu">
+                <li><a href="/"><span>首页</span></a></li>
+                <li onmouseover="showMenu('popup1', this)" onmouseout="hideMenu('popup1', this)"><a href="/product"><span>产品</span></a>
+                    <ul id="popup1" class="popupmenu">
+                        <li class="product"><a href="/product">产品介绍</a></li>
+                        <li><a href="/features">功能特性</a></li>
+                        <li><a href="/screenshots">界面截图</a></li>                        
+                        <li><a href="/support">支持服务</a></li>
+                        <li><a href="/license">授权方式</a></li>
+                        
+                        <li class="faq"><a href="/faq">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="/demo"><span>示例</span></a></li>
+                <li onmouseover="showMenu('popup2', this)" onmouseout="hideMenu('popup2', this)"><a href="/docs"><span>文档</span></a>
+                    <ul id="popup2" class="popupmenu">                        
+                        <li id="start_link"><a href="/docs/quickstart">快速入门</a></li>
+                        <li><a href="/docs/tutorial">开发教程</a></li>
+                        <li id="kb_link"><a href="/docs/kb">精华文章</a></li>
+                        <li><a href="/docs/api">Api参考手册</a></li>
+                    </ul>
+                </li>
+                <li><a href="/bbs"><span>论坛</span></a></li><li><a href="/download"><span>下载</span></a></li>
+                
+                <li><a href="/contact"><span>联系</span></a></li>
+            </ul>
+        
+     
+        </div>
+    </div>
+    <div class="topnav">
+        <div class="topnavInner">
+            <a href="/">首页</a>><a href="/docs">文档中心</a>><a href="/docs/tutorial">开发教程</a>><span>数据表格</span>
+        </div>
+    </div>
+    <div class="body " >
+        <div class="bodyInner">
+            
+        <div class="contentView">
+            <h3>表格：汇总行</h3>
+                
+            <a title="表格：汇总行" href="../../demo/datagrid/summary.html" target="_blank"><img src="../api/images/summary.gif"/></a>
+            <br /><br />
+            <p class="p_demo"><span class="note">参考示例</span>：<a href="../../demo/datagrid/summary.html" target="_blank">汇总行</a></p>
+            <br />
+
+            <h4>Javascript处理</h4>
+            <p>通常在表格的"load"数据加载完成事件中，更新表格的汇总信息：</p>
+<pre class="code">grid.on(<span style="color:maroon">"load"</span>, onGridLoad);
+
+<span style="color:blue">function </span>onGridLoad(e) {
+    <span style="color:blue">var </span>result = e.result;
+    <span style="color:blue">var </span>grid = e.sender;
+
+    <span style="color:blue">var </span>cellEl = grid.getSummaryCellEl(<span style="color:maroon">"ageColumn"</span>);
+    cellEl.style.cssText = <span style="color:maroon">"text-align:right"</span>;
+    cellEl.innerHTML = <span style="color:maroon">"&lt;span style='color:Brown;'&gt;"
+                    </span>+ <span style="color:maroon">'Min=' </span>+ result.minAge + <span style="color:maroon">"&lt;br/&gt;"
+                    </span>+ <span style="color:maroon">'Max=' </span>+ result.maxAge + <span style="color:maroon">"&lt;br/&gt;"
+                    </span>+ <span style="color:maroon">'Avg=' </span>+ result.avgAge + <span style="color:maroon">"&lt;br/&gt;"
+                    </span>+ <span style="color:maroon">"&lt;/span&gt;"</span>;
+
+    <span style="color:blue">var </span>cellEl = grid.getSummaryCellEl(<span style="color:maroon">"totalColumn"</span>);
+    cellEl.innerHTML = <span style="color:maroon">"总员工数：" </span>+ result.total;
+}
+</pre>
+        
+            <h4>服务端数据处理</h4>
+            <p>在服务端返回表格分页数据时，我们额外增加了一些属性，比如minAge、maxAge、avgAge等，代码如下：</p>
+<pre class="code"><span style="color:blue">public </span><span style="color:#2b91af">Hashtable </span>SearchEmployees(<span style="color:blue">string </span>key, <span style="color:blue">int </span>index, <span style="color:blue">int </span>size, <span style="color:blue">string </span>sortField, <span style="color:blue">string </span>sortOrder)
+{        
+    <span style="color:#2b91af">ArrayList </span>employees = ......;   <span style="color:green">//分页后的数据
+    </span><span style="color:blue">int </span>totalCount = ......;        <span style="color:green">//总记录数
+
+    </span><span style="color:#2b91af">Hashtable </span>result = <span style="color:blue">new </span><span style="color:#2b91af">Hashtable</span>();
+    result[<span style="color:#a31515">"data"</span>] = employees;
+    result[<span style="color:#a31515">"total"</span>] = totalCount;
+
+    <span style="color:green">//生成一些汇总信息
+    </span><span style="color:#2b91af">ArrayList </span>ages = <span style="color:#2b91af">DBUtil</span>.Select(<span style="color:#a31515">"select min(age) as minAge, max(age) as maxAge, avg(age) as avgAge from t_employee"</span>);
+    <span style="color:#2b91af">Hashtable </span>ageInfo = ages[0] <span style="color:blue">as </span><span style="color:#2b91af">Hashtable</span>;
+    result[<span style="color:#a31515">"minAge"</span>] = ageInfo[<span style="color:#a31515">"minAge"</span>];
+    result[<span style="color:#a31515">"maxAge"</span>] = ageInfo[<span style="color:#a31515">"maxAge"</span>];
+    result[<span style="color:#a31515">"avgAge"</span>] = ageInfo[<span style="color:#a31515">"avgAge"</span>];
+
+    <span style="color:blue">return </span>result;
+}
+</pre>
+        </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <div id="copyright">Copyright © 上海普加软件有限公司版权所有 </div>
+            <div id="bottomlinks"><a href="/sitemap">网站导航</a>|<a href="/support">支持服务</a>|<a href="/license">授权方式</a>|<a href="/contact">联系我们</a></div>
+        </div>
+    </div>
+</body>
+</html>

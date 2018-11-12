@@ -1,0 +1,261 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery MiniUI - 专业WebUI控件库</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="jquery,web,grid,表格,datagrid,js,javascript,ajax,web开发,tree,table" />   
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。它能缩短开发时间，减少代码量，使开发者更专注于业务和服务端，轻松实现界面开发，带来绝佳的用户体验。" />
+    <link href="../core.css" rel="stylesheet" type="text/css" />
+    
+    <style type="text/css">
+
+    .td1
+    {
+        width:180px;
+        padding-bottom:32px;
+        vertical-align:top;
+        cursor:default;
+    }
+    .td1 div
+    {
+        width:150px;
+        height:100px;
+        border:solid 1px #bbb;
+        background:url(images/support.gif) no-repeat 50% 50%;
+        text-align:center;
+        line-height:100px;
+        font-size:14px;
+        font-family:微软雅黑,黑体,宋体;
+    }
+    .td2
+    {
+        vertical-align:top;
+        padding-top:2px;
+    }
+    h2
+    {
+        font-size:15px;
+        margin:0;
+    }
+    p
+    {
+        line-height:20px;
+        font-size:13px;
+    }
+    ul
+    {
+        font-size:13px;
+        line-height:20px;
+    }
+h4
+{
+    font-size:16px;
+    font-family:微软雅黑,黑体,宋体;
+    margin-bottom:8px;
+}     
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="headerInner">
+            <a class="logo" href="http://www.miniui.com" title="jQuery MiniUI - 专业WebUI控件库">jQuery MiniUI</a>
+            <a id="why" href="/why">为什么选择MiniUI？</a>
+
+            <ul class="topmenu">
+                <li><a href="/"><span>首页</span></a></li>
+                <li onmouseover="showMenu('popup1', this)" onmouseout="hideMenu('popup1', this)"><a href="/product"><span>产品</span></a>
+                    <ul id="popup1" class="popupmenu">
+                        <li class="product"><a href="/product">产品介绍</a></li>
+                        <li><a href="/features">功能特性</a></li>
+                        <li><a href="/screenshots">界面截图</a></li>                        
+                        <li><a href="/support">支持服务</a></li>
+                        <li><a href="/license">授权方式</a></li>
+                        
+                        <li class="faq"><a href="/faq">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="/demo"><span>示例</span></a></li>
+                <li onmouseover="showMenu('popup2', this)" onmouseout="hideMenu('popup2', this)"><a href="/docs"><span>文档</span></a>
+                    <ul id="popup2" class="popupmenu">                        
+                        <li id="start_link"><a href="/docs/quickstart">快速入门</a></li>
+                        <li><a href="/docs/tutorial">开发教程</a></li>
+                        <li id="kb_link"><a href="/docs/kb">精华文章</a></li>
+                        <li><a href="/docs/api">Api参考手册</a></li>
+                    </ul>
+                </li>
+                <li><a href="/bbs"><span>论坛</span></a></li><li><a href="/download"><span>下载</span></a></li>
+                
+                <li><a href="/contact"><span>联系</span></a></li>
+            </ul>
+        
+     
+        </div>
+    </div>
+    <div class="topnav">
+        <div class="topnavInner">
+            <a href="/">首页</a>><a href="/docs">文档中心</a>><span>快速入门</span>
+        </div>
+    </div>
+    <div class="body leftCenter">
+        <div class="bodyInner">
+            <div class="bodyLeft">
+                <div class="leftmenu">
+                    <h1>快速入门</h1>
+                    <ul>
+                        <li><a href="index.html">下载安装</a></li>
+                        <li><a href="first.html">Hello, world!</a></li>
+                        <li><a href="crud.html">CRUD</a></li>                        
+                        <li class="active"><a href="form.html">表单开发</a></li>                        
+                        <li><a href="layout.html">主框架布局</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bodyCenter">
+                <h1 class="bodyTitle" style="font-family:Tahoma;">表单开发</h1>
+
+                <div id="content">
+                    <p>表单开发包括：布局、验证、加载、提交、清除、重置等。</p>
+                    <p>效果图如下：</p>
+                    <img src="images/form.gif" />
+                    <br /><br />
+                        
+                        <h4>表单布局</h4>
+                        <p>使用HTML Table标签实现任意丰富的表单布局：</p>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">table </span><span style="color:red">class</span><span style="color:blue">="form-table" </span><span style="color:red">border</span><span style="color:blue">="0" </span><span style="color:red">cellpadding</span><span style="color:blue">="1" </span><span style="color:red">cellspacing</span><span style="color:blue">="2"&gt;
+    &lt;</span><span style="color:maroon">tr</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">td </span><span style="color:red">class</span><span style="color:blue">="form-label" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:60px;"&gt;</span>姓名：<span style="color:blue">&lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">td </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:150px"&gt;
+            &lt;</span><span style="color:maroon">input </span><span style="color:red">name</span><span style="color:blue">="name" </span><span style="color:red">class</span><span style="color:blue">="mini-textbox" /&gt;
+        &lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">td </span><span style="color:red">class</span><span style="color:blue">="form-label" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:60px;"&gt;</span>地址：<span style="color:blue">&lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">td </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:150px"&gt;
+            &lt;</span><span style="color:maroon">input </span><span style="color:red">name</span><span style="color:blue">="addr" </span><span style="color:red">class</span><span style="color:blue">="mini-textbox" /&gt;
+        &lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+    &lt;/</span><span style="color:maroon">tr</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">tr</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">td </span><span style="color:red">class</span><span style="color:blue">="form-label"&gt;</span>性别：<span style="color:blue">&lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">td </span><span style="color:blue">&gt;
+            &lt;</span><span style="color:maroon">input </span><span style="color:red">name</span><span style="color:blue">="gender" </span><span style="color:red">class</span><span style="color:blue">="mini-radiobuttonlist" </span><span style="color:red">data</span><span style="color:blue">="[{id: 1, text: '男'}, {id: 2, text: '女'}]"/&gt;
+        &lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">td </span><span style="color:red">class</span><span style="color:blue">="form-label"&gt;</span>年龄：<span style="color:blue">&lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">td </span><span style="color:blue">&gt;
+            &lt;</span><span style="color:maroon">input </span><span style="color:red">name</span><span style="color:blue">="age" </span><span style="color:red">class</span><span style="color:blue">="mini-spinner" /&gt;
+        &lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+    &lt;/</span><span style="color:maroon">tr</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">tr</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">td </span><span style="color:red">class</span><span style="color:blue">="form-label"&gt;</span>备注：<span style="color:blue">&lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">td </span><span style="color:red">colspan</span><span style="color:blue">="3" &gt;
+            &lt;</span><span style="color:maroon">input </span><span style="color:red">name</span><span style="color:blue">="remarks" </span><span style="color:red">class</span><span style="color:blue">="mini-textarea" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:343px;</span><span style="color:red">height</span><span style="color:blue">:60px;"/&gt;
+        &lt;/</span><span style="color:maroon">td</span><span style="color:blue">&gt;        
+    &lt;/</span><span style="color:maroon">tr</span><span style="color:blue">&gt;
+&lt;/</span><span style="color:maroon">table</span><span style="color:blue">&gt;
+</span></pre>
+                      
+                    <h4>数据验证</h4>
+                    <p>监听处理控件的"validation"事件，自定义验证规则和错误描述信息：</p>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">input </span><span style="color:red">id</span><span style="color:blue">="username" </span><span style="color:red">name</span><span style="color:blue">="username" </span>
+    <span style="color:red">onvalidation</span><span style="color:blue">="onUserNameValidation" </span><span style="color:red">class</span><span style="color:blue">="mini-textbox" </span><span style="color:red">required</span><span style="color:blue">="true" /&gt;
+</span></pre>
+<pre class="code"><span style="color:blue">function </span>onUserNameValidation(e) {
+    <span style="color:blue">if </span>(e.isValid) {
+        <span style="color:blue">if </span>(isEmail(e.value) == <span style="color:blue">false</span>) {
+            e.errorText = <span style="color:maroon">"必须输入邮件地址"</span>;
+            e.isValid = <span style="color:blue">false</span>;
+        }
+    }
+}
+</pre>
+                    <p>使用mini.Form组件对多个控件进行验证：</p>            
+<pre class="code"><span style="color:blue">var </span>form = <span style="color:blue">new </span>mini.Form(<span style="color:maroon">"#form1"</span>);
+form.validate();
+</pre>
+
+            <h4>加载表单</h4>
+<pre class="code">$.ajax({
+    url: <span style="color: maroon">"../data/FormService.aspx?method=LoadData"</span>,
+    type: <span style="color: maroon">"post"</span>,
+    success: <span style="color: blue">function </span>(text) {
+        <span style="color: blue">var </span>data = mini.decode(text);   <span style="color: #006400">//反序列化成对象
+        </span>form.setData(data);             <span style="color: #006400">//设置多个控件数据
+    </span>}
+});
+</pre>
+
+            <h4>提交表单</h4>
+<pre class="code"><span style="color:#006400">//提交表单数据
+</span><span style="color:blue">var </span>form = <span style="color:blue">new </span>mini.Form(<span style="color:maroon">"#form1"</span>);            
+<span style="color:blue">var </span>data = form.getData();      <span style="color:#006400">//获取表单多个控件的数据
+</span><span style="color:blue">var </span>json = mini.encode(data);   <span style="color:#006400">//序列化成JSON
+</span>$.ajax({
+    url: <span style="color:maroon">"../data/FormService.aspx?method=SaveData"</span>,
+    type: <span style="color:maroon">"post"</span>,
+    data: { submitData: json },
+    success: <span style="color:blue">function </span>(text) {
+        alert(<span style="color:maroon">"提交成功，返回结果:" </span>+ text);
+    }
+});
+</pre>
+            <h4>清除表单</h4>
+<pre class="code">form.clear();
+</pre>
+            <h4>重置表单</h4>
+<pre class="code">form.reset();
+</pre>
+
+
+
+                    <p>参考示例：</p>
+                    <ul>
+				        <li><a href="../../demo/formlayout/formlayout.html" target="_blank">表单布局</a></li>    
+                        <li><a href="../../demo/form/form.html" target="main">表单控件</a></li>                                            
+                        <li><a href="../../demo/datagrid/popupeditform.html" target="_blank">弹出面板：本页面</a></li>
+                        <li><a href="../../demo/datagrid/datagrid.html" target="_blank">弹出面板：子页面</a></li> 
+                        <li><a href="../../demo/datagrid/editform.html" target="_blank">编辑表单：行内编辑</a></li>      
+                        <li><a href="../../demo/form/rules.html" target="main" title="验证规则">验证规则 </a></li> 
+                        <li><a href="../../demo/form/validation.html" target="main" title="数据验证">表单：验证</a></li>
+                        <li><a href="../../demo/form/validLabel.html" target="main" title="文本显示">表单：文本显示</a></li>
+                        <li><a href="../../demo/form/validGroup.html" target="main" title="组合验证">表单：组合验证</a></li> 
+                        <li><a href="../../demo/form/validWindow.html" target="main" title="弹出框验证">表单：弹出框验证</a></li> 
+
+                    </ul>
+
+
+                </div>
+
+            </div>
+            <div class="bodyRight">                
+                <div class="panel">
+                    <h1>文档中心</h1>
+                    <div class="panelBody">
+                        <a id="start_item" href="/docs/getting_started">新手入门</a>
+                        <a href="/docs/tutorial">开发指南</a>
+                        <a id="kb_item" href="/docs/kb">精华文章</a>
+                        <a href="/docs/api">组件参考手册</a>
+                    </div>
+                </div>
+                <div class="panel">
+                    <h1>示例中心</h1>
+                    <div class="panelBody">
+                        <a href="/demo#app=crud">CRUD：DataGrid</a>
+                        <a href="/demo#app=master-detail">Master-Detail</a>
+                        <a href="/demo#app=layout">界面布局</a>
+                        <a href="/demo#app=validator">数据验证</a>
+                        <a href="/demo#ui=tree">树形：Tree</a>
+             <!--           <a href="/api">富文本编辑器</a>
+                        <a href="/api">图表</a>-->
+                    </div>
+                </div>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <div id="copyright">Copyright © 上海普加软件有限公司版权所有 </div>
+            <div id="bottomlinks"><a href="/sitemap">网站导航</a>|<a href="/support">支持服务</a>|<a href="/license">授权方式</a>|<a href="/contact">联系我们</a></div>
+        </div>
+    </div>
+</body>
+</html>

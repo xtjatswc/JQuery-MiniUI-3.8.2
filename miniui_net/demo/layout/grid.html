@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Layout</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" /><link href="../demo.css" rel="stylesheet" type="text/css" />
+
+    
+    <script src="../../scripts/boot.js" type="text/javascript"></script>
+    <link href="../../scripts/miniui/themes/blue/skin.css" rel="stylesheet" type="text/css" />
+
+    <style>
+    
+    .container
+    {
+        padding:30px;
+    }
+    
+    </style>
+
+</head>
+<body>
+    <h1>响应式网格布局</h1>      
+    
+
+            
+    <div class="container">
+        <div class="mini-clearfix ">
+            <div class="mini-col-6 mini-col-sm-3" style="background-color: #dedef8;">
+              <div style="border:solid 1px #444;">
+                <span class="mini-hidden-xs">特别小型</span>
+                <span class="mini-visible-xs">✔ 在特别小型设备上可见</span>
+               </div>
+            </div>
+            <div class="mini-col-6 mini-col-sm-3" style="background-color: #dedef8;">
+               <div style="border:solid 1px #444;">
+                <span class="mini-hidden-sm">小型</span>
+                <span class="mini-visible-sm">✔ 在小型设备上可见</span>
+              </div>
+            </div>
+            <div class="mini-clearfix mini-visible-xs mini-unspace"></div>
+            <div class="mini-col-6 mini-col-sm-3" style="background-color: #dedef8;">
+               <div style="border:solid 1px #444;">
+                <span class="mini-hidden-md">中型</span>
+                <span class="mini-visible-md">✔ 在中型设备上可见</span>
+              </div>
+            </div>
+            <div class="mini-col-6 mini-col-sm-3" style="background-color: #dedef8;">
+                <div style="border:solid 1px #444;">
+                    <span class="mini-hidden-lg">大型</span>
+                    <span class="mini-visible-lg">✔ 在大型设备上可见</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mini-visible-md mini-visible-lg">中型设备以上显示</div>
+        <div class="mini-hidden-xs mini-hidden-sm">中型设备以上显示</div>
+
+    </div>    
+
+    
+
+    <div class="description">
+        <h3>Description</h3>
+        <p>实现响应式CSS网格布局。
+        </p>
+        <ul>
+            <li>网格布局样式，如：.mini-col-4, .mini-col-sm-4, .mini-col-md-4, .mini-col-lg-4，一行12格数字。</li>
+            <li>显示/隐藏样式，如：.mini-visible-sm, .mini-hidden-md</li>
+            <li>设备尺寸：xs, sm, md, lg</li>
+            <li>支持IE6+、FireFox、Chrome、Safari、Opera等。</li>
+        </ul>
+    </div>
+</body>
+</html>

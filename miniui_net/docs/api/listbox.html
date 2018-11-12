@@ -1,0 +1,491 @@
+﻿<html>
+<head>
+    <title>ListBox - jQuery MiniUI 3.0 Documentation</title>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="core.js" type="text/javascript"></script>
+</head>
+<body>
+    <h3>mini.ListBox</h3>
+    
+    <p>列表控件。</p>
+
+    <h4>Extend</h4>
+    <p> <a class="extendlink" href="control.html">mini.Control</a></p>    
+
+    <h4>Usage</h4>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">div </span><span style="color:red">id</span><span style="color:blue">="listbox1" </span><span style="color:red">class</span><span style="color:blue">="mini-listbox" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:150px;</span><span style="color:red">height</span><span style="color:blue">:100px;"
+    </span><span style="color:red">textField</span><span style="color:blue">="text" </span><span style="color:red">valueField</span><span style="color:blue">="id" 
+    </span><span style="color:red">url</span><span style="color:blue">="../data/countrys.txt"&gt;
+&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+</span></pre>
+
+    <h4>Screenshots</h4>
+
+    <table>
+        <tr>
+            <td style="border:0"><img src="images/listbox.gif" /></td>
+            <td style="border:0"><img src="images/listbox2.gif" /></td>
+        </tr>
+    </table> 
+
+    <h4>Examples</h4>
+    <a class="demo" href="../../demo/listbox/listbox.html" target="_blank">ListBox</a>
+    <a class="demo" href="../../demo/listbox/moveitems.html" target="_blank">Move Items</a>
+      
+
+    <h4>Properties</h4>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th><th><a href="setsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Set? </a></th><th><a href="getsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Get? </a></th><th><a href="tagsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Tag? </a></th></tr>
+        <tr>
+            <td>columns</td>
+            <td>Array</td>
+            <td>列对象集合</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>data</td>
+            <td>Array</td>
+            <td>数据对象</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>url</td>
+            <td>String</td>
+            <td>数据加载地址</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>ajaxType</td>
+            <td>String</td>
+            <td>ajax类型：get/post。</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>ajaxOptions</td>
+            <td>Object</td>
+            <td>ajax配置对象。如：ajaxOptions="{type:'post', async: true, data: {a:1, b: true}, dataType: 'text', contentType: 'application/x-www-form-urlencoded;charset=utf-8'}"。</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>value</td>
+            <td>String</td>
+            <td>值</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>valueField</td>
+            <td>String</td>
+            <td>值字段</td>
+            <td>id</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>textField</td>
+            <td>String</td>
+            <td>文本字段</td>
+            <td>text</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>dataField</td>
+            <td>String</td>
+            <td>数据列表字段</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showCheckBox</td>
+            <td>Boolean</td>
+            <td>显示多选框</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showAllCheckBox</td>
+            <td>Boolean</td>
+            <td>显示全选框</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>multiSelect</td>
+            <td>Boolean</td>
+            <td>多选</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>showNullItem</td>
+            <td>Boolean</td>
+            <td>显示空项</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>nullItemText</td>
+            <td>String</td>
+            <td>空项文本</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+    </table>
+
+    <h4>Methods</h4>
+    <table>
+        <tr><th>Name</th><th>Parameter</th><th>Description</th><th>Return</th></tr>
+        <tr>
+            <td>setValue（value）</td>
+            <td></td>
+            <td>设置值</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getValue（）</td>
+            <td></td>
+            <td>获取值</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getFormValue（）</td>
+            <td></td>
+            <td>获取表单值</td>
+            <td>String</td>
+        </tr>
+        <tr>
+            <td>getText（）</td>
+            <td></td>
+            <td>获取文本值</td>
+            <td>String</td>
+        </tr>
+        
+        <tr>
+            <td>load（url）</td>
+            <td></td>
+            <td>加载数据</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>loadData（Array）</td>
+            <td></td>
+            <td>加载数据</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getCount（）</td>
+            <td></td>
+            <td>获取总项数</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getAt（Number）</td>
+            <td></td>
+            <td>获取索引处对象</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>indexOf（Object）</td>
+            <td></td>
+            <td>获取对象索引号</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>findItems（value）</td>
+            <td></td>
+            <td>根据值获取项数组</td>
+            <td>Array</td>
+        </tr>
+        <tr>
+            <td>updateItem（Object, options）</td>
+            <td></td>
+            <td>更新项</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>removeAll（）</td>
+            <td></td>
+            <td>删除所有项</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>addItems（Array, Number）</td>
+            <td></td>
+            <td>加入多个项</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>addItem（Object, Number）</td>
+            <td></td>
+            <td>加入单个项</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>removeItems（Array）</td>
+            <td></td>
+            <td>删除多个项</td>
+            <td></td>
+        </tr>
+         <tr>
+            <td>removeItem（Object）</td>
+            <td></td>
+            <td>删除项</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>moveItem（Object, Number）</td>
+            <td></td>
+            <td>移动项到新索引位置</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>isSelected（Object）</td>
+            <td></td>
+            <td>是否选中项</td>
+            <td>Boolean</td>
+        </tr>
+        <tr>
+            <td>isSelected（Object）</td>
+            <td></td>
+            <td>是否选中项</td>
+            <td>Boolean</td>
+        </tr>
+        <tr>
+            <td>getSelecteds（）</td>
+            <td></td>
+            <td>获取选中项集合</td>
+            <td>Array</td>
+        </tr>
+        <tr>
+            <td>getSelected（）</td>
+            <td></td>
+            <td>获取当前选中项</td>
+            <td>Object</td>
+        </tr>
+        <tr>
+            <td>select（Object）</td>
+            <td></td>
+            <td>选中项</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>deselect（Object）</td>
+            <td></td>
+            <td>取消选中项</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>selects（Array）</td>
+            <td></td>
+            <td>选中多个项</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>deselects（Array）</td>
+            <td></td>
+            <td>取消选中多个项</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>selectAll（）</td>
+            <td></td>
+            <td>选中所有项</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>deselectAll（）</td>
+            <td></td>
+            <td>取消选中所有项</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>clearSelect（）</td>
+            <td></td>
+            <td>取消选中所有项</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getColumn ( index/columnName )</td>
+            <td></td>
+            <td>获取列对象</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>hideColumn ( column )</td>
+            <td></td>
+            <td>隐藏列</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>showColumn ( column )</td>
+            <td></td>
+            <td>显示列</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h4>Events</h4>
+    <table>
+        <tr><th>Name</th><th>EventObject</th><th>Description</th></tr>       
+        <tr>
+            <td>valuechanged</td>
+            <td></td>
+            <td>值改变时发生</td>            
+        </tr>
+        <tr>
+            <td>beforeitemclick</td>
+            <td>
+<pre>
+{
+    sender: Object,
+    item: Object,
+    cancel: false
+}
+</pre>            
+            </td>
+            <td>项点击时发生</td>            
+        </tr>
+<tr>
+            <td>itemclick</td>
+            <td>
+<pre>
+{
+    sender: Object,
+    item: Object
+}
+</pre>            
+            </td>
+            <td>项点击时发生</td>            
+        </tr>
+        <tr>
+            <td>itemdblclick</td>
+            <td>
+<pre>
+{
+    sender: Object,
+    item: Object
+}
+</pre>            
+            </td>
+            <td>项双击时发生</td>            
+        </tr>
+        <tr>
+            <td>beforeload</td>
+            <td></td>
+            <td>数据加载前发生</td>
+        </tr>
+        <tr>
+            <td>preload</td>
+            <td></td>
+            <td>数据加载，设置到Tree前发生</td>
+        </tr>
+        <tr>
+            <td>loaderror</td>
+            <td></td>
+            <td>数据加载错误时发生</td>
+        </tr>
+        <tr>
+            <td>load</td>
+            <td></td>
+            <td>数据加载成功时发生</td>
+        </tr>
+    </table>
+
+    <br />
+    <hr />
+
+    <h4 id="columns">Columns</h4>
+    <p>列配置集合：columns，是一个数组，如：[column, column, ...]。其中一个column的配置参数如下表：</p>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th><th><a href="setsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Set? </a></th><th><a href="getsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Get? </a></th><th><a href="tagsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Tag? </a></th></tr>
+        
+        <tr>
+            <td>header</td>
+            <td>String</td>
+            <td>表头列文本</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+        <tr>
+            <td>field</td>
+            <td>String</td>
+            <td>单元格值字段</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+        <tr>
+            <td>name</td>
+            <td>String</td>
+            <td>列标识名称</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>width</td>
+            <td>Number</td>
+            <td>列宽度</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+        <tr>
+            <td>headerAlign</td>
+            <td>String</td>
+            <td>表头列文本位置。left/center/right。</td>
+            <td>left</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+        <tr>
+            <td>align</td>
+            <td>String</td>
+            <td>单元格文本位置。left/center/right。</td>
+            <td>left</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+        <tr>
+            <td>headerCls</td>
+            <td>String</td>
+            <td>表头列样式类。</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+        <tr>
+            <td>cellCls</td>
+            <td>String</td>
+            <td>单元格样式类</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+        <tr>
+            <td>headerStyle</td>
+            <td>String</td>
+            <td>表头列样式</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+        <tr>
+            <td>cellStyle</td>
+            <td>String</td>
+            <td>单元格样式</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>renderer</td>
+            <td>Function</td>
+            <td>单元格绘制处理函数，同<a href="#drawcell">drawcell</a>事件。</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+    </table>
+</body>
+</html>

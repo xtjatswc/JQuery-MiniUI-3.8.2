@@ -1,0 +1,76 @@
+﻿<html>
+<head>
+    <title>HtmlFile - jQuery MiniUI 3.0 Documentation</title>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="core.js" type="text/javascript"></script>
+</head>
+<body>
+    <h3>mini.HtmlFile</h3>
+    
+    <p>文件上传控件（html实现）。</p>
+
+    <h4>Extend</h4>
+    <p> <a class="extendlink" href="buttonedit.html">mini.ButtonEdit</a></p>    
+
+    <h4>Usage</h4>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">form </span><span style="color:red">id</span><span style="color:blue">="upload" </span><span style="color:red">action</span><span style="color:blue">="upload.aspx" </span><span style="color:red">method</span><span style="color:blue">="post" </span><span style="color:red">enctype</span><span style="color:blue">="multipart/form-data"&gt;         
+    </span>图片：<span style="color:blue">&lt;</span><span style="color:maroon">input </span><span style="color:red">class</span><span style="color:blue">="mini-htmlfile" </span><span style="color:red">name</span><span style="color:blue">="Fdata" </span><span style="color:red">limitType</span><span style="color:blue">="*.txt" /&gt;       
+    &lt;</span><span style="color:maroon">input </span><span style="color:red">type</span><span style="color:blue">="submit" </span><span style="color:red">value</span><span style="color:blue">="上传"/&gt;
+&lt;/</span><span style="color:maroon">form</span><span style="color:blue">&gt;
+</span></pre>
+
+    <h4>Screenshots</h4>
+    <img src="images/fileupload.gif" />
+
+    <h4>Examples</h4>
+    <a class="demo" href="../../demo/fileupload/htmlfile.html" target="_blank">HtmlFile</a>
+
+
+    <h4>Properties</h4>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th><th><a href="setsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Set? </a></th><th><a href="getsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Get? </a></th><th><a href="tagsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Tag? </a></th></tr>
+        <tr>
+            <td>buttonText</td>
+            <td>String</td>
+            <td>按钮文本</td>  
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>limitType</td>
+            <td>String</td>
+            <td>文件限制类型。如"*.bmp;*.txt"</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>       
+    </table>
+
+    <h4>Methods</h4>
+    <table>
+        <tr><th>Name</th><th>Parameter</th><th>Description</th><th>Return</th></tr>
+        <tr>
+            <td>clear（）</td>
+            <td></td>
+            <td>清空选择</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h4>Events</h4>
+    <table>
+        <tr><th>Name</th><th>EventObject</th><th>Description</th></tr>  
+        <tr>
+            <td>fileselect</td>
+            <td></td>
+            <td>文件选择时激发</td>
+        </tr>                      
+    </table>
+
+    
+</body>
+</html>

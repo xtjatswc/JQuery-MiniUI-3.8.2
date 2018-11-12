@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>KindEditor(弹出)</title>
+    
+    <script src="../../../../scripts/boot.js" type="text/javascript"></script>   
+    <script src="http://kindeditor.net/ke4/kindeditor-all-min.js?t=20160331.js" type="text/javascript"></script>
+</head> 
+<body>
+ <div id="win1" class="mini-window" title="简单表单" style="width:900px;height:500px;"
+         showFooter="true" >
+        <div>文本编辑器：</div>
+        <textarea name="editor1" id="editor" style="width:100%;height:250px;">
+            <p>MiniUI - 专业WebUI控件库</p>
+           </br>
+           <p>   快速开发，减少50%代码量</p>
+           <p>   丰富组件库，高性能、低内存</p>
+           <p>   支持 Java、.NET、PHP</p>
+           <p>   支持 IE6+、FireFox、Chrome</p>
+        </textarea>
+        <div property="footer" style="text-align:right;padding:5px;">
+            <a class="mini-button" onclick="getContent()" style="margin-right:20px">获取文章内容</a>
+            <a class="mini-button" onclick="setContent()" style="margin-right:20px">更新文章内容</a>
+        </div>
+    </div>
+  
+
+
+       
+
+</body>
+</html>
+
+
+
+
+<script type="text/javascript">
+    mini.parse();
+    var win1 = mini.get("win1");
+    win1.show();
+    var editor = KindEditor.create('#editor');
+    function setContent() {
+        var text = "MiniUI - 专业WebUI控件库";
+        editor.html(text);
+    }
+    function getContent() {
+        alert(editor.html());
+    }
+
+</script>

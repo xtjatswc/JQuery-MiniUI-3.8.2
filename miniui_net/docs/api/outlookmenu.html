@@ -1,0 +1,178 @@
+﻿<html>
+<head>
+    <title>OutlookMenu - jQuery MiniUI 3.0 Documentation</title>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="core.js" type="text/javascript"></script>
+</head>
+<body>
+    <h3>mini.OutlookMenu</h3>
+    
+    <p>Outlook风格菜单导航控件。</p>
+
+    <h4>Extend</h4>
+    <p> <a class="extendlink" href="control.html">mini.Control</a></p>    
+
+    <h4>Examples</h4>
+    <a class="demo" href="../../demo/outlookmenu/outlookmenu.html" target="_blank">OutlookMenu</a>    
+  
+
+    <h4>Properties</h4>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th><th><a href="setsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Set? </a></th><th><a href="getsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Get? </a></th><th><a href="tagsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Tag? </a></th></tr>
+        <tr>
+            <td>url</td>
+            <td>String</td>
+            <td>数据地址</td>  
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>idField</td>
+            <td>String</td>
+            <td>值字段。</td>
+            <td>id</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        
+        <tr>
+            <td>textField</td>
+            <td>String</td>
+            <td>节点文本字段</td>
+            <td>text</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>iconField</td>
+            <td>String</td>
+            <td>图标字段</td>
+            <td>iconCls</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+<!--        <tr>
+            <td>nodesField</td>
+            <td>String</td>
+            <td>子级节点字段</td>
+            <td>children</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>-->
+        <tr>
+            <td>parentField</td>
+            <td>String</td>
+            <td>父节点字段</td>
+            <td>pid</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>resultAsTree</td>
+            <td>Boolean</td>
+            <td>url数据是否列表</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>dataField</td>
+            <td>String</td>
+            <td>数据列表字段</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>imgPath</td>
+            <td>String</td>
+            <td>节点图片路径。节点可以设置"img"属性。</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+    </table>
+
+    <h4>Methods</h4>
+    <table>
+        <tr><th>Name</th><th>Parameter</th><th>Description</th><th>Return</th></tr>
+        <tr>
+            <td>load ( Array )</td>
+            <td>
+            </td>
+            <td>加载树形数据。<br />
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getSelected (  )</td>
+            <td>
+            </td>
+            <td>获取选中项。<br />
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>selectNode ( node )</td>
+            <td></td>
+            <td>选中节点</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>loadList ( Array, idField, parentField )</td>
+            <td>
+            </td>
+            <td>加载列表数据。比如：tree.loadList(list, "id", "pid")<br />
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getList ( )</td>
+            <td></td>
+            <td>获取节点数组。
+            </td>
+            <td>Array</td>
+        </tr>
+        <tr>
+            <td>findNodes ( fn, scope )</td>
+            <td></td>
+            <td>查找节点数据。如：
+<pre>
+var nodes = tree.findNodes(function(node){
+    if(node.name.indexOf("abc") != -1) return true;
+});
+</pre>            
+            </td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h4>Events</h4>
+    <table>
+        <tr><th>Name</th><th>EventObject</th><th>Description</th></tr>       
+        <tr>
+            <td>itemclick</td>
+            <td>
+<pre>
+{
+    sender: Object,
+    item: Object
+}
+</pre>
+            </td>
+            <td>项点击时发生</td>            
+        </tr>
+        <tr>
+            <td>itemselect</td>
+            <td>
+<pre>
+{
+    sender: Object,
+    item: Object
+}
+</pre>
+            </td>
+            <td>项选中时发生</td>            
+        </tr>
+    </table>
+
+    
+</body>
+</html>

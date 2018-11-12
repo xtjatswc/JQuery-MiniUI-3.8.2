@@ -1,0 +1,142 @@
+﻿<html>
+<head>
+    <title>Date - jQuery MiniUI 3.0 Documentation</title>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="core.js" type="text/javascript"></script>
+</head>
+<body>
+    <h3>Date</h3>
+    
+    <p>日期类型处理组件。可格式化、解析JS Date对象。</p>
+
+    <h4>Extend</h4>
+    <p> <a class="extendlink" href="control.html">mini.Control</a></p>    
+
+    <h4>Usage</h4>
+    <p> </p>    
+
+
+    <h4>Methods</h4>
+    <table>
+        <tr><th>Name</th><th>Parameter</th><th>Description</th><th>Return</th></tr>
+        <tr>
+            <td>mini.parseDate ( String )</td>
+            <td>String: 特定格式字符串。<br />
+支持如下：
+<ul>
+    <li>2010-11-22</li>
+    <li>2010/11/22</li>
+    <li>11-22-2010</li>
+    <li>11/22/2010</li>
+    <li>2010-11-22T23:23:59</li>
+    <li>2010/11/22T23:23:59</li>
+    <li>2010-11-22 23:23:59</li>
+    <li>2010/11/22 23:23:59</li>
+</ul>
+            </td>
+            <td>把字符串转换成Date类型对象。<br />
+
+            </td>
+            <td>Date</td>
+        </tr>
+        <tr>
+            <td>mini.formatDate ( Date, String )</td>
+            <td>
+Date: 日期类型对象。<br />
+String: 格式化字符串。例如："yyyy-MM-dd HH:mm:ss"。<br />
+具体格式说明，请参考下面的“Format”内容。<br />
+            </td>
+            <td>把Date类型转换为字符串</td>
+            <td>String</td>
+        </tr>
+        
+    </table>
+
+    <h4>Format</h4>
+    <table>
+        <tr><th>Name</th><th>Description</th></tr>
+        <tr>
+            <td>d</td>
+            <td>月中的某一天。一位数的日期没有前导零。</td>
+        </tr>
+        <tr>
+            <td>dd</td>
+            <td>月中的某一天。一位数的日期有一个前导零。</td>
+        </tr>
+        <tr>
+            <td>ddd</td>
+            <td>周中某天的缩写名称</td>
+        </tr>
+        <tr>
+            <td>dddd</td>
+            <td>周中某天的完整名称</td>
+        </tr>
+        <tr>
+            <td>M</td>
+            <td>月份数字。一位数的月份没有前导零。</td>
+        </tr>
+        <tr>
+            <td>MM</td>
+            <td>月份数字。一位数的月份有一个前导零。</td>
+        </tr>
+        <tr>
+            <td>MMM</td>
+            <td>月份的缩写名称。</td>
+        </tr>
+        <tr>
+            <td>MMMM</td>
+            <td>月份的完整名称。</td>
+        </tr>
+        <tr>
+            <td>y</td>
+            <td>不包含纪元的年份。如果不包含纪元的年份小于 10，则显示不具有前导零的年份。</td>
+        </tr>
+        <tr>
+            <td>yy</td>
+            <td>不包含纪元的年份。如果不包含纪元的年份小于 10，则显示具有前导零的年份。</td>
+        </tr>
+        <tr>
+            <td>yyyy</td>
+            <td>包括纪元的四位数的年份。</td>
+        </tr>
+        <tr>
+            <td>h</td>
+            <td>12 小时制的小时。一位数的小时数没有前导零。</td>
+        </tr>
+        <tr>
+            <td>hh</td>
+            <td>12 小时制的小时。一位数的小时数有前导零。</td>
+        </tr>
+
+        <tr>
+            <td>H</td>
+            <td>24 小时制的小时。一位数的小时数没有前导零。</td>
+        </tr>
+        <tr>
+            <td>HH</td>
+            <td>24 小时制的小时。一位数的小时数有前导零。</td>
+        </tr>
+        <tr>
+            <td>m</td>
+            <td>分钟。一位数的分钟数没有前导零。</td>
+        </tr>
+        <tr>
+            <td>mm</td>
+            <td>分钟。一位数的分钟数有一个前导零。</td>
+        </tr>
+        <tr>
+            <td>s</td>
+            <td>秒。一位数的秒数没有前导零。</td>
+        </tr>
+        <tr>
+            <td>ss</td>
+            <td>秒。一位数的秒数有一个前导零。</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,9 @@
+name: 服务方法名-必填
+cleanArgs: 是否清理请求参数：目前是删除请求参数中带下划线的参数，默认true
+syncable：是否支持同步，默认false。如果为true，服务有个同步版本的方法：name+Sync
+dataType：返回的数据类型，默认 json
+contentType：请求的内容类型。只在type为post时有效。默认策略：如果请求参数为复杂对象，则为application/json，否则application/x-www-form-urlencoded。
+type：请求方式，默认策略：如果方法名以get开头，则为get；否则post
+cacheable：是否支持缓存，默认false
+mock：默认false。true: mock模式，后台接口未提供的情况下，前端可做模拟请求。
+url: 和最终请求的url有关，生成url的具体策略参考 “Service和Controller对应规则.txt”

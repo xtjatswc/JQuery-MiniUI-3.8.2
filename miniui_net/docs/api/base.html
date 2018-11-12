@@ -1,0 +1,81 @@
+﻿<html>
+<head>
+    <title>Base - jQuery MiniUI 3.0 Documentation</title>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="core.js" type="text/javascript"></script>
+    <style type="text/css">
+    a
+    {
+        
+    }
+    </style>
+</head>
+<body>
+    <h3>Base</h3>
+    
+    <p>mini全局方法。</p>    
+    <table>
+        <tr><th>Name</th><th>Parameter</th><th>Description</th><th>Return</th></tr>
+        <tr>
+            <td>mini.parse()</td>
+            <td></td>
+            <td>将html标签解析为miniui控件。<br />解析后，才能使用mini.get获取到控件对象。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>mini.layout()</td>
+            <td></td>
+            <td>布局调整控件达到合适尺寸。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>mini.get(id)</td>
+            <td></td>
+            <td>根据id获取控件对象</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>mini.getByUid(uid)</td>
+            <td></td>
+            <td>根据uid获取控件对象</td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>mini.getByName(name)<br />mini.getByName(name, parent)</td>
+            <td>name: 控件name;<br />parent: 可选。限定获取控件的范围。</td>
+            <td>根据name获取单个控件</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>mini.getsByName(name)<br />mini.getsbyName(name, parent)</td>
+            <td>name: 控件name;<br />parent: 可选。限定获取控件的范围。</td>
+            <td>根据name获取多个控件</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>mini.formatNumber(number, format)</td>
+            <td>number: 数值;<br />format: 数字格式化。<br />
+
+</td>
+            <td>格式化数字。<br />format取值，参考：
+        <ul>
+            <li>小数点和千分位：format="n"</li>
+            <li>货币格式：format="c"。</li>
+            <li>百分比格式：format="p"。</li>
+            <li>自定义格式：format="¥#,0.00"。</li>            
+        </ul>            
+            </td>
+            <td></td>
+        </tr>
+        
+    </table>
+    
+
+</body>
+</html>

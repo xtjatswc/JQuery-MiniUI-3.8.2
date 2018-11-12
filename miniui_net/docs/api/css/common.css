@@ -1,0 +1,112 @@
+﻿body
+{
+    font-family:"Lucida Sans","Lucida Grande",Arial;
+    font-size:13px;
+    background:white;
+    line-height:22px;
+    padding-left:5px;
+}
+body .header
+{
+    background:url(header.gif) repeat-x;
+    cursor:default;
+}
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 12px 0;
+}
+h4
+{
+    font-size:16px;
+    color:#CC0000;
+    margin:10px;
+    margin-left:0;
+    margin-top:15px;
+    margin-bottom:5px;
+}
+p
+{
+    margin:0;
+}
+table
+{
+    border-collapse:collapse;
+    font-size: 1em;
+    margin: 1em;
+    width: auto;
+    color:#131313;
+}
+table th
+{
+    background:#EEEEEE;
+    font-weight:bold;
+    line-height:18px;
+    color:Black;
+}
+th, td
+{
+    border: 1px solid #999999;
+    padding: 0.25em 0.5em;
+    text-align: left;
+    vertical-align: top;
+    line-height:16px;
+}
+
+a
+{
+    text-decoration:none;
+    color:Black;
+}
+a:hover
+{
+    text-decoration:underline;
+    color:Blue;
+}
+pre
+{
+    margin:5px;
+    color:#7a0202;
+}
+.extendlink
+{
+    margin-left:18px;
+    font-family:Verdana;
+}
+ul
+{
+    margin:5px;
+    margin-left:25px;
+    font-family:Verdana;
+}
+
+.code
+{
+    border:solid 1px #cccccc;
+    /*background:#ffffeb;*/
+    background:#efefef;
+    padding:8px;
+    font-size:13px;
+    line-height:17px;
+    color:Black;
+}
+img
+{
+    border:solid 1px #fff;
+    margin-left:10px;
+}
+.demo
+{
+    margin-left:13px;
+    font-family:Verdana;
+}
+
+.examples
+{
+    padding-left:15px;
+}
+.examples a
+{
+    margin-right:15px;
+    font-family:Verdana;
+}

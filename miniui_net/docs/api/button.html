@@ -1,0 +1,182 @@
+﻿<html>
+<head>
+    <title>Button - jQuery MiniUI 3.0 Documentation</title>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="core.js" type="text/javascript"></script>
+</head>
+<body>
+    <h3>mini.Button</h3>
+    
+    <p>按钮。能设置文本、图标、下拉菜单等。</p>
+
+    <h4>Extend</h4>
+    <p> <a class="extendlink" href="control.html">mini.Control</a></p>    
+
+    <h4>Usage</h4>
+    <pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">a </span><span style="color:red">class</span><span style="color:blue">="mini-button" </span><span style="color:red">iconCls</span><span style="color:blue">="icon-edit" </span><span style="color:red">onclick</span><span style="color:blue">="onClick"&gt;</span>Edit<span style="color:blue">&lt;/</span><span style="color:maroon">a</span><span style="color:blue">&gt;
+</span></pre>
+
+    <h4>Screenshots</h4>
+    <img src="images/button.gif" />
+
+    <h4>Examples</h4>
+    <a class="demo" href="../../demo/button/button.html" target="_blank">Button</a>
+    <a class="demo" href="../../demo/button/menubutton.html" target="_blank">MenuButton</a>
+    <a class="demo" href="../../demo/button/radiobutton.html" target="_blank">RadioButton</a>
+    <a class="demo" href="../../demo/toolbar/toolbar.html" target="_blank">Toolbar</a>
+
+    <h4>Properties</h4>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th>
+            <th><a href="setsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Set? </a></th><th><a href="getsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Get? </a></th><th><a href="tagsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Tag? </a></th>
+        </tr>
+        <tr>
+            <td>text</td>
+            <td>String</td>
+            <td>按钮文本</td>  
+            <td></td>
+            <td style="text-align:center;">&radic;</td>
+            <td style="text-align:center;">&radic;</td>
+            <td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>iconCls</td>
+            <td>String</td>
+            <td>按钮图标类</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td>
+            <td style="text-align:center;">&radic;</td>
+            <td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>iconStyle</td>
+            <td>String</td>
+            <td>按钮图标样式</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td>
+            <td style="text-align:center;">&radic;</td>
+            <td style="text-align:center;">&radic;</td>
+        </tr>
+     <!--   <tr>
+            <td>iconPosition</td>
+            <td>left/top</td>
+            <td>图标位置</td>
+            <td>left</td>
+            <td style="text-align:center;">&radic;</td>
+            <td style="text-align:center;">&radic;</td>
+            <td style="text-align:center;">&radic;</td>
+        </tr>-->
+        <tr>
+            <td>href</td>
+            <td>String</td>
+            <td>超链接地址</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td>
+            <td style="text-align:center;">&radic;</td>
+            <td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>target</td>
+            <td>String</td>
+            <td>超链接弹出方式。"</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td>
+            <td style="text-align:center;">&radic;</td>
+            <td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>plain</td>
+            <td>Boolean</td>
+            <td>背景透明</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td>
+            <td style="text-align:center;">&radic;</td>
+            <td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>checked</td>
+            <td>Boolean</td>
+            <td>是否选中</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td>
+            <td style="text-align:center;">&radic;</td>
+            <td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>checkOnClick</td>
+            <td>Boolean</td>
+            <td>点击时是否自动选中</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td>
+            <td style="text-align:center;">&radic;</td>
+            <td style="text-align:center;">&radic;</td>
+        </tr>
+       <tr>
+            <td>groupName</td>
+            <td>String</td>
+            <td>菜单项组名称。设置后，会单选菜单项组。</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td>
+            <td style="text-align:center;">&radic;</td>
+            <td style="text-align:center;">&radic;</td>
+        </tr>
+    </table>
+
+    <h4>Methods</h4>
+    <table>
+        <tr><th>Name</th><th>Parameter</th><th>Description</th><th>Return</th></tr>
+        <tr>
+            <td>doClick（）</td>
+            <td></td>
+            <td>主动激发click事件。</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h4>Events</h4>
+    <table>
+        <tr><th>Name</th><th>EventObject</th><th>Description</th></tr>       
+        <tr>
+            <td>click</td>
+            <td></td>
+            <td>按钮点击时发生</td>            
+        </tr>
+        <tr>
+            <td>checkedchanged</td>
+            <td></td>
+            <td>按钮选择变化时发生</td>            
+        </tr>
+    </table>
+
+    <br />
+    <hr />
+
+    <h3>mini.MenuButton</h3>
+    <p>菜单按钮。</p>
+    <h4>Properties</h4>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th><th><a href="setsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Set? </a></th><th><a href="getsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Get? </a></th><th><a href="tagsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Tag? </a></th></tr>
+        <tr>
+            <td>menu</td>
+            <td><a href="menu.html">Menu</a></td>
+            <td>菜单对象</td>  
+            <td></td>
+            <td style="text-align:center;">&radic;</td>
+        </tr>
+    </table>
+
+    <br />
+    <hr />
+    
+    <h3>mini.SplitButton</h3>
+    <h4>Properties</h4>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th><th><a href="setsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Set? </a></th><th><a href="getsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Get? </a></th><th><a href="tagsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Tag? </a></th></tr>        
+    </table>
+</body>
+</html>

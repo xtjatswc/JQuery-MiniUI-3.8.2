@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="../../../scripts/boot.js" type="text/javascript"></script>
+
+    <script src="../../../scripts/thirdparty/spectrum/spectrum.js" type="text/javascript"></script>
+    <link href="../../../scripts/thirdparty/spectrum/spectrum.css" rel="stylesheet"
+        type="text/css" />
+  
+    <style>
+        .sp-replacer {
+            border-width: 0;
+            padding: 0;
+            /*position: absolute;*/
+            /*top: 50%;*/
+        }
+
+        .sp-dd {
+            display: none;
+        }
+
+      
+        body .mini-labelfield {
+            display: inline-block;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="panel1" class="mini-panel" title="表单" style="width:350px;height:150px;"
+         showToolbar="true" showCollapseButton="true" showFooter="true" allowResize="true" collapseOnTitleClick="true">
+        <input labelField="true" label="日期:" id="date1" name="date" class="mini-datepicker" emptyText="请选择时间" />
+        <div class="colorPicker">
+            <input labelField="true" label="选择颜色:" id="textbox1" name="color" class="mini-textbox" emptyText="请选择颜色">
+            <input id="full">
+        </div>
+
+        <div class="mini-button" onclick="getData()">提交表单</div>
+
+    </div>
+
+</body>
+</html>
+<script>
+    $("#full").spectrum({
+        color: "#f00",  //初始化颜色
+        preferredFormat: "hex3", //输入框颜色格式
+        showInput: true,  //显示输入
+        showPalette: true, //显示选择器面板
+        cancelText: "取消",//取消按钮,按钮文字
+        chooseText: "选择",//选择按钮,按钮文字
+        palette: [
+            ["#000", "#444", "#666", "#999", "#ccc", "#eee", "#f3f3f3", "#fff"],
+            ["#f00", "#f90", "#ff0", "#0f0", "#0ff", "#00f", "#90f", "#f0f"],
+            ["#f4cccc", "#fce5cd", "#fff2cc", "#d9ead3", "#d0e0e3", "#cfe2f3", "#d9d2e9", "#ead1dc"],
+            ["#ea9999", "#f9cb9c", "#ffe599", "#b6d7a8", "#a2c4c9", "#9fc5e8", "#b4a7d6", "#d5a6bd"],
+            ["#e06666", "#f6b26b", "#ffd966", "#93c47d", "#76a5af", "#6fa8dc", "#8e7cc3", "#c27ba0"],
+            ["#c00", "#e69138", "#f1c232", "#6aa84f", "#45818e", "#3d85c6", "#674ea7", "#a64d79"],
+            ["#900", "#b45f06", "#bf9000", "#38761d", "#134f5c", "#0b5394", "#351c75", "#741b47"],
+            ["#600", "#783f04", "#7f6000", "#274e13", "#0c343d", "#073763", "#20124d", "#4c1130"]
+        ]
+
+    });
+    $(function () {
+        $('#full').change(function() {
+            mini.get("textbox1").setValue($("#full").val())
+        });
+
+    })
+    function getData() {
+        var form = new mini.Form("panel1");
+        var data = form.getData();
+        var json = mini.encode(data);
+        alert(json)
+    }
+
+</script>

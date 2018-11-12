@@ -1,0 +1,192 @@
+﻿<html>
+<head>
+    <title>Menu - jQuery MiniUI 3.0 Documentation</title>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="core.js" type="text/javascript"></script>
+    
+        
+
+</head>
+<body>
+    <h3>mini.Menu</h3>
+    
+    <p>菜单控件。可加入菜单项对象<a href="menuitem.html">MenuItem</a>。</p>    
+    
+    <h4>Extend</h4>
+    <p> <a class="extendlink" href="control.html">mini.Control</a></p>    
+
+        <h4>Usage</h4>
+<pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">ul </span><span style="color:red">id</span><span style="color:blue">="menu2" </span><span style="color:red">class</span><span style="color:blue">="mini-menu"&gt;
+    &lt;</span><span style="color:maroon">li</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">span </span><span style="color:blue">&gt;</span>操作<span style="color:blue">&lt;/</span><span style="color:maroon">span</span><span style="color:blue">&gt;
+        &lt;</span><span style="color:maroon">ul</span><span style="color:blue">&gt;
+            &lt;</span><span style="color:maroon">li </span><span style="color:red">iconCls</span><span style="color:blue">="icon-new" </span><span style="color:red">onclick</span><span style="color:blue">="onItemClick"&gt;</span>新建<span style="color:blue">&lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;
+            &lt;</span><span style="color:maroon">li </span><span style="color:red">class</span><span style="color:blue">="separator"&gt;&lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;
+            &lt;</span><span style="color:maroon">li </span><span style="color:red">iconCls</span><span style="color:blue">="icon-add" </span><span style="color:red">onclick</span><span style="color:blue">="onItemClick"&gt;</span>增加<span style="color:blue">&lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;    
+            &lt;</span><span style="color:maroon">li </span><span style="color:red">iconCls</span><span style="color:blue">="icon-edit" </span><span style="color:red">onclick</span><span style="color:blue">="onItemClick"&gt;</span>修改<span style="color:blue">&lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;
+            &lt;</span><span style="color:maroon">li </span><span style="color:red">iconCls</span><span style="color:blue">="icon-remove" </span><span style="color:red">onclick</span><span style="color:blue">="onItemClick"&gt;</span>删除<span style="color:blue">&lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;                      
+        &lt;/</span><span style="color:maroon">ul</span><span style="color:blue">&gt;
+    &lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">li </span><span style="color:red">class</span><span style="color:blue">="separator"&gt;&lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">li </span><span style="color:red">iconCls</span><span style="color:blue">="icon-open" </span><span style="color:red">onclick</span><span style="color:blue">="onItemClick"&gt;</span>打开<span style="color:blue">&lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">li </span><span style="color:red">iconCls</span><span style="color:blue">="icon-remove" </span><span style="color:red">onclick</span><span style="color:blue">="onItemClick"&gt;</span>关闭<span style="color:blue">&lt;/</span><span style="color:maroon">li</span><span style="color:blue">&gt;
+&lt;/</span><span style="color:maroon">ul</span><span style="color:blue">&gt;
+</span></pre>
+
+    <h4>Screenshots</h4>
+    <img src="images/menu.gif" />
+
+    <h4>Examples</h4>
+    <a class="demo" href="../../demo/menu/menu.html" target="_blank">Menu</a>
+    <a class="demo" href="../../demo/menu/contextmenu.html" target="_blank">ContextMenu</a>
+
+    <h4>Properties</h4>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th><th><a href="setsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Set? </a></th><th><a href="getsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Get? </a></th><th><a href="tagsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Tag? </a></th></tr>
+        <tr>
+            <td>vertical</td>
+            <td>Boolean</td>
+            <td>是否竖向</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>allowSelectItem</td>
+            <td>Boolean</td>
+            <td>是否允许选择菜单项</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>url</td>
+            <td>String</td>
+            <td>菜单数据地址</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+      <tr>
+            <td>textField</td>
+            <td>String</td>
+            <td></td>
+            <td>text</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>idField</td>
+            <td>String</td>
+            <td></td>
+            <td>id</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+        <tr>
+            <td>parentField</td>
+            <td>String</td>
+            <td></td>
+            <td>pid</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>resultAsTree</td>
+            <td>Boolean</td>
+            <td></td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr> 
+        <tr>
+            <td>dataField</td>
+            <td>String</td>
+            <td>数据列表字段</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>iconClsField</td>
+            <td>String</td>
+            <td>图标名称字段</td>
+            <td>iconCls</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        
+        <tr>
+            <td>imgPath</td>
+            <td>String</td>
+            <td>节点图片路径。节点可以设置"img"属性。</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+    </table>
+
+    <h4>Methods</h4>
+    <table>
+        <tr><th>Name</th><th>Parameter</th><th>Description</th><th>Return</th></tr>
+        <tr>    
+            <td>setItems ( items )</td>
+            <td></td>
+            <td>设置菜单项数组。菜单项对象<a href="menuitem.html">MenuItem</a>。</td>
+            <td></td>
+        </tr>
+        <tr>    
+            <td>showAtPos ( x, y )</td>
+            <td></td>
+            <td>显示菜单</td>
+            <td></td>
+        </tr> 
+        <tr>    
+            <td>getSelectedItem ( )</td>
+            <td></td>
+            <td>获得选中的菜单项对象。</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>load ( url )</td>
+            <td></td>
+            <td>加载菜单数据</td>
+            <td></td>
+        </tr>   
+        <tr>
+            <td>loadList ( Array, idField, parentField )</td>
+            <td>
+            </td>
+            <td>加载列表数据。比如：tree.loadList(list, "id", "pid")<br />
+            </td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h4>Events</h4>
+    <table>
+        <tr><th>Name</th><th>EventObject</th><th>Description</th></tr>       
+        <tr>
+            <td>itemclick</td>
+            <td>
+<pre>
+{
+  sender: Object,         //树对象
+  item: Object,           //项对象
+  isLeaf: Boolean
+}
+</pre>            
+            </td>
+            <td>菜单项点击时发生</td>            
+        </tr>
+        <tr>
+            <td>itemselect</td>
+            <td>
+<pre>
+{
+  sender: Object,         //树对象
+  item: Object,           //项对象
+  isLeaf: Boolean
+}
+</pre>  
+            </td>
+            <td>菜单项选中时发生</td>            
+        </tr>
+    </table>
+</body>
+</html>

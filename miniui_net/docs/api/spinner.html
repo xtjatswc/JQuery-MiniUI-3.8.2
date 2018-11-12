@@ -1,0 +1,144 @@
+﻿<html>
+<head>
+    <title>Spinner - jQuery MiniUI 3.0 Documentation</title>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="core.js" type="text/javascript"></script>
+</head>
+<body>
+    <h3>mini.Spinner</h3>
+    
+    <p>数字输入框。</p>
+
+    <h4>Extend</h4>
+    <p> <a class="extendlink" href="buttonedit.html">mini.ButtonEdit</a></p>    
+
+    <h4>Usage</h4>
+    <pre class="code"><span style="color:blue">&lt;</span><span style="color:maroon">input </span><span style="color:red">id</span><span style="color:blue">="sp1" </span><span style="color:red">class</span><span style="color:blue">="mini-spinner"  </span><span style="color:red">minValue</span><span style="color:blue">="200" </span><span style="color:red">maxValue</span><span style="color:blue">="250" /&gt;
+</span></pre>
+
+    <h4>Screenshots</h4>
+    <img src="images/spinner.gif" />
+
+    <h4>Examples</h4>
+    <a class="demo" href="../../demo/spinner/spinner.html" target="_blank">Spinner</a> 
+  
+
+    <h4>Properties</h4>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th><th><a href="setsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Set? </a></th><th><a href="getsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Get? </a></th><th><a href="tagsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Tag? </a></th></tr>
+        <tr>
+            <td>value</td>
+            <td>Number</td>
+            <td>值</td>
+            <td>0</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>minValue</td>
+            <td>Number</td>
+            <td>最小值</td>
+            <td>0</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>maxValue</td>
+            <td>Number</td>
+            <td>最大值</td>
+            <td>100</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>increment</td>
+            <td>Number</td>
+            <td>增量值</td>
+            <td>1</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>format</td>
+            <td>String</td>
+            <td>数字格式化。如：
+                <ul>
+                    <li>小数点和千分位：format="n"</li>
+                    <li>货币格式：format="c"。</li>
+                    <li>百分比格式：format="p"。</li>
+                    <li>自定义格式：format="¥#,0.00"。</li>
+                </ul>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>allowLimitValue</td>
+            <td>Boolean</td>
+            <td>是否强制约束大小范围</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>changeOnMousewheel</td>
+            <td>Boolean</td>
+            <td>是否滚动滚轮改变值</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+
+
+        <tr>
+            <td>decimalPlaces</td>
+            <td>Number</td>
+            <td>保留的小数点位数</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>allowLoopValue</td>
+            <td>Boolean</td>
+            <td>值增加到最大值时从最小值开始，反之亦然。</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>allowNull</td>
+            <td>Boolean</td>
+            <td>是否允许空值</td>
+            <td>false</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        
+    </table>
+
+    <h4>Methods</h4>
+    <table>
+        <tr><th>Name</th><th>Parameter</th><th>Description</th><th>Return</th></tr>
+        <tr>
+            <td>setValue（value）</td>
+            <td></td>
+            <td>设置值</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getValue（）</td>
+            <td></td>
+            <td>获取值</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h4>Events</h4>
+    <table>
+        <tr><th>Name</th><th>EventObject</th><th>Description</th></tr>       
+        <tr>
+            <td>valuechanged</td>
+            <td></td>
+            <td>值改变时发生</td>            
+        </tr>
+    </table>
+
+    
+</body>
+</html>

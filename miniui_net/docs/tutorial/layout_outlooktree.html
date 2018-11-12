@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery MiniUI - 专业WebUI控件库</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="jquery,web,grid,表格,datagrid,js,javascript,ajax,web开发,tree,table" />   
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。它能缩短开发时间，减少代码量，使开发者更专注于业务和服务端，轻松实现界面开发，带来绝佳的用户体验。" />
+    <link href="../core.css" rel="stylesheet" type="text/css" />
+    
+    <link href="common.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="header">
+        <div class="headerInner">
+            <a class="logo" href="http://www.miniui.com" title="jQuery MiniUI - 专业WebUI控件库">jQuery MiniUI</a>
+            <a id="why" href="/why">为什么选择MiniUI？</a>
+
+            <ul class="topmenu">
+                <li><a href="/"><span>首页</span></a></li>
+                <li onmouseover="showMenu('popup1', this)" onmouseout="hideMenu('popup1', this)"><a href="/product"><span>产品</span></a>
+                    <ul id="popup1" class="popupmenu">
+                        <li class="product"><a href="/product">产品介绍</a></li>
+                        <li><a href="/features">功能特性</a></li>
+                        <li><a href="/screenshots">界面截图</a></li>                        
+                        <li><a href="/support">支持服务</a></li>
+                        <li><a href="/license">授权方式</a></li>
+                        
+                        <li class="faq"><a href="/faq">常见问题</a></li>
+                    </ul>
+                </li>
+                <li><a href="/demo"><span>示例</span></a></li>
+                <li onmouseover="showMenu('popup2', this)" onmouseout="hideMenu('popup2', this)"><a href="/docs"><span>文档</span></a>
+                    <ul id="popup2" class="popupmenu">                        
+                        <li id="start_link"><a href="/docs/quickstart">快速入门</a></li>
+                        <li><a href="/docs/tutorial">开发教程</a></li>
+                        <li id="kb_link"><a href="/docs/kb">精华文章</a></li>
+                        <li><a href="/docs/api">Api参考手册</a></li>
+                    </ul>
+                </li>
+                <li><a href="/bbs"><span>论坛</span></a></li><li><a href="/download"><span>下载</span></a></li>
+                
+                <li><a href="/contact"><span>联系</span></a></li>
+            </ul>
+        
+     
+        </div>
+    </div>
+    <div class="topnav">
+        <div class="topnavInner">
+            <a href="/">首页</a>><a href="/docs">文档中心</a>><a href="/docs/tutorial">开发教程</a>><span>主框架布局</span>
+        </div>
+    </div>
+    <div class="body " >
+        <div class="bodyInner">
+            
+        <div class="contentView">
+            <h3>主框架布局之：OutlookTree</h3>
+           
+            <img src="../api/images/layout_outlooktree.gif" />
+
+            <br /><br />
+            <p class="p_demo"><span class="note">参考示例</span>：<a href="../../demo/outlooktree/outlooktree.html" target="_blank">主框架布局之：OutlookTree</a></p>
+            <br />
+
+
+            <h4>一：创建界面布局</h4>
+<pre class="code"><span style="color:#006400">&lt;!--Layout--&gt;
+</span><span style="color:blue">&lt;</span><span style="color:maroon">div </span><span style="color:red">id</span><span style="color:blue">="layout1" </span><span style="color:red">class</span><span style="color:blue">="mini-layout" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:100%;</span><span style="color:red">height</span><span style="color:blue">:100%;"&gt;
+    &lt;</span><span style="color:maroon">div </span><span style="color:red">class</span><span style="color:blue">="header" </span><span style="color:red">region</span><span style="color:blue">="north" </span><span style="color:red">height</span><span style="color:blue">="70" </span><span style="color:red">showSplit</span><span style="color:blue">="false" </span><span style="color:red">showHeader</span><span style="color:blue">="false"&gt;
+    &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">div </span><span style="color:red">title</span><span style="color:blue">="south" </span><span style="color:red">region</span><span style="color:blue">="south" </span><span style="color:red">showSplit</span><span style="color:blue">="false" </span><span style="color:red">showHeader</span><span style="color:blue">="false" </span><span style="color:red">height</span><span style="color:blue">="30" &gt;    
+    &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+    &lt;</span><span style="color:maroon">div </span><span style="color:red">title</span><span style="color:blue">="center" </span><span style="color:red">region</span><span style="color:blue">="center" </span><span style="color:red">bodyStyle</span><span style="color:blue">="overflow:hidden;"&gt;    
+        </span><span style="color:#006400">&lt;!--Splitter--&gt;
+        </span><span style="color:blue">&lt;</span><span style="color:maroon">div </span><span style="color:red">class</span><span style="color:blue">="mini-splitter" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:100%;</span><span style="color:red">height</span><span style="color:blue">:100%;" </span><span style="color:red">borderStyle</span><span style="color:blue">="border:0;"&gt;
+            &lt;</span><span style="color:maroon">div </span><span style="color:red">size</span><span style="color:blue">="180" </span><span style="color:red">maxSize</span><span style="color:blue">="250" </span><span style="color:red">minSize</span><span style="color:blue">="100" </span><span style="color:red">showCollapseButton</span><span style="color:blue">="true"&gt;
+                
+            &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+            &lt;</span><span style="color:maroon">div </span><span style="color:red">showCollapseButton</span><span style="color:blue">="false"&gt;
+                
+            &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;        
+        &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+    &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;    
+</span></pre>
+            <p>其中，Layout实现上、中、下布局；Splitter实现左、右折叠布局。</p>            
+
+
+            <h4>二：创建OutlookTree</h4>
+            <p>创建OutlookTree控件，放入Splitter左侧区域，作为功能操作树。</p>
+<pre class="code"><span style="color:#006400">&lt;!--OutlookTree--&gt;
+</span><span style="color:blue">&lt;</span><span style="color:maroon">div </span><span style="color:red">id</span><span style="color:blue">="leftTree" </span><span style="color:red">class</span><span style="color:blue">="mini-outlooktree" </span><span style="color:red">url</span><span style="color:blue">="../data/outlooktree.txt" </span><span style="color:red">onnodeselect</span><span style="color:blue">="onNodeSelect"
+    </span><span style="color:red">textField</span><span style="color:blue">="text" </span><span style="color:red">idField</span><span style="color:blue">="id" </span><span style="color:red">parentField</span><span style="color:blue">="pid"
+&gt;
+&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+</span></pre>
+            <p>url从服务端返回JSON格式如下：</p>
+<pre class="code">[
+    {id: "user", text: "用户管理"},        
+    {id: "lists", text: "Lists", pid: "user" },            
+    {id: "datagrid", text: "DataGrid", pid: "lists"},            
+    {id: "tree", text: "Tree" , pid: "lists"},
+    ......
+]
+</pre>            
+            <p>通过 "id" 和 "pid" 组成树形结构，在创建OutlookTree时注意设置 "idField" 和 "parentField" 。</p>
+
+            <h4>三：创建Tabs</h4>
+            <p>创建Tabs控件，放入Splitter右侧区域，作为主操作区域。</p>
+<pre class="code"><span style="color:#006400">&lt;!--Tabs--&gt;
+</span><span style="color:blue">&lt;</span><span style="color:maroon">div </span><span style="color:red">id</span><span style="color:blue">="mainTabs" </span><span style="color:red">class</span><span style="color:blue">="mini-tabs bg-toolbar" </span><span style="color:red">activeIndex</span><span style="color:blue">="0" </span><span style="color:red">style</span><span style="color:blue">="</span><span style="color:red">width</span><span style="color:blue">:100%;</span><span style="color:red">height</span><span style="color:blue">:100%;"      
+    </span><span style="color:red">bodyStyle</span><span style="color:blue">="border:0;background:white;"      
+&gt;        
+    &lt;</span><span style="color:maroon">div </span><span style="color:red">title</span><span style="color:blue">="首页" </span><span style="color:red">url</span><span style="color:blue">="../../docs/api/overview.html" &gt;        
+    &lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+&lt;/</span><span style="color:maroon">div</span><span style="color:blue">&gt;
+</span></pre>
+            
+            <h4>四：监听处理"nodeselect"事件</h4>
+<pre class="code"><span style="color:blue">function </span>showTab(node) {
+    <span style="color:blue">var </span>tabs = mini.get(<span style="color:maroon">"mainTabs"</span>);            
+    <span style="color:blue">var </span>id = <span style="color:maroon">"tab$" </span>+ node.id;
+    <span style="color:blue">var </span>tab = tabs.getTab(id);
+    <span style="color:blue">if </span>(!tab) {
+        tab = {};
+        tab.name = id;
+        tab.title = node.text;
+        tab.showCloseButton = <span style="color:blue">true</span>;
+        tab.url = node.url;
+        tabs.addTab(tab);
+    }
+    tabs.activeTab(tab);
+}        
+
+<span style="color:blue">function </span>onNodeSelect(e) {
+    <span style="color:blue">var </span>node = e.node;
+    <span style="color:blue">var </span>isLeaf = e.isLeaf;            
+
+    <span style="color:blue">if </span>(isLeaf) {
+        showTab(node);
+    }
+}
+</pre>
+            
+            <br />
+
+        </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerInner">
+            <div id="copyright">Copyright © 上海普加软件有限公司版权所有 </div>
+            <div id="bottomlinks"><a href="/sitemap">网站导航</a>|<a href="/support">支持服务</a>|<a href="/license">授权方式</a>|<a href="/contact">联系我们</a></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+Button: btn
+Calendar: cldr
+ComboBox: cmb
+Form: frm
+Fit: fit
+Hidden: hid
+Lookup: lu
+Layout: lo
+Menu: menu
+Password: pwd
+Panel: pnl
+Pager: pager
+Spinner: spnr
+Tree: tree
+Tabs: tabs
+Toolbar: tool
+Window: win
+
+除以上控件，取单词首字母

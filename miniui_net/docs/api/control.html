@@ -1,0 +1,289 @@
+﻿<html>
+<head>
+    <title>Control - jQuery MiniUI 3.0 Documentation</title>    
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="jquery,datagrid,grid,表格控件,ajax,web开发,java开发,.net开发,tree,table,treegrid" />
+    <meta name="description" content="jQuery MiniUI - 专业WebUI控件库。jQuery MiniUI是使用Javascript实现的前端Ajax组件库，支持所有浏览器，可以跨平台开发，如Java、.Net、PHP等。" />
+
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="core.js" type="text/javascript"></script>
+</head>
+<body>
+    <h3>mini.Control</h3>
+    
+    <p>控件基类。是表单、表格、树形、布局、菜单等所有控件的基类。<br />
+    提供宽度、高度、样式外观、显示\隐藏、启用\禁用等功能操作。<br />
+    它本身无法被实例化。
+    </p>
+
+    <h4>Usage</h4>
+    <p> </p>    
+
+    <h4>Properties</h4>
+    <table>
+        <tr><th>Name</th><th>Type</th><th>Description</th><th>Default</th><th><a href="setsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Set? </a></th><th><a href="getsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Get? </a></th><th><a href="tagsupport.html" target="_blank" style="padding-left:5px;padding-right:5px;"> Tag? </a></th></tr>
+        <tr>
+            <td>id</td>
+            <td>String</td>
+            <td>控件唯一标识符。</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>name</td>
+            <td>String</td>
+            <td>控件名称。</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>visible</td>
+            <td>Boolean</td>
+            <td>是否显示控件</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>
+        <tr>
+            <td>enabled</td>
+            <td>Boolean</td>
+            <td>是否禁用控件</td>
+            <td>true</td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>    
+        <tr>
+            <td>cls</td>
+            <td>String</td>
+            <td>样式类</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>    
+        <tr>
+            <td>style</td>
+            <td>String</td>
+            <td>样式</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+        <tr>
+            <td>borderStyle</td>
+            <td>String</td>
+            <td>边框样式。针对datagrid,panel,textbox,combobox等。</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>  
+        
+        <tr>
+            <td>width</td>
+            <td>Number</td>
+            <td>宽度</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>    
+        <tr>
+            <td>height</td>
+            <td>Number</td>
+            <td>高度</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>        
+        <tr>
+            <td>tooltip</td>
+            <td>String</td>
+            <td>提示信息</td>
+            <td></td>
+            <td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td><td style="text-align:center;">&radic;</td>
+        </tr>    
+    </table>
+
+    <h4>Methods</h4>
+    <table>
+        <tr><th>Name</th><th>Parameter</th><th>Description</th><th>Return</th></tr>
+        <tr>
+            <td>getEl ( )</td>
+            <td></td>
+            <td>获取控件DOM元素</td>
+            <td>Element</td>
+        </tr>
+        <tr>
+            <td>on ( type, fn[, scope] )</td>
+            <td>
+                type: String。事件类型，比如"click"<br />
+                fn: Function。事件处理函数<br />
+                scope: Object。可选。事件处理函数的作用域对象<br />
+            </td>
+            <td>监听事件。<br />
+            例如：
+<pre>
+control.on("click", function(e){
+    //...
+});
+</pre>
+                    </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>un ( type, fn[, scope] )</td>
+            <td>
+                同上
+            </td>
+            <td>取消监听事件</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>set ( options )</td>
+            <td>options: Object。参数配置对象<br />
+            </td>
+            <td>批量设置属性和事件，例如：<br />
+<pre>
+control.set({
+    visible: false,
+    width: 200,
+    onclick: functoin(e){
+        //...
+    }
+});
+</pre>            
+            </td>
+            <td></td>
+        </tr>
+        
+        <tr>
+            <td>render ( Element )</td>
+            <td></td>
+            <td>控件加入DOM元素呈现，如：<br />
+<pre>
+control.render(document.body)
+</pre>
+                
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>destroy ( )</td>
+            <td></td>
+            <td>销毁控件
+                
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>getHeight ( )</td>
+            <td></td>
+            <td>获取控件高度</td>
+            <td>Number</td>
+        </tr>
+<!--        <tr>
+            <td>getBox ()</td>
+            <td></td>
+            <td>获取控件坐标和尺寸对象。<br />
+返回对象：
+<pre>
+    {
+        x: Number 
+        y: Number 
+        width: Number 
+        height: Number 
+        right: Number 
+        bottom: Number 
+    }
+</pre>
+            </td>
+            <td>Object</td>
+        </tr>
+-->        <tr>
+            <td>show ( )</td>
+            <td></td>
+            <td>显示控件</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>hide ( )</td>
+            <td></td>
+            <td>隐藏控件</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>enable ( )</td>
+            <td></td>
+            <td>启用控件</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>disable ( )</td>
+            <td></td>
+            <td>禁用控件</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>focus ( )</td>
+            <td></td>
+            <td>获取焦点</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>blur ( )</td>
+            <td></td>
+            <td>失去焦点</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>doLayout ( )</td>
+            <td></td>
+            <td>调整控件布局</td>
+            <td></td>
+        </tr>
+         <tr>
+            <td>addCls ( String )</td>
+            <td></td>
+            <td>增加样式类。</td>
+            <td></td>
+        </tr>
+         <tr>
+            <td>removeCls ( String )</td>
+            <td></td>
+            <td>去除样式类</td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>mask ( options )</td>
+            <td></td>
+            <td>遮罩。
+<pre>
+options: {
+    html: "",
+    cls: "",
+    style: ""
+}    
+</pre>        </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>unmask (  )</td>
+            <td></td>
+            <td>取消遮罩</td>
+            <td></td>
+        </tr>
+    </table>
+
+    <h4>Events</h4>
+    <table>
+        <tr><th>Name</th><th>EventObject</th><th>Description</th></tr>
+<!--        <tr>
+            <td>rendered</td>
+            <td></td>
+            <td>控件呈现时发生</td>
+           
+        </tr>-->
+        <tr>
+            <td>destroy</td>
+            <td></td>
+            <td>控件销毁时发生</td>
+           
+        </tr>
+        
+    </table>
+
+</body>
+</html>
